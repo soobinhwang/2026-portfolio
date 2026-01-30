@@ -57,7 +57,7 @@ function Frame11() {
 
 function Frame12() {
   return (
-    <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
+    <div className="content-stretch flex gap-[10px] items-center justify-center relative shrink-0 w-full -mt-8 mb-8">
       <Frame9 />
       <Frame10 />
       <Frame11 />
@@ -67,7 +67,7 @@ function Frame12() {
 
 function Frame19() {
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0">
+    <div className="content-stretch flex flex-col gap-0 items-center relative shrink-0">
       <div className="relative shrink-0 w-[320px] h-[360px]" data-name="hero-visual">
         <img
           alt="Sue"
@@ -107,15 +107,15 @@ function Frame19() {
           style={{ bottom: "95%", right: "12%", width: "56px", transform: "rotate(4deg)" }}
         />
       </div>
-      <Frame12 />
     </div>
   );
 }
 
 function Frame20() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[34px] items-center left-[calc(50%+0.5px)] max-w-[619px] top-[152px] translate-x-[-50%] w-[619px] h-[560px]">
+    <div className="absolute content-stretch flex flex-col gap-0 items-center left-[calc(50%+0.5px)] max-w-[619px] top-[152px] translate-x-[-50%] w-[619px] h-[560px]">
       <Frame19 />
+      <Frame12 />
       <div className="flex flex-col font-['Newsreader',serif] font-normal justify-center min-w-full relative shrink-0 text-[#32404f] text-[0px] text-center tracking-[-1.04px] w-[min-content]">
         <p className="css-4hzbpn text-[50px] leading-[50px]">
           <span className="font-['Newsreader',serif] text-[#1e242a]">{`I'm Sue, a product designer `}</span>
