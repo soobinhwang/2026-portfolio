@@ -8616,7 +8616,7 @@ function ContentContainer1() {
 function SectionHeader1() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Header">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-full">
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">B2B SaaS • web app</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-1.04px] w-full">
@@ -8651,7 +8651,7 @@ function Container22() {
 
 function Thumbnail() {
   return (
-    <div className="bg-[#f0f3f5] h-[440px] overflow-clip relative shrink-0 w-[774px]" data-name="Thumbnail">
+    <div className="bg-[#f0f3f5] h-[440px] overflow-clip relative shrink-0 w-[774px]" data-name="Static Thumbnail">
       <Container21 />
       <Container22 />
     </div>
@@ -9168,12 +9168,12 @@ function Property11() {
 
 function SectionContainer7() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-center leading-[0] relative shrink-0 text-center w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">outcome</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[36px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Impact at product, team, and business scale</p>
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-0.9px] w-full">
+        <p className="leading-[50px] whitespace-pre-wrap">Impact at product, team, and business scale</p>
       </div>
     </div>
   );
@@ -9181,28 +9181,28 @@ function SectionContainer7() {
 
 function SubsectionContainer4() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Subsection Container">
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col items-center size-full">
-        <div className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-center leading-[0] p-[24px] relative text-[#5b6a79] text-[16px] text-center w-full">
-          <div className="flex flex-col justify-center relative shrink-0 w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Established consistent, on-brand experiences across programmes</p>
-          </div>
-          <div className="flex flex-col justify-center relative shrink-0 w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Enabled clearer self-service CMS configuration with less developer involvement.</p>
-          </div>
-        </div>
-      </div>
+    <div className="relative shrink-0 w-full" data-name="Subsection Container">
+      <ul className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
+        <li className="flex gap-[10px] items-start">
+          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
+          <span className="leading-[26px] whitespace-pre-wrap">Established consistent, on-brand experiences across programmes</span>
+        </li>
+        <li className="flex gap-[10px] items-start">
+          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
+          <span className="leading-[26px] whitespace-pre-wrap">Enabled clearer self-service CMS configuration with less developer involvement.</span>
+        </li>
+      </ul>
     </div>
   );
 }
 
 function SectionContainer8() {
   return (
-    <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full" data-name="Section Container">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[24px] text-center tracking-[-0.424px] w-full">
-        <p className="leading-[31.8px] whitespace-pre-wrap">{`Product & UX`}</p>
+    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="Section Container">
+      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.3px] w-full">
+        <p className="leading-[30px] whitespace-pre-wrap">{`Product & UX`}</p>
       </div>
+      <div aria-hidden="true" className="bg-[#d6dce1] h-px w-[56px]" />
       <SubsectionContainer4 />
     </div>
   );
@@ -9210,28 +9210,28 @@ function SectionContainer8() {
 
 function SubsectionContainer6() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Subsection Container">
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col items-center size-full">
-        <div className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-center leading-[0] p-[24px] relative text-[#5b6a79] text-[16px] text-center w-full">
-          <div className="flex flex-col justify-center relative shrink-0 w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Reduced minor change requests and eliminated repeated one-off design and development work</p>
-          </div>
-          <div className="flex flex-col justify-center relative shrink-0 w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Freed up capacity for longer-term roadmap initiatives.</p>
-          </div>
-        </div>
-      </div>
+    <div className="relative shrink-0 w-full" data-name="Subsection Container">
+      <ul className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
+        <li className="flex gap-[10px] items-start">
+          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
+          <span className="leading-[26px] whitespace-pre-wrap">Reduced minor change requests and eliminated repeated one-off design and development work</span>
+        </li>
+        <li className="flex gap-[10px] items-start">
+          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
+          <span className="leading-[26px] whitespace-pre-wrap">Freed up capacity for longer-term roadmap initiatives.</span>
+        </li>
+      </ul>
     </div>
   );
 }
 
 function SubsectionContainer5() {
   return (
-    <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full" data-name="Subsection Container">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[24px] text-center tracking-[-0.424px] w-full">
-        <p className="leading-[31.8px] whitespace-pre-wrap">{`Team & Ops`}</p>
+    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="Subsection Container">
+      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.3px] w-full">
+        <p className="leading-[30px] whitespace-pre-wrap">{`Team & Ops`}</p>
       </div>
+      <div aria-hidden="true" className="bg-[#d6dce1] h-px w-[56px]" />
       <SubsectionContainer6 />
     </div>
   );
@@ -9239,28 +9239,28 @@ function SubsectionContainer5() {
 
 function SubsectionContainer8() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Subsection Container">
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col items-center size-full">
-        <div className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-center leading-[0] p-[24px] relative text-[#5b6a79] text-[16px] text-center w-full">
-          <div className="flex flex-col justify-center relative shrink-0 w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Supported more client programmes without increasing headcount</p>
-          </div>
-          <div className="flex flex-col justify-center relative shrink-0 w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Contributed to a 30% revenue increase in the first year after rollout</p>
-          </div>
-        </div>
-      </div>
+    <div className="relative shrink-0 w-full" data-name="Subsection Container">
+      <ul className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
+        <li className="flex gap-[10px] items-start">
+          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
+          <span className="leading-[26px] whitespace-pre-wrap">Supported more client programmes without increasing headcount</span>
+        </li>
+        <li className="flex gap-[10px] items-start">
+          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
+          <span className="leading-[26px] whitespace-pre-wrap">Contributed to a 30% revenue increase in the first year after rollout</span>
+        </li>
+      </ul>
     </div>
   );
 }
 
 function SubsectionContainer7() {
   return (
-    <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full" data-name="Subsection Container">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[24px] text-center tracking-[-0.424px] w-full">
-        <p className="leading-[31.8px] whitespace-pre-wrap">Business</p>
+    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="Subsection Container">
+      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.3px] w-full">
+        <p className="leading-[30px] whitespace-pre-wrap">Business</p>
       </div>
+      <div aria-hidden="true" className="bg-[#d6dce1] h-px w-[56px]" />
       <SubsectionContainer8 />
     </div>
   );
@@ -9268,11 +9268,13 @@ function SubsectionContainer7() {
 
 function SectionContainer6() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full" data-name="Section Container">
       <SectionContainer7 />
-      <SectionContainer8 />
-      <SubsectionContainer5 />
-      <SubsectionContainer7 />
+      <div className="content-stretch grid grid-cols-3 gap-[36px] items-start w-full">
+        <SectionContainer8 />
+        <SubsectionContainer5 />
+        <SubsectionContainer7 />
+      </div>
     </div>
   );
 }
@@ -10312,7 +10314,7 @@ function MainContent() {
 
 export default function EngagementPlatform() {
   return (
-    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[80px] relative w-full" data-name="Engagement Platform">
+    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[110px] relative w-full" data-name="Engagement Platform">
       <MainContent />
       <Footer />
       <NavBar />

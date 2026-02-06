@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 
 const CLICKABLE = "a, button, [role='button'], input, textarea, select, label, [onclick], [tabindex]";
 const THUMBNAIL = '[data-name="Thumbnail"], [data-name="AI Thumbnail"], [data-name="Project"]';
+const VISUAL = '[data-cursor="visual"]';
+const COMING_SOON = '[data-cursor="coming-soon"]';
 
-type CursorMode = "default" | "clickable" | "case-study";
+type CursorMode = "default" | "clickable" | "case-study" | "visual" | "coming-soon";
 
 const DOT_SIZE = 15.84;
 
@@ -18,8 +20,12 @@ export default function CustomCursor() {
       if (!visible) setVisible(true);
 
       const target = e.target as Element;
-      if (target?.closest(THUMBNAIL)) {
+      if (target?.closest(COMING_SOON)) {
+        setMode("coming-soon");
+      } else if (target?.closest(THUMBNAIL)) {
         setMode("case-study");
+      } else if (target?.closest(VISUAL)) {
+        setMode("visual");
       } else if (target?.closest(CLICKABLE)) {
         setMode("clickable");
       } else {
@@ -42,10 +48,12 @@ export default function CustomCursor() {
   }, [visible]);
 
   const isCaseStudy = mode === "case-study";
+  const isComingSoon = mode === "coming-soon";
   const isClickable = mode === "clickable";
+  const isVisual = mode === "visual";
 
   const dotScale = isClickable ? 1.2 : 1;
-  const baseOpacity = isClickable ? 0.6 : 1;
+  const baseOpacity = isClickable ? 0.6 : isVisual ? 0.5 : 1;
 
   return (
     <div
@@ -66,9 +74,9 @@ export default function CustomCursor() {
         letterSpacing: "0.5px",
         textTransform: "uppercase",
         whiteSpace: "nowrap",
-        width: isCaseStudy ? "auto" : DOT_SIZE,
-        height: isCaseStudy ? "auto" : DOT_SIZE,
-        padding: isCaseStudy ? "8px 16px" : 0,
+        width: isCaseStudy || isComingSoon ? "auto" : DOT_SIZE,
+        height: isCaseStudy || isComingSoon ? "auto" : DOT_SIZE,
+        padding: isCaseStudy || isComingSoon ? "8px 16px" : 0,
         borderRadius: 999,
         pointerEvents: "none",
         zIndex: 99999,
@@ -76,7 +84,7 @@ export default function CustomCursor() {
         overflow: "hidden",
         willChange: "transform, opacity",
         transition:
-          "transform 0.18s ease-out, width 0.35s cubic-bezier(0.4, 0, 0.2, 1), height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s cubic-bezier(0.4, 0, 0.2, 1), gap 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.18s ease-out",
+          "transform 0.1s ease-out, width 0.25s cubic-bezier(0.4, 0, 0.2, 1), height 0.25s cubic-bezier(0.4, 0, 0.2, 1), padding 0.25s cubic-bezier(0.4, 0, 0.2, 1), gap 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.1s ease-out",
       }}
     >
       <svg
@@ -93,7 +101,7 @@ export default function CustomCursor() {
           opacity: isCaseStudy ? 1 : 0,
           width: isCaseStudy ? 16 : 0,
           transition:
-            "opacity 0.3s ease 0.1s, width 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+            "opacity 0.2s ease 0.05s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
@@ -101,14 +109,14 @@ export default function CustomCursor() {
       </svg>
       <span
         style={{
-          opacity: isCaseStudy ? 1 : 0,
-          maxWidth: isCaseStudy ? 200 : 0,
+          opacity: isCaseStudy || isComingSoon ? 1 : 0,
+          maxWidth: isCaseStudy || isComingSoon ? 200 : 0,
           transition:
-            "opacity 0.3s ease 0.12s, max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+            "opacity 0.2s ease 0.06s, max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
           overflow: "hidden",
         }}
       >
-        View Case Study
+        {isComingSoon ? "Coming Soon!" : "View Case Study"}
       </span>
     </div>
   );

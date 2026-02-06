@@ -1,4 +1,10 @@
+import { useState } from "react";
 import imgSue1 from "../assets/sue-final.png";
+import imgFigmaLogo from "../assets/1Figma Logo.png";
+import imgShipIt from "../assets/2Ship It.png";
+import imgStar from "../assets/3Star.png";
+import imgSmile from "../assets/4Smile.png";
+import imgScale from "../assets/5Scale.png";
 import imgImage from "../assets/65cb38abb69a5f063af2be9ea0a5e5ab405bb5eb.png";
 import imgImage1 from "../assets/e665e2a761e07a38d4849d612f31276b1a754fc0.png";
 import { Link as RouterLink } from "react-router";
@@ -48,17 +54,37 @@ function ProfileInfoContainer() {
 function ProfileImageContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0" data-name="Profile Image Container">
-      <div className="h-[221px] relative shrink-0 w-[214px]" data-name="sue 1">
+      <div className="h-[221px] relative shrink-0 w-[214px] perspective-800" data-name="sue 1">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSue1} />
+        <FloatingVisual className="absolute left-[-4px] bottom-[38px] w-[48px] h-auto float-soft" src={imgFigmaLogo} axis="z" />
+        <FloatingVisual className="absolute left-[-11px] top-[35px] w-[62px] h-auto float-soft float-soft-delayed-1" src={imgShipIt} />
+        <FloatingVisual className="absolute right-[13px] top-[-24px] w-[42px] h-auto float-soft float-soft-delayed-2" src={imgStar} />
+        <FloatingVisual className="absolute right-[-20px] top-[74px] w-[50px] h-auto float-soft float-soft-delayed-3" src={imgSmile} axis="z" />
+        <FloatingVisual className="absolute right-[27px] bottom-[7px] w-[42px] h-auto float-soft float-soft-delayed-4" src={imgScale} />
       </div>
       <ProfileInfoContainer />
     </div>
   );
 }
 
+function FloatingVisual({ className, src, axis = "y" }: { className: string; src: string; axis?: "x" | "y" | "z" }) {
+  const [spinning, setSpinning] = useState(false);
+
+  return (
+    <img
+      alt=""
+      className={`${className} cursor-pointer hover-pop ${spinning ? (axis === "x" ? "spin-x" : axis === "z" ? "spin-z" : "spin-y") : ""}`}
+      src={src}
+      data-cursor="visual"
+      onClick={() => setSpinning(true)}
+      onAnimationEnd={() => setSpinning(false)}
+    />
+  );
+}
+
 function ProfileContainer() {
   return (
-    <div className="content-stretch flex flex-col gap-[34px] h-[478px] items-center self-center max-w-[619px] mt-[129px] w-[619px]" data-name="Profile Container">
+    <div className="content-stretch flex flex-col gap-[34px] h-[478px] items-center self-center max-w-[619px] mt-[160px] w-[619px]" data-name="Profile Container">
       <ProfileImageContainer />
       <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] min-w-full relative shrink-0 text-[#32404f] text-[0px] text-center tracking-[-1.04px] w-[min-content]">
         <p className="text-[50px] whitespace-pre-wrap">
@@ -206,7 +232,7 @@ function InfoContainer3() {
   return (
     <div className="content-stretch flex font-normal items-center justify-between leading-[0] relative shrink-0 w-full whitespace-nowrap" data-name="Info Container">
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.64px]">
-        <p className="leading-[38px]">{`Rewards & Recognition Engagement Product`}</p>
+        <p className="leading-[38px]">Design Library</p>
       </div>
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
         <p className="leading-[22.5px]">B2B SaaS • web app</p>
