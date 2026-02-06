@@ -1,0 +1,50 @@
+/* Geist Mono font mappings */
+@font-face {
+  font-family: 'Geist_Mono:Regular';
+  src: url('./fonts/GeistMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist_Mono:Medium';
+  src: url('./fonts/GeistMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Map Geist:Regular and Geist:Medium to Geist Mono */
+@font-face {
+  font-family: 'Geist:Regular';
+  src: url('./fonts/GeistMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist:Medium';
+  src: url('./fonts/GeistMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Newsreader font mappings */
+@font-face {
+  font-family: 'Newsreader:Regular';
+  src: url('./fonts/Newsreader-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Newsreader:Italic';
+  src: url('./fonts/Newsreader-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
