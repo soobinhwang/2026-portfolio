@@ -3,6 +3,7 @@ import LandingPage from "../imports/LandingPage";
 import AiProjectPage from "../imports/AiProjectPage";
 import AboutPage from "../imports/AboutPage";
 import EngagementPlatform from "../imports/EngagementPlatform";
+import AiProject1Detail from "../imports/AiProject1Detail";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ export const router = createBrowserRouter([
   {
     path: "/ai",
     Component: AiProjectPage,
+  },
+  {
+    path: "/ai/project-1",
+    Component: AiProject1Detail,
   },
   {
     path: "/about",

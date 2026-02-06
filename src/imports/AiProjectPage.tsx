@@ -72,7 +72,9 @@ function Project1() {
 function ProjectsRow() {
   return (
     <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full" data-name="Projects row">
-      <Project />
+      <RouterLink to="/ai/project-1" className="flex-[1_0_0] min-h-px min-w-px" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Project />
+      </RouterLink>
       <Project1 />
     </div>
   );
