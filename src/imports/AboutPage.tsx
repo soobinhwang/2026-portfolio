@@ -1,10 +1,5 @@
 import svgPaths from "./svg-81bzjcs43u";
-import imgPolaroidBase from "../assets/5e3112297abffe7af495410619ea40937d2c708e.png";
-import imgProfileImage from "../assets/6fced779523ae18a70e877f1d8dc5a325889eff6.png";
-import imgProfileImage1 from "../assets/9ab1caaf0c2d5448addfae5eb9b745fd97761ed9.png";
-import imgProfileTape from "../assets/c0075c655c9094a95692c615a7fdcd5d5b731b22.png";
-import imgWritingThumbnail from "../assets/57bf94777d60d0c33d7d650f5ba64792da9c8031.png";
-import imgAboutPage from "../assets/1bf73234501ca8343e01e4bf4a0305fb61a429d8.png";
+import imgProfileContainer from "../assets/Profile Container.png";
 import { Link as RouterLink } from "react-router";
 
 function StatusIndicator() {
@@ -35,33 +30,8 @@ function StatusIndicator() {
 
 function ProfileContainer() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid items-[start] justify-items-[start] leading-[0] relative shrink-0" data-name="Profile Container">
-      <div className="col-1 h-[450.002px] ml-0 mt-[26px] relative row-1 w-[390.919px]" data-name="Polaroid Base">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[121.73%] left-[-6.02%] max-w-none top-[0.05%] w-[112.11%]" src={imgPolaroidBase} />
-        </div>
-      </div>
-      <div className="-translate-x-1/2 -translate-y-1/2 col-1 flex flex-col font-['Figma_Hand:Regular',sans-serif] justify-center ml-[181.86px] mt-[441.2px] not-italic relative row-1 text-[#1a1816] text-[24.711px] text-center tracking-[-0.5436px] whitespace-nowrap">
-        <p className="leading-[1.3]">Sue Hwang</p>
-      </div>
-      <div className="col-1 ml-[15.06px] mt-[41.07px] relative row-1 size-[360.776px]" data-name="Profile Image">
-        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-          <img alt="" className="absolute max-w-none object-cover size-full" src={imgProfileImage} />
-          <img alt="" className="absolute max-w-none object-cover size-full" src={imgProfileImage1} />
-        </div>
-      </div>
-      <div className="col-1 flex h-[51.8px] items-center justify-center ml-[100.49px] mt-0 relative row-1 w-[189.174px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "18" } as React.CSSProperties}>
-        <div className="-rotate-90 flex-none">
-          <div className="h-[189.174px] relative w-[51.8px]" data-name="Profile Tape">
-            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgProfileTape} />
-          </div>
-        </div>
-      </div>
-      <div className="col-1 flex items-center justify-center ml-[261.69px] mt-[421.44px] relative row-1 size-[37.345px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "18" } as React.CSSProperties}>
-        <div className="flex-none rotate-[22.65deg]">
-          <StatusIndicator />
-        </div>
-      </div>
+    <div className="relative shrink-0" data-name="Profile Container">
+      <img alt="Sue Hwang" className="w-[300px] h-auto" src={imgProfileContainer} />
     </div>
   );
 }
@@ -69,10 +39,10 @@ function ProfileContainer() {
 function ProfileDescriptionContainer() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start relative shrink-0 w-full" data-name="Profile Description Container">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[39px] tracking-[-1.04px] w-full">
+      <div className="flex flex-col font-newsreader justify-center leading-[0] relative shrink-0 text-[#32404f] text-[39px] tracking-[-1.04px] w-full">
         <p className="leading-[44px] whitespace-pre-wrap">Sue is a Product Designer</p>
       </div>
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] justify-center leading-[24px] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-full whitespace-pre-wrap">
+      <div className="flex flex-col font-geist justify-center leading-[24px] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-full whitespace-pre-wrap">
         <p className="mb-0">a User Experience Designer who believes growth is something we do together. I love creating spaces where people can learn from each other, stay curious, and feel comfortable asking any questions.</p>
         <p className="mb-0">&nbsp;</p>
         <p>
@@ -195,7 +165,7 @@ function ContentColumn() {
 
 function MainContainer() {
   return (
-    <div className="content-stretch flex flex-col gap-[120px] items-center relative shrink-0 w-full" data-name="Main Container">
+    <div className="content-stretch flex flex-col gap-[56px] items-center relative shrink-0 w-full" data-name="Main Container">
       <ProfileContainer />
       <ContentColumn />
     </div>
@@ -205,7 +175,7 @@ function MainContainer() {
 function DownloadResumeHeading() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Download Resume Heading">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[24px]">Download Resume</p>
       </div>
     </div>
@@ -241,7 +211,6 @@ function DownloadResumeContainer() {
         <div aria-hidden="true" className="absolute border border-[#e6e6e6] border-solid inset-0 pointer-events-none rounded-[24px]" />
       </div>
       <DownloadResumeTextContainer />
-      <ArrowDown />
     </div>
   );
 }
@@ -257,7 +226,7 @@ function DownloadResumeLink() {
 function ExperienceHeaderContainer() {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="Experience Header Container">
-      <div className="flex flex-col font-['Geist_Mono:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[20px] tracking-[-1.04px] uppercase whitespace-nowrap">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[20px] tracking-[-1.04px] uppercase whitespace-nowrap">
         <p className="leading-[normal]">experience</p>
       </div>
       <DownloadResumeLink />
@@ -267,7 +236,7 @@ function ExperienceHeaderContainer() {
 
 function MentorshipEventContainer() {
   return (
-    <div className="content-stretch flex flex-col font-['Geist:Regular',sans-serif] font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
         <p className="leading-[24px]">KOTRA Job Fair</p>
       </div>
@@ -281,7 +250,7 @@ function MentorshipEventContainer() {
 function MentorshipContent() {
   return (
     <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Mentorship Content">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#1e242a] text-[16px]">
+      <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Career Mentor</p>
       </div>
       <MentorshipEventContainer />
@@ -291,7 +260,7 @@ function MentorshipContent() {
 
 function MentorshipEventContainer1() {
   return (
-    <div className="content-stretch flex flex-col font-['Geist:Regular',sans-serif] font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
         <p className="leading-[24px]">KOTRA Job Fair</p>
       </div>
@@ -305,7 +274,7 @@ function MentorshipEventContainer1() {
 function MentorshipContent1() {
   return (
     <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Mentorship Content">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#1e242a] text-[16px]">
+      <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Career Mentor</p>
       </div>
       <MentorshipEventContainer1 />
@@ -315,7 +284,7 @@ function MentorshipContent1() {
 
 function MentorshipEventContainer2() {
   return (
-    <div className="content-stretch flex flex-col font-['Geist:Regular',sans-serif] font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
         <p className="leading-[24px]">Euonia UX Hackathon</p>
       </div>
@@ -329,7 +298,7 @@ function MentorshipEventContainer2() {
 function MentorshipContent2() {
   return (
     <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Mentorship Content">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#1e242a] text-[16px]">
+      <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Hackathon Mentor</p>
       </div>
       <MentorshipEventContainer2 />
@@ -350,7 +319,7 @@ function MentorshipContentContainer() {
 function MentorshipLine() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start pb-[48px] relative shrink-0 w-full" data-name="Mentorship Line">
-      <div className="flex flex-col font-['Geist_Mono:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
         <p className="leading-[24px] whitespace-pre-wrap">MENTORSHIP</p>
       </div>
       <MentorshipContentContainer />
@@ -376,7 +345,7 @@ function ArrowNarrowUpRight({ className }: { className?: string }) {
 function AwardsProjectContainer() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">Metaverse Therapeutic Web App</p>
       </div>
       <ArrowNarrowUpRight />
@@ -387,7 +356,7 @@ function AwardsProjectContainer() {
 function AwardsEventContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-name="Awards Event Container">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[16px] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">1st Place</p>
       </div>
       <AwardsProjectContainer />
@@ -397,7 +366,7 @@ function AwardsEventContainer() {
 
 function AwardsEventContainer1() {
   return (
-    <div className="content-stretch flex flex-col font-['Geist:Regular',sans-serif] font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
         <p className="leading-[24px]">Bizhacks</p>
       </div>
@@ -432,7 +401,7 @@ function AwardsProjectIcon() {
 function AwardsProjectContainer1() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">Ethical Shopping App</p>
       </div>
       <AwardsProjectIcon />
@@ -443,7 +412,7 @@ function AwardsProjectContainer1() {
 function AwardsEventContainer2() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-name="Awards Event Container">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[16px] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">2nd Place</p>
       </div>
       <AwardsProjectContainer1 />
@@ -453,11 +422,11 @@ function AwardsEventContainer2() {
 
 function AwardsEventContainer3() {
   return (
-    <div className="content-stretch flex flex-col font-['Geist:Regular',sans-serif] font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
         <p className="text-[14px]">
           <span className="leading-[24px]">{`Patagonia `}</span>
-          <span className="font-['Geist:ExtraLight',sans-serif] font-extralight leading-[24px]">X</span>
+          <span className="font-geist font-extralight leading-[24px]">X</span>
           <span className="leading-[24px]">{` Adobe`}</span>
         </p>
       </div>
@@ -492,7 +461,7 @@ function AwardsProjectIcon1() {
 function AwardsProjectContainer2() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">Volunteer Matching App</p>
       </div>
       <AwardsProjectIcon1 />
@@ -503,7 +472,7 @@ function AwardsProjectContainer2() {
 function AwardsEventContainer4() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-name="Awards Event Container">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[16px] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">2nd Place</p>
       </div>
       <AwardsProjectContainer2 />
@@ -513,11 +482,11 @@ function AwardsEventContainer4() {
 
 function AwardsEventContainer5() {
   return (
-    <div className="content-stretch flex flex-col font-['Geist:Regular',sans-serif] font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
         <p className="text-[14px]">
           <span className="leading-[24px]">{`Amazon `}</span>
-          <span className="font-['Geist:ExtraLight',sans-serif] font-extralight leading-[24px]">X</span>
+          <span className="font-geist font-extralight leading-[24px]">X</span>
           <span className="leading-[24px]">{` Adobe`}</span>
         </p>
       </div>
@@ -552,7 +521,7 @@ function AwardsProjectIcon2() {
 function AwardsProjectContainer3() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">English Learning Platform UX Improvement</p>
       </div>
       <AwardsProjectIcon2 />
@@ -563,7 +532,7 @@ function AwardsProjectContainer3() {
 function AwardsEventContainer6() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-name="Awards Event Container">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[16px] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">3rd Place</p>
       </div>
       <AwardsProjectContainer3 />
@@ -573,7 +542,7 @@ function AwardsEventContainer6() {
 
 function AwardsEventContainer7() {
   return (
-    <div className="content-stretch flex flex-col font-['Geist:Regular',sans-serif] font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
         <p className="leading-[24px]">{`Ringle  `}</p>
       </div>
@@ -608,7 +577,7 @@ function AwardsProjectIcon3() {
 function AwardsProjectContainer4() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">Trustworthy Election Content App</p>
       </div>
       <AwardsProjectIcon3 />
@@ -619,7 +588,7 @@ function AwardsProjectContainer4() {
 function AwardsEventContainer8() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-name="Awards Event Container">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[16px] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">Top 10 Finalist</p>
       </div>
       <AwardsProjectContainer4 />
@@ -629,11 +598,11 @@ function AwardsEventContainer8() {
 
 function AwardsEventContainer9() {
   return (
-    <div className="content-stretch flex flex-col font-['Geist:Regular',sans-serif] font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
         <p className="text-[14px]">
           <span className="leading-[24px]">{`NYT `}</span>
-          <span className="font-['Geist:ExtraLight',sans-serif] font-extralight leading-[24px]">X</span>
+          <span className="font-geist font-extralight leading-[24px]">X</span>
           <span className="leading-[24px]">{` Adobe`}</span>
         </p>
       </div>
@@ -668,7 +637,7 @@ function AwardsProjectIcon4() {
 function AwardsProjectContainer5() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">Recycling Educating App</p>
       </div>
       <AwardsProjectIcon4 />
@@ -679,7 +648,7 @@ function AwardsProjectContainer5() {
 function AwardsEventContainer10() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-name="Awards Event Container">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[16px] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.25px] whitespace-nowrap">
         <p className="leading-[24px]">Top 10 Finalist</p>
       </div>
       <AwardsProjectContainer5 />
@@ -689,11 +658,11 @@ function AwardsEventContainer10() {
 
 function AwardsEventContainer11() {
   return (
-    <div className="content-stretch flex flex-col font-['Geist:Regular',sans-serif] font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
         <p className="text-[14px]">
           <span className="leading-[24px]">{`Target `}</span>
-          <span className="font-['Geist:ExtraLight',sans-serif] font-extralight leading-[24px]">X</span>
+          <span className="font-geist font-extralight leading-[24px]">X</span>
           <span className="leading-[24px]">{` Adobe`}</span>
         </p>
       </div>
@@ -729,7 +698,7 @@ function AwardsContentContainer() {
 function AwardsContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start pb-[48px] relative shrink-0 w-full" data-name="Awards Container">
-      <div className="flex flex-col font-['Geist_Mono:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
         <p className="leading-[24px] whitespace-pre-wrap">AWARDS</p>
       </div>
       <AwardsContentContainer />
@@ -740,11 +709,11 @@ function AwardsContainer() {
 
 function PublicSpeakingEventContainer() {
   return (
-    <div className="content-stretch flex flex-col font-['Geist:Regular',sans-serif] font-normal gap-[4px] items-end relative shrink-0 text-[rgba(50,64,79,0.58)]" data-name="Public Speaking Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[rgba(50,64,79,0.58)]" data-name="Public Speaking Event Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
         <p className="text-[14px]">
           <span className="leading-[24px]">{`Target `}</span>
-          <span className="font-['Geist:ExtraLight',sans-serif] font-extralight leading-[24px]">X</span>
+          <span className="font-geist font-extralight leading-[24px]">X</span>
           <span className="leading-[24px]">{` Adobe`}</span>
         </p>
       </div>
@@ -758,7 +727,7 @@ function PublicSpeakingEventContainer() {
 function PublicSpeakingContent() {
   return (
     <div className="content-stretch flex items-start justify-between relative shrink-0 tracking-[-0.25px] w-full whitespace-nowrap" data-name="Public Speaking Content">
-      <div className="flex flex-col font-['Geist:Medium',sans-serif] font-medium justify-center relative shrink-0 text-[#1e242a] text-[16px]">
+      <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Thriving Success in Design Competitions</p>
       </div>
       <PublicSpeakingEventContainer />
@@ -769,7 +738,7 @@ function PublicSpeakingContent() {
 function PublicSpeakingContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start leading-[0] relative shrink-0 w-full" data-name="Public Speaking Container">
-      <div className="flex flex-col font-['Geist_Mono:Regular',sans-serif] font-normal justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
+      <div className="flex flex-col font-geist-mono font-normal justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
         <p className="leading-[24px] whitespace-pre-wrap">PUBLIC SPEAKING</p>
       </div>
       <PublicSpeakingContent />
@@ -799,7 +768,7 @@ function ExperienceContainer() {
 function WritingThumbnail() {
   return (
     <div className="relative shrink-0 size-[90px]" data-name="Writing Thumbnail">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWritingThumbnail} />
+      <div className="absolute inset-0 bg-[#e9ebef]" />
     </div>
   );
 }
@@ -807,10 +776,10 @@ function WritingThumbnail() {
 function Frame() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col font-normal gap-[16px] items-start leading-[0] min-h-px min-w-px relative">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center min-w-full relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.64px] w-[min-content]">
+      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.64px] w-[min-content]">
         <p className="leading-[normal] whitespace-pre-wrap">The power of networking for entrepreneurs</p>
       </div>
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] justify-center min-w-full relative shrink-0 text-[#858e97] text-[15px] w-[min-content]">
+      <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[#858e97] text-[15px] w-[min-content]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Lorem ipsum dolor sit amet consectetur. Tellus tempus pharetra tristique ipsum pellentesque</p>
       </div>
     </div>
@@ -829,7 +798,7 @@ function WritingDescription() {
 function WritingThumbnail1() {
   return (
     <div className="relative shrink-0 size-[90px]" data-name="Writing Thumbnail">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWritingThumbnail} />
+      <div className="absolute inset-0 bg-[#e9ebef]" />
     </div>
   );
 }
@@ -837,10 +806,10 @@ function WritingThumbnail1() {
 function Frame1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col font-normal gap-[16px] items-start leading-[0] min-h-px min-w-px relative">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center min-w-full relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.64px] w-[min-content]">
+      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.64px] w-[min-content]">
         <p className="leading-[normal] whitespace-pre-wrap">The power of networking for entrepreneurs</p>
       </div>
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] justify-center min-w-full relative shrink-0 text-[#858e97] text-[15px] w-[min-content]">
+      <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[#858e97] text-[15px] w-[min-content]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Lorem ipsum dolor sit amet consectetur. Tellus tempus pharetra tristique ipsum pellentesque</p>
       </div>
     </div>
@@ -859,7 +828,7 @@ function WritingDescription1() {
 function WritingThumbnail2() {
   return (
     <div className="relative shrink-0 size-[90px]" data-name="Writing Thumbnail">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWritingThumbnail} />
+      <div className="absolute inset-0 bg-[#e9ebef]" />
     </div>
   );
 }
@@ -867,10 +836,10 @@ function WritingThumbnail2() {
 function Frame2() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col font-normal gap-[16px] items-start leading-[0] min-h-px min-w-px relative">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center min-w-full relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.64px] w-[min-content]">
+      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.64px] w-[min-content]">
         <p className="leading-[normal] whitespace-pre-wrap">The power of networking for entrepreneurs</p>
       </div>
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] justify-center min-w-full relative shrink-0 text-[#858e97] text-[15px] w-[min-content]">
+      <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[#858e97] text-[15px] w-[min-content]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Lorem ipsum dolor sit amet consectetur. Tellus tempus pharetra tristique ipsum pellentesque</p>
       </div>
     </div>
@@ -889,7 +858,7 @@ function WritingDescription2() {
 function WritingThumbnail3() {
   return (
     <div className="relative shrink-0 size-[90px]" data-name="Writing Thumbnail">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWritingThumbnail} />
+      <div className="absolute inset-0 bg-[#e9ebef]" />
     </div>
   );
 }
@@ -897,10 +866,10 @@ function WritingThumbnail3() {
 function Frame3() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col font-normal gap-[16px] items-start leading-[0] min-h-px min-w-px relative">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center min-w-full relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.64px] w-[min-content]">
+      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.64px] w-[min-content]">
         <p className="leading-[normal] whitespace-pre-wrap">The power of networking for entrepreneurs</p>
       </div>
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] justify-center min-w-full relative shrink-0 text-[#858e97] text-[15px] w-[min-content]">
+      <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[#858e97] text-[15px] w-[min-content]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Lorem ipsum dolor sit amet consectetur. Tellus tempus pharetra tristique ipsum pellentesque</p>
       </div>
     </div>
@@ -919,7 +888,7 @@ function WritingDescription3() {
 function WritingThumbnail4() {
   return (
     <div className="relative shrink-0 size-[90px]" data-name="Writing Thumbnail">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWritingThumbnail} />
+      <div className="absolute inset-0 bg-[#e9ebef]" />
     </div>
   );
 }
@@ -927,10 +896,10 @@ function WritingThumbnail4() {
 function Frame4() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col font-normal gap-[16px] items-start leading-[0] min-h-px min-w-px relative">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center min-w-full relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.64px] w-[min-content]">
+      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.64px] w-[min-content]">
         <p className="leading-[normal] whitespace-pre-wrap">The power of networking for entrepreneurs</p>
       </div>
-      <div className="flex flex-col font-['Geist:Regular',sans-serif] justify-center min-w-full relative shrink-0 text-[#858e97] text-[15px] w-[min-content]">
+      <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[#858e97] text-[15px] w-[min-content]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Lorem ipsum dolor sit amet consectetur. Tellus tempus pharetra tristique ipsum pellentesque</p>
       </div>
     </div>
@@ -961,7 +930,7 @@ function WritingsContentContainer() {
 function WritingsContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start max-w-[1200px] relative shrink-0 w-full" data-name="Writings Container">
-      <div className="flex flex-col font-['Geist_Mono:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[20px] tracking-[-1.04px] uppercase w-full">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[20px] tracking-[-1.04px] uppercase w-full">
         <p className="leading-[normal] whitespace-pre-wrap">Writings</p>
       </div>
       <WritingsContentContainer />
@@ -998,7 +967,7 @@ function MainFrame() {
 function Link1() {
   return (
     <RouterLink to="/" className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <div className="flex flex-col font-['Geist_Mono:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
+      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[24px]">Work</p>
       </div>
     </RouterLink>
@@ -1024,7 +993,7 @@ function Link() {
 function LinkContainer() {
   return (
     <div className="content-stretch flex items-center justify-center relative shrink-0" data-name="Link Container">
-      <div className="flex flex-col font-['Geist_Mono:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
+      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[24px]">AI</p>
       </div>
     </div>
@@ -1058,7 +1027,7 @@ function Link2() {
 function Link5() {
   return (
     <div className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link">
-      <div className="flex flex-col font-['Geist_Mono:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
+      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[24px]">About</p>
       </div>
     </div>
@@ -1084,7 +1053,7 @@ function Link4() {
 function Link7() {
   return (
     <div className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link">
-      <div className="flex flex-col font-['Geist_Mono:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
+      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[24px]">Resume</p>
       </div>
     </div>
@@ -1122,7 +1091,7 @@ function Container() {
   return (
     <div className="bg-white content-stretch flex items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0" data-name="Container">
       <Links />
-      <div className="absolute inset-0 rounded-[24px]" data-name="Border">
+      <div className="absolute inset-0 rounded-[24px] pointer-events-none" data-name="Border">
         <div aria-hidden="true" className="absolute border border-[#e6e6e6] border-solid inset-0 pointer-events-none rounded-[24px]" />
       </div>
     </div>
@@ -1139,7 +1108,7 @@ function NavDesktop() {
 
 function MainNavigation() {
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[40px]" data-name="Main Navigation">
+    <div className="-translate-x-1/2 fixed content-stretch flex flex-col items-start left-1/2 top-[40px] z-50" data-name="Main Navigation">
       <NavDesktop />
     </div>
   );
@@ -1147,7 +1116,7 @@ function MainNavigation() {
 
 export default function AboutPage() {
   return (
-    <div className="bg-size-[179px_574px,auto_auto] bg-top-left relative size-full" data-name="About Page" style={{ backgroundImage: `url('${imgAboutPage}'), linear-gradient(90deg, rgb(251, 253, 253) 0%, rgb(251, 253, 253) 100%)` }}>
+    <div className="bg-dot-grid min-h-screen relative w-full" data-name="About Page">
       <MainFrame />
       <MainNavigation />
     </div>

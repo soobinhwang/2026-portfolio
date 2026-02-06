@@ -1,14 +1,13 @@
-import imgAiProjectPage from "../assets/1bf73234501ca8343e01e4bf4a0305fb61a429d8.png";
 import { Link as RouterLink } from "react-router";
 
 function Header() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-[755px]" data-name="Header">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[0px] tracking-[-1.04px] w-full">
+      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[0px] tracking-[-1.04px] w-full">
         <p className="text-[39px] whitespace-pre-wrap">
-          <span className="leading-[44px] text-[#1e242a]">{`I use `}</span>
-          <span className="font-['Newsreader:Italic',sans-serif] font-normal italic leading-[44px] text-[#1e242a]">{`AI `}</span>
-          <span className="leading-[44px] text-[#1e242a]">as a thinking partner and productivity booster</span>
+          <span className="leading-[44px] text-[#32404f]">{`I use `}</span>
+          <span className="font-newsreader font-normal italic leading-[44px] text-[#32404f]">{`AI `}</span>
+          <span className="leading-[44px] text-[#32404f]">as a thinking partner and productivity booster</span>
           <span className="leading-[44px] text-[#808890]">{` to move faster from ambiguity to clarity.`}</span>
         </p>
       </div>
@@ -23,10 +22,10 @@ function AiThumbnail() {
 function ProjectDesc() {
   return (
     <div className="content-center flex flex-wrap font-normal gap-[8px] items-center justify-between leading-[0] relative shrink-0 w-full" data-name="Project Desc">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.64px] whitespace-nowrap">
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.64px] whitespace-nowrap">
         <p className="leading-[normal]">Lorem Ipsum</p>
       </div>
-      <div className="flex flex-col font-['Geist_Mono:Regular',sans-serif] justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-[162px]">
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-[162px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">B2B SaaS • web app</p>
       </div>
     </div>
@@ -50,10 +49,10 @@ function AiThumbnail1() {
 function ProjectDesc1() {
   return (
     <div className="content-center flex flex-wrap font-normal gap-[8px] items-center justify-between leading-[0] relative shrink-0 w-full" data-name="Project Desc">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.64px] whitespace-nowrap">
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.64px] whitespace-nowrap">
         <p className="leading-[normal]">Lorem Ipsum</p>
       </div>
-      <div className="flex flex-col font-['Geist_Mono:Regular',sans-serif] justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-[162px]">
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-[162px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">B2B SaaS • web app</p>
       </div>
     </div>
@@ -86,10 +85,10 @@ function AiThumbnail2() {
 function ProjectDesc2() {
   return (
     <div className="content-center flex flex-wrap font-normal gap-[8px] items-center justify-between leading-[0] relative shrink-0 w-full" data-name="Project Desc">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.64px] whitespace-nowrap">
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.64px] whitespace-nowrap">
         <p className="leading-[normal]">Lorem Ipsum</p>
       </div>
-      <div className="flex flex-col font-['Geist_Mono:Regular',sans-serif] justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-[162px]">
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-[162px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">B2B SaaS • web app</p>
       </div>
     </div>
@@ -113,10 +112,10 @@ function AiThumbnail3() {
 function ProjectDesc3() {
   return (
     <div className="content-center flex flex-wrap font-normal gap-[8px] items-center justify-between leading-[0] relative shrink-0 w-full" data-name="Project Desc">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.64px] whitespace-nowrap">
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.64px] whitespace-nowrap">
         <p className="leading-[normal]">Lorem Ipsum</p>
       </div>
-      <div className="flex flex-col font-['Geist_Mono:Regular',sans-serif] justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-[162px]">
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-[162px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">B2B SaaS • web app</p>
       </div>
     </div>
@@ -140,10 +139,10 @@ function AiThumbnail4() {
 function ProjectDesc4() {
   return (
     <div className="content-center flex flex-wrap font-normal gap-[8px] items-center justify-between leading-[0] relative shrink-0 w-full" data-name="Project Desc">
-      <div className="flex flex-col font-['Newsreader:Regular',sans-serif] justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.64px] whitespace-nowrap">
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.64px] whitespace-nowrap">
         <p className="leading-[normal]">Lorem Ipsum</p>
       </div>
-      <div className="flex flex-col font-['Geist_Mono:Regular',sans-serif] justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-[162px]">
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[15px] uppercase w-[162px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">B2B SaaS • web app</p>
       </div>
     </div>
@@ -191,7 +190,7 @@ function Container() {
 function Link1() {
   return (
     <div className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link">
-      <div className="flex flex-col font-['Geist_Mono:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
+      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[24px]">Work</p>
       </div>
     </div>
@@ -217,7 +216,7 @@ function Link() {
 function LinkContainer() {
   return (
     <div className="content-stretch flex items-center justify-center relative shrink-0" data-name="Link Container">
-      <div className="flex flex-col font-['Geist_Mono:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
+      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[24px]">AI</p>
       </div>
     </div>
@@ -251,7 +250,7 @@ function Link2() {
 function Link5() {
   return (
     <div className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link">
-      <div className="flex flex-col font-['Geist_Mono:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
+      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[24px]">About</p>
       </div>
     </div>
@@ -277,7 +276,7 @@ function Link4() {
 function Link7() {
   return (
     <div className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link">
-      <div className="flex flex-col font-['Geist_Mono:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
+      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[24px]">Resume</p>
       </div>
     </div>
@@ -315,7 +314,7 @@ function Container1() {
   return (
     <div className="bg-white content-stretch flex items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0" data-name="Container">
       <Links />
-      <div className="absolute inset-0 rounded-[24px]" data-name="Border">
+      <div className="absolute inset-0 rounded-[24px] pointer-events-none" data-name="Border">
         <div aria-hidden="true" className="absolute border border-[#e6e6e6] border-solid inset-0 pointer-events-none rounded-[24px]" />
       </div>
     </div>
@@ -332,7 +331,7 @@ function NavDesktop() {
 
 function MainNavigation() {
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-start left-1/2 top-[40px]" data-name="Main Navigation">
+    <div className="-translate-x-1/2 fixed content-stretch flex flex-col items-start left-1/2 top-[40px] z-50" data-name="Main Navigation">
       <NavDesktop />
     </div>
   );
@@ -340,7 +339,7 @@ function MainNavigation() {
 
 export default function AiProjectPage() {
   return (
-    <div className="bg-size-[179px_574px,auto_auto] bg-top-left relative size-full" data-name="AI Project Page" style={{ backgroundImage: `url('${imgAiProjectPage}'), linear-gradient(90deg, rgb(251, 253, 253) 0%, rgb(251, 253, 253) 100%)` }}>
+    <div className="bg-dot-grid min-h-screen relative w-full" data-name="AI Project Page">
       <Container />
       <MainNavigation />
     </div>

@@ -3,8 +3,49 @@
 
 @import 'tw-animate-css';
 
+:root {
+  --dot-grid-color: rgba(30, 36, 42, 0.08);
+  --dot-grid-dot: 1.2px;
+  --dot-grid-size: 18px;
+}
+
+body {
+  background-color: #FBFDFD;
+  background-image: radial-gradient(circle, var(--dot-grid-color) var(--dot-grid-dot), transparent var(--dot-grid-dot));
+  background-size: var(--dot-grid-size) var(--dot-grid-size);
+  background-position: 0 0;
+}
+
+.bg-dot-grid {
+  background-color: #fbfdfd;
+  background-image: radial-gradient(circle, var(--dot-grid-color) var(--dot-grid-dot), transparent var(--dot-grid-dot));
+  background-size: var(--dot-grid-size) var(--dot-grid-size);
+  background-position: 0 0;
+}
+
+@layer utilities {
+  .font-geist-mono {
+    font-family: 'Geist Mono', monospace;
+  }
+
+  .font-geist {
+    font-family: 'Geist', sans-serif;
+  }
+
+  .font-newsreader {
+    font-family: 'Newsreader', serif;
+  }
+
+  .col-1 {
+    grid-column: 1;
+  }
+
+  .row-1 {
+    grid-row: 1;
+  }
+}
+
 *, *::before, *::after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url('../assets/Cursor-32.png'), auto !important;
 }
