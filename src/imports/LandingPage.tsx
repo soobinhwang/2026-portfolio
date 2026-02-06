@@ -2,6 +2,8 @@ import imgSue1 from "../assets/sue-final.png";
 import imgImage from "../assets/65cb38abb69a5f063af2be9ea0a5e5ab405bb5eb.png";
 import imgImage1 from "../assets/e665e2a761e07a38d4849d612f31276b1a754fc0.png";
 import { Link as RouterLink } from "react-router";
+import Footer from "../app/components/Footer";
+import NavBar from "../app/components/NavBar";
 
 function ProfileInfoItem() {
   return (
@@ -56,7 +58,7 @@ function ProfileImageContainer() {
 
 function ProfileContainer() {
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[34px] h-[478px] items-center left-[calc(50%+0.5px)] max-w-[619px] top-[129px] w-[619px]" data-name="Profile Container">
+    <div className="content-stretch flex flex-col gap-[34px] h-[478px] items-center self-center max-w-[619px] mt-[129px] w-[619px]" data-name="Profile Container">
       <ProfileImageContainer />
       <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] min-w-full relative shrink-0 text-[#32404f] text-[0px] text-center tracking-[-1.04px] w-[min-content]">
         <p className="text-[50px] whitespace-pre-wrap">
@@ -243,168 +245,20 @@ function MainFrame1() {
 
 function MainFrame() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[120px] items-start left-[120px] max-w-[1200px] top-[667px] w-[1200px]" data-name="Main Frame">
+    <div className="content-stretch flex flex-col gap-[120px] items-start ml-[120px] max-w-[1200px] mt-[60px] w-[1200px]" data-name="Main Frame">
       <MainFrame1 />
     </div>
   );
 }
 
-function Link1() {
-  return (
-    <div className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link">
-      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
-        <p className="leading-[24px]">Work</p>
-      </div>
-    </div>
-  );
-}
-
-function Container9() {
-  return (
-    <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Container">
-      <Link1 />
-    </div>
-  );
-}
-
-function Link() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Link">
-      <Container9 />
-    </div>
-  );
-}
-
-function LinkContainer() {
-  return (
-    <div className="content-stretch flex items-center justify-center relative shrink-0" data-name="Link Container">
-      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
-        <p className="leading-[24px]">AI</p>
-      </div>
-    </div>
-  );
-}
-
-function Link3() {
-  return (
-    <div className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link">
-      <LinkContainer />
-    </div>
-  );
-}
-
-function Container10() {
-  return (
-    <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Container">
-      <Link3 />
-    </div>
-  );
-}
-
-function Link2() {
-  return (
-    <RouterLink to="/ai" className="content-stretch flex flex-col items-start relative shrink-0" data-name="Link" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <Container10 />
-    </RouterLink>
-  );
-}
-
-function Link5() {
-  return (
-    <div className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link">
-      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
-        <p className="leading-[24px]">About</p>
-      </div>
-    </div>
-  );
-}
-
-function Container11() {
-  return (
-    <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Container">
-      <Link5 />
-    </div>
-  );
-}
-
-function Link4() {
-  return (
-    <RouterLink to="/about" className="content-stretch flex flex-col items-start relative shrink-0" data-name="Link" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <Container11 />
-    </RouterLink>
-  );
-}
-
-function Link7() {
-  return (
-    <div className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link">
-      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
-        <p className="leading-[24px]">Resume</p>
-      </div>
-    </div>
-  );
-}
-
-function Container12() {
-  return (
-    <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Container">
-      <Link7 />
-    </div>
-  );
-}
-
-function Link6() {
-  return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Link">
-      <Container12 />
-    </div>
-  );
-}
-
-function Links() {
-  return (
-    <div className="content-stretch flex gap-[16px] items-center justify-center relative shrink-0" data-name="Links">
-      <Link />
-      <Link2 />
-      <Link4 />
-      <Link6 />
-    </div>
-  );
-}
-
-function Container8() {
-  return (
-    <div className="bg-white content-stretch flex items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0" data-name="Container">
-      <Links />
-      <div className="absolute inset-0 rounded-[24px] pointer-events-none" data-name="Border">
-        <div aria-hidden="true" className="absolute border border-[#e6e6e6] border-solid inset-0 pointer-events-none rounded-[24px]" />
-      </div>
-    </div>
-  );
-}
-
-function NavDesktop() {
-  return (
-    <div className="content-stretch flex flex-col items-end justify-center relative shrink-0" data-name="Nav - Desktop">
-      <Container8 />
-    </div>
-  );
-}
-
-function MainNavigation() {
-  return (
-    <div className="-translate-x-1/2 fixed content-stretch flex flex-col items-start left-1/2 top-[40px] z-50" data-name="Main Navigation">
-      <NavDesktop />
-    </div>
-  );
-}
 
 export default function LandingPage() {
   return (
-    <div className="bg-dot-grid min-h-screen relative w-full" data-name="Landing Page">
+    <div className="bg-dot-grid min-h-screen flex flex-col relative w-full" data-name="Landing Page">
       <ProfileContainer />
       <MainFrame />
-      <MainNavigation />
+      <Footer />
+      <NavBar />
     </div>
   );
 }

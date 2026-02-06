@@ -1,5 +1,7 @@
 import svgPaths from "./svg-m1k5znvmzs";
 import { Link as RouterLink } from "react-router";
+import Footer from "../app/components/Footer";
+import NavBar from "../app/components/NavBar";
 import imgEllipse440 from "../assets/87bcf6cc5a6f499816d2a7d5fa8cd9b840c67f41.png";
 import imgImage4 from "../assets/e665e2a761e07a38d4849d612f31276b1a754fc0.png";
 import imgAdminInterface1 from "../assets/e2603487797800f429d28e829f2654d0a052c61f.png";
@@ -10307,47 +10309,13 @@ function MainContent() {
   );
 }
 
-function EngagementNavigation() {
-  return (
-    <div className="-translate-x-1/2 fixed content-stretch flex flex-col items-start left-1/2 top-[40px] z-50" data-name="Main Navigation">
-      <div className="content-stretch flex flex-col items-end justify-center relative shrink-0" data-name="Nav - Desktop">
-        <div className="bg-white content-stretch flex items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0" data-name="Container">
-          <div className="content-stretch flex gap-[16px] items-center justify-center relative shrink-0" data-name="Links">
-            <RouterLink to="/" className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link" style={{ textDecoration: "none", color: "inherit" }}>
-              <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
-                <p className="leading-[24px]">Work</p>
-              </div>
-            </RouterLink>
-            <RouterLink to="/ai" className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link" style={{ textDecoration: "none", color: "inherit" }}>
-              <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
-                <p className="leading-[24px]">AI</p>
-              </div>
-            </RouterLink>
-            <RouterLink to="/about" className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link" style={{ textDecoration: "none", color: "inherit" }}>
-              <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
-                <p className="leading-[24px]">About</p>
-              </div>
-            </RouterLink>
-            <div className="content-stretch flex items-start justify-center relative shrink-0" data-name="Link">
-              <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
-                <p className="leading-[24px]">Resume</p>
-              </div>
-            </div>
-          </div>
-          <div className="absolute inset-0 rounded-[24px] pointer-events-none" data-name="Border">
-            <div aria-hidden="true" className="absolute border border-[#e6e6e6] border-solid inset-0 pointer-events-none rounded-[24px]" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function EngagementPlatform() {
   return (
-    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center relative w-full" data-name="Engagement Platform">
+    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[80px] relative w-full" data-name="Engagement Platform">
       <MainContent />
-      <EngagementNavigation />
+      <Footer />
+      <NavBar />
     </div>
   );
 }
