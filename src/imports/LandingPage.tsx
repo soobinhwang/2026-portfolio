@@ -7,8 +7,8 @@ import imgStar25 from "../assets/2-5-Star.png";
 import imgStar from "../assets/3Star.png";
 import imgSmile from "../assets/4Smile.png";
 import imgScale from "../assets/5Scale.png";
-import imgImage from "../assets/65cb38abb69a5f063af2be9ea0a5e5ab405bb5eb.png";
-import imgImage1 from "../assets/e665e2a761e07a38d4849d612f31276b1a754fc0.png";
+import imgImage from "../assets/work/engagement-platform/65cb38abb69a5f063af2be9ea0a5e5ab405bb5eb.png";
+import imgImage1 from "../assets/work/engagement-platform/e665e2a761e07a38d4849d612f31276b1a754fc0.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
@@ -56,6 +56,8 @@ function ProfileInfoContainer() {
 function ProfileImageContainer() {
   const [profileClicked, setProfileClicked] = useState(false);
   const [profileSpinning, setProfileSpinning] = useState(false);
+  const [profileSpinDir, setProfileSpinDir] = useState<"normal" | "reverse">("normal");
+  const [profilePhase, setProfilePhase] = useState<"idle" | "toSecond" | "waiting" | "toOriginal">("idle");
   const resetTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
@@ -69,19 +71,37 @@ function ProfileImageContainer() {
       <div className="h-[221px] relative shrink-0 w-[214px] perspective-800" data-name="sue 1">
         <img
           alt=""
-          className={`absolute inset-0 max-w-none object-cover size-full cursor-pointer ${profileSpinning ? "spin-y" : ""}`}
-          src={profileClicked ? imgSueClick : imgSue1}
+          className={`absolute inset-0 max-w-none object-cover size-full cursor-pointer transition-opacity duration-400 ease-in-out ${profileSpinning && profilePhase === "toSecond" ? (profileSpinDir === "reverse" ? "spin-y-reverse" : "spin-y") : ""} ${profileClicked ? "opacity-0" : "opacity-100"}`}
+          src={imgSue1}
           data-cursor="visual"
           onClick={() => {
-            setProfileClicked(true);
-            setProfileSpinning(true);
             if (resetTimerRef.current) window.clearTimeout(resetTimerRef.current);
-            resetTimerRef.current = window.setTimeout(() => {
-              setProfileClicked(false);
-              setProfileSpinning(true);
-            }, 1500);
+            setProfileClicked(false);
+            setProfilePhase("toSecond");
+            setProfileSpinDir("reverse");
+            setProfileSpinning(true);
           }}
-          onAnimationEnd={() => setProfileSpinning(false)}
+          onAnimationEnd={() => {
+            setProfileSpinning(false);
+            if (profilePhase === "toSecond") {
+              setProfileClicked(true);
+              setProfilePhase("waiting");
+              if (resetTimerRef.current) window.clearTimeout(resetTimerRef.current);
+              resetTimerRef.current = window.setTimeout(() => {
+                setProfileClicked(false);
+                setProfilePhase("toOriginal");
+                setProfileSpinDir("normal");
+                setProfileSpinning(true);
+              }, 1000);
+            } else if (profilePhase === "toOriginal") {
+              setProfilePhase("idle");
+            }
+          }}
+        />
+        <img
+          alt=""
+          className={`absolute inset-0 max-w-none object-cover size-full pointer-events-none transition-opacity duration-400 ease-in-out ${profileSpinning && profilePhase === "toOriginal" ? (profileSpinDir === "reverse" ? "spin-y-reverse" : "spin-y") : ""} ${profileClicked ? "opacity-100" : "opacity-0"}`}
+          src={imgSueClick}
         />
         <FloatingVisual className="absolute left-[-4px] bottom-[38px] w-[48px] h-auto float-soft" src={imgFigmaLogo} axis="z" />
         <FloatingVisual className="absolute left-[-11px] top-[35px] w-[62px] h-auto float-soft float-soft-delayed-1" src={imgShipIt} />
