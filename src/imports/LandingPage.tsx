@@ -3,6 +3,7 @@ import imgSue1 from "../assets/sue-final.png";
 import imgSueClick from "../assets/sue-final-click.png";
 import imgFigmaLogo from "../assets/1Figma Logo.png";
 import imgShipIt from "../assets/2Ship It.png";
+import imgStar25 from "../assets/2-5-Star.png";
 import imgStar from "../assets/3Star.png";
 import imgSmile from "../assets/4Smile.png";
 import imgScale from "../assets/5Scale.png";
@@ -84,6 +85,7 @@ function ProfileImageContainer() {
         />
         <FloatingVisual className="absolute left-[-4px] bottom-[38px] w-[48px] h-auto float-soft" src={imgFigmaLogo} axis="z" />
         <FloatingVisual className="absolute left-[-11px] top-[35px] w-[62px] h-auto float-soft float-soft-delayed-1" src={imgShipIt} />
+        <FloatingVisual className="absolute left-[65px] top-[-3px] w-[13.5px] h-auto float-soft float-soft-delayed-2 hidden" src={imgStar25} />
         <FloatingVisual className="absolute right-[13px] top-[-24px] w-[42px] h-auto float-soft float-soft-delayed-2" src={imgStar} />
         <FloatingVisual className="absolute right-[-20px] top-[74px] w-[50px] h-auto float-soft float-soft-delayed-3" src={imgSmile} axis="z" />
         <FloatingVisual className="absolute right-[27px] bottom-[7px] w-[42px] h-auto float-soft float-soft-delayed-4" src={imgScale} />
