@@ -138,3 +138,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   cursor: none !important;
 }
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  user-select: none;
+}

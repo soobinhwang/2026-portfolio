@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import imgSue1 from "../assets/sue-final.png";
+import imgSueClick from "../assets/sue-final-click.png";
 import imgFigmaLogo from "../assets/1Figma Logo.png";
 import imgShipIt from "../assets/2Ship It.png";
 import imgStar from "../assets/3Star.png";
@@ -52,10 +53,35 @@ function ProfileInfoContainer() {
 }
 
 function ProfileImageContainer() {
+  const [profileClicked, setProfileClicked] = useState(false);
+  const [profileSpinning, setProfileSpinning] = useState(false);
+  const resetTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (resetTimerRef.current) window.clearTimeout(resetTimerRef.current);
+    };
+  }, []);
+
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0" data-name="Profile Image Container">
       <div className="h-[221px] relative shrink-0 w-[214px] perspective-800" data-name="sue 1">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSue1} />
+        <img
+          alt=""
+          className={`absolute inset-0 max-w-none object-cover size-full cursor-pointer ${profileSpinning ? "spin-y" : ""}`}
+          src={profileClicked ? imgSueClick : imgSue1}
+          data-cursor="visual"
+          onClick={() => {
+            setProfileClicked(true);
+            setProfileSpinning(true);
+            if (resetTimerRef.current) window.clearTimeout(resetTimerRef.current);
+            resetTimerRef.current = window.setTimeout(() => {
+              setProfileClicked(false);
+              setProfileSpinning(true);
+            }, 1500);
+          }}
+          onAnimationEnd={() => setProfileSpinning(false)}
+        />
         <FloatingVisual className="absolute left-[-4px] bottom-[38px] w-[48px] h-auto float-soft" src={imgFigmaLogo} axis="z" />
         <FloatingVisual className="absolute left-[-11px] top-[35px] w-[62px] h-auto float-soft float-soft-delayed-1" src={imgShipIt} />
         <FloatingVisual className="absolute right-[13px] top-[-24px] w-[42px] h-auto float-soft float-soft-delayed-2" src={imgStar} />
