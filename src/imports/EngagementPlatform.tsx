@@ -1,11 +1,12 @@
+import { useEffect, useRef, useState } from "react";
 import svgPaths from "./svg-m1k5znvmzs";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 import imgEllipse440 from "../assets/work/engagement-platform/87bcf6cc5a6f499816d2a7d5fa8cd9b840c67f41.png";
-import imgImage4 from "../assets/work/engagement-platform/e665e2a761e07a38d4849d612f31276b1a754fc0.png";
+import imgImage4 from "../assets/landing/e665e2a761e07a38d4849d612f31276b1a754fc0.png";
 import imgAdminInterface1 from "../assets/work/engagement-platform/e2603487797800f429d28e829f2654d0a052c61f.png";
-import imgDesktopVer1 from "../assets/work/engagement-platform/65cb38abb69a5f063af2be9ea0a5e5ab405bb5eb.png";
+import imgDesktopVer1 from "../assets/landing/65cb38abb69a5f063af2be9ea0a5e5ab405bb5eb.png";
 import imgDtAdminViewVer2 from "../assets/work/engagement-platform/e0d6461f579531510d4283e58dda859846a30a11.png";
 import imgDtVer1 from "../assets/work/engagement-platform/0f3d0a40412ffd775e20a91e6bc7489d4b02b508.png";
 import imgTheme8 from "../assets/work/engagement-platform/142e8ad4399e3737f8836f0c021b1eed2751ab1e.png";
@@ -10312,10 +10313,56 @@ function MainContent() {
 }
 
 
+function NextProjectNudge() {
+  const [visible, setVisible] = useState(false);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <>
+      {/* Sentinel — placed at the end of main content to trigger the nudge */}
+      <div ref={sentinelRef} className="w-full h-px shrink-0" aria-hidden="true" />
+
+      {/* Floating nudge bar */}
+      <RouterLink
+        to="/global-reward-storefront"
+        className={`fixed bottom-[32px] left-1/2 -translate-x-1/2 z-[100] flex items-center gap-[20px] bg-white rounded-full shadow-[0_2px_24px_rgba(0,0,0,0.10)] px-[8px] py-[8px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${visible ? "translate-y-0 opacity-100" : "translate-y-[24px] opacity-0 pointer-events-none"}`}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <div className="flex items-center gap-[14px] pl-[16px]">
+          <div className="size-[40px] rounded-full bg-[#1e242a] shrink-0" />
+          <div className="flex flex-col">
+            <span className="font-geist-mono text-[11px] text-[rgba(50,64,79,0.4)] uppercase tracking-[1.5px] leading-[16px]">
+              Next case
+            </span>
+            <span className="font-newsreader text-[16px] text-[#1e242a] tracking-[-0.3px] leading-[22px] whitespace-nowrap">
+              Global Reward Storefront
+            </span>
+          </div>
+        </div>
+        <div className="flex items-center justify-center bg-[#1e242a] text-white font-geist-mono text-[12px] uppercase tracking-[0.5px] rounded-full px-[20px] py-[10px] whitespace-nowrap hover:bg-[#32404f] transition-colors duration-200">
+          Read the case
+        </div>
+      </RouterLink>
+    </>
+  );
+}
+
 export default function EngagementPlatform() {
   return (
     <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[110px] relative w-full" data-name="Engagement Platform">
       <MainContent />
+      <NextProjectNudge />
       <Footer />
       <NavBar />
     </div>

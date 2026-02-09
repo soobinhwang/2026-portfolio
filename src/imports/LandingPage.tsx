@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import imgSue1 from "../assets/sue-final.png";
-import imgSueClick from "../assets/sue-final-click.png";
-import imgFigmaLogo from "../assets/1Figma Logo.png";
-import imgShipIt from "../assets/2Ship It.png";
-import imgStar25 from "../assets/2-5-Star.png";
-import imgStar from "../assets/3Star.png";
-import imgSmile from "../assets/4Smile.png";
-import imgScale from "../assets/5Scale.png";
-import imgImage from "../assets/work/engagement-platform/65cb38abb69a5f063af2be9ea0a5e5ab405bb5eb.png";
-import imgImage1 from "../assets/work/engagement-platform/e665e2a761e07a38d4849d612f31276b1a754fc0.png";
+import imgSue1 from "../assets/landing/sue-final.png";
+import imgSueClick from "../assets/landing/sue-final-click.png";
+import imgFigmaLogo from "../assets/landing/1Figma Logo.png";
+import imgShipIt from "../assets/landing/2Ship It.png";
+import imgStar25 from "../assets/landing/2-5-Star.png";
+import imgStar from "../assets/landing/3Star.png";
+import imgSmile from "../assets/landing/4Smile.png";
+import imgScale from "../assets/landing/5Scale.png";
+import imgP1Thumbnail from "../assets/landing/P1 Thumbnail.png";
+import imgP2Thumbnail from "../assets/landing/P2 Thumbnail.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
@@ -153,31 +153,10 @@ function ProfileContainer() {
   );
 }
 
-function Container2() {
-  return (
-    <div className="absolute h-[389px] left-[51px] overflow-clip rounded-[3.62px] shadow-[0px_2.679px_22.769px_0px_rgba(192,192,192,0.25)] top-[46px] w-[331px]" data-name="Container">
-      <div className="absolute h-[1071.31px] left-[-0.04px] top-[20.53px] w-[331.384px]" data-name="Image">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage} />
-      </div>
-    </div>
-  );
-}
-
-function Container3() {
-  return (
-    <div className="absolute h-[416px] left-[198px] overflow-clip rounded-[3.62px] shadow-[0px_2.679px_22.769px_0px_rgba(192,192,192,0.25)] top-[19px] w-[331px]" data-name="Container">
-      <div className="absolute h-[901.376px] left-[-0.44px] top-[19.73px] w-[331.414px]" data-name="Image">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage1} />
-      </div>
-    </div>
-  );
-}
-
 function Thumbnail() {
   return (
-    <div className="bg-[#f0f3f5] h-[435px] overflow-clip relative shrink-0 w-[580px]" data-name="Thumbnail">
-      <Container2 />
-      <Container3 />
+    <div className="bg-[#f0f3f5] h-[435px] overflow-clip relative shrink-0 w-[580px] transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail">
+      <img alt="" className="absolute inset-0 size-full object-cover" src={imgP1Thumbnail} />
     </div>
   );
 }
@@ -199,7 +178,7 @@ function Container1() {
   return (
     <RouterLink
       to="/engagement-platform"
-      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative"
+      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
@@ -211,7 +190,11 @@ function Container1() {
 }
 
 function Thumbnail1() {
-  return <div className="bg-[#1e242a] h-[435px] shrink-0 w-full" data-name="Thumbnail" />;
+  return (
+    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail">
+      <img alt="" className="absolute inset-0 size-full object-cover" src={imgP2Thumbnail} />
+    </div>
+  );
 }
 
 function InfoContainer1() {
@@ -231,7 +214,7 @@ function Container4() {
   return (
     <RouterLink
       to="/global-reward-storefront"
-      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative"
+      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
@@ -243,7 +226,7 @@ function Container4() {
 
 function Container() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex gap-[32px] items-center relative shrink-0 w-full" data-name="Container">
       <Container1 />
       <Container4 />
     </div>
@@ -251,7 +234,9 @@ function Container() {
 }
 
 function Thumbnail2() {
-  return <div className="bg-[#1e242a] h-[435px] shrink-0 w-full" data-name="Thumbnail" />;
+  return (
+    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail" />
+  );
 }
 
 function InfoContainer2() {
@@ -269,7 +254,7 @@ function InfoContainer2() {
 
 function Container6() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail2 />
       <InfoContainer2 />
@@ -278,7 +263,9 @@ function Container6() {
 }
 
 function Thumbnail3() {
-  return <div className="bg-[#1e242a] h-[435px] shrink-0 w-full" data-name="Thumbnail" />;
+  return (
+    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail" />
+  );
 }
 
 function InfoContainer3() {
@@ -296,7 +283,7 @@ function InfoContainer3() {
 
 function Container7() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail3 />
       <InfoContainer3 />
@@ -306,7 +293,7 @@ function Container7() {
 
 function Container5() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex gap-[32px] items-center relative shrink-0 w-full" data-name="Container">
       <Container6 />
       <Container7 />
     </div>
@@ -324,7 +311,7 @@ function MainFrame1() {
 
 function MainFrame() {
   return (
-    <div className="content-stretch flex flex-col gap-[120px] items-start ml-[120px] max-w-[1200px] mt-[60px] w-[1200px]" data-name="Main Frame">
+    <div className="content-stretch flex flex-col gap-[120px] items-start max-w-[1200px] mt-[60px] mx-auto w-full" data-name="Main Frame">
       <MainFrame1 />
     </div>
   );

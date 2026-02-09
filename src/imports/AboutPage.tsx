@@ -1,5 +1,5 @@
 import svgPaths from "./svg-81bzjcs43u";
-import imgProfileContainer from "../assets/Profile Container.png";
+import imgProfileContainer from "../assets/About/Profile Container.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";

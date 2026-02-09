@@ -8,6 +8,10 @@ const COMING_SOON = '[data-cursor="coming-soon"]';
 type CursorMode = "default" | "clickable" | "case-study" | "visual" | "coming-soon";
 
 const DOT_SIZE = 15.84;
+const ICON_SIZE = 16;
+const FONT_SIZE = 11;
+const PILL_PADDING = "8px 16px";
+const CASE_STUDY_GAP = 6;
 
 export default function CustomCursor() {
   const [position, setPosition] = useState({ x: -100, y: -100 });
@@ -65,18 +69,18 @@ export default function CustomCursor() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        gap: isCaseStudy ? 6 : 0,
+        gap: isCaseStudy ? CASE_STUDY_GAP : 0,
         backgroundColor: "#1700CF",
         color: "#fff",
         fontFamily: "'Geist Mono', monospace",
-        fontSize: 11,
+        fontSize: FONT_SIZE,
         fontWeight: 500,
         letterSpacing: "0.5px",
         textTransform: "uppercase",
         whiteSpace: "nowrap",
         width: isCaseStudy || isComingSoon ? "auto" : DOT_SIZE,
         height: isCaseStudy || isComingSoon ? "auto" : DOT_SIZE,
-        padding: isCaseStudy || isComingSoon ? "8px 16px" : 0,
+        padding: isCaseStudy || isComingSoon ? PILL_PADDING : 0,
         borderRadius: 999,
         pointerEvents: "none",
         zIndex: 99999,
@@ -88,8 +92,8 @@ export default function CustomCursor() {
       }}
     >
       <svg
-        width="16"
-        height="16"
+        width={ICON_SIZE}
+        height={ICON_SIZE}
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -99,7 +103,7 @@ export default function CustomCursor() {
         style={{
           flexShrink: 0,
           opacity: isCaseStudy ? 1 : 0,
-          width: isCaseStudy ? 16 : 0,
+          width: isCaseStudy ? ICON_SIZE : 0,
           transition:
             "opacity 0.2s ease 0.05s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
         }}

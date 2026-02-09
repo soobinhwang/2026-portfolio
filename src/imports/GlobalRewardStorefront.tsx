@@ -1,6 +1,7 @@
 import imgImpactImage from "../assets/work/reward-storefront/41b6c62844189df22142385946af124d25b436c7.png";
 import imgImpactImage1 from "../assets/work/reward-storefront/0bf1aaec7b99564ebf5e726aa918a53ff79ba4b3.png";
 import imgMyRole from "../assets/work/reward-storefront/My Role.png";
+import imgDetailThumbnail from "../assets/work/reward-storefront/P1-Detail-Thumbnail.png";
 import imgPrioritization from "../assets/work/reward-storefront/Prioritization.png";
 import imgProgramStructureAnalysis from "../assets/work/reward-storefront/program structure analysis.png";
 import imgSolution from "../assets/work/reward-storefront/Solution.png";
@@ -421,7 +422,11 @@ function SectionHeader() {
 }
 
 function Thumbnail() {
-  return <div className="bg-[#f0f3f5] h-[440px] shrink-0 w-[774px]" data-name="Thumbnail" />;
+  return (
+    <div className="bg-[#f0f3f5] h-[440px] shrink-0 w-[774px] overflow-clip relative" data-name="Detail Thumbnail">
+      <img alt="" className="absolute inset-0 size-full object-cover" src={imgDetailThumbnail} />
+    </div>
+  );
 }
 
 function Container4() {
