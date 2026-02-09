@@ -5,6 +5,7 @@ import AiProjectPage from "../imports/AiProjectPage";
 import AboutPage from "../imports/AboutPage";
 import EngagementPlatform from "../imports/EngagementPlatform";
 import AiProject1Detail from "../imports/AiProject1Detail";
+import GlobalRewardStorefront from "../imports/GlobalRewardStorefront";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: "/engagement-platform",
         Component: EngagementPlatform,
+      },
+      {
+        path: "/global-reward-storefront",
+        Component: GlobalRewardStorefront,
       },
     ],
   },

@@ -229,10 +229,15 @@ function InfoContainer1() {
 
 function Container4() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative" data-name="Container">
+    <RouterLink
+      to="/global-reward-storefront"
+      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative"
+      data-name="Container"
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
       <Thumbnail1 />
       <InfoContainer1 />
-    </div>
+    </RouterLink>
   );
 }
 
