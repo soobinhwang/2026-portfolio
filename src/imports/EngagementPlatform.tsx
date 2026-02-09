@@ -4,9 +4,7 @@ import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 import imgEllipse440 from "../assets/work/engagement-platform/87bcf6cc5a6f499816d2a7d5fa8cd9b840c67f41.png";
-import imgImage4 from "../assets/landing/e665e2a761e07a38d4849d612f31276b1a754fc0.png";
 import imgAdminInterface1 from "../assets/work/engagement-platform/e2603487797800f429d28e829f2654d0a052c61f.png";
-import imgDesktopVer1 from "../assets/landing/65cb38abb69a5f063af2be9ea0a5e5ab405bb5eb.png";
 import imgDtAdminViewVer2 from "../assets/work/engagement-platform/e0d6461f579531510d4283e58dda859846a30a11.png";
 import imgDtVer1 from "../assets/work/engagement-platform/0f3d0a40412ffd775e20a91e6bc7489d4b02b508.png";
 import imgTheme8 from "../assets/work/engagement-platform/142e8ad4399e3737f8836f0c021b1eed2751ab1e.png";
@@ -309,7 +307,7 @@ function SectionImageSm() {
     <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <div className="absolute h-[774px] left-[43px] top-[24px] w-[285px]" data-name="image 4">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage4} />
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
         </div>
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
@@ -344,7 +342,7 @@ function SectionImageSm1() {
     <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <div className="-translate-x-1/2 absolute h-[775px] left-1/2 top-[-329px] w-[285px]" data-name="image 4">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage4} />
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
         </div>
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
@@ -882,7 +880,7 @@ function SectionImageSm2() {
     <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <div className="absolute h-[774px] left-[43px] top-[24px] w-[285px]" data-name="image 4">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage4} />
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
         </div>
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
@@ -917,7 +915,7 @@ function SectionImageSm3() {
     <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <div className="-translate-x-1/2 absolute h-[921px] left-1/2 top-[24px] w-[285px]" data-name="Desktop Ver1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDesktopVer1} />
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDtVer1} />
         </div>
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
@@ -8634,7 +8632,7 @@ function Container21() {
   return (
     <div className="absolute h-[405px] left-[68px] overflow-clip rounded-[4.83px] shadow-[0px_3.575px_30.385px_0px_rgba(192,192,192,0.25)] top-[62px] w-[442px]" data-name="Container">
       <div className="absolute h-[1429.645px] left-0 top-[0.09px] w-[442.227px]" data-name="Image">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDesktopVer1} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDtVer1} />
       </div>
     </div>
   );
@@ -8644,7 +8642,7 @@ function Container22() {
   return (
     <div className="absolute left-[264px] overflow-clip rounded-[4.83px] shadow-[0px_3.575px_30.385px_0px_rgba(192,192,192,0.25)] size-[442px] top-[25px]" data-name="Container">
       <div className="absolute h-[1202.871px] left-[-0.36px] top-0 w-[442.267px]" data-name="Image">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage4} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
       </div>
     </div>
   );
@@ -10362,7 +10360,7 @@ export default function EngagementPlatform() {
   return (
     <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[110px] relative w-full" data-name="Engagement Platform">
       <MainContent />
-      <NextProjectNudge />
+      {/* <NextProjectNudge /> */}
       <Footer />
       <NavBar />
     </div>

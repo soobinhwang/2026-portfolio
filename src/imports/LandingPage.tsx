@@ -9,6 +9,8 @@ import imgSmile from "../assets/landing/4Smile.png";
 import imgScale from "../assets/landing/5Scale.png";
 import imgP1Thumbnail from "../assets/landing/P1 Thumbnail.png";
 import imgP2Thumbnail from "../assets/landing/P2 Thumbnail.png";
+import imgP3Thumbnail from "../assets/landing/P3 Thumbnail.png";
+import imgP4Thumbnail from "../assets/landing/P4 Thumbnail.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
@@ -235,7 +237,9 @@ function Container() {
 
 function Thumbnail2() {
   return (
-    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail" />
+    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail">
+      <img alt="" className="absolute inset-0 size-full object-cover" src={imgP3Thumbnail} />
+    </div>
   );
 }
 
@@ -254,7 +258,11 @@ function InfoContainer2() {
 
 function Container6() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group" data-name="Container">
+    <div
+      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group"
+      data-name="Container"
+      data-cursor="coming-soon"
+    >
       <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail2 />
       <InfoContainer2 />
@@ -264,7 +272,9 @@ function Container6() {
 
 function Thumbnail3() {
   return (
-    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail" />
+    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail">
+      <img alt="" className="absolute inset-0 size-full object-cover" src={imgP4Thumbnail} />
+    </div>
   );
 }
 
@@ -294,8 +304,8 @@ function Container7() {
 function Container5() {
   return (
     <div className="content-stretch flex gap-[32px] items-center relative shrink-0 w-full" data-name="Container">
-      <Container6 />
       <Container7 />
+      <Container6 />
     </div>
   );
 }
