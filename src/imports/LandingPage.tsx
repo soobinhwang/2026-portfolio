@@ -70,7 +70,7 @@ function ProfileImageContainer() {
 
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0" data-name="Profile Image Container">
-      <div className="h-[221px] relative shrink-0 w-[214px] perspective-800" data-name="sue 1">
+      <div className="h-[200px] sm:h-[221px] relative shrink-0 w-[194px] sm:w-[214px] perspective-800" data-name="sue 1">
         <img
           alt=""
           className={`absolute inset-0 max-w-none object-cover size-full cursor-pointer transition-opacity duration-400 ease-in-out ${profileSpinning && profilePhase === "toSecond" ? (profileSpinDir === "reverse" ? "spin-y-reverse" : "spin-y") : ""} ${profileClicked ? "opacity-0" : "opacity-100"}`}
@@ -134,21 +134,21 @@ function FloatingVisual({ className, src, axis = "y" }: { className: string; src
 
 function ProfileContainer() {
   return (
-    <div className="content-stretch flex flex-col gap-[34px] h-[478px] items-center self-center max-w-[619px] mt-[160px] w-[619px]" data-name="Profile Container">
+    <div className="content-stretch flex flex-col gap-[24px] sm:gap-[34px] items-center self-center max-w-[619px] mt-[120px] sm:mt-[160px] w-full px-[20px] sm:px-0" data-name="Profile Container">
       <ProfileImageContainer />
       <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] min-w-full relative shrink-0 text-[#32404f] text-[0px] text-center tracking-[-1.04px] w-[min-content]">
-        <p className="text-[50px] whitespace-pre-wrap">
-          <span className="leading-[50px] text-[#32404f]">{`I'm Sue, a product designer `}</span>
-          <span className="leading-[50px]">
+        <p className="text-[32px] sm:text-[50px] whitespace-pre-wrap">
+          <span className="leading-[36px] sm:leading-[50px] text-[#32404f]">{`I'm Sue, a product designer `}</span>
+          <span className="leading-[36px] sm:leading-[50px]">
             <br aria-hidden="true" />
           </span>
-          <span className="leading-[50px] text-[#858e97]">{`who `}</span>
-          <span className="font-newsreader font-normal leading-[50px] text-[#858e97]">{`turns `}</span>
-          <span className="font-newsreader font-normal italic leading-[50px] text-[#858e97]">
+          <span className="leading-[36px] sm:leading-[50px] text-[#858e97]">{`who `}</span>
+          <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">{`turns `}</span>
+          <span className="font-newsreader font-normal italic leading-[36px] sm:leading-[50px] text-[#858e97]">
             ambiguity
             <br aria-hidden="true" />
           </span>
-          <span className="font-newsreader font-normal leading-[50px] text-[#858e97]">into scalable solutions.</span>
+          <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">into scalable solutions.</span>
         </p>
       </div>
     </div>
@@ -157,7 +157,7 @@ function ProfileContainer() {
 
 function Thumbnail() {
   return (
-    <div className="bg-[#f0f3f5] h-[435px] overflow-clip relative shrink-0 w-[580px] transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#f0f3f5] h-[240px] sm:h-[320px] lg:h-[435px] overflow-clip relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP1Thumbnail} />
     </div>
   );
@@ -165,12 +165,15 @@ function Thumbnail() {
 
 function InfoContainer() {
   return (
-    <div className="content-stretch flex font-normal items-center justify-between leading-[0] relative shrink-0 w-full whitespace-nowrap" data-name="Info Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.64px]">
-        <p className="leading-[38px]">{`Rewards & Recognition Engagement Product`}</p>
+    <div
+      className="content-stretch flex flex-col sm:flex-row font-normal items-start sm:items-center justify-start sm:justify-between gap-[6px] sm:gap-0 leading-[0] relative shrink-0 w-full whitespace-normal sm:whitespace-nowrap"
+      data-name="Info Container"
+    >
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
+        <p className="leading-[28px] sm:leading-[38px]">{`Rewards & Recognition Engagement Product`}</p>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[22.5px]">B2B SaaS • web app</p>
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
+        <p className="leading-[20px] sm:leading-[22.5px]">B2B SaaS • web app</p>
       </div>
     </div>
   );
@@ -180,7 +183,7 @@ function Container1() {
   return (
     <RouterLink
       to="/engagement-platform"
-      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group"
+      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
@@ -193,7 +196,7 @@ function Container1() {
 
 function Thumbnail1() {
   return (
-    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP2Thumbnail} />
     </div>
   );
@@ -201,12 +204,15 @@ function Thumbnail1() {
 
 function InfoContainer1() {
   return (
-    <div className="content-stretch flex font-normal items-center justify-between leading-[0] relative shrink-0 w-full whitespace-nowrap" data-name="Info Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.64px]">
-        <p className="leading-[38px]">Global Reward Storefront</p>
+    <div
+      className="content-stretch flex flex-col sm:flex-row font-normal items-start sm:items-center justify-start sm:justify-between gap-[6px] sm:gap-0 leading-[0] relative shrink-0 w-full whitespace-normal sm:whitespace-nowrap"
+      data-name="Info Container"
+    >
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
+        <p className="leading-[28px] sm:leading-[38px]">Global Reward Storefront</p>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[22.5px]">B2B SaaS • web app • Ecommerce</p>
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
+        <p className="leading-[20px] sm:leading-[22.5px]">B2B SaaS • web app • Ecommerce</p>
       </div>
     </div>
   );
@@ -216,7 +222,7 @@ function Container4() {
   return (
     <RouterLink
       to="/global-reward-storefront"
-      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group"
+      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
@@ -228,7 +234,7 @@ function Container4() {
 
 function Container() {
   return (
-    <div className="content-stretch flex gap-[32px] items-center relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col md:flex-row gap-[24px] sm:gap-[32px] items-stretch md:items-center relative shrink-0 w-full" data-name="Container">
       <Container1 />
       <Container4 />
     </div>
@@ -237,7 +243,7 @@ function Container() {
 
 function Thumbnail2() {
   return (
-    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP3Thumbnail} />
     </div>
   );
@@ -245,12 +251,15 @@ function Thumbnail2() {
 
 function InfoContainer2() {
   return (
-    <div className="content-stretch flex font-normal items-center justify-between leading-[0] relative shrink-0 w-full whitespace-nowrap" data-name="Info Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.64px]">
-        <p className="leading-[38px]">C1 Wallet</p>
+    <div
+      className="content-stretch flex flex-col sm:flex-row font-normal items-start sm:items-center justify-start sm:justify-between gap-[6px] sm:gap-0 leading-[0] relative shrink-0 w-full whitespace-normal sm:whitespace-nowrap"
+      data-name="Info Container"
+    >
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
+        <p className="leading-[28px] sm:leading-[38px]">C1 Wallet</p>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[22.5px]">B2B SaaS • web app</p>
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
+        <p className="leading-[20px] sm:leading-[22.5px]">B2B SaaS • web app</p>
       </div>
     </div>
   );
@@ -259,7 +268,7 @@ function InfoContainer2() {
 function Container6() {
   return (
     <div
-      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group"
+      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full"
       data-name="Container"
       data-cursor="coming-soon"
     >
@@ -272,7 +281,7 @@ function Container6() {
 
 function Thumbnail3() {
   return (
-    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP4Thumbnail} />
     </div>
   );
@@ -280,12 +289,15 @@ function Thumbnail3() {
 
 function InfoContainer3() {
   return (
-    <div className="content-stretch flex font-normal items-center justify-between leading-[0] relative shrink-0 w-full whitespace-nowrap" data-name="Info Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.64px]">
-        <p className="leading-[38px]">Design Library</p>
+    <div
+      className="content-stretch flex flex-col sm:flex-row font-normal items-start sm:items-center justify-start sm:justify-between gap-[6px] sm:gap-0 leading-[0] relative shrink-0 w-full whitespace-normal sm:whitespace-nowrap"
+      data-name="Info Container"
+    >
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
+        <p className="leading-[28px] sm:leading-[38px]">Design Library</p>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[22.5px]">B2B SaaS • web app</p>
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
+        <p className="leading-[20px] sm:leading-[22.5px]">B2B SaaS • web app</p>
       </div>
     </div>
   );
@@ -293,7 +305,7 @@ function InfoContainer3() {
 
 function Container7() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group" data-name="Container">
+    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail3 />
       <InfoContainer3 />
@@ -303,7 +315,7 @@ function Container7() {
 
 function Container5() {
   return (
-    <div className="content-stretch flex gap-[32px] items-center relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col md:flex-row gap-[24px] sm:gap-[32px] items-stretch md:items-center relative shrink-0 w-full" data-name="Container">
       <Container7 />
       <Container6 />
     </div>
@@ -312,7 +324,7 @@ function Container5() {
 
 function MainFrame1() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0 w-full" data-name="Main Frame">
+    <div className="content-stretch flex flex-col gap-[24px] sm:gap-[40px] items-start relative shrink-0 w-full" data-name="Main Frame">
       <Container />
       <Container5 />
     </div>
@@ -321,7 +333,7 @@ function MainFrame1() {
 
 function MainFrame() {
   return (
-    <div className="content-stretch flex flex-col gap-[120px] items-start max-w-[1200px] mt-[60px] mx-auto w-full" data-name="Main Frame">
+    <div className="content-stretch flex flex-col gap-[64px] sm:gap-[120px] items-start max-w-[1200px] mt-[40px] sm:mt-[60px] mx-auto w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Main Frame">
       <MainFrame1 />
     </div>
   );

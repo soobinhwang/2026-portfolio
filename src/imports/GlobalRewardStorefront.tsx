@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 import React from "react";
 import imgMyRole from "../assets/work/reward-storefront/My Role.png";
-import imgDetailThumbnail from "../assets/work/reward-storefront/P1-Detail-Thumbnail.png";
+import imgDetailThumbnail from "../assets/work/reward-storefront/P2-Detail-Thumbnail.png";
 import imgPrioritization from "../assets/work/reward-storefront/Prioritization.png";
 import imgProgramStructureAnalysis from "../assets/work/reward-storefront/program structure analysis.png";
 import imgSolution from "../assets/work/reward-storefront/Solution.png";
@@ -426,7 +426,7 @@ function SectionContainer7() {
         <p className="leading-[22.5px] whitespace-pre-wrap">outcome</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-0.9px] w-full">
-        <p className="leading-[50px] whitespace-pre-wrap">Impact at product, team, and business scale</p>
+        <p className="leading-[50px] whitespace-pre-wrap">Laying the groundwork for future phases</p>
       </div>
     </div>
   );
@@ -435,16 +435,11 @@ function SectionContainer7() {
 function SubsectionContainer4() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subsection Container">
-      <ul className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
-        <li className="flex gap-[10px] items-start">
-          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
-          <span className="leading-[26px] whitespace-pre-wrap">Established consistent, on-brand experiences across programmes</span>
-        </li>
-        <li className="flex gap-[10px] items-start">
-          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
-          <span className="leading-[26px] whitespace-pre-wrap">Enabled clearer self-service CMS configuration with less developer involvement.</span>
-        </li>
-      </ul>
+      <div className="flex font-geist font-normal items-start leading-[26px] relative text-[#5b6a79] text-[16px] w-full">
+        <span className="leading-[26px] whitespace-pre-wrap">
+          Reduced friction in discovery by making it faster and more consistent for users to find relevant items.
+        </span>
+      </div>
     </div>
   );
 }
@@ -464,16 +459,11 @@ function SectionContainer8() {
 function SubsectionContainer6() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subsection Container">
-      <ul className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
-        <li className="flex gap-[10px] items-start">
-          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
-          <span className="leading-[26px] whitespace-pre-wrap">Reduced minor change requests and eliminated repeated one-off design and development work</span>
-        </li>
-        <li className="flex gap-[10px] items-start">
-          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
-          <span className="leading-[26px] whitespace-pre-wrap">Freed up capacity for longer-term roadmap initiatives.</span>
-        </li>
-      </ul>
+      <div className="flex font-geist font-normal items-start leading-[26px] relative text-[#5b6a79] text-[16px] w-full">
+        <span className="leading-[26px] whitespace-pre-wrap">
+          Established scalable discovery patterns that reduced one-off solutions across different client programs.
+        </span>
+      </div>
     </div>
   );
 }
@@ -493,16 +483,11 @@ function SubsectionContainer5() {
 function SubsectionContainer8() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subsection Container">
-      <ul className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
-        <li className="flex gap-[10px] items-start">
-          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
-          <span className="leading-[26px] whitespace-pre-wrap">Supported more client programmes without increasing headcount</span>
-        </li>
-        <li className="flex gap-[10px] items-start">
-          <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
-          <span className="leading-[26px] whitespace-pre-wrap">Contributed to a 30% revenue increase in the first year after rollout</span>
-        </li>
-      </ul>
+      <div className="flex font-geist font-normal items-start leading-[26px] relative text-[#5b6a79] text-[16px] w-full">
+        <span className="leading-[26px] whitespace-pre-wrap">
+          Enabled the platform to support a wider range of client setups without increasing complexity.
+        </span>
+      </div>
     </div>
   );
 }

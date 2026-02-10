@@ -43,12 +43,26 @@ import imgRectangle194 from "../assets/work/engagement-platform/eae313a48883a46e
 import imgRectangle195 from "../assets/work/engagement-platform/fc358c0328ef1d220795f00d207ad41c6830996e.png";
 import imgRectangle196 from "../assets/work/engagement-platform/2a29e88ec4419bc60da3cfd58de07f8fd094c817.png";
 import imgRectangle197 from "../assets/work/engagement-platform/641fb802e0cc701fedbc2cb3c06943fa5536610a.png";
-import imgAdobeStock2327327561 from "../assets/work/engagement-platform/5899706c7532daccf344b9cc0657f58caf3102e1.png";
-import imgAdobeStock671688592RemovebgPreview1 from "../assets/work/engagement-platform/11aeb1ba09ba506b5a194ec8f72b724c6ffcf7c8.png";
-import imgImage229 from "../assets/work/engagement-platform/4b1819c54352a3edd1f132a0c66ac83c0452c306.png";
-import imgImpactImage from "../assets/work/engagement-platform/6651e6cafa0dc8b5a1ebcbc2a3f0db89a3dd27f6.png";
-import imgImpactImage1 from "../assets/work/engagement-platform/de81d6f2ef97e9088ba6085db9728c13d8898c6a.png";
-import imgImpactImage2 from "../assets/work/engagement-platform/ec73560665e755f166694ec0cccbe3250746d1b4.png";
+import imgBackground from "../assets/work/engagement-platform/Background.png";
+import imgDetailThumbnail from "../assets/work/engagement-platform/P1-Detail-Thumbnail.png";
+import imgChallenge from "../assets/work/engagement-platform/Challenge.png";
+import videoRefinedSolution from "../assets/work/engagement-platform/refined solution.mov";
+import imgSolutionOnePrimary from "../assets/work/engagement-platform/Solution 1 - 1.png";
+import imgSolutionOneSecondary from "../assets/work/engagement-platform/Solution 1 - 2.png";
+import videoReusableComponent1 from "../assets/work/engagement-platform/reusable component 1.mp4";
+import videoReusableComponent2 from "../assets/work/engagement-platform/reusable component 2.mp4";
+import imgSolutionThree from "../assets/work/engagement-platform/Solution 3.png";
+import imgMyRole from "../assets/work/engagement-platform/My Role.png";
+import imgNeedSynthesis from "../assets/work/engagement-platform/Need Synthesis.png";
+import imgKeyInsight1 from "../assets/work/engagement-platform/Key Insights 1.png";
+import imgKeyInsight2 from "../assets/work/engagement-platform/Key Insights 2.png";
+import imgKeyInsight3 from "../assets/work/engagement-platform/Key Insights 3.png";
+import imgDesignDirection from "../assets/work/engagement-platform/Design Direction.png";
+import imgRoadmap from "../assets/work/engagement-platform/Roadmap.png";
+import imgDesignOutcome2 from "../assets/work/engagement-platform/Design Outcome 2.png";
+import imgDesignOutcome3 from "../assets/work/engagement-platform/Design Outcome 3.png";
+import imgDesignOutcome4 from "../assets/work/engagement-platform/Design Outcome 4.png";
+import imgDesignOutcome1 from "../assets/work/engagement-platform/Design Outcome 1.png";
 
 function Frame255() {
   return (
@@ -63,75 +77,98 @@ function Frame255() {
   );
 }
 
-function Frame5() {
+function StaggeredNumber({ text, isVisible }: { text: string; isVisible: boolean }) {
   return (
-    <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[3px] items-center text-center relative shrink-0 w-fit">
       <div className="flex flex-col font-newsreader font-semibold justify-center leading-[0] relative shrink-0 text-[#32404f] text-[62px] tracking-[-0.424px] whitespace-nowrap">
-        <p className="leading-[normal]">{`+30% `}</p>
+        <p className="leading-[normal] overflow-hidden">
+          {Array.from(text).map((char, index) => (
+            <span
+              key={`${char}-${index}`}
+              className={`inline-block transition-all duration-700 ease-out will-change-transform ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
+              }`}
+              style={{ transitionDelay: `${index * 60}ms` }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
+        </p>
       </div>
     </div>
   );
 }
 
-function Container1() {
+function Frame5({ isVisible }: { isVisible: boolean }) {
+  return <StaggeredNumber text="+30%" isVisible={isVisible} />;
+}
+
+function Container1({ isVisible }: { isVisible: boolean }) {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative self-stretch" data-name="Container">
-      <Frame5 />
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">revenue growth CarltonOne is a B2B SaaS rewards</p>
+    <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0 text-center" data-name="Container">
+      <Frame5 isVisible={isVisible} />
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[18px] text-[#5b6a79] w-fit">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Revenue growth</p>
       </div>
     </div>
   );
 }
 
-function Frame6() {
+function Frame6({ isVisible }: { isVisible: boolean }) {
+  return <StaggeredNumber text="+500" isVisible={isVisible} />;
+}
+
+function Container2({ isVisible }: { isVisible: boolean }) {
   return (
-    <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
-      <div className="flex flex-col font-newsreader font-semibold justify-center leading-[0] relative shrink-0 text-[#32404f] text-[62px] tracking-[-0.424px] whitespace-nowrap">
-        <p className="leading-[normal]">+500</p>
+    <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0 text-center" data-name="Container">
+      <Frame6 isVisible={isVisible} />
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[18px] text-[#5b6a79] w-fit">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Client programs</p>
       </div>
     </div>
   );
 }
 
-function Container2() {
-  return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative self-stretch" data-name="Container">
-      <Frame6 />
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">global clients CarltonOne is a B2B SaaS rewards</p>
-      </div>
-    </div>
-  );
+function Frame7({ isVisible }: { isVisible: boolean }) {
+  return <StaggeredNumber text="~50%" isVisible={isVisible} />;
 }
 
-function Frame7() {
+function Container3({ isVisible }: { isVisible: boolean }) {
   return (
-    <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
-      <div className="flex flex-col font-newsreader font-semibold justify-center leading-[0] relative shrink-0 text-[#32404f] text-[62px] tracking-[-0.424px] whitespace-nowrap">
-        <p className="leading-[normal]">{`~50% `}</p>
-      </div>
-    </div>
-  );
-}
-
-function Container3() {
-  return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative self-stretch" data-name="Container">
-      <Frame7 />
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">less change ticketsCarltonOne is a B2B SaaS rewards</p>
+    <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0 text-center" data-name="Container">
+      <Frame7 isVisible={isVisible} />
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[18px] text-[#5b6a79] w-fit">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Less change tickets</p>
       </div>
     </div>
   );
 }
 
 function Container() {
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="content-stretch flex gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Container">
-      <Container1 />
-      <Container2 />
-      <Container3 />
+    <div ref={containerRef} className="content-stretch inline-flex gap-[104px] items-start justify-center relative shrink-0 w-fit" data-name="Container">
+      <Container1 isVisible={isVisible} />
+      <Container2 isVisible={isVisible} />
+      <Container3 isVisible={isVisible} />
     </div>
   );
 }
@@ -146,7 +183,7 @@ function Frame265() {
 
 function Property() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[42px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[50px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0" data-name="Property">
       <Frame255 />
       <Frame265 />
     </div>
@@ -265,12 +302,9 @@ function SubsectionContainer() {
 
 function SectionImage() {
   return (
-    <div className="bg-[#f0f3f5] h-[266px] relative shrink-0 w-[774px]" data-name="Section Image">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <SubsectionContainer />
-        <p className="absolute font-geist-mono font-normal leading-[1.5] left-[54px] text-[#1e242a] text-[12px] top-[189px]">Problem Identification</p>
-        <p className="absolute font-geist-mono font-normal leading-[1.5] left-[calc(50%-51px)] text-[#1e242a] text-[12px] top-[189px]">Need Synthesis</p>
-        <p className="absolute font-geist-mono font-normal leading-[1.5] left-[582px] text-[#1e242a] text-[12px] top-[189px]">Design Direction</p>
+    <div className="bg-[#f0f3f5] relative shrink-0 w-[774px]" data-name="Section Image">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgMyRole} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -306,9 +340,7 @@ function SectionImageSm() {
   return (
     <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[774px] left-[43px] top-[24px] w-[285px]" data-name="image 4">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgSolutionOnePrimary} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -341,9 +373,7 @@ function SectionImageSm1() {
   return (
     <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="-translate-x-1/2 absolute h-[775px] left-1/2 top-[-329px] w-[285px]" data-name="image 4">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgSolutionOneSecondary} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -416,14 +446,9 @@ function Frame256() {
 
 function SectionImageLg() {
   return (
-    <div className="bg-[#f0f3f5] h-[310px] relative shrink-0 w-[774px]" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[696px] left-[200px] top-[34px] w-[178px]" data-name="Admin Interface 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
-        </div>
-        <div className="absolute h-[696px] left-[387px] top-[-376px] w-[178px]" data-name="Admin Interface 2">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
-        </div>
+    <div className="bg-[#f0f3f5] relative shrink-0 w-[774px]" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgSolutionThree} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -692,10 +717,9 @@ function Group34() {
 
 function SectionImageLg1() {
   return (
-    <div className="bg-[#f0f3f5] h-[310px] relative shrink-0 w-[774px]" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute bg-[#f0f3f5] h-[33px] left-[332px] top-[105px] w-[86px]" />
-        <Group34 />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-[774px]" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgRoadmap} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -832,10 +856,9 @@ function Group33() {
 
 function SectionImageLg2() {
   return (
-    <div className="bg-[#f0f3f5] h-[266px] relative shrink-0 w-[774px]" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute bg-[#f0f3f5] h-[33px] left-[332px] top-[105px] w-[86px]" />
-        <Group33 />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-[774px]" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgNeedSynthesis} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -879,9 +902,7 @@ function SectionImageSm2() {
   return (
     <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[774px] left-[43px] top-[24px] w-[285px]" data-name="image 4">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgDesignOutcome1} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -914,9 +935,7 @@ function SectionImageSm3() {
   return (
     <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="-translate-x-1/2 absolute h-[921px] left-1/2 top-[24px] w-[285px]" data-name="Desktop Ver1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDtVer1} />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgDesignOutcome2} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -958,12 +977,7 @@ function SectionImageSm4() {
   return (
     <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[221px] left-[61px] top-[24px] w-[285px]" data-name="DT Admin View - Ver 2">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDtAdminViewVer2} />
-        </div>
-        <div className="-translate-x-1/2 absolute h-[297px] left-[calc(50%-19px)] top-[180px] w-[285px]" data-name="DT Ver 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDtVer1} />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgDesignOutcome3} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -1009,13 +1023,7 @@ function SectionImageSm5() {
   return (
     <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <Group32 />
-        <div className="absolute h-[2426px] left-[778px] top-[240px] w-[407px]" data-name="Theme 5">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTheme8} />
-        </div>
-        <div className="absolute h-[2349px] left-[1220px] top-[240px] w-[407px]" data-name="Theme 6">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTheme9} />
-        </div>
+        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgDesignOutcome4} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -1081,7 +1089,7 @@ function SectionContainer2() {
         <p className="leading-[46px] whitespace-pre-wrap">Reusable Components: Standardizing what matters</p>
       </div>
       <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">{`To scale across brands and content, supporting client-prferredd layouts without new one-off design work. Reusable components kept a consistent structure while flexing through CSS and imagery. `}</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">{`To scale across brands and content, supporting client-preferred layouts without new one-off design work. Reusable components kept a consistent structure while flexing through CSS and imagery. `}</p>
       </div>
     </div>
   );
@@ -8518,11 +8526,12 @@ function ContentSections1() {
 
 function Property7() {
   return (
-    <div className="h-[420px] relative shrink-0 w-[371px]" data-name="Property">
-      <video autoPlay className="absolute max-w-none object-contain size-full" controlsList="nodownload" loop playsInline>
-        <source src="/_videos/v1/b760b8e943f3c47b746cb14270f16040960ab48d" />
-      </video>
-      <div className="overflow-clip rounded-[inherit] size-full" />
+    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="Property">
+      <div className="overflow-clip rounded-[inherit] size-full flex items-center justify-center">
+        <video autoPlay className="max-h-full max-w-full object-contain" controlsList="nodownload" loop muted playsInline>
+          <source src={videoReusableComponent1} />
+        </video>
+      </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
   );
@@ -8552,12 +8561,11 @@ function Container17() {
 
 function Property8() {
   return (
-    <div className="h-[420px] relative shrink-0 w-[371px]" data-name="Property">
-      <video autoPlay className="absolute max-w-none object-contain size-full" controlsList="nodownload" loop playsInline>
-        <source src="/_videos/v1/36edc8e30dd095685d8e0c75497ea8a59bb1dbbe" />
-      </video>
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[102.805px] left-[calc(50%+0.23px)] top-[calc(50%+0.4px)] w-[109.45px]" />
+    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="Property">
+      <div className="overflow-clip rounded-[inherit] size-full flex items-center justify-center">
+        <video autoPlay className="max-h-full max-w-full object-contain" controlsList="nodownload" loop muted playsInline>
+          <source src={videoReusableComponent2} />
+        </video>
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -8650,9 +8658,8 @@ function Container22() {
 
 function Thumbnail() {
   return (
-    <div className="bg-[#f0f3f5] h-[440px] overflow-clip relative shrink-0 w-[774px]" data-name="Static Thumbnail">
-      <Container21 />
-      <Container22 />
+    <div className="bg-[#f0f3f5] overflow-clip relative shrink-0 w-[774px]" data-name="Static Thumbnail">
+      <img alt="" className="block w-full h-auto object-cover" src={imgDetailThumbnail} />
     </div>
   );
 }
@@ -8911,97 +8918,9 @@ function Group38() {
 
 function Property10() {
   return (
-    <div className="bg-[#f0f3f5] h-[280px] relative shrink-0 w-[774px]" data-name="Property">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[154px] left-[455px] shadow-[0px_4.594px_10.336px_0px_rgba(0,0,0,0.1)] top-[57px] w-[115px]" data-name="AdobeStock_232732756 1">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <img alt="" className="absolute h-full left-[-47.12%] max-w-none top-0 w-[199.61%]" src={imgAdobeStock2327327561} />
-          </div>
-        </div>
-        <div className="absolute h-[162px] left-[166px] shadow-[0px_4.594px_10.336px_0px_rgba(0,0,0,0.1)] top-[49px] w-[148px]" data-name="AdobeStock_671688592-removebg-preview 1">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <img alt="" className="absolute h-[100.32%] left-[-33.35%] max-w-none top-[-0.16%] w-[163.3%]" src={imgAdobeStock671688592RemovebgPreview1} />
-          </div>
-        </div>
-        <div className="absolute flex inset-[45.08%_45.37%_41.44%_45.32%] items-center justify-center">
-          <div className="flex-none h-[29.577px] rotate-[6.96deg] w-[69px]">
-            <div className="relative size-full" data-name="arrow-27">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 69 29.577">
-                <path d={svgPaths.p2820a600} fill="var(--fill-0, #1E242A)" id="arrow-27" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div className="absolute h-0 left-[48px] top-[234px] w-[690px]">
-          <div className="absolute inset-[-0.5px_0]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 690 1">
-              <path d="M0 0.5H690" id="Vector 1544" stroke="url(#paint0_linear_1_560521)" strokeOpacity="0.2" />
-              <defs>
-                <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1_560521" x1="0" x2="690" y1="1" y2="1">
-                  <stop stopColor="#F0F3F5" />
-                  <stop offset="0.519231" stopColor="#2B2E31" />
-                  <stop offset="1" stopColor="#F0F3F5" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-        </div>
-        <div className="absolute left-[240px] size-[8px] top-[230px]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8 8">
-            <circle cx="4" cy="4" fill="var(--fill-0, #CBD1D4)" id="Ellipse 399" r="4" />
-          </svg>
-        </div>
-        <div className="absolute left-[512px] size-[8px] top-[230px]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8 8">
-            <circle cx="4" cy="4" fill="var(--fill-0, #CBD1D4)" id="Ellipse 399" r="4" />
-          </svg>
-        </div>
-        <div className="-translate-y-1/2 absolute flex flex-col font-geist font-normal justify-center leading-[0] left-[201px] text-[#858e97] text-[11px] top-[249.5px] whitespace-nowrap">
-          <p className="leading-[22.5px]">Send Recognition</p>
-        </div>
-        <div className="-translate-y-1/2 absolute flex flex-col font-geist font-normal justify-center leading-[0] left-[473px] text-[#858e97] text-[11px] top-[249.5px] whitespace-nowrap">
-          <p className="leading-[22.5px]">Redeem Rewards</p>
-        </div>
-        <div className="absolute flex h-[70.231px] items-center justify-center left-[166px] top-[390px] w-[51.559px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "207.5" } as React.CSSProperties}>
-          <div className="flex-none rotate-[12.03deg]">
-            <div className="h-[63.456px] relative w-[39.193px]" data-name="image 229">
-              <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <img alt="" className="absolute h-full left-0 max-w-none top-0 w-[457.14%]" src={imgImage229} />
-              </div>
-            </div>
-          </div>
-        </div>
-        <Group31 />
-        <Group30 />
-        <div className="absolute flex items-center justify-center left-[105px] size-[135.383px] top-[-6px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "153.5" } as React.CSSProperties}>
-          <div className="flex-none rotate-[-28.2deg]">
-            <Component3 />
-          </div>
-        </div>
-        <div className="absolute flex h-[45.678px] items-center justify-center left-[140.85px] top-[37.25px] w-[63.716px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "19" } as React.CSSProperties}>
-          <div className="flex-none rotate-[-30.22deg]">
-            <p className="font-['Figma_Hand:Regular',sans-serif] leading-[1.5] not-italic relative text-[#1e242a] text-[10px]">Thank you!</p>
-          </div>
-        </div>
-        <div className="absolute flex items-center justify-center left-[276.06px] size-[43.588px] top-[114.64px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "153.5" } as React.CSSProperties}>
-          <div className="flex-none rotate-[37.52deg]">
-            <TestiomonialCarouselArrow />
-          </div>
-        </div>
-        <div className="absolute flex h-[16.575px] items-center justify-center left-[176px] top-[104px] w-[15.799px]" style={{ "--transform-inner-width": "1200", "--transform-inner-height": "153.5" } as React.CSSProperties}>
-          <div className="flex-none rotate-[13.14deg]">
-            <div className="h-[13.996px] relative w-[12.956px]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.9564 13.9962">
-                <path d={svgPaths.p14a13800} fill="var(--fill-0, #1D2939)" id="Star 15" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div className="absolute flex inset-[20.71%_37.7%_73.04%_59.95%] items-center justify-center">
-          <div className="flex-none h-[14px] rotate-[15.46deg] w-[15.014px]">
-            <Group38 />
-          </div>
-        </div>
+    <div className="bg-[#f0f3f5] relative shrink-0 w-[774px]" data-name="Property">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgBackground} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -9032,15 +8951,9 @@ function Frame261() {
 
 function ImpactImage() {
   return (
-    <div className="h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
-      <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-        <div className="absolute bg-[#f0f3f5] inset-0" />
-        <div className="absolute inset-0 overflow-hidden">
-          <img alt="" className="absolute h-[83.33%] left-[-11.98%] max-w-none top-[8.33%] w-[123.97%]" src={imgImpactImage} />
-        </div>
-      </div>
+    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[13px] left-[147px] top-[129px] w-[62px]" />
+        <img alt="" className="block w-full h-full object-contain" src={imgKeyInsight1} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -9068,15 +8981,9 @@ function Container28() {
 
 function ImpactImage1() {
   return (
-    <div className="h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
-      <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-        <div className="absolute bg-[#f0f3f5] inset-0" />
-        <div className="absolute inset-0 overflow-hidden">
-          <img alt="" className="absolute h-[82.22%] left-[-13.64%] max-w-none top-[8.89%] w-[122.31%]" src={imgImpactImage1} />
-        </div>
-      </div>
+    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[13px] left-[147px] top-[129px] w-[62px]" />
+        <img alt="" className="block w-full h-full object-contain" src={imgKeyInsight2} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -9104,15 +9011,9 @@ function Container29() {
 
 function ImpactImage2() {
   return (
-    <div className="h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
-      <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-        <div className="absolute bg-[#f0f3f5] inset-0" />
-        <div className="absolute inset-0 overflow-hidden">
-          <img alt="" className="absolute h-[71.11%] left-[-2.89%] max-w-none top-[14.44%] w-[105.79%]" src={imgImpactImage2} />
-        </div>
-      </div>
+    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[13px] left-[147px] top-[129px] w-[62px]" />
+        <img alt="" className="block w-full h-full object-contain" src={imgKeyInsight3} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -9348,30 +9249,9 @@ function Frame252() {
 
 function SectionImageLg3() {
   return (
-    <div className="bg-[#f0f3f5] h-[310px] relative shrink-0 w-[774px]" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <Frame251 />
-        <Frame250 />
-        <Frame253 />
-        <Frame252 />
-        <div className="-translate-y-1/2 absolute flex h-[20.073px] items-center justify-center left-[32.24%] right-[63.29%] top-[calc(50%+4.46px)]">
-          <div className="flex-none h-[32.635px] rotate-75 w-[12.037px]">
-            <div className="relative size-full" data-name="arrow-21">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.0368 32.6346">
-                <path d={svgPaths.p220a0800} fill="var(--fill-0, #858E97)" id="arrow-21" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div className="-translate-y-1/2 absolute flex h-[20.073px] items-center justify-center left-[63.25%] right-[32.28%] top-[calc(50%+4.46px)]">
-          <div className="flex-none h-[32.635px] rotate-75 w-[12.037px]">
-            <div className="relative size-full" data-name="arrow-21">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.0368 32.6346">
-                <path d={svgPaths.p220a0800} fill="var(--fill-0, #858E97)" id="arrow-21" />
-              </svg>
-            </div>
-          </div>
-        </div>
+    <div className="bg-[#f0f3f5] relative shrink-0 w-[774px]" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgChallenge} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -9417,11 +9297,12 @@ function SectionContainer9() {
 
 function Property13() {
   return (
-    <div className="h-[380px] relative shrink-0 w-[774px]" data-name="Property">
-      <video autoPlay className="absolute max-w-none object-contain size-full" controlsList="nodownload" loop playsInline>
-        <source src="/_videos/v1/082e60b723aea1c8a5d79df8a8f593b799f98140" />
-      </video>
-      <div className="overflow-clip rounded-[inherit] size-full" />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-[774px]" data-name="Property">
+      <div className="overflow-clip rounded-[inherit] w-full">
+        <video autoPlay className="block w-full h-auto" controlsList="nodownload" loop muted playsInline>
+          <source src={videoRefinedSolution} />
+        </video>
+      </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
   );
@@ -10229,32 +10110,9 @@ function Frame319() {
 
 function SectionImage1() {
   return (
-    <div className="bg-[#f0f3f5] h-[346px] relative shrink-0 w-[774px]" data-name="Section Image">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <Frame206 />
-        <Frame203 />
-        <div className="absolute flex inset-[45.66%_65.03%_48.53%_30.49%] items-center justify-center">
-          <div className="flex-none h-[32.635px] rotate-75 w-[12.037px]">
-            <div className="relative size-full" data-name="arrow-21">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.0368 32.6346">
-                <path d={svgPaths.p220a0800} fill="var(--fill-0, #858E97)" id="arrow-21" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div className="absolute flex inset-[45.09%_30.41%_49.11%_65.12%] items-center justify-center">
-          <div className="flex-none h-[32.635px] rotate-75 w-[12.037px]">
-            <div className="relative size-full" data-name="arrow-21">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.0368 32.6346">
-                <path d={svgPaths.p220a0800} fill="var(--fill-0, #858E97)" id="arrow-21" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <Frame319 />
-        <p className="absolute font-geist-mono font-normal leading-[1.5] left-[108px] text-[#1e242a] text-[12px] top-[268px]">Layout</p>
-        <p className="absolute font-geist-mono font-normal leading-[1.5] left-[318px] text-[#1e242a] text-[12px] top-[268px]">Reusable Components</p>
-        <p className="absolute font-geist-mono font-normal leading-[1.5] left-[585px] text-[#1e242a] text-[12px] top-[268px]">CMS Improvement</p>
+    <div className="bg-[#f0f3f5] relative shrink-0 w-[774px]" data-name="Section Image">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgDesignDirection} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
