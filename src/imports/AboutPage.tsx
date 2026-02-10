@@ -971,7 +971,7 @@ export default function AboutPage() {
   return (
     <div className="bg-dot-grid min-h-screen flex flex-col relative w-full" data-name="About Page">
       <MainFrame />
-      <Footer />
+      <Footer maxWidthClass="max-w-[550px]" />
       <NavBar />
     </div>
   );

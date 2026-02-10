@@ -768,7 +768,7 @@ export default function GlobalRewardStorefront() {
   return (
     <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[110px] relative w-full" data-name="Global Reward Storefront">
       <MainContent />
-      <Footer />
+      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" />
       <NavBar />
     </div>
   );

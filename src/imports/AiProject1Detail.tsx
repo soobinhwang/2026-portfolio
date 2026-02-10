@@ -255,7 +255,7 @@ export default function AiProject1Detail() {
   return (
     <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center relative w-full" data-name="AI Project 1 Detail">
       <MainContent />
-      <Footer />
+      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" />
       <NavBar />
     </div>
   );
