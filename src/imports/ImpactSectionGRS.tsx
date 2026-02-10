@@ -72,7 +72,7 @@ function ImpactItem({ title, subtitle, icon }: { title: string; subtitle: string
 
 export default function ImpactSectionGRS() {
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative size-full" data-name="Property">
+    <div className="content-stretch flex flex-col gap-[40px] items-start relative size-full" data-name="Property">
       <ImpactHeader />
       <div className="content-stretch flex gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Container">
         <ImpactItem title="Faster path" subtitle="to relevant items" icon={<BrutalismIcon />} />
