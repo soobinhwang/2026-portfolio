@@ -1,150 +1,24 @@
-import imgImpactImage from "../assets/work/reward-storefront/41b6c62844189df22142385946af124d25b436c7.png";
-import imgImpactImage1 from "../assets/work/reward-storefront/0bf1aaec7b99564ebf5e726aa918a53ff79ba4b3.png";
+/// <reference types="vite/client" />
+import React from "react";
 import imgMyRole from "../assets/work/reward-storefront/My Role.png";
 import imgDetailThumbnail from "../assets/work/reward-storefront/P1-Detail-Thumbnail.png";
 import imgPrioritization from "../assets/work/reward-storefront/Prioritization.png";
 import imgProgramStructureAnalysis from "../assets/work/reward-storefront/program structure analysis.png";
 import imgSolution from "../assets/work/reward-storefront/Solution.png";
+import imgBackground from "../assets/work/reward-storefront/Background.png";
+import imgChallenge1 from "../assets/work/reward-storefront/Challenge 1.png";
+import imgChallenge2 from "../assets/work/reward-storefront/Challenge 2.png";
+import videoSolution1 from "../assets/work/reward-storefront/Solution 1.mov";
+import videoSolution2 from "../assets/work/reward-storefront/Solution 2.mov";
 import NavBar from "../app/components/NavBar";
 import Footer from "../app/components/Footer";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
-
-function Frame3() {
-  return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px]">impact</p>
-      </div>
-      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[46px] whitespace-pre-wrap">Turning complexity into confident discovery</p>
-      </div>
-    </div>
-  );
-}
-
-function ImpactImage() {
-  return (
-    <div className="h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
-      <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-        <div className="absolute bg-[#f0f3f5] inset-0" />
-        <div className="absolute inset-0 overflow-hidden">
-          <img alt="" className="absolute h-[67.22%] left-0 max-w-none top-[16.39%] w-full" src={imgImpactImage} />
-        </div>
-      </div>
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[13px] left-[147px] top-[129px] w-[62px]" />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
-  );
-}
-
-function Frame() {
-  return (
-    <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[19px] text-center tracking-[-0.424px] w-full">
-        <p className="leading-[31.8px] whitespace-pre-wrap">Faster path to relevant items</p>
-      </div>
-    </div>
-  );
-}
-
-function Container1() {
-  return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-center justify-start min-h-px min-w-px relative self-stretch" data-name="Container">
-      <ImpactImage />
-      <Frame />
-    </div>
-  );
-}
-
-function ImpactImage1() {
-  return (
-    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[13px] left-[147px] top-[129px] w-[62px]" />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
-  );
-}
-
-function Frame1() {
-  return (
-    <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[19px] text-center tracking-[-0.424px] w-full">
-        <p className="leading-[31.8px] whitespace-pre-wrap">Consistent discovery experience</p>
-      </div>
-    </div>
-  );
-}
-
-function Container2() {
-  return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-center justify-start min-h-px min-w-px relative self-stretch" data-name="Container">
-      <ImpactImage1 />
-      <Frame1 />
-    </div>
-  );
-}
-
-function ImpactImage2() {
-  return (
-    <div className="h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
-      <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-        <div className="absolute bg-[#f0f3f5] inset-0" />
-        <img alt="" className="absolute max-w-none object-contain size-full" src={imgImpactImage1} />
-      </div>
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute h-[13px] left-[147px] top-[129px] w-[62px]" />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
-  );
-}
-
-function Frame2() {
-  return (
-    <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[19px] text-center tracking-[-0.424px] w-full">
-        <p className="leading-[31.8px] whitespace-pre-wrap">Scalable across diverse programs</p>
-      </div>
-    </div>
-  );
-}
-
-function Container3() {
-  return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-center justify-start min-h-px min-w-px relative self-stretch" data-name="Container">
-      <ImpactImage2 />
-      <Frame2 />
-    </div>
-  );
-}
-
-function Container() {
-  return (
-    <div className="content-stretch flex gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Container">
-      <Container1 />
-      <Container2 />
-      <Container3 />
-    </div>
-  );
-}
-
-function Frame11() {
-  return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-      <Container />
-    </div>
-  );
-}
+import ImpactSectionGRS from "./ImpactSectionGRS";
 
 function Property() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0" data-name="Property">
-      <Frame3 />
-      <Frame11 />
+      <ImpactSectionGRS />
     </div>
   );
 }
@@ -501,7 +375,7 @@ function Property4() {
 
 function ContentSections1() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] pt-[110px] relative row-[1] self-start shrink-0 w-[774px]" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] pt-[48px] relative row-[1] self-start shrink-0 w-[774px]" data-name="Content Sections">
       <SectionHeader />
       <Thumbnail />
       <Property4 />
@@ -529,7 +403,7 @@ function Property5() {
   return (
     <div className="bg-[#f0f3f5] h-[351px] relative shrink-0 w-[774px]" data-name="Property">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute bg-[#f0f3f5] h-[33px] left-[332px] top-[105px] w-[86px]" />
+        <img alt="" className="absolute inset-0 size-full object-contain" src={imgBackground} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -676,7 +550,7 @@ function Frame4() {
         <p className="leading-[46px] whitespace-pre-wrap">A fragmented discovery experience</p>
       </div>
       <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">The storefront lacked a scalable discovery system. Users struggled to form a clear mental model of where they were and what value they could use, while key shopping options remained hidden. This led to unnecessary steps and prevented users from fully experiencing the program’s breadth and value.</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Users struggled to form a clear mental model of where they were and what value they could use, while key shopping options remained hidden. This led to unnecessary steps and prevented users from fully experiencing the program’s breadth and value.</p>
       </div>
     </div>
   );
@@ -684,9 +558,20 @@ function Frame4() {
 
 function SectionImageLg3() {
   return (
-    <div className="bg-[#f0f3f5] h-[310px] relative shrink-0 w-[774px]" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute bg-[#f0f3f5] h-[33px] left-[332px] top-[105px] w-[86px]" />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-[774px]" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgChallenge1} />
+      </div>
+      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+    </div>
+  );
+}
+
+function SectionImageLg3b() {
+  return (
+    <div className="bg-[#f0f3f5] relative shrink-0 w-[774px]" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgChallenge2} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -695,8 +580,9 @@ function SectionImageLg3() {
 
 function Frame12() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
       <SectionImageLg3 />
+      <SectionImageLg3b />
     </div>
   );
 }
@@ -772,9 +658,16 @@ function Frame9() {
 
 function SectionImageLg5() {
   return (
-    <div className="bg-[#f0f3f5] h-[310px] relative shrink-0 w-[774px]" data-name="section image lg">
+    <div className="bg-[#f0f3f5] h-[330px] relative shrink-0 w-[774px]" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute bg-[#f0f3f5] h-[33px] left-[332px] top-[105px] w-[86px]" />
+        <video
+          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top"
+          src={videoSolution1}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -816,9 +709,16 @@ function Frame10() {
 
 function SectionImageLg6() {
   return (
-    <div className="bg-[#f0f3f5] h-[310px] relative shrink-0 w-[774px]" data-name="section image lg">
+    <div className="bg-[#f0f3f5] h-[380px] relative shrink-0 w-[774px]" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute bg-[#f0f3f5] h-[33px] left-[332px] top-[105px] w-[86px]" />
+        <video
+          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top"
+          src={videoSolution2}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -881,7 +781,7 @@ function MainContent() {
 
 export default function GlobalRewardStorefront() {
   return (
-    <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen relative w-full" data-name="Global Reward Storefront">
+    <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[110px] relative w-full" data-name="Global Reward Storefront">
       <MainContent />
       <Footer />
       <NavBar />
