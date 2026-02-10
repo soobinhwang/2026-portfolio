@@ -157,7 +157,7 @@ function ProfileContainer() {
 
 function Thumbnail() {
   return (
-    <div className="bg-[#f0f3f5] h-[435px] overflow-clip relative shrink-0 w-[580px] transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail">
+    <div className="bg-[#f0f3f5] h-[435px] overflow-clip relative shrink-0 w-[580px] transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP1Thumbnail} />
     </div>
   );
@@ -193,7 +193,7 @@ function Container1() {
 
 function Thumbnail1() {
   return (
-    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail">
+    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP2Thumbnail} />
     </div>
   );
@@ -237,7 +237,7 @@ function Container() {
 
 function Thumbnail2() {
   return (
-    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail">
+    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP3Thumbnail} />
     </div>
   );
@@ -272,7 +272,7 @@ function Container6() {
 
 function Thumbnail3() {
   return (
-    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-40" data-name="Thumbnail">
+    <div className="bg-[#1e242a] h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP4Thumbnail} />
     </div>
   );
