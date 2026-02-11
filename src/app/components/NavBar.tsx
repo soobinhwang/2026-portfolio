@@ -1,10 +1,11 @@
 import { Link, useLocation } from "react-router";
+import resumePdf from "../../assets/Sue Hwang - Product Designer.pdf";
 
 const NAV_ITEMS = [
   { label: "Work", to: "/" },
   { label: "AI", to: "/ai", disabled: true },
   { label: "About", to: "/about" },
-  { label: "Resume", to: null },
+  { label: "Resume", href: resumePdf },
 ];
 
 function isActive(pathname: string, to: string) {
@@ -55,6 +56,21 @@ export default function NavBar() {
                   >
                     {inner}
                   </Link>
+                );
+              }
+
+              if (item.href && !disabled) {
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="content-stretch flex flex-col items-start relative shrink-0"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    {inner}
+                  </a>
                 );
               }
 

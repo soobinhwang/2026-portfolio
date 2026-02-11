@@ -3,6 +3,7 @@ import imgProfileContainer from "../assets/About/Profile Container.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
+import resumePdf from "../assets/Sue Hwang - Product Designer.pdf";
 
 function StatusIndicator() {
   return (
@@ -45,7 +46,7 @@ function ProfileDescriptionContainer() {
         <p className="leading-[44px] whitespace-pre-wrap">Sue is a Product Designer</p>
       </div>
       <div className="flex flex-col font-geist justify-center leading-[24px] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-full whitespace-pre-wrap">
-        <p className="mb-0">a User Experience Designer who believes growth is something we do together. I love creating spaces where people can learn from each other, stay curious, and feel comfortable asking any questions.</p>
+        <p className="mb-0">who believes growth is something we do together. I love creating spaces where people can learn from each other, stay curious, and feel comfortable asking any questions.</p>
         <p className="mb-0">&nbsp;</p>
         <p>
           {`Design is how I live my values of humanity, growth, and doing my best work. I care about building products that quietly make everyday life easier, especially for people who may have fewer options or more barriers. `}
@@ -160,7 +161,6 @@ function ContentColumn() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Content Column">
       <ProfileDescriptionContainer />
-      <SocialLinksContainer />
     </div>
   );
 }
@@ -208,9 +208,9 @@ function ArrowDown({ className }: { className?: string }) {
 
 function DownloadResumeContainer() {
   return (
-    <div className="bg-white content-stretch flex gap-[4px] items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0" data-name="Download Resume Container">
+    <div className="bg-white content-stretch flex gap-[4px] items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0 transition-colors duration-200 group-hover:bg-[#f7f8f9]" data-name="Download Resume Container">
       <div className="absolute inset-0 rounded-[24px]" data-name="Download Resume Border">
-        <div aria-hidden="true" className="absolute border border-[#e6e6e6] border-solid inset-0 pointer-events-none rounded-[24px]" />
+        <div aria-hidden="true" className="absolute border border-[#e6e6e6] border-solid inset-0 pointer-events-none rounded-[24px] transition-colors duration-200 group-hover:border-[#d6dbe0]" />
       </div>
       <DownloadResumeTextContainer />
     </div>
@@ -219,9 +219,15 @@ function DownloadResumeContainer() {
 
 function DownloadResumeLink() {
   return (
-    <div className="content-stretch flex items-center justify-center relative shrink-0" data-name="Download Resume Link">
+    <a
+      className="content-stretch flex items-center justify-center relative shrink-0 group"
+      data-name="Download Resume Link"
+      href={resumePdf}
+      download
+      aria-label="Download resume"
+    >
       <DownloadResumeContainer />
-    </div>
+    </a>
   );
 }
 
@@ -931,7 +937,10 @@ function WritingsContentContainer() {
 
 function WritingsContainer() {
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start max-w-[1200px] relative shrink-0 w-full" data-name="Writings Container">
+    <div
+      className="content-stretch hidden flex-col gap-[32px] items-start max-w-[1200px] relative shrink-0 w-full"
+      data-name="Writings Container"
+    >
       <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[20px] tracking-[-1.04px] uppercase w-full">
         <p className="leading-[normal] whitespace-pre-wrap">Writings</p>
       </div>
@@ -971,7 +980,7 @@ export default function AboutPage() {
   return (
     <div className="bg-dot-grid min-h-screen flex flex-col relative w-full" data-name="About Page">
       <MainFrame />
-      <Footer maxWidthClass="max-w-[550px]" />
+      <Footer maxWidthClass="max-w-[550px]" emailVariant="text" paddingXClass="px-0" />
       <NavBar />
     </div>
   );

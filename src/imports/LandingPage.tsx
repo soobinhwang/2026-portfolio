@@ -270,7 +270,6 @@ function Container6() {
     <div
       className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full"
       data-name="Container"
-      data-cursor="coming-soon"
     >
       <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail2 />
@@ -305,7 +304,11 @@ function InfoContainer3() {
 
 function Container7() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full" data-name="Container">
+    <div
+      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full"
+      data-name="Container"
+      data-cursor="coming-soon"
+    >
       <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail3 />
       <InfoContainer3 />

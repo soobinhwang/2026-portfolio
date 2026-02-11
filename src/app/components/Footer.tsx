@@ -1,11 +1,17 @@
 type FooterProps = {
   maxWidthClass?: string;
   emailVariant?: "pill" | "text";
+  stacked?: boolean;
+  swapOrder?: boolean;
+  paddingXClass?: string;
 };
 
 export default function Footer({
   maxWidthClass = "max-w-[1200px]",
   emailVariant = "pill",
+  stacked = false,
+  swapOrder = false,
+  paddingXClass = "px-[16px]",
 }: FooterProps) {
   const handleCopy = () => {
     navigator.clipboard.writeText("soobinhwang317@gmail.com");
@@ -14,13 +20,14 @@ export default function Footer({
     );
   };
 
+  const containerClassName = `flex flex-col ${stacked ? "gap-[20px]" : "gap-[16px] sm:flex-row sm:items-center sm:justify-between"} py-[48px] relative w-full ${paddingXClass} font-geist-mono ${maxWidthClass}`;
+  const groupOrder = stacked ? 1 : swapOrder ? 1 : 2;
+  const textOrder = stacked ? 2 : swapOrder ? 2 : 1;
+
   return (
     <footer className="content-stretch flex flex-col items-center relative shrink-0 w-full pt-[100px]" data-name="Footer">
-      <div className={`flex flex-col gap-[16px] py-[48px] relative w-full px-[16px] font-geist-mono sm:flex-row sm:items-center sm:justify-between ${maxWidthClass}`}>
-        <div className="flex flex-col font-normal justify-center leading-[0] text-[#32404f] text-[16px] tracking-[-0.2px]">
-          <p className="leading-[24px]">Designed + vibe coded by Sue</p>
-        </div>
-        <div className="flex flex-col gap-[12px] items-start sm:flex-row sm:items-center sm:gap-[20px]">
+      <div className={containerClassName}>
+        <div className={`flex flex-col gap-[12px] items-start sm:flex-row sm:items-center sm:gap-[20px] order-${groupOrder}`}>
           {emailVariant === "pill" ? (
             <div className="flex items-center gap-[10px] bg-[#f0f3f5] rounded-full px-[16px] py-[8px] text-[#32404f] text-[14px]">
               <span className="leading-[20px]">soobinhwang317@gmail.com</span>
@@ -53,6 +60,9 @@ export default function Footer({
               LinkedIn
             </a>
           </div>
+        </div>
+        <div className={`flex flex-col font-normal justify-center leading-[0] text-[#32404f] text-[16px] tracking-[-0.2px] order-${textOrder}`}>
+          <p className="leading-[24px]">Designed + vibe coded by Sue</p>
         </div>
       </div>
     </footer>
