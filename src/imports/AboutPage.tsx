@@ -3,7 +3,7 @@ import imgProfileContainer from "../assets/About/Profile Container.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
-import resumePdf from "../assets/Sue Hwang - Product Designer.pdf";
+import resumePdf from "../Sue Hwang - Resume.pdf";
 
 function StatusIndicator() {
   return (

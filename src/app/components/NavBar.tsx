@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import resumePdf from "../../assets/Sue Hwang - Product Designer.pdf";
+import resumePdf from "../../Sue Hwang - Resume.pdf";
 
 const NAV_ITEMS = [
   { label: "Work", to: "/" },
@@ -32,7 +32,7 @@ export default function NavBar() {
                   data-cursor={disabled ? "coming-soon" : undefined}
                 >
                   <div
-                    className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[16px] text-center tracking-[-0.5px] whitespace-nowrap transition-colors duration-200"
+                    className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[16px] text-center tracking-[-0.5px] whitespace-nowrap transition-colors duration-200 uppercase"
                     style={{ color: textColor }}
                     onMouseEnter={(e) => {
                       if (!active && !disabled) e.currentTarget.style.color = "#1700CF";
