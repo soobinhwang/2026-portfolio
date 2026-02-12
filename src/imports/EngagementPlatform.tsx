@@ -151,17 +151,50 @@ function Container() {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
+    let revealed = false;
+
+    const reveal = () => {
+      if (revealed) return;
+      revealed = true;
+      setIsVisible(true);
+    };
+
+    const isInView = () => {
+      const rect = el.getBoundingClientRect();
+      return rect.top < window.innerHeight * 0.85 && rect.bottom > 0;
+    };
+
+    if (isInView()) {
+      reveal();
+      return;
+    }
+
+    let observer: IntersectionObserver | null = null;
+    if ("IntersectionObserver" in window) {
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            reveal();
+            observer?.disconnect();
+          }
+        },
+        { threshold: 0.3 }
+      );
+      observer.observe(el);
+    }
+
+    const onScroll = () => {
+      if (isInView()) {
+        reveal();
+        window.removeEventListener("scroll", onScroll);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return (
