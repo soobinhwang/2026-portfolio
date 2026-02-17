@@ -17,9 +17,9 @@ import NavBar from "../app/components/NavBar";
 
 function ProfileInfoItem() {
   return (
-    <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px]">+3 years</p>
+    <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] max-[392px]:px-[4px] max-[392px]:py-[1px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] max-[392px]:text-[8px] uppercase whitespace-nowrap">
+        <p className="leading-[22.5px] max-[392px]:leading-[14px]">+3 years</p>
       </div>
     </div>
   );
@@ -27,9 +27,9 @@ function ProfileInfoItem() {
 
 function ProfileInfoItem1() {
   return (
-    <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px]">b2b B2B2C saas</p>
+    <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] max-[392px]:px-[4px] max-[392px]:py-[1px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] max-[392px]:text-[8px] uppercase whitespace-nowrap">
+        <p className="leading-[22.5px] max-[392px]:leading-[14px]">b2b B2B2C saas</p>
       </div>
     </div>
   );
@@ -37,9 +37,9 @@ function ProfileInfoItem1() {
 
 function ProfileInfoItem2() {
   return (
-    <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px]">enterprise designer</p>
+    <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] max-[392px]:px-[4px] max-[392px]:py-[1px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] max-[392px]:text-[8px] uppercase whitespace-nowrap">
+        <p className="leading-[22.5px] max-[392px]:leading-[14px]">enterprise designer</p>
       </div>
     </div>
   );
@@ -47,7 +47,7 @@ function ProfileInfoItem2() {
 
 function ProfileInfoContainer() {
   return (
-    <div className="content-center flex flex-wrap gap-[10px] items-center relative shrink-0 w-full" data-name="Profile Info Container">
+    <div className="content-center flex flex-wrap max-[392px]:flex-nowrap gap-[10px] max-[392px]:gap-[4px] items-center relative shrink-0 w-full" data-name="Profile Info Container">
       <ProfileInfoItem />
       <ProfileInfoItem1 />
       <ProfileInfoItem2 />

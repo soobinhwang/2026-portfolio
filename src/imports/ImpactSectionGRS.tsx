@@ -54,7 +54,7 @@ function BrutalismCircleIcon() {
 
 function ImpactItem({ title, subtitle, icon }: { title: string; subtitle: string; icon: React.ReactNode }) {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start justify-center min-h-px min-w-px relative self-stretch">
+    <div className="content-stretch flex flex-col gap-[16px] items-start justify-center relative w-full sm:min-h-px sm:min-w-px">
       {icon}
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
@@ -83,10 +83,15 @@ export default function ImpactSectionGRS({
   secondTitle?: string;
   secondSubtitle?: string;
 }) {
+  const gridColumns = hideThird ? "min-[481px]:grid-cols-2" : "min-[481px]:grid-cols-3";
+
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start relative size-full" data-name="Property">
       <ImpactHeader />
-      <div className="content-stretch flex gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Container">
+      <div
+        className={`content-stretch grid grid-cols-1 ${gridColumns} gap-[24px] min-[481px]:gap-[40px] items-start relative shrink-0 w-full`}
+        data-name="Container"
+      >
         <ImpactItem title={firstTitle} subtitle={firstSubtitle} icon={<FlexibilityIcon />} />
         <ImpactItem title={secondTitle} subtitle={secondSubtitle} icon={<EfficiencyIcon />} />
         {!hideThird && <ImpactItem title="Scalability" subtitle="across diverse programs" icon={<BrutalismCircleIcon />} />}

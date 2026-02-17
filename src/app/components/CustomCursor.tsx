@@ -16,6 +16,7 @@ const PILL_PADDING = "8px 16px";
 const ICON_GAP = 6;
 
 export default function CustomCursor() {
+  const [isEnabled, setIsEnabled] = useState(false);
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [visible, setVisible] = useState(false);
   const [mode, setMode] = useState<CursorMode>("default");
@@ -23,6 +24,22 @@ export default function CustomCursor() {
   const flashTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px) and (hover: hover) and (pointer: fine)");
+    const updateEnabled = () => setIsEnabled(mediaQuery.matches);
+
+    updateEnabled();
+    mediaQuery.addEventListener("change", updateEnabled);
+    window.addEventListener("resize", updateEnabled);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateEnabled);
+      window.removeEventListener("resize", updateEnabled);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isEnabled) return;
+
     const onMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
       if (!visible) setVisible(true);
@@ -57,7 +74,14 @@ export default function CustomCursor() {
       document.removeEventListener("mouseleave", onMouseLeave);
       document.removeEventListener("mouseenter", onMouseEnter);
     };
-  }, [visible]);
+  }, [isEnabled, visible]);
+
+  useEffect(() => {
+    if (!isEnabled) {
+      setVisible(false);
+      setMode("default");
+    }
+  }, [isEnabled]);
 
   useEffect(() => {
     const onFlash = (event: Event) => {
@@ -103,8 +127,11 @@ export default function CustomCursor() {
           ? "Copy Email"
           : "View Case Study";
 
+  if (!isEnabled) return null;
+
   return (
     <div
+      className="custom-cursor"
       style={{
         position: "fixed",
         left: position.x,

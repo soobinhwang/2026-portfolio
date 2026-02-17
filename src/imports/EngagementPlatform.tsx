@@ -49,6 +49,7 @@ import imgChallenge from "../assets/work/engagement-platform/Challenge.png";
 import videoRefinedSolution from "../assets/work/engagement-platform/refined solution.mov";
 import imgSolutionOnePrimary from "../assets/work/engagement-platform/Solution 1 - 1.png";
 import imgSolutionOneSecondary from "../assets/work/engagement-platform/Solution 1 - 2.png";
+import imgSolutionTwo from "../assets/work/engagement-platform/Solution 2.png";
 import videoReusableComponent1 from "../assets/work/engagement-platform/reusable component 1.mp4";
 import videoReusableComponent2 from "../assets/work/engagement-platform/reusable component 2.mp4";
 import imgSolutionThree from "../assets/work/engagement-platform/Solution 3.png";
@@ -105,9 +106,9 @@ function Frame5({ isVisible }: { isVisible: boolean }) {
 
 function Container1({ isVisible }: { isVisible: boolean }) {
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0 text-center" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[8px] items-center relative text-center w-full" data-name="Container">
       <Frame5 isVisible={isVisible} />
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[18px] text-[#5b6a79] w-fit">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[#5b6a79] w-fit">
         <p className="leading-[22.5px] whitespace-pre-wrap">Revenue growth</p>
       </div>
     </div>
@@ -120,9 +121,9 @@ function Frame6({ isVisible }: { isVisible: boolean }) {
 
 function Container2({ isVisible }: { isVisible: boolean }) {
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0 text-center" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[8px] items-center relative text-center w-full" data-name="Container">
       <Frame6 isVisible={isVisible} />
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[18px] text-[#5b6a79] w-fit">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[#5b6a79] w-fit">
         <p className="leading-[22.5px] whitespace-pre-wrap">Client programs</p>
       </div>
     </div>
@@ -135,9 +136,9 @@ function Frame7({ isVisible }: { isVisible: boolean }) {
 
 function Container3({ isVisible }: { isVisible: boolean }) {
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0 text-center" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[8px] items-center relative text-center w-full" data-name="Container">
       <Frame7 isVisible={isVisible} />
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[18px] text-[#5b6a79] w-fit">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[#5b6a79] w-fit">
         <p className="leading-[22.5px] whitespace-pre-wrap">Less change tickets</p>
       </div>
     </div>
@@ -198,7 +199,7 @@ function Container() {
   }, []);
 
   return (
-    <div ref={containerRef} className="content-stretch inline-flex gap-[104px] items-start justify-center relative shrink-0 w-fit" data-name="Container">
+    <div ref={containerRef} className="content-stretch grid grid-cols-1 min-[481px]:grid-cols-3 gap-[24px] min-[481px]:gap-[40px] items-start relative w-full" data-name="Container">
       <Container1 isVisible={isVisible} />
       <Container2 isVisible={isVisible} />
       <Container3 isVisible={isVisible} />
@@ -371,7 +372,7 @@ function Frame258() {
 
 function SectionImageSm() {
   return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
+    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgSolutionOnePrimary} />
       </div>
@@ -395,7 +396,7 @@ function Container5() {
 
 function Container4() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px order-1" data-name="Container">
       <SectionImageSm />
       <Container5 />
     </div>
@@ -404,7 +405,7 @@ function Container4() {
 
 function SectionImageSm1() {
   return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
+    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgSolutionOneSecondary} />
       </div>
@@ -428,7 +429,7 @@ function Container7() {
 
 function Container6() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px order-2" data-name="Container">
       <SectionImageSm1 />
       <Container7 />
     </div>
@@ -437,7 +438,7 @@ function Container6() {
 
 function Frame1() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[32px] items-start relative shrink-0 w-full">
       <Container4 />
       <Container6 />
     </div>
@@ -908,7 +909,7 @@ function Frame269() {
 
 function Property4() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] h-[439px] items-start max-w-[774px] relative row-[12] shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[12] shrink-0 w-full" data-name="Property">
       <Frame259 />
       <Frame269 />
     </div>
@@ -933,9 +934,9 @@ function Frame260() {
 
 function SectionImageSm2() {
   return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgDesignOutcome1} />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome1} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -957,7 +958,7 @@ function Container9() {
 
 function Container8() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px order-1" data-name="Container">
       <SectionImageSm2 />
       <Container9 />
     </div>
@@ -966,9 +967,9 @@ function Container8() {
 
 function SectionImageSm3() {
   return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgDesignOutcome2} />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome2} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -990,7 +991,7 @@ function Container11() {
 
 function Container10() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px order-2" data-name="Container">
       <SectionImageSm3 />
       <Container11 />
     </div>
@@ -999,7 +1000,7 @@ function Container10() {
 
 function Frame2() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[32px] items-start relative shrink-0 w-full">
       <Container8 />
       <Container10 />
     </div>
@@ -1008,9 +1009,9 @@ function Frame2() {
 
 function SectionImageSm4() {
   return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgDesignOutcome3} />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome3} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -1032,7 +1033,7 @@ function Container13() {
 
 function Container12() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px order-1" data-name="Container">
       <SectionImageSm4 />
       <Container13 />
     </div>
@@ -1054,9 +1055,9 @@ function Group32() {
 
 function SectionImageSm5() {
   return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgDesignOutcome4} />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome4} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -1078,7 +1079,7 @@ function Container15() {
 
 function Container14() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px order-2" data-name="Container">
       <SectionImageSm5 />
       <Container15 />
     </div>
@@ -1087,7 +1088,7 @@ function Container14() {
 
 function Frame3() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[32px] items-start relative shrink-0 w-full">
       <Container12 />
       <Container14 />
     </div>
@@ -8500,18 +8501,9 @@ function Frame264() {
 
 function Property6() {
   return (
-    <div className="bg-[#f0f3f5] h-[346px] relative shrink-0 w-full" data-name="Property">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <Table />
-        <Frame46 />
-        <Frame45 />
-        <WidgetSmBlock />
-        <WorkAnniversary />
-        <WidgetSmBlock2 />
-        <WidgetSmBlock3 />
-        <WidgetSmBlock4 />
-        <WidgetSmBlock5 />
-        <Frame264 />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Property">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgSolutionTwo} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -8559,7 +8551,7 @@ function ContentSections1() {
 
 function Property7() {
   return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="Property">
+    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px]" data-name="Property">
       <div className="overflow-clip rounded-[inherit] size-full flex items-center justify-center">
         <video autoPlay className="max-h-full max-w-full object-contain" controlsList="nodownload" loop muted playsInline>
           <source src={videoReusableComponent1} />
@@ -8585,7 +8577,7 @@ function Container18() {
 
 function Container17() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px order-1" data-name="Container">
       <Property7 />
       <Container18 />
     </div>
@@ -8594,7 +8586,7 @@ function Container17() {
 
 function Property8() {
   return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="Property">
+    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px]" data-name="Property">
       <div className="overflow-clip rounded-[inherit] size-full flex items-center justify-center">
         <video autoPlay className="max-h-full max-w-full object-contain" controlsList="nodownload" loop muted playsInline>
           <source src={videoReusableComponent2} />
@@ -8620,7 +8612,7 @@ function Container20() {
 
 function Container19() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px order-2" data-name="Container">
       <Property8 />
       <Container20 />
     </div>
@@ -8629,7 +8621,7 @@ function Container19() {
 
 function SectionContainer4() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[32px] items-start relative shrink-0 w-full" data-name="Section Container">
       <Container17 />
       <Container19 />
     </div>
@@ -8699,12 +8691,12 @@ function Thumbnail() {
 
 function Container23() {
   return (
-    <div className="content-stretch flex gap-[76px] items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-[72px]">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Role</p>
       </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[#5b6a79] text-[15px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
         <p>
           <span className="leading-[24px] text-[#5b6a79]">{`UX `}</span>
           <span className="leading-[24px]">·</span>
@@ -8717,12 +8709,12 @@ function Container23() {
 
 function Container24() {
   return (
-    <div className="content-stretch flex gap-[76px] items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-[72px]">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Timeline</p>
       </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[#5b6a79] text-[15px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
         <p className="leading-[24px]">6 months · Sep 2022 - Feb 2023</p>
       </div>
     </div>
@@ -8731,12 +8723,12 @@ function Container24() {
 
 function Container25() {
   return (
-    <div className="content-stretch flex gap-[76px] items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-[72px]">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Team</p>
       </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[#5b6a79] text-[15px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
         <p>
           <span className="leading-[24px] text-[#5b6a79]">{`2 Designers `}</span>
           <span className="leading-[24px]">·</span>
@@ -8755,11 +8747,11 @@ function Container25() {
 
 function Container26() {
   return (
-    <div className="content-stretch flex font-normal gap-[76px] items-center leading-[0] relative shrink-0 text-[15px] w-full" data-name="Container">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[rgba(50,64,79,0.58)] uppercase w-[72px]">
+    <div className="content-stretch flex flex-col sm:flex-row font-normal gap-[8px] sm:gap-[76px] items-start sm:items-center leading-[0] relative shrink-0 text-[15px] w-full" data-name="Container">
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Skills</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[#5b6a79] whitespace-nowrap">
+      <div className="flex flex-col font-geist justify-center min-h-px min-w-0 relative text-[#5b6a79] w-full">
         <p>
           <span className="leading-[24px] text-[#5b6a79]">{`Systems Thinking `}</span>
           <span className="leading-[24px]">·</span>
@@ -8984,7 +8976,7 @@ function Frame261() {
 
 function ImpactImage() {
   return (
-    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
+    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-full sm:w-[242px]" data-name="Impact image">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <img alt="" className="block w-full h-full object-contain" src={imgKeyInsight1} />
       </div>
@@ -9005,7 +8997,7 @@ function Frame9() {
 
 function Container28() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative self-stretch" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[8px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px sm:self-stretch order-1" data-name="Container">
       <ImpactImage />
       <Frame9 />
     </div>
@@ -9014,7 +9006,7 @@ function Container28() {
 
 function ImpactImage1() {
   return (
-    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
+    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-full sm:w-[242px]" data-name="Impact image">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <img alt="" className="block w-full h-full object-contain" src={imgKeyInsight2} />
       </div>
@@ -9035,7 +9027,7 @@ function Frame10() {
 
 function Container29() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative self-stretch" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[8px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px sm:self-stretch order-2" data-name="Container">
       <ImpactImage1 />
       <Frame10 />
     </div>
@@ -9044,7 +9036,7 @@ function Container29() {
 
 function ImpactImage2() {
   return (
-    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-[242px]" data-name="Impact image">
+    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-full sm:w-[242px]" data-name="Impact image">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <img alt="" className="block w-full h-full object-contain" src={imgKeyInsight3} />
       </div>
@@ -9065,7 +9057,7 @@ function Frame11() {
 
 function Container30() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative self-stretch" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[8px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px sm:self-stretch order-3" data-name="Container">
       <ImpactImage2 />
       <Frame11 />
     </div>
@@ -9074,7 +9066,7 @@ function Container30() {
 
 function Container27() {
   return (
-    <div className="content-stretch flex gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Container">
       <Container28 />
       <Container29 />
       <Container30 />
@@ -10163,7 +10155,7 @@ function ContentSections7() {
 
 function SectionContainer() {
   return (
-    <div className="gap-[110px] sm:gap-[170px] grid-cols-[repeat(1,_fit-content(100%))] grid-rows-[repeat(17,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
+    <div className="gap-[110px] sm:gap-[170px] grid-cols-1 grid-rows-[repeat(17,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
       <Property />
       <ContentSections />
       <Property1 />
@@ -10249,10 +10241,10 @@ function NextProjectNudge() {
 
 export default function EngagementPlatform() {
   return (
-    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px] sm:px-0 relative w-full" data-name="Engagement Platform">
+    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px] relative w-full" data-name="Engagement Platform">
       <MainContent />
       {/* <NextProjectNudge /> */}
-      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
+      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px]" />
       <NavBar />
     </div>
   );

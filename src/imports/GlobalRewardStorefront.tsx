@@ -41,9 +41,9 @@ function SectionContainer1() {
 
 function SectionImageLg() {
   return (
-    <div className="bg-[#f0f3f5] h-[266px] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 size-full object-cover" src={imgMyRole} />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgMyRole} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -89,12 +89,12 @@ function SectionImageLg1() {
       <DialogTrigger asChild>
         <button
           type="button"
-          className="bg-[#f0f3f5] h-[346px] relative shrink-0 w-full cursor-pointer group"
+          className="bg-[#f0f3f5] relative shrink-0 w-full cursor-pointer group"
           data-name="section image lg"
           aria-label="Open program structure analysis full view"
         >
-          <div className="overflow-clip relative rounded-[inherit] size-full">
-            <img alt="" className="absolute inset-0 size-full object-cover" src={imgProgramStructureAnalysis} />
+          <div className="overflow-clip relative rounded-[inherit] w-full">
+            <img alt="" className="block w-full h-auto object-contain" src={imgProgramStructureAnalysis} />
           </div>
           <div
             className="absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] bg-white/60 border border-[#eceff2] transition-opacity duration-200 group-hover:opacity-80"
@@ -253,9 +253,9 @@ function Frame7() {
 
 function SectionImageLg2() {
   return (
-    <div className="bg-[#f0f3f5] h-[316px] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 size-full object-cover" src={imgPrioritization} />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgPrioritization} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -305,12 +305,12 @@ function Thumbnail() {
 
 function Container4() {
   return (
-    <div className="content-stretch flex gap-[76px] items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-[72px]">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Role</p>
       </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[#5b6a79] text-[15px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
         <p>
           <span className="leading-[24px]">{`UX `}</span>
           <span className="font-geist font-normal leading-[24px]">•</span>
@@ -323,12 +323,12 @@ function Container4() {
 
 function Container5() {
   return (
-    <div className="content-stretch flex gap-[76px] items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-[72px]">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Timeline</p>
       </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[#5b6a79] text-[15px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
         <p className="leading-[24px]">4 months · Jan - Apr 2025</p>
       </div>
     </div>
@@ -337,12 +337,12 @@ function Container5() {
 
 function Container6() {
   return (
-    <div className="content-stretch flex gap-[76px] items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-[72px]">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Team</p>
       </div>
-      <div className="flex flex-[1_0_0] flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-px relative text-[#5b6a79] text-[15px]">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
         <p className="leading-[24px] whitespace-pre-wrap">{`Product Lead · UX Lead · 2 UX Designers · 1 Developer · CS Team · Business Analysts `}</p>
       </div>
     </div>
@@ -351,11 +351,11 @@ function Container6() {
 
 function Container7() {
   return (
-    <div className="content-stretch flex font-normal gap-[76px] items-center leading-[0] relative shrink-0 text-[15px] w-full" data-name="Container">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[rgba(50,64,79,0.58)] uppercase w-[72px]">
+    <div className="content-stretch flex flex-col sm:flex-row font-normal gap-[8px] sm:gap-[76px] items-start sm:items-center leading-[0] relative shrink-0 text-[15px] w-full" data-name="Container">
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
         <p className="leading-[22.5px] whitespace-pre-wrap">Skills</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[#5b6a79] whitespace-nowrap">
+      <div className="flex flex-col font-geist justify-center min-h-px min-w-0 relative text-[#5b6a79] w-full">
         <p className="leading-[24px]">{`Problem Framing · Solution Scoping ·  UI Design`}</p>
       </div>
     </div>
@@ -401,9 +401,9 @@ function SectionContainer2() {
 
 function Property5() {
   return (
-    <div className="bg-[#f0f3f5] h-[351px] relative shrink-0 w-full" data-name="Property">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 size-full object-contain" src={imgBackground} />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Property">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgBackground} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -543,23 +543,75 @@ function Frame4() {
 
 function SectionImageLg3() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgChallenge1} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <Dialog>
+      <DialogTrigger asChild>
+        <button
+          type="button"
+          className="bg-[#f0f3f5] relative shrink-0 w-full cursor-pointer group"
+          data-name="section image lg"
+          aria-label="Open challenge image 1 full view"
+        >
+          <div className="overflow-clip relative rounded-[inherit] w-full">
+            <img alt="" className="block w-full h-auto object-contain" src={imgChallenge1} />
+          </div>
+          <div
+            className="absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] bg-white/60 border border-[#eceff2] transition-opacity duration-200 group-hover:opacity-80"
+            aria-hidden="true"
+          >
+            <svg aria-hidden="true" className="h-[14px] w-[14px]" fill="none" viewBox="0 0 24 24">
+              <path
+                d="M14 3h7v7M21 3l-7 7M10 21H3v-7M3 21l7-7"
+                stroke="#6b7785"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.4"
+              />
+            </svg>
+          </div>
+          <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+        </button>
+      </DialogTrigger>
+      <DialogContent className="w-[1362px] max-w-[96vw] sm:w-[1362px] sm:max-w-[96vw] p-0 border-0 bg-transparent shadow-none">
+        <img alt="" className="w-full h-auto max-h-[90vh] object-contain rounded-[12px]" src={imgChallenge1} />
+      </DialogContent>
+    </Dialog>
   );
 }
 
 function SectionImageLg3b() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgChallenge2} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <Dialog>
+      <DialogTrigger asChild>
+        <button
+          type="button"
+          className="bg-[#f0f3f5] relative shrink-0 w-full cursor-pointer group"
+          data-name="section image lg"
+          aria-label="Open challenge image 2 full view"
+        >
+          <div className="overflow-clip relative rounded-[inherit] w-full">
+            <img alt="" className="block w-full h-auto object-contain" src={imgChallenge2} />
+          </div>
+          <div
+            className="absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] bg-white/60 border border-[#eceff2] transition-opacity duration-200 group-hover:opacity-80"
+            aria-hidden="true"
+          >
+            <svg aria-hidden="true" className="h-[14px] w-[14px]" fill="none" viewBox="0 0 24 24">
+              <path
+                d="M14 3h7v7M21 3l-7 7M10 21H3v-7M3 21l7-7"
+                stroke="#6b7785"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.4"
+              />
+            </svg>
+          </div>
+          <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+        </button>
+      </DialogTrigger>
+      <DialogContent className="w-[1362px] max-w-[96vw] sm:w-[1362px] sm:max-w-[96vw] p-0 border-0 bg-transparent shadow-none">
+        <img alt="" className="w-full h-auto max-h-[90vh] object-contain rounded-[12px]" src={imgChallenge2} />
+      </DialogContent>
+    </Dialog>
   );
 }
 
@@ -599,9 +651,9 @@ function Frame8() {
 
 function SectionImageLg4() {
   return (
-    <div className="bg-[#f0f3f5] h-[266px] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 size-full object-cover" src={imgSolution} />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img alt="" className="block w-full h-auto object-contain" src={imgSolution} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -643,10 +695,10 @@ function Frame9() {
 
 function SectionImageLg5() {
   return (
-    <div className="bg-[#f0f3f5] h-[330px] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
+    <div className="bg-[#f0f3f5] max-[560px]:bg-transparent h-[300px] max-[430px]:h-auto relative shrink-0 w-full" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] h-full max-[430px]:h-auto w-full">
         <video
-          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top"
+          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top max-[430px]:static max-[430px]:block max-[430px]:h-auto max-[430px]:w-full max-[430px]:scale-100"
           src={videoSolution1}
           autoPlay
           loop
@@ -654,7 +706,7 @@ function SectionImageLg5() {
           playsInline
         />
       </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none max-[560px]:hidden" />
     </div>
   );
 }
@@ -694,10 +746,10 @@ function Frame10() {
 
 function SectionImageLg6() {
   return (
-    <div className="bg-[#f0f3f5] h-[380px] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
+    <div className="bg-[#f0f3f5] max-[560px]:bg-transparent h-[350px] max-[430px]:h-auto relative shrink-0 w-full" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] h-full max-[430px]:h-auto w-full">
         <video
-          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top"
+          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top max-[430px]:static max-[430px]:block max-[430px]:h-auto max-[430px]:w-full max-[430px]:scale-100"
           src={videoSolution2}
           autoPlay
           loop
@@ -705,7 +757,7 @@ function SectionImageLg6() {
           playsInline
         />
       </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none max-[560px]:hidden" />
     </div>
   );
 }
@@ -729,7 +781,7 @@ function Property9() {
 
 function SectionContainer() {
   return (
-    <div className="gap-[110px] sm:gap-[170px] grid-cols-[repeat(1,_fit-content(100%))] grid-rows-[repeat(15,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
+    <div className="gap-[110px] sm:gap-[170px] grid-cols-1 grid-rows-[repeat(15,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
       <Property />
       <ContentSections />
       <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[10] shrink-0" data-name="Horizontal Divider" />
@@ -766,9 +818,9 @@ function MainContent() {
 
 export default function GlobalRewardStorefront() {
   return (
-    <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[96px] sm:pt-[110px] px-[20px] sm:px-0 relative w-full" data-name="Global Reward Storefront">
+    <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[96px] sm:pt-[110px] px-[20px] relative w-full" data-name="Global Reward Storefront">
       <MainContent />
-      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
+      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px]" />
       <NavBar />
     </div>
   );
