@@ -695,10 +695,10 @@ function Frame9() {
 
 function SectionImageLg5() {
   return (
-    <div className="bg-[#f0f3f5] max-[560px]:bg-transparent h-[300px] max-[430px]:h-auto relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] h-full max-[430px]:h-auto w-full">
+    <div className="bg-[#f0f3f5] max-[560px]:bg-transparent h-[300px] max-[560px]:h-auto relative shrink-0 w-full" data-name="section image lg">
+      <div className="overflow-clip max-[560px]:overflow-visible relative rounded-[inherit] max-[560px]:rounded-none h-full max-[560px]:h-auto w-full">
         <video
-          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top max-[430px]:static max-[430px]:block max-[430px]:h-auto max-[430px]:w-full max-[430px]:scale-100"
+          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top max-[560px]:static max-[560px]:block max-[560px]:h-auto max-[560px]:w-full max-[560px]:scale-100"
           src={videoSolution1}
           autoPlay
           loop
@@ -746,10 +746,10 @@ function Frame10() {
 
 function SectionImageLg6() {
   return (
-    <div className="bg-[#f0f3f5] max-[560px]:bg-transparent h-[350px] max-[430px]:h-auto relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] h-full max-[430px]:h-auto w-full">
+    <div className="bg-[#f0f3f5] max-[560px]:bg-transparent h-[350px] max-[560px]:h-auto relative shrink-0 w-full" data-name="section image lg">
+      <div className="overflow-clip max-[560px]:overflow-visible relative rounded-[inherit] max-[560px]:rounded-none h-full max-[560px]:h-auto w-full">
         <video
-          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top max-[430px]:static max-[430px]:block max-[430px]:h-auto max-[430px]:w-full max-[430px]:scale-100"
+          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top max-[560px]:static max-[560px]:block max-[560px]:h-auto max-[560px]:w-full max-[560px]:scale-100"
           src={videoSolution2}
           autoPlay
           loop

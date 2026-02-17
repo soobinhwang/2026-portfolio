@@ -18,6 +18,7 @@ import imgChallenge1 from "../assets/work/design-library/Challenge 1.png";
 import NavBar from "../app/components/NavBar";
 import Footer from "../app/components/Footer";
 import ImpactSectionGRS from "./ImpactSectionGRS";
+import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 
 function Property() {
   return (
@@ -63,15 +64,15 @@ function SectionImageLg() {
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <div className="absolute inset-0 flex items-center justify-center px-[16px] sm:px-[80px] scale-[0.72] sm:scale-100 origin-center">
           {/* Icon 1: Fragmented ring — Audit & Discovery */}
-          <div className="flex flex-col items-center gap-[20px]">
+          <div className="flex w-[108px] flex-col items-center gap-[20px]">
             <svg viewBox="0 0 120 120" width="108" height="108" fill="none">
               <circle cx="60" cy="60" r="42" stroke="#1e242a" strokeWidth="9" strokeDasharray="20 10" strokeLinecap="round" />
             </svg>
-            <span className="font-geist-mono text-[13px] text-[rgba(50,64,79,0.58)]">Audit & Research</span>
+            <span className="w-full text-center font-geist-mono text-[13px] text-[rgba(50,64,79,0.58)]">Audit & Research</span>
           </div>
           {arrow}
           {/* Icon 2: 3×3 grid — Component System */}
-          <div className="flex flex-col items-center gap-[20px]">
+          <div className="flex w-[108px] flex-col items-center gap-[20px]">
             <svg viewBox="0 0 120 120" width="108" height="108" fill="none">
               <rect x="20" y="20" width="22" height="22" rx="4" fill="#1e242a" />
               <rect x="49" y="20" width="22" height="22" rx="4" fill="#1e242a" />
@@ -83,15 +84,15 @@ function SectionImageLg() {
               <rect x="49" y="78" width="22" height="22" rx="4" fill="#1e242a" />
               <rect x="78" y="78" width="22" height="22" rx="4" fill="#1e242a" />
             </svg>
-            <span className="font-geist-mono text-[13px] text-[rgba(50,64,79,0.58)]">Component System</span>
+            <span className="w-full text-center font-geist-mono text-[13px] text-[rgba(50,64,79,0.58)]">Component System</span>
           </div>
           {arrow}
           {/* Icon 3: 4-pointed north star — Shipped & Scaled */}
-          <div className="flex flex-col items-center gap-[20px]">
+          <div className="flex w-[108px] flex-col items-center gap-[20px]">
             <svg viewBox="0 0 120 120" width="108" height="108" fill="none">
               <path d="M60 8 L65 55 L112 60 L65 65 L60 112 L55 65 L8 60 L55 55 Z" fill="#1e242a" />
             </svg>
-            <span className="font-geist-mono text-[13px] text-[rgba(50,64,79,0.58)]">Shipped to Scale</span>
+            <span className="w-full text-center font-geist-mono text-[13px] text-[rgba(50,64,79,0.58)]">Shipped to Scale</span>
           </div>
         </div>
       </div>
@@ -445,12 +446,38 @@ function Frame4() {
 
 function SectionImageLg3() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgChallenge1} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <Dialog>
+      <DialogTrigger asChild>
+        <button
+          type="button"
+          className="bg-[#f0f3f5] relative shrink-0 w-full cursor-pointer group"
+          data-name="section image lg"
+          aria-label="Open challenge image full view"
+        >
+          <div className="overflow-clip relative rounded-[inherit] w-full">
+            <img alt="" className="block w-full h-auto object-contain" src={imgChallenge1} />
+          </div>
+          <div
+            className="absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] bg-white/60 border border-[#eceff2] transition-opacity duration-200 group-hover:opacity-80"
+            aria-hidden="true"
+          >
+            <svg aria-hidden="true" className="h-[14px] w-[14px]" fill="none" viewBox="0 0 24 24">
+              <path
+                d="M14 3h7v7M21 3l-7 7M10 21H3v-7M3 21l7-7"
+                stroke="#6b7785"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.4"
+              />
+            </svg>
+          </div>
+          <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+        </button>
+      </DialogTrigger>
+      <DialogContent className="w-[1362px] max-w-[96vw] sm:w-[1362px] sm:max-w-[96vw] p-0 border-0 bg-transparent shadow-none">
+        <img alt="" className="w-full h-auto max-h-[90vh] object-contain rounded-[12px]" src={imgChallenge1} />
+      </DialogContent>
+    </Dialog>
   );
 }
 
