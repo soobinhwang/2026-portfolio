@@ -42,8 +42,8 @@ function ProfileContainer() {
 function ProfileDescriptionContainer() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start relative shrink-0 w-full" data-name="Profile Description Container">
-      <div className="flex flex-col font-newsreader justify-center leading-[0] relative shrink-0 text-[#32404f] text-[39px] tracking-[-1.04px] w-full">
-        <p className="leading-[44px] whitespace-pre-wrap">Sue is a Product Designer</p>
+      <div className="flex flex-col font-newsreader justify-center leading-[0] relative shrink-0 text-[#32404f] text-[28px] sm:text-[39px] tracking-[-1.04px] w-full">
+        <p className="leading-[34px] sm:leading-[44px] whitespace-pre-wrap">Sue is a Product Designer</p>
       </div>
       <div className="flex flex-col font-geist justify-center leading-[24px] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-full whitespace-pre-wrap">
         <p className="mb-0">who believes growth is something we do together. I love creating spaces where people can learn from each other, stay curious, and feel comfortable asking any questions.</p>
@@ -246,10 +246,10 @@ function MentorshipEventContainer() {
   return (
     <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px]">KOTRA Job Fair</p>
+        <p className="leading-[24px] whitespace-nowrap">KOTRA Job Fair</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px]">Oct 2025</p>
+        <p className="leading-[24px] whitespace-nowrap">Oct 2025</p>
       </div>
     </div>
   );
@@ -257,8 +257,8 @@ function MentorshipEventContainer() {
 
 function MentorshipContent() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Mentorship Content">
-      <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
+    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
+      <div className="flex flex-col font-geist font-medium justify-center relative text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Career Mentor</p>
       </div>
       <MentorshipEventContainer />
@@ -270,10 +270,10 @@ function MentorshipEventContainer1() {
   return (
     <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px]">KOTRA Job Fair</p>
+        <p className="leading-[24px] whitespace-nowrap">KOTRA Job Fair</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px]">Sep 2022</p>
+        <p className="leading-[24px] whitespace-nowrap">Sep 2022</p>
       </div>
     </div>
   );
@@ -281,8 +281,8 @@ function MentorshipEventContainer1() {
 
 function MentorshipContent1() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Mentorship Content">
-      <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
+    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
+      <div className="flex flex-col font-geist font-medium justify-center relative text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Career Mentor</p>
       </div>
       <MentorshipEventContainer1 />
@@ -294,10 +294,10 @@ function MentorshipEventContainer2() {
   return (
     <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px]">Euonia UX Hackathon</p>
+        <p className="leading-[24px] whitespace-nowrap">Euonia UX Hackathon</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px]">May 2022</p>
+        <p className="leading-[24px] whitespace-nowrap">May 2022</p>
       </div>
     </div>
   );
@@ -305,8 +305,8 @@ function MentorshipEventContainer2() {
 
 function MentorshipContent2() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Mentorship Content">
-      <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
+    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
+      <div className="flex flex-col font-geist font-medium justify-center relative text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Hackathon Mentor</p>
       </div>
       <MentorshipEventContainer2 />
@@ -316,7 +316,7 @@ function MentorshipContent2() {
 
 function MentorshipContentContainer() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start justify-center leading-[0] relative shrink-0 tracking-[-0.25px] w-full whitespace-nowrap" data-name="Mentorship Content Container">
+    <div className="content-stretch flex flex-col gap-[24px] items-start justify-center leading-[0] relative shrink-0 tracking-[-0.25px] w-full" data-name="Mentorship Content Container">
       <MentorshipContent />
       <MentorshipContent1 />
       <MentorshipContent2 />
@@ -353,7 +353,7 @@ function ArrowNarrowUpRight({ className }: { className?: string }) {
 function AwardsProjectContainer() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
         <p className="leading-[24px]">Metaverse Therapeutic Web App</p>
       </div>
       <ArrowNarrowUpRight />
@@ -387,7 +387,7 @@ function AwardsEventContainer1() {
 
 function AwardsContent() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer />
       <AwardsEventContainer1 />
     </div>
@@ -409,7 +409,7 @@ function AwardsProjectIcon() {
 function AwardsProjectContainer1() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
         <p className="leading-[24px]">Ethical Shopping App</p>
       </div>
       <AwardsProjectIcon />
@@ -447,7 +447,7 @@ function AwardsEventContainer3() {
 
 function AwardsContent1() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer2 />
       <AwardsEventContainer3 />
     </div>
@@ -469,7 +469,7 @@ function AwardsProjectIcon1() {
 function AwardsProjectContainer2() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
         <p className="leading-[24px]">Volunteer Matching App</p>
       </div>
       <AwardsProjectIcon1 />
@@ -507,7 +507,7 @@ function AwardsEventContainer5() {
 
 function AwardsContent2() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer4 />
       <AwardsEventContainer5 />
     </div>
@@ -529,7 +529,7 @@ function AwardsProjectIcon2() {
 function AwardsProjectContainer3() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
         <p className="leading-[24px]">English Learning Platform UX Improvement</p>
       </div>
       <AwardsProjectIcon2 />
@@ -563,7 +563,7 @@ function AwardsEventContainer7() {
 
 function AwardsContent3() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer6 />
       <AwardsEventContainer7 />
     </div>
@@ -585,7 +585,7 @@ function AwardsProjectIcon3() {
 function AwardsProjectContainer4() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
         <p className="leading-[24px]">Trustworthy Election Content App</p>
       </div>
       <AwardsProjectIcon3 />
@@ -623,7 +623,7 @@ function AwardsEventContainer9() {
 
 function AwardsContent4() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer8 />
       <AwardsEventContainer9 />
     </div>
@@ -645,7 +645,7 @@ function AwardsProjectIcon4() {
 function AwardsProjectContainer5() {
   return (
     <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap">
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
         <p className="leading-[24px]">Recycling Educating App</p>
       </div>
       <AwardsProjectIcon4 />
@@ -683,7 +683,7 @@ function AwardsEventContainer11() {
 
 function AwardsContent5() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer10 />
       <AwardsEventContainer11 />
     </div>
@@ -734,7 +734,7 @@ function PublicSpeakingEventContainer() {
 
 function PublicSpeakingContent() {
   return (
-    <div className="content-stretch flex items-start justify-between relative shrink-0 tracking-[-0.25px] w-full whitespace-nowrap" data-name="Public Speaking Content">
+    <div className="content-stretch flex flex-col sm:flex-row sm:items-start sm:justify-between gap-[4px] sm:gap-0 relative shrink-0 tracking-[-0.25px] w-full" data-name="Public Speaking Content">
       <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Thriving Success in Design Competitions</p>
       </div>
@@ -969,7 +969,7 @@ function MainFrame1() {
 
 function MainFrame() {
   return (
-    <div className="content-stretch flex flex-col items-start self-center max-w-[550px] mt-[190px] w-[550px]" data-name="Main Frame">
+    <div className="content-stretch flex flex-col items-start self-center max-w-[550px] mt-[120px] sm:mt-[190px] w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Main Frame">
       <MainFrame1 />
     </div>
   );
@@ -980,7 +980,7 @@ export default function AboutPage() {
   return (
     <div className="bg-dot-grid min-h-screen flex flex-col relative w-full" data-name="About Page">
       <MainFrame />
-      <Footer maxWidthClass="max-w-[550px]" emailVariant="text" paddingXClass="px-0" />
+      <Footer maxWidthClass="max-w-[550px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
   );
