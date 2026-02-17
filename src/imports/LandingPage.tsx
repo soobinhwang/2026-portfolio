@@ -157,8 +157,8 @@ function ProfileContainer() {
 
 function Thumbnail() {
   return (
-    <div className="bg-[#f0f3f5] h-[240px] sm:h-[320px] lg:h-[435px] overflow-hidden relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
-      <img alt="" className="absolute inset-0 size-full object-cover" src={imgP1Thumbnail} />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+      <img alt="" className="block w-full h-auto object-contain" src={imgP1Thumbnail} />
     </div>
   );
 }
@@ -196,8 +196,8 @@ function Container1() {
 
 function Thumbnail1() {
   return (
-    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-hidden relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
-      <img alt="" className="absolute inset-0 size-full object-cover" src={imgP2Thumbnail} />
+    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+      <img alt="" className="block w-full h-auto object-contain" src={imgP2Thumbnail} />
     </div>
   );
 }
@@ -243,8 +243,8 @@ function Container() {
 
 function Thumbnail2() {
   return (
-    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-hidden relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
-      <img alt="" className="absolute inset-0 size-full object-cover" src={imgP3Thumbnail} />
+    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+      <img alt="" className="block w-full h-auto object-contain" src={imgP3Thumbnail} />
     </div>
   );
 }
@@ -281,8 +281,8 @@ function Container6() {
 
 function Thumbnail3() {
   return (
-    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-hidden relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
-      <img alt="" className="absolute inset-0 size-full object-cover" src={imgP4Thumbnail} />
+    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+      <img alt="" className="block w-full h-auto object-contain" src={imgP4Thumbnail} />
     </div>
   );
 }
@@ -294,7 +294,7 @@ function InfoContainer3() {
       data-name="Info Container"
     >
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">Design Library</p>
+        <p className="leading-[28px] sm:leading-[38px]">Design System</p>
       </div>
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
         <p className="leading-[20px] sm:leading-[22.5px]">B2B SaaS • web app</p>

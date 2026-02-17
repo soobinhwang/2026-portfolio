@@ -233,7 +233,7 @@ function DownloadResumeLink() {
 
 function ExperienceHeaderContainer() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="Experience Header Container">
+    <div className="content-stretch flex flex-col gap-[14px] items-start sm:flex-row sm:items-center sm:justify-between relative shrink-0 w-full" data-name="Experience Header Container">
       <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[20px] tracking-[-1.04px] uppercase whitespace-nowrap">
         <p className="leading-[normal]">experience</p>
       </div>
@@ -244,12 +244,12 @@ function ExperienceHeaderContainer() {
 
 function MentorshipEventContainer() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)] w-full sm:w-auto" data-name="Mentorship Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] whitespace-nowrap">KOTRA Job Fair</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">KOTRA Job Fair</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] whitespace-nowrap">Oct 2025</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">Oct 2025</p>
       </div>
     </div>
   );
@@ -257,7 +257,7 @@ function MentorshipEventContainer() {
 
 function MentorshipContent() {
   return (
-    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
+    <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
       <div className="flex flex-col font-geist font-medium justify-center relative text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Career Mentor</p>
       </div>
@@ -268,12 +268,12 @@ function MentorshipContent() {
 
 function MentorshipEventContainer1() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)] w-full sm:w-auto" data-name="Mentorship Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] whitespace-nowrap">KOTRA Job Fair</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">KOTRA Job Fair</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] whitespace-nowrap">Sep 2022</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">Sep 2022</p>
       </div>
     </div>
   );
@@ -281,7 +281,7 @@ function MentorshipEventContainer1() {
 
 function MentorshipContent1() {
   return (
-    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
+    <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
       <div className="flex flex-col font-geist font-medium justify-center relative text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Career Mentor</p>
       </div>
@@ -292,12 +292,12 @@ function MentorshipContent1() {
 
 function MentorshipEventContainer2() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)] w-full sm:w-auto" data-name="Mentorship Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] whitespace-nowrap">Euonia UX Hackathon</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">Euonia UX Hackathon</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] whitespace-nowrap">May 2022</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">May 2022</p>
       </div>
     </div>
   );
@@ -305,7 +305,7 @@ function MentorshipEventContainer2() {
 
 function MentorshipContent2() {
   return (
-    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
+    <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
       <div className="flex flex-col font-geist font-medium justify-center relative text-[#32404f] text-[16px]">
         <p className="leading-[24px]">Hackathon Mentor</p>
       </div>
@@ -352,12 +352,18 @@ function ArrowNarrowUpRight({ className }: { className?: string }) {
 
 function AwardsProjectContainer() {
   return (
-    <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
+    <a
+      className="content-stretch flex flex-wrap gap-[4px] items-center relative shrink-0"
+      data-name="Awards Project Container"
+      href="https://www.figma.com/proto/yRLaj3vpnll9xki7lNnMp2/Prototype?page-id=&node-id=28-1605&starting-point-node-id=28%3A1605"
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
-        <p className="leading-[24px]">Metaverse Therapeutic Web App</p>
+        <p className="leading-[24px] underline-offset-2 hover:underline">Metaverse Therapeutic Web App</p>
       </div>
       <ArrowNarrowUpRight />
-    </div>
+    </a>
   );
 }
 
@@ -374,12 +380,12 @@ function AwardsEventContainer() {
 
 function AwardsEventContainer1() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end leading-[0] relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] w-full sm:w-auto" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px]">Bizhacks</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">Bizhacks</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px]">May 2022</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">May 2022</p>
       </div>
     </div>
   );
@@ -387,7 +393,7 @@ function AwardsEventContainer1() {
 
 function AwardsContent() {
   return (
-    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer />
       <AwardsEventContainer1 />
     </div>
@@ -408,12 +414,18 @@ function AwardsProjectIcon() {
 
 function AwardsProjectContainer1() {
   return (
-    <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
+    <a
+      className="content-stretch flex flex-wrap gap-[4px] items-center relative shrink-0"
+      data-name="Awards Project Container"
+      href="https://xd.adobe.com/view/598ea877-14df-4db4-b859-6ade634b6b45-0cdd/"
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
-        <p className="leading-[24px]">Ethical Shopping App</p>
+        <p className="leading-[24px] underline-offset-2 hover:underline">Ethical Shopping App</p>
       </div>
       <AwardsProjectIcon />
-    </div>
+    </a>
   );
 }
 
@@ -430,16 +442,16 @@ function AwardsEventContainer2() {
 
 function AwardsEventContainer3() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] w-full sm:w-auto" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
-        <p className="text-[14px]">
+        <p className="text-[13px] sm:text-[14px]">
           <span className="leading-[24px]">{`Patagonia `}</span>
           <span className="font-geist font-extralight leading-[24px]">X</span>
           <span className="leading-[24px]">{` Adobe`}</span>
         </p>
       </div>
-      <div className="flex flex-col justify-center relative shrink-0 text-[14px]">
-        <p className="leading-[24px]">May 2022</p>
+      <div className="flex flex-col justify-center relative shrink-0 text-[13px] sm:text-[14px]">
+        <p className="leading-[24px] sm:whitespace-nowrap">May 2022</p>
       </div>
     </div>
   );
@@ -447,7 +459,7 @@ function AwardsEventContainer3() {
 
 function AwardsContent1() {
   return (
-    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer2 />
       <AwardsEventContainer3 />
     </div>
@@ -468,12 +480,18 @@ function AwardsProjectIcon1() {
 
 function AwardsProjectContainer2() {
   return (
-    <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
+    <a
+      className="content-stretch flex flex-wrap gap-[4px] items-center relative shrink-0"
+      data-name="Awards Project Container"
+      href="https://xd.adobe.com/view/0de6016a-1473-42c4-a20b-83e972fb0ad5-58b5/"
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
-        <p className="leading-[24px]">Volunteer Matching App</p>
+        <p className="leading-[24px] underline-offset-2 hover:underline">Volunteer Matching App</p>
       </div>
       <AwardsProjectIcon1 />
-    </div>
+    </a>
   );
 }
 
@@ -490,16 +508,16 @@ function AwardsEventContainer4() {
 
 function AwardsEventContainer5() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] w-full sm:w-auto" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
-        <p className="text-[14px]">
+        <p className="text-[13px] sm:text-[14px]">
           <span className="leading-[24px]">{`Amazon `}</span>
           <span className="font-geist font-extralight leading-[24px]">X</span>
           <span className="leading-[24px]">{` Adobe`}</span>
         </p>
       </div>
-      <div className="flex flex-col justify-center relative shrink-0 text-[14px]">
-        <p className="leading-[24px]">Jul 2022</p>
+      <div className="flex flex-col justify-center relative shrink-0 text-[13px] sm:text-[14px]">
+        <p className="leading-[24px] sm:whitespace-nowrap">Jul 2022</p>
       </div>
     </div>
   );
@@ -507,7 +525,7 @@ function AwardsEventContainer5() {
 
 function AwardsContent2() {
   return (
-    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer4 />
       <AwardsEventContainer5 />
     </div>
@@ -528,12 +546,18 @@ function AwardsProjectIcon2() {
 
 function AwardsProjectContainer3() {
   return (
-    <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
+    <a
+      className="content-stretch flex flex-wrap gap-[4px] items-center relative shrink-0"
+      data-name="Awards Project Container"
+      href="https://www.linkedin.com/feed/update/urn:li:activity:7122036303730278400/"
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
-        <p className="leading-[24px]">English Learning Platform UX Improvement</p>
+        <p className="leading-[24px] underline-offset-2 hover:underline">English Learning Platform UX Improvement</p>
       </div>
       <AwardsProjectIcon2 />
-    </div>
+    </a>
   );
 }
 
@@ -550,12 +574,12 @@ function AwardsEventContainer6() {
 
 function AwardsEventContainer7() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end leading-[0] relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px] w-full sm:w-auto" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px]">{`Ringle  `}</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">{`Ringle  `}</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px]">Jul 2022</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">Jul 2022</p>
       </div>
     </div>
   );
@@ -563,7 +587,7 @@ function AwardsEventContainer7() {
 
 function AwardsContent3() {
   return (
-    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer6 />
       <AwardsEventContainer7 />
     </div>
@@ -584,12 +608,18 @@ function AwardsProjectIcon3() {
 
 function AwardsProjectContainer4() {
   return (
-    <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
+    <a
+      className="content-stretch flex flex-wrap gap-[4px] items-center relative shrink-0"
+      data-name="Awards Project Container"
+      href="https://xd.adobe.com/view/bc3d48de-8800-4e0b-910d-8712837d4410-e96e/"
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
-        <p className="leading-[24px]">Trustworthy Election Content App</p>
+        <p className="leading-[24px] underline-offset-2 hover:underline">Trustworthy Election Content App</p>
       </div>
       <AwardsProjectIcon3 />
-    </div>
+    </a>
   );
 }
 
@@ -606,16 +636,16 @@ function AwardsEventContainer8() {
 
 function AwardsEventContainer9() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] w-full sm:w-auto" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
-        <p className="text-[14px]">
+        <p className="text-[13px] sm:text-[14px]">
           <span className="leading-[24px]">{`NYT `}</span>
           <span className="font-geist font-extralight leading-[24px]">X</span>
           <span className="leading-[24px]">{` Adobe`}</span>
         </p>
       </div>
-      <div className="flex flex-col justify-center relative shrink-0 text-[14px]">
-        <p className="leading-[24px]">Sep 2021</p>
+      <div className="flex flex-col justify-center relative shrink-0 text-[13px] sm:text-[14px]">
+        <p className="leading-[24px] sm:whitespace-nowrap">Sep 2021</p>
       </div>
     </div>
   );
@@ -623,7 +653,7 @@ function AwardsEventContainer9() {
 
 function AwardsContent4() {
   return (
-    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer8 />
       <AwardsEventContainer9 />
     </div>
@@ -644,12 +674,18 @@ function AwardsProjectIcon4() {
 
 function AwardsProjectContainer5() {
   return (
-    <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="Awards Project Container">
+    <a
+      className="content-stretch flex flex-wrap gap-[4px] items-center relative shrink-0"
+      data-name="Awards Project Container"
+      href="https://xd.adobe.com/view/f5c3cb5e-757d-4348-9fca-07c2c6a8638a-a090/"
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
-        <p className="leading-[24px]">Recycling Educating App</p>
+        <p className="leading-[24px] underline-offset-2 hover:underline">Recycling Education App</p>
       </div>
       <AwardsProjectIcon4 />
-    </div>
+    </a>
   );
 }
 
@@ -666,16 +702,16 @@ function AwardsEventContainer10() {
 
 function AwardsEventContainer11() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] whitespace-nowrap" data-name="Awards Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end leading-[0] relative shrink-0 text-[rgba(50,64,79,0.58)] tracking-[-0.25px] w-full sm:w-auto" data-name="Awards Event Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
-        <p className="text-[14px]">
+        <p className="text-[13px] sm:text-[14px]">
           <span className="leading-[24px]">{`Target `}</span>
           <span className="font-geist font-extralight leading-[24px]">X</span>
           <span className="leading-[24px]">{` Adobe`}</span>
         </p>
       </div>
-      <div className="flex flex-col justify-center relative shrink-0 text-[14px]">
-        <p className="leading-[24px]">Aug 2021</p>
+      <div className="flex flex-col justify-center relative shrink-0 text-[13px] sm:text-[14px]">
+        <p className="leading-[24px] sm:whitespace-nowrap">Aug 2021</p>
       </div>
     </div>
   );
@@ -683,7 +719,7 @@ function AwardsEventContainer11() {
 
 function AwardsContent5() {
   return (
-    <div className="grid grid-cols-[1fr_auto] items-start gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
+    <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Awards Content">
       <AwardsEventContainer10 />
       <AwardsEventContainer11 />
     </div>
@@ -717,16 +753,16 @@ function AwardsContainer() {
 
 function PublicSpeakingEventContainer() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[4px] items-end relative shrink-0 text-[rgba(50,64,79,0.58)]" data-name="Public Speaking Event Container">
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end relative shrink-0 text-[rgba(50,64,79,0.58)] w-full sm:w-auto" data-name="Public Speaking Event Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
-        <p className="text-[14px]">
+        <p className="text-[13px] sm:text-[14px]">
           <span className="leading-[24px]">{`Target `}</span>
           <span className="font-geist font-extralight leading-[24px]">X</span>
           <span className="leading-[24px]">{` Adobe`}</span>
         </p>
       </div>
-      <div className="flex flex-col justify-center relative shrink-0 text-[14px]">
-        <p className="leading-[24px]">Oct 2021</p>
+      <div className="flex flex-col justify-center relative shrink-0 text-[13px] sm:text-[14px]">
+        <p className="leading-[24px] sm:whitespace-nowrap">Oct 2021</p>
       </div>
     </div>
   );

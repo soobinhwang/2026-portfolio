@@ -20,14 +20,14 @@ export default function Footer({
     );
   };
 
-  const containerClassName = `flex flex-col ${stacked ? "gap-[20px]" : "gap-[16px] sm:flex-row sm:items-center sm:justify-between"} py-[48px] relative w-full ${paddingXClass} font-geist-mono ${maxWidthClass}`;
+  const containerClassName = `flex flex-col items-center text-center ${stacked ? "gap-[20px]" : "gap-[16px] sm:flex-row sm:items-center sm:justify-between sm:text-left"} py-[48px] relative w-full ${paddingXClass} font-geist-mono ${maxWidthClass}`;
   const groupOrder = stacked ? 1 : swapOrder ? 1 : 2;
   const textOrder = stacked ? 2 : swapOrder ? 2 : 1;
 
   return (
     <footer className="content-stretch flex flex-col items-center relative shrink-0 w-full pt-[100px]" data-name="Footer">
       <div className={containerClassName}>
-        <div className={`flex flex-col gap-[12px] items-start sm:flex-row sm:items-center sm:gap-[20px] order-${groupOrder}`}>
+        <div className={`flex flex-row flex-wrap gap-[16px] sm:gap-[20px] items-center order-${groupOrder}`}>
           {emailVariant === "pill" ? (
             <div className="flex items-center gap-[10px] bg-[#f0f3f5] rounded-full px-[16px] py-[8px] text-[#32404f] text-[14px]">
               <span className="leading-[20px]">soobinhwang317@gmail.com</span>
@@ -43,7 +43,7 @@ export default function Footer({
             </div>
           ) : (
             <button
-              className="text-[#32404f] text-[13px] uppercase tracking-[0.06em] hover:text-[#1e242a] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30"
+              className="border-0 bg-transparent m-0 p-0 font-normal text-[#32404f] text-[13px] uppercase tracking-[0.06em] hover:text-[#1e242a] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30"
               type="button"
               data-cursor="copy-email"
               onClick={handleCopy}
@@ -61,7 +61,7 @@ export default function Footer({
             </a>
           </div>
         </div>
-        <div className={`flex flex-col font-normal justify-center leading-[0] text-[#32404f] text-[16px] tracking-[-0.2px] order-${textOrder}`}>
+        <div className={`flex flex-col items-center font-normal justify-center leading-[0] text-[#32404f] text-[16px] text-center tracking-[-0.2px] order-${textOrder} sm:items-start sm:text-left`}>
           <p className="leading-[24px]">Designed + vibe coded by Sue</p>
         </div>
       </div>

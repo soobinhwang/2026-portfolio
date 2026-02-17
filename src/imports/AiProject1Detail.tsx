@@ -66,7 +66,7 @@ function OverviewLabel() {
 
 function OverviewImageSm() {
   return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-[371px]" data-name="section image sm">
+    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-full" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <div className="bg-[#1e242a] size-full" />
       </div>
@@ -222,7 +222,7 @@ function OutcomeSection() {
 
 function SectionContainer() {
   return (
-    <div className="gap-[170px] grid-cols-[repeat(1,_fit-content(100%))] grid-rows-[repeat(8,_fit-content(100%))] inline-grid max-w-[774px] pb-[48px] pt-[120px] relative shrink-0" data-name="Section Container">
+    <div className="gap-[110px] sm:gap-[170px] grid-cols-[repeat(1,_fit-content(100%))] grid-rows-[repeat(8,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
       <HeroSection />
       <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[2] shrink-0" data-name="Horizontal Divider" />
       <OverviewSection />
@@ -236,7 +236,7 @@ function SectionContainer() {
 
 function ContentContainer() {
   return (
-    <div className="content-stretch flex items-center relative shrink-0 w-[778px]" data-name="Content Container">
+    <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Content Container">
       <SectionContainer />
     </div>
   );
@@ -244,7 +244,7 @@ function ContentContainer() {
 
 function MainContent() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start max-w-[774px] relative shrink-0 w-[774px]" data-name="Main Content">
+    <div className="content-stretch flex gap-[32px] items-start max-w-[774px] relative shrink-0 w-full" data-name="Main Content">
       <ContentContainer />
     </div>
   );
@@ -253,9 +253,9 @@ function MainContent() {
 
 export default function AiProject1Detail() {
   return (
-    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center relative w-full" data-name="AI Project 1 Detail">
+    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px] sm:px-0 relative w-full" data-name="AI Project 1 Detail">
       <MainContent />
-      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" />
+      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
   );
