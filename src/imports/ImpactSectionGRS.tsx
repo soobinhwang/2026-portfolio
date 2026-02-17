@@ -14,27 +14,27 @@ function ImpactHeader() {
   );
 }
 
-function BrutalismIcon() {
+function FlexibilityIcon() {
   return (
-    <div className="overflow-clip relative shrink-0 size-[65px]" data-name="Brutalism 76">
-      <div className="absolute inset-[14.59%]" data-name="Group">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 46.0351 46.0351">
-          <g id="Group">
-            <path d={svgPaths.p26f60000} fill="var(--fill-0, #1E242A)" id="Vector" />
-          </g>
-        </svg>
-      </div>
+    <div className="relative shrink-0 size-[65px]">
+      <svg className="block size-full" fill="none" viewBox="0 0 65 65">
+        <path
+          d="M27.5 0 L37.5 0 L37.5 27.5 L65 27.5 L65 37.5 L37.5 37.5 L37.5 65 L27.5 65 L27.5 37.5 L0 37.5 L0 27.5 L27.5 27.5 Z"
+          fill="#1E242A"
+        />
+      </svg>
     </div>
   );
 }
 
-function AbstractIcon() {
+function EfficiencyIcon() {
   return (
-    <div className="relative shrink-0 size-[64.398px]" data-name="Abstract 193">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 64.3981 64.3981">
-        <g id="Abstract 193">
-          <path d={svgPaths.pbec1200} fill="var(--fill-0, #1E242A)" id="Vector" />
-        </g>
+    <div className="relative shrink-0 size-[55px]">
+      <svg className="block size-full" fill="none" viewBox="0 0 65 65">
+        <path
+          d="M0 0 L65 0 L37.5 32.5 L65 65 L0 65 L27.5 32.5 Z"
+          fill="#1E242A"
+        />
       </svg>
     </div>
   );
@@ -70,14 +70,26 @@ function ImpactItem({ title, subtitle, icon }: { title: string; subtitle: string
   );
 }
 
-export default function ImpactSectionGRS() {
+export default function ImpactSectionGRS({
+  hideThird = false,
+  firstTitle = "Faster path",
+  firstSubtitle = "to relevant items",
+  secondTitle = "Consistency",
+  secondSubtitle = "in discovery experience",
+}: {
+  hideThird?: boolean;
+  firstTitle?: string;
+  firstSubtitle?: string;
+  secondTitle?: string;
+  secondSubtitle?: string;
+}) {
   return (
     <div className="content-stretch flex flex-col gap-[40px] items-start relative size-full" data-name="Property">
       <ImpactHeader />
       <div className="content-stretch flex gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Container">
-        <ImpactItem title="Faster path" subtitle="to relevant items" icon={<BrutalismIcon />} />
-        <ImpactItem title="Consistency" subtitle="in discovery experience" icon={<AbstractIcon />} />
-        <ImpactItem title="Scalability" subtitle="across diverse programs" icon={<BrutalismCircleIcon />} />
+        <ImpactItem title={firstTitle} subtitle={firstSubtitle} icon={<FlexibilityIcon />} />
+        <ImpactItem title={secondTitle} subtitle={secondSubtitle} icon={<EfficiencyIcon />} />
+        {!hideThird && <ImpactItem title="Scalability" subtitle="across diverse programs" icon={<BrutalismCircleIcon />} />}
       </div>
     </div>
   );

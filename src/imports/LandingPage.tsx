@@ -157,7 +157,7 @@ function ProfileContainer() {
 
 function Thumbnail() {
   return (
-    <div className="bg-[#f0f3f5] h-[240px] sm:h-[320px] lg:h-[435px] overflow-clip relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#f0f3f5] h-[240px] sm:h-[320px] lg:h-[435px] overflow-hidden relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP1Thumbnail} />
     </div>
   );
@@ -166,7 +166,7 @@ function Thumbnail() {
 function InfoContainer() {
   return (
     <div
-      className="content-stretch flex flex-col sm:flex-row font-normal items-start sm:items-center justify-start sm:justify-between gap-[6px] sm:gap-0 leading-[0] relative shrink-0 w-full whitespace-normal sm:whitespace-nowrap"
+      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
       data-name="Info Container"
     >
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
@@ -183,7 +183,7 @@ function Container1() {
   return (
     <RouterLink
       to="/engagement-platform"
-      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full"
+      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
@@ -196,7 +196,7 @@ function Container1() {
 
 function Thumbnail1() {
   return (
-    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-hidden relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP2Thumbnail} />
     </div>
   );
@@ -205,7 +205,7 @@ function Thumbnail1() {
 function InfoContainer1() {
   return (
     <div
-      className="content-stretch flex flex-col sm:flex-row font-normal items-start sm:items-center justify-start sm:justify-between gap-[6px] sm:gap-0 leading-[0] relative shrink-0 w-full whitespace-normal sm:whitespace-nowrap"
+      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
       data-name="Info Container"
     >
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
@@ -222,7 +222,7 @@ function Container4() {
   return (
     <RouterLink
       to="/global-reward-storefront"
-      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full"
+      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
@@ -234,7 +234,7 @@ function Container4() {
 
 function Container() {
   return (
-    <div className="content-stretch flex flex-col md:flex-row gap-[24px] sm:gap-[32px] items-stretch md:items-center relative shrink-0 w-full" data-name="Container">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] sm:gap-[32px] items-start relative w-full" data-name="Container">
       <Container1 />
       <Container4 />
     </div>
@@ -243,7 +243,7 @@ function Container() {
 
 function Thumbnail2() {
   return (
-    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-hidden relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP3Thumbnail} />
     </div>
   );
@@ -252,7 +252,7 @@ function Thumbnail2() {
 function InfoContainer2() {
   return (
     <div
-      className="content-stretch flex flex-col sm:flex-row font-normal items-start sm:items-center justify-start sm:justify-between gap-[6px] sm:gap-0 leading-[0] relative shrink-0 w-full whitespace-normal sm:whitespace-nowrap"
+      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
       data-name="Info Container"
     >
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
@@ -268,8 +268,9 @@ function InfoContainer2() {
 function Container6() {
   return (
     <div
-      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full"
+      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
       data-name="Container"
+      data-cursor="coming-soon"
     >
       <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail2 />
@@ -280,7 +281,7 @@ function Container6() {
 
 function Thumbnail3() {
   return (
-    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-clip relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#1e242a] h-[240px] sm:h-[320px] lg:h-[435px] shrink-0 w-full overflow-hidden relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img alt="" className="absolute inset-0 size-full object-cover" src={imgP4Thumbnail} />
     </div>
   );
@@ -289,7 +290,7 @@ function Thumbnail3() {
 function InfoContainer3() {
   return (
     <div
-      className="content-stretch flex flex-col sm:flex-row font-normal items-start sm:items-center justify-start sm:justify-between gap-[6px] sm:gap-0 leading-[0] relative shrink-0 w-full whitespace-normal sm:whitespace-nowrap"
+      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
       data-name="Info Container"
     >
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
@@ -304,21 +305,22 @@ function InfoContainer3() {
 
 function Container7() {
   return (
-    <div
-      className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative group w-full"
+    <RouterLink
+      to="/design-library"
+      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
       data-name="Container"
-      data-cursor="coming-soon"
+      style={{ textDecoration: "none", color: "inherit" }}
     >
       <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail3 />
       <InfoContainer3 />
-    </div>
+    </RouterLink>
   );
 }
 
 function Container5() {
   return (
-    <div className="content-stretch flex flex-col md:flex-row gap-[24px] sm:gap-[32px] items-stretch md:items-center relative shrink-0 w-full" data-name="Container">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] sm:gap-[32px] items-start relative w-full" data-name="Container">
       <Container7 />
       <Container6 />
     </div>

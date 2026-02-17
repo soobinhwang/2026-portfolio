@@ -6,6 +6,7 @@ import AboutPage from "../imports/AboutPage";
 import EngagementPlatform from "../imports/EngagementPlatform";
 import AiProject1Detail from "../imports/AiProject1Detail";
 import GlobalRewardStorefront from "../imports/GlobalRewardStorefront";
+import DesignLibrary from "../imports/DesignLibrary";
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: "/global-reward-storefront",
         Component: GlobalRewardStorefront,
+      },
+      {
+        path: "/design-library",
+        Component: DesignLibrary,
       },
     ],
   },
