@@ -4,13 +4,16 @@ import NavBar from "../app/components/NavBar";
 
 function HeaderContainer() {
   return (
-    <div className="content-stretch flex flex-col items-center self-center max-w-[800px] mt-[120px] sm:mt-[160px] w-full px-[20px] sm:px-0" data-name="Header Container">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[0px] tracking-[-1.04px] w-full">
+    <div className="content-stretch flex flex-col items-start mt-[120px] sm:mt-[160px] mx-auto max-w-[1200px] w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Header Container">
+      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[0px] tracking-[-1.04px] w-full text-left">
         <p className="text-[32px] sm:text-[39px] whitespace-pre-wrap">
           <span className="leading-[36px] sm:leading-[44px] text-[#32404f]">{`I use `}</span>
           <span className="font-newsreader font-normal italic leading-[36px] sm:leading-[44px] text-[#32404f]">{`AI `}</span>
           <span className="leading-[36px] sm:leading-[44px] text-[#32404f]">as a thinking partner and productivity booster</span>
-          <span className="leading-[36px] sm:leading-[44px] text-[#808890]">{` to move faster from ambiguity to clarity.`}</span>
+          <span className="leading-[36px] sm:leading-[44px]">
+            <br aria-hidden="true" />
+          </span>
+          <span className="leading-[36px] sm:leading-[44px] text-[#808890]">{`To move faster from ambiguity to clarity.`}</span>
         </p>
       </div>
     </div>

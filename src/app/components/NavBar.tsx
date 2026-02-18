@@ -3,7 +3,7 @@ import resumePdf from "../../Sue Hwang, Product Designer.pdf";
 
 const NAV_ITEMS = [
   { label: "Work", to: "/" },
-  { label: "AI", to: "/ai" },
+  { label: "AI", to: "/ai", disabled: true },
   { label: "About", to: "/about" },
   { label: "Resume", href: resumePdf },
 ];
