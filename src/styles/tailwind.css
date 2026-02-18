@@ -16,6 +16,16 @@ body {
   background-position: 0 0;
 }
 
+::selection {
+  background: rgba(23, 0, 207, 0.05);
+  color: #1700cf;
+}
+
+::-moz-selection {
+  background: rgba(23, 0, 207, 0.05);
+  color: #1700cf;
+}
+
 .bg-dot-grid {
   background-color: #fbfdfd;
   background-image: radial-gradient(circle, var(--dot-grid-color) var(--dot-grid-dot), transparent var(--dot-grid-dot));

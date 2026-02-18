@@ -267,15 +267,16 @@ function InfoContainer2() {
 
 function Container6() {
   return (
-    <div
+    <RouterLink
+      to="/ai"
       className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
       data-name="Container"
-      data-cursor="coming-soon"
+      style={{ textDecoration: "none", color: "inherit" }}
     >
       <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail2 />
       <InfoContainer2 />
-    </div>
+    </RouterLink>
   );
 }
 
