@@ -819,7 +819,7 @@ export default function DesignLibrary() {
   return (
     <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[96px] sm:pt-[110px] relative w-full px-[20px]" data-name="Design Library">
       <MainContent />
-      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px]" />
+      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
   );

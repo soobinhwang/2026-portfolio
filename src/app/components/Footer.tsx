@@ -11,7 +11,7 @@ export default function Footer({
   emailVariant = "pill",
   stacked = false,
   swapOrder = false,
-  paddingXClass = "px-[16px]",
+  paddingXClass = "px-[20px] sm:px-[32px] lg:px-0",
 }: FooterProps) {
   const handleCopy = () => {
     navigator.clipboard.writeText("soobinhwang317@gmail.com");
@@ -20,7 +20,7 @@ export default function Footer({
     );
   };
 
-  const containerClassName = `flex flex-col items-center text-center ${stacked ? "gap-[20px]" : "gap-[16px] sm:flex-row sm:items-center sm:justify-between sm:text-left"} py-[48px] relative w-full ${paddingXClass} font-geist-mono ${maxWidthClass}`;
+  const containerClassName = `flex flex-col items-center text-center ${stacked ? "gap-[20px]" : "gap-[16px] sm:flex-row sm:items-center sm:justify-between sm:text-left"} py-[48px] relative w-full mx-auto ${paddingXClass} font-geist-mono ${maxWidthClass}`;
   const groupOrder = stacked ? 1 : swapOrder ? 1 : 2;
   const textOrder = stacked ? 2 : swapOrder ? 2 : 1;
 

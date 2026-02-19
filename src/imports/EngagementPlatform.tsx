@@ -10244,7 +10244,7 @@ export default function EngagementPlatform() {
     <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px] relative w-full" data-name="Engagement Platform">
       <MainContent />
       {/* <NextProjectNudge /> */}
-      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px]" />
+      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
   );

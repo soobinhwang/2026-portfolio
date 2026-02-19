@@ -1,260 +1,338 @@
-import { Link as RouterLink } from "react-router";
+import { useEffect, useRef, useState } from "react";
+import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
+import imgChatGptLogo from "../assets/ai/project-2/gpt logo.jpg";
+import imgClaudeLogo from "../assets/ai/project-2/claude logo.png";
+import imgCursorLogo from "../assets/ai/project-2/cursor logo.png";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
-/* ───────────────────────────────────────────────
-   Section: Hero
-   ─────────────────────────────────────────────── */
-
-function HeroLabel() {
-  return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px]">project 01</p>
-      </div>
-      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[36px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[46px] whitespace-pre-wrap">Project title goes here</p>
-      </div>
-      <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-[min-content]">
-        <p className="leading-[22.5px] whitespace-pre-wrap">
-          Brief description of the project — what it is, what problem it solves, and what role AI played in the process. Replace this with real content.
-        </p>
-      </div>
-    </div>
-  );
-}
-
-function HeroImage() {
-  return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-full" data-name="Hero Image">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="bg-[#1e242a] size-full" />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
-  );
-}
-
-function HeroSection() {
-  return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[1] self-start shrink-0" data-name="Hero">
-      <HeroLabel />
-      <HeroImage />
-    </div>
-  );
-}
+const project1ThumbnailJsonUrl = new URL("../assets/ai/project-1/Frame-32.json", import.meta.url).href;
 
 /* ───────────────────────────────────────────────
-   Section 1: Overview
+   Shared primitives
    ─────────────────────────────────────────────── */
 
-function OverviewLabel() {
+function SectionLabel({ label }: { label: string }) {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">overview</p>
-      </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[36px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Section title placeholder</p>
-      </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Description text goes here. Explain the context, challenge, or background for this section of the project.</p>
-      </div>
+    <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
+      <p className="leading-[22.5px]">{label}</p>
     </div>
   );
 }
 
-function OverviewImageSm() {
+function Divider() {
+  return <div className="bg-[rgba(50,64,79,0.1)] h-px w-full shrink-0" />;
+}
+
+function LottieThumbnail({ srcUrl, fallbackVideoSrc }: { srcUrl: string; fallbackVideoSrc?: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [hasPlayer, setHasPlayer] = useState<boolean>(Boolean(window.customElements?.get("lottie-player")));
+  const [scriptFailed, setScriptFailed] = useState(false);
+
+  useEffect(() => {
+    if (window.customElements?.get("lottie-player")) {
+      setHasPlayer(true);
+      return;
+    }
+
+    const existingScript = document.querySelector<HTMLScriptElement>('script[data-lottie-player="true"]');
+    if (existingScript) {
+      const checkReady = window.setInterval(() => {
+        if (window.customElements?.get("lottie-player")) {
+          setHasPlayer(true);
+          window.clearInterval(checkReady);
+        }
+      }, 120);
+      return () => window.clearInterval(checkReady);
+    }
+
+    if (!containerRef.current) return;
+    const script = document.createElement("script");
+    script.src = "https://unpkg.com/@lottiefiles/lottie-player@2.0.12/dist/lottie-player.js";
+    script.async = true;
+    script.dataset.lottiePlayer = "true";
+    script.onload = () => setHasPlayer(true);
+    script.onerror = () => setScriptFailed(true);
+    document.head.appendChild(script);
+  }, []);
+
+  if (!hasPlayer || scriptFailed) {
+    return fallbackVideoSrc ? (
+      <video
+        className="absolute inset-0 size-full object-cover"
+        src={fallbackVideoSrc}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+      />
+    ) : (
+      <div className="absolute inset-0 size-full" />
+    );
+  }
+
   return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-full" data-name="section image sm">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="bg-[#1e242a] size-full" />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
+    <div ref={containerRef} className="absolute inset-0 size-full overflow-hidden">
+      <lottie-player
+        src={srcUrl}
+        background="transparent"
+        autoplay
+        loop
+        speed="1"
+        style={{ width: "100%", height: "100%" }}
+      />
     </div>
   );
 }
 
-function OverviewImageSmCaption1() {
+function DetailThumbnail() {
   return (
-    <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
-        <p className="leading-[30px] whitespace-pre-wrap">Image caption one</p>
-      </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Brief description of this image</p>
-      </div>
+    <div className="bg-[#1e242a] h-[240px] sm:h-[440px] shrink-0 w-full overflow-clip relative" data-name="Detail Thumbnail">
+      <LottieThumbnail srcUrl={project1ThumbnailJsonUrl} fallbackVideoSrc={project1ThumbnailVideo} />
     </div>
   );
 }
 
-function OverviewImageSmCaption2() {
-  return (
-    <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
-        <p className="leading-[30px] whitespace-pre-wrap">Image caption two</p>
-      </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Brief description of this image</p>
-      </div>
-    </div>
-  );
-}
-
-function OverviewImages() {
-  return (
-    <div className="content-stretch flex gap-[32px] items-start relative shrink-0 w-full">
-      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative">
-        <OverviewImageSm />
-        <OverviewImageSmCaption1 />
-      </div>
-      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative">
-        <OverviewImageSm />
-        <OverviewImageSmCaption2 />
-      </div>
-    </div>
-  );
-}
+/* ───────────────────────────────────────────────
+   Section 1: Quick Overview
+   ─────────────────────────────────────────────── */
 
 function OverviewSection() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0" data-name="Overview">
-      <OverviewLabel />
-      <OverviewImages />
-    </div>
-  );
-}
-
-/* ───────────────────────────────────────────────
-   Section 2: Process
-   ─────────────────────────────────────────────── */
-
-function ProcessLabel() {
-  return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">process</p>
-      </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[36px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Section title placeholder</p>
-      </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Description text goes here. Walk through the process, tools, or approach used in this part of the project.</p>
-      </div>
-    </div>
-  );
-}
-
-function ProcessImage() {
-  return (
-    <div className="bg-[#f0f3f5] h-[420px] relative shrink-0 w-full" data-name="Process Image">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <div className="bg-[#1e242a] size-full" />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
-  );
-}
-
-function ProcessSection() {
-  return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Process">
-      <ProcessLabel />
-      <ProcessImage />
-    </div>
-  );
-}
-
-/* ───────────────────────────────────────────────
-   Section 3: Outcome
-   ─────────────────────────────────────────────── */
-
-function OutcomeLabel() {
-  return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px]">outcome</p>
-      </div>
-      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[36px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[46px] whitespace-pre-wrap">Section title placeholder</p>
-      </div>
-    </div>
-  );
-}
-
-function StatBox({ value, description }: { value: string; description: string }) {
-  return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-h-px min-w-px relative self-stretch" data-name="Container">
-      <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
-        <div className="flex flex-col font-newsreader font-semibold justify-center leading-[0] relative shrink-0 text-[#32404f] text-[62px] tracking-[-0.424px] whitespace-nowrap">
-          <p className="leading-[normal]">{value}</p>
+    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Overview">
+      <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full">
+        <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
+          <p className="leading-[22.5px] whitespace-pre-wrap">Prototype • PoC</p>
+        </div>
+        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[34px] sm:text-[42px] tracking-[-1.04px] w-full">
+          <p className="leading-[42px] sm:leading-[normal] whitespace-pre-wrap">ChatGPT Feature Improvement</p>
+        </div>
+        <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
+          <p className="leading-[26px]">Five interaction improvements, prototyped, to help users navigate long chats, keep context, and act faster.</p>
         </div>
       </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">{description}</p>
+      <DetailThumbnail />
+      <div className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full" data-name="Property">
+        <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full">
+          <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
+          <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+            <p className="leading-[22.5px] whitespace-pre-wrap">Tool</p>
+          </div>
+          <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
+            <div className="flex flex-wrap items-center gap-x-[14px] gap-y-[8px] leading-[24px]">
+              <span className="inline-flex items-center gap-[6px]">
+                <img alt="ChatGPT logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgChatGptLogo} />
+                <span>Chat GPT</span>
+              </span>
+              <span className="inline-flex items-center gap-[6px]">
+                <img alt="Claude logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgClaudeLogo} />
+                <span>Claude Code</span>
+              </span>
+              <span className="inline-flex items-center gap-[6px]">
+                <img alt="" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgCursorLogo} />
+                <span>Cursor</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full">
+          <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
+          <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+            <p className="leading-[22.5px] whitespace-pre-wrap">Timeline</p>
+          </div>
+          <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
+            <p className="leading-[24px] whitespace-pre-wrap">3 hours</p>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full">
+          <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
+          <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+            <p className="leading-[22.5px] whitespace-pre-wrap">Team</p>
+          </div>
+          <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
+            <p className="leading-[24px] whitespace-pre-wrap">Solo project</p>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col sm:flex-row font-normal gap-[8px] sm:gap-[76px] items-start sm:items-center leading-[0] relative shrink-0 text-[15px] w-full">
+          <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+            <p className="leading-[22.5px] whitespace-pre-wrap">Skills</p>
+          </div>
+          <div className="flex flex-col font-geist justify-center min-h-px min-w-0 relative text-[#5b6a79] w-full">
+            <p className="leading-[24px] whitespace-pre-wrap">Problem framing • Systems thinking • Rapid prototyping</p>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
-function OutcomeStats() {
-  return (
-    <div className="content-stretch flex gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Container">
-      <StatBox value="00%" description="Stat description placeholder" />
-      <StatBox value="00" description="Stat description placeholder" />
-      <StatBox value="00%" description="Stat description placeholder" />
-    </div>
-  );
-}
+/* ───────────────────────────────────────────────
+   Section 2: Why I Did This
+   ─────────────────────────────────────────────── */
 
-function OutcomeSection() {
+function WhySection() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[42px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0" data-name="Outcome">
-      <OutcomeLabel />
-      <OutcomeStats />
+    <div className="content-stretch flex flex-col gap-[24px] items-start relative w-full" data-name="Why">
+      <SectionLabel label="How it started" />
+      <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full">
+        <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#1e242a] text-[28px] w-full">
+          <p className="leading-[38px] whitespace-pre-wrap">
+            If you're a ChatGPT user, have you ever had that moment where you think,{" "}
+            <span className="italic font-medium">"I wish it did this"?</span>
+          </p>
+        </div>
+        <div className="flex flex-col font-geist font-normal gap-[12px] justify-center relative shrink-0 text-[#32404f] text-[16px] w-full">
+          <p className="leading-[27px] whitespace-pre-wrap">That's what triggered this project.</p>
+          <p className="leading-[27px] whitespace-pre-wrap">Instead of letting that thought loop in my head, I decided to visualize the ideas, make them feel real, and share them with others to see what resonates.</p>
+        </div>
+        <div className="bg-[#f5f7f8] border border-[#ebeced] rounded-[10px] px-[16px] py-[14px] sm:px-[20px] sm:py-[16px] w-full">
+          <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">
+            Here are five feature ideas designed to reduce clicks and remove mental blocks:
+          </p>
+          <ol className="mt-[8px] pl-[20px] font-geist text-[15px] text-[#5b6a79] leading-[25px] list-decimal">
+            <li>[Feature 1]</li>
+            <li>[Feature 2]</li>
+            <li>[Feature 3]</li>
+            <li>[Feature 4]</li>
+            <li>[Feature 5]</li>
+          </ol>
+        </div>
+      </div>
     </div>
   );
 }
 
 /* ───────────────────────────────────────────────
-   Layout Grid + Navigation + Root
+   Section 3: What I Made
+   ─────────────────────────────────────────────── */
+
+function FeatureBlock({
+  title,
+  videoSrc,
+  painPoint,
+  improvement,
+}: {
+  title: string;
+  videoSrc?: string;
+  painPoint: string;
+  improvement: string;
+}) {
+  return (
+    <div className="flex flex-col gap-[20px] w-full" data-name="Feature">
+      <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
+        <p className="leading-[32px]">{title}</p>
+      </div>
+      <div className="bg-[#1e242a] w-full relative shrink-0">
+        {videoSrc ? (
+          <video
+            className="block w-full aspect-[16/9] object-cover"
+            src={videoSrc}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+          />
+        ) : (
+          <div className="w-full aspect-[16/9]" />
+        )}
+      </div>
+      <div className="flex flex-col gap-[20px]">
+        <div className="flex flex-col gap-[6px]">
+          <div className="font-geist-mono text-[12px] text-[rgba(50,64,79,0.45)] uppercase leading-[22.5px]">Pain point</div>
+          <div className="font-geist font-normal text-[15px] text-[rgba(50,64,79,0.72)] leading-[24px]">{painPoint}</div>
+        </div>
+        <div className="flex flex-col gap-[6px]">
+          <div className="font-geist-mono text-[12px] text-[rgba(50,64,79,0.45)] uppercase leading-[22.5px]">Improvement</div>
+          <div className="font-geist font-normal text-[15px] text-[#32404f] leading-[24px]">{improvement}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function WhatIMadeSection() {
+  return (
+    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="What I Made">
+      <SectionLabel label="what i made" />
+      <div className="flex flex-col gap-[80px] sm:gap-[110px] w-full">
+        <FeatureBlock
+          title="Feature 1: [Name]"
+          painPoint="[What was broken or frustrating before this existed]"
+          improvement="[One sentence: what changed and why it's better]"
+        />
+        <FeatureBlock
+          title="Feature 2: [Name]"
+          painPoint="[What was broken or frustrating before]"
+          improvement="[One sentence: what changed]"
+        />
+        <FeatureBlock
+          title="Feature 3: [Name]"
+          painPoint="[What was broken or frustrating before]"
+          improvement="[One sentence: what changed]"
+        />
+      </div>
+    </div>
+  );
+}
+
+/* ───────────────────────────────────────────────
+   Section 4: Try It On Your Own
+   ─────────────────────────────────────────────── */
+
+function TryItSection() {
+  return (
+    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Try It">
+      <SectionLabel label="try it on your own" />
+      <div className="grid grid-cols-1 gap-[32px] w-full">
+        <div className="content-stretch flex flex-col gap-[14px] items-start relative">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-[8px] px-[20px] py-[11px] font-geist text-[15px] font-medium rounded-[8px] transition-opacity duration-200 hover:opacity-70 whitespace-nowrap bg-[#1e242a] text-white"
+          >
+            Try the prototype
+            <span aria-hidden="true">↗</span>
+          </a>
+          <p className="font-geist font-normal text-[14px] text-[rgba(50,64,79,0.58)] leading-[22px]">
+            Best viewed on desktop
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ───────────────────────────────────────────────
+   Layout + Root
    ─────────────────────────────────────────────── */
 
 function SectionContainer() {
   return (
-    <div className="gap-[110px] sm:gap-[170px] grid-cols-[repeat(1,_fit-content(100%))] grid-rows-[repeat(8,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
-      <HeroSection />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[2] shrink-0" data-name="Horizontal Divider" />
+    <div
+      className="content-stretch flex flex-col gap-[80px] sm:gap-[110px] items-start max-w-[774px] pt-[48px] pb-[48px] relative shrink-0 w-full"
+      data-name="Section Container"
+    >
       <OverviewSection />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[4] shrink-0" data-name="Horizontal Divider" />
-      <ProcessSection />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[6] shrink-0" data-name="Horizontal Divider" />
-      <OutcomeSection />
+      <Divider />
+      <WhySection />
+      <Divider />
+      <WhatIMadeSection />
+      <Divider />
+      <TryItSection />
     </div>
   );
 }
-
-function ContentContainer() {
-  return (
-    <div className="content-stretch flex items-center relative shrink-0 w-full" data-name="Content Container">
-      <SectionContainer />
-    </div>
-  );
-}
-
-function MainContent() {
-  return (
-    <div className="content-stretch flex gap-[32px] items-start max-w-[774px] relative shrink-0 w-full" data-name="Main Content">
-      <ContentContainer />
-    </div>
-  );
-}
-
 
 export default function AiProject1Detail() {
   return (
-    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px] sm:px-0 relative w-full" data-name="AI Project 1 Detail">
-      <MainContent />
+    <div
+      className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px] sm:px-0 relative w-full"
+      data-name="AI Project 1 Detail"
+    >
+      <SectionContainer />
       <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
