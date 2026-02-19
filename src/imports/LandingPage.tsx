@@ -3,7 +3,7 @@ import imgSue1 from "../assets/landing/sue-final.png";
 import imgSueClick from "../assets/landing/sue-final-click.png";
 import imgFigmaLogo from "../assets/landing/1Figma Logo.png";
 import imgShipIt from "../assets/landing/2Ship It.png";
-import imgStar25 from "../assets/ai/2-5-Star.png";
+import imgStar25 from "../assets/ai/project-2/2-5-Star.png";
 import imgStar from "../assets/landing/3Star.png";
 import imgSmile from "../assets/landing/4Smile.png";
 import imgScale from "../assets/landing/5Scale.png";

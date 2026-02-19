@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link as RouterLink } from "react-router";
 import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
 import project2ThumbnailImage from "../assets/ai/project-2/ai-p2-thumbnail.png";
-import imgStar25 from "../assets/ai/2-5-Star.png";
+import imgStar25 from "../assets/ai/project-2/2-5-Star.png";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
@@ -203,8 +203,6 @@ function ProjectsGrid() {
         thumbnailVideoSrc={project1ThumbnailVideo}
       />
       <ProjectCard title="Design Decision Note" subtitle="Figma Plugin" thumbnailSrc={project2ThumbnailImage} />
-      <ProjectCard title="—" comingSoon />
-      <ProjectCard title="—" comingSoon />
     </div>
   );
 }
@@ -213,6 +211,9 @@ function MainFrame() {
   return (
     <div className="content-stretch flex flex-col gap-[64px] sm:gap-[120px] items-start max-w-[1200px] mt-[40px] sm:mt-[60px] mx-auto w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Main Frame">
       <ProjectsGrid />
+      <div className="w-full text-center">
+        <p className="font-geist text-[16px] text-[#5b6a79] leading-[26px]">Stay tuned! More exciting things are coming ;)</p>
+      </div>
     </div>
   );
 }

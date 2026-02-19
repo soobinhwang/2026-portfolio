@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
+import featureBranchChatVideo from "../assets/ai/project-2/branch chat.mov";
+import featurePromptQueueVideo from "../assets/ai/project-2/Prompt Queue.mov";
+import featureChatHistoryManagerVideo from "../assets/ai/project-2/Chat History Manager.mov";
 import imgChatGptLogo from "../assets/ai/project-2/gpt logo.jpg";
 import imgClaudeLogo from "../assets/ai/project-2/claude logo.png";
 import imgCursorLogo from "../assets/ai/project-2/cursor logo.png";
@@ -109,7 +112,7 @@ function OverviewSection() {
           <p className="leading-[42px] sm:leading-[normal] whitespace-pre-wrap">ChatGPT Feature Improvement</p>
         </div>
         <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
-          <p className="leading-[26px]">Three interaction improvements, prototyped, to help users navigate long chats, keep context, and act faster.</p>
+          <p className="leading-[26px]">Three interaction improvements prototyped to help users navigate long chats, keep context, and act faster.</p>
         </div>
       </div>
       <DetailThumbnail />
@@ -216,6 +219,21 @@ function FeatureBlock({
   painPoint: string;
   improvement: string;
 }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      void video.play().then(() => setIsPlaying(true)).catch(() => {});
+    } else {
+      video.pause();
+      setIsPlaying(false);
+    }
+  };
+
   return (
     <div className="flex flex-col gap-[20px] w-full" data-name="Feature">
       <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
@@ -223,27 +241,43 @@ function FeatureBlock({
       </div>
       <div className="bg-[#1e242a] w-full relative shrink-0">
         {videoSrc ? (
-          <video
-            className="block w-full aspect-[16/9] object-cover"
-            src={videoSrc}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-          />
+          <button
+            type="button"
+            className="group relative block w-full cursor-pointer border-0 bg-transparent p-0"
+            onClick={togglePlay}
+            aria-label={isPlaying ? "Pause video preview" : "Play video preview"}
+          >
+            <video
+              ref={videoRef}
+              className="block w-full h-auto object-contain"
+              src={videoSrc}
+              muted
+              playsInline
+              preload="metadata"
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+              onEnded={() => setIsPlaying(false)}
+            />
+            {!isPlaying ? (
+              <span className="absolute inset-0 grid place-items-center pointer-events-none">
+                <span className="inline-flex h-[42px] w-[42px] items-center justify-center rounded-full bg-black/55 text-white text-[16px]">
+                  ▶
+                </span>
+              </span>
+            ) : null}
+          </button>
         ) : (
           <div className="w-full aspect-[16/9]" />
         )}
       </div>
-      <div className="flex flex-col gap-[20px]">
-        <div className="flex flex-col gap-[6px]">
-          <div className="font-geist-mono text-[12px] text-[rgba(50,64,79,0.45)] uppercase leading-[22.5px]">Pain point</div>
-          <div className="font-geist font-normal text-[15px] text-[#32404f] leading-[24px]">{painPoint}</div>
+      <div className="flex flex-col gap-[14px]">
+        <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#f1d8d8] bg-[#fcf4f4] px-[14px] py-[12px]">
+          <div className="font-geist-mono text-[12px] text-[#b05555] uppercase leading-[22.5px]">Pain point</div>
+          <div className="font-geist font-normal text-[15px] text-[#6b5050] leading-[24px]">{painPoint}</div>
         </div>
-        <div className="flex flex-col gap-[6px]">
-          <div className="font-geist-mono text-[12px] text-[rgba(50,64,79,0.45)] uppercase leading-[22.5px]">Improvement</div>
-          <div className="font-geist font-normal text-[15px] text-[#32404f] leading-[24px]">{improvement}</div>
+        <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#d7e9db] bg-[#f3f9f4] px-[14px] py-[12px]">
+          <div className="font-geist-mono text-[12px] text-[#3f8654] uppercase leading-[22.5px]">Improvement</div>
+          <div className="font-geist font-normal text-[15px] text-[#45604e] leading-[24px]">{improvement}</div>
         </div>
       </div>
     </div>
@@ -257,16 +291,19 @@ function WhatIMadeSection() {
       <div className="flex flex-col gap-[80px] sm:gap-[110px] w-full">
         <FeatureBlock
           title="Feature 1: Branch Chat"
+          videoSrc={featureBranchChatVideo}
           painPoint="In a single vertical chat, exploring a tangent interrupts the main thread, so users either lose momentum or carry “I’ll come back later” mental load."
           improvement="Branch Chat lets users open a focused side thread from a specific snippet, so they can dig deeper without breaking the main conversation flow."
         />
         <FeatureBlock
           title="Feature 2: Prompt Queue"
+          videoSrc={featurePromptQueueVideo}
           painPoint="While ChatGPT is answering, users can’t type and submit their next questions, so they either wait doing nothing or hold follow-ups in their head and risk forgetting them."
           improvement="Prompt Queue lets users keep drafting and lining up questions while an answer is generating, so the next prompt is ready to run without interrupting the current response."
         />
         <FeatureBlock
           title="Feature 3: Chat History Manager"
+          videoSrc={featureChatHistoryManagerVideo}
           painPoint="As chat lists grow, infinite scrolling and weak recall-based search make it hard to find past conversations, so users give up and create new chats—making history even more unmanageable."
           improvement="Chat History Manager provides a full-page, searchable, sortable view with bulk archive/delete, so users can quickly locate and manage past chats with a clearer sense of control."
         />
@@ -286,7 +323,7 @@ function TryItSection() {
       <div className="grid grid-cols-1 gap-[32px] w-full">
         <div className="content-stretch flex flex-col gap-[14px] items-start relative">
           <a
-            href="#"
+            href="https://chatgpt-ux-improvements.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-[8px] px-[20px] py-[11px] font-geist text-[15px] font-medium rounded-[8px] transition-opacity duration-200 hover:opacity-70 whitespace-nowrap bg-[#1e242a] text-white"
