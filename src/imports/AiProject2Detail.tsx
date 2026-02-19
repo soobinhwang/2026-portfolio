@@ -3,6 +3,7 @@ import imgDetailThumbnail from "../assets/ai/project-2/ai-p2-detail-thumbnail.pn
 import imgFigmaLogo from "../assets/ai/project-2/figma logo.png";
 import imgChatGptLogo from "../assets/ai/project-1/gpt logo.jpg";
 import imgVsCodeLogo from "../assets/ai/project-2/visual studio code logo.png";
+import imgBusyMoment from "../assets/ai/project-2/busy.gif";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
@@ -113,11 +114,15 @@ function WhySection() {
       <SectionLabel label="How it started" />
       <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full">
         <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#1e242a] text-[28px] w-full">
-          <p className="leading-[38px] whitespace-pre-wrap">I’m a heavy note-taker, but in fast-paced design reviews my notes kept getting messy and scattered.</p>
+          <p className="leading-[38px] whitespace-pre-wrap">I’m a heavy note-taker, but in fast-paced design reviews, my notes kept getting messy and scattered.</p>
+        </div>
+        <div className="w-[40%] bg-[#f0f3f5] rounded-[10px] overflow-hidden">
+          <img alt="Busy moment" className="block w-full h-auto object-contain" src={imgBusyMoment} />
         </div>
         <div className="flex flex-col font-geist font-normal gap-[12px] justify-center relative shrink-0 text-[#32404f] text-[16px] w-full">
           <p className="leading-[27px] whitespace-pre-wrap">With multiple stakeholders giving different feedback, decisions shifted often, and I lost track of what was final versus what was still a question.</p>
-          <p className="leading-[27px] whitespace-pre-wrap">I wanted a fast, structured way to write labelled notes directly next to the design frame — and share them without extra cleanup. That’s what pushed me to build this Figma plugin.</p>
+          <p className="leading-[27px] whitespace-pre-wrap">I wanted a fast, structured way to write labelled notes directly next to the design frame and share them without extra cleanup.</p>
+          <p className="leading-[27px] whitespace-pre-wrap">That’s what pushed me to build this Figma plugin.</p>
         </div>
       </div>
     </div>
@@ -195,10 +200,10 @@ function WhatIMadeSection() {
       <SectionLabel label="what i built" />
       <div className="flex flex-col gap-[80px] sm:gap-[110px] w-full">
         <FeatureBlock
-          title="MVP: [Name]"
+          title="MVP"
         />
         <FeatureBlock
-          title="Release: [Name]"
+          title="Release"
         />
       </div>
     </div>
