@@ -109,7 +109,7 @@ function OverviewSection() {
           <p className="leading-[42px] sm:leading-[normal] whitespace-pre-wrap">ChatGPT Feature Improvement</p>
         </div>
         <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
-          <p className="leading-[26px]">Five interaction improvements, prototyped, to help users navigate long chats, keep context, and act faster.</p>
+          <p className="leading-[26px]">Three interaction improvements, prototyped, to help users navigate long chats, keep context, and act faster.</p>
         </div>
       </div>
       <DetailThumbnail />
@@ -179,7 +179,7 @@ function WhySection() {
         <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#1e242a] text-[28px] w-full">
           <p className="leading-[38px] whitespace-pre-wrap">
             If you're a ChatGPT user, have you ever had that moment where you think,{" "}
-            <span className="italic font-medium">"I wish it did this"?</span>
+            <span className="italic font-medium">I wish it did this</span>?
           </p>
         </div>
         <div className="flex flex-col font-geist font-normal gap-[12px] justify-center relative shrink-0 text-[#32404f] text-[16px] w-full">
@@ -188,14 +188,12 @@ function WhySection() {
         </div>
         <div className="bg-[#f5f7f8] border border-[#ebeced] rounded-[10px] px-[16px] py-[14px] sm:px-[20px] sm:py-[16px] w-full">
           <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">
-            Here are five feature ideas designed to reduce clicks and remove mental blocks:
+            Here are three feature ideas designed to reduce clicks and remove mental blocks:
           </p>
           <ol className="mt-[8px] pl-[20px] font-geist text-[15px] text-[#5b6a79] leading-[25px] list-decimal">
-            <li>[Feature 1]</li>
-            <li>[Feature 2]</li>
-            <li>[Feature 3]</li>
-            <li>[Feature 4]</li>
-            <li>[Feature 5]</li>
+            <li>Branch Chat</li>
+            <li>Prompt Queue</li>
+            <li>Chat History Manager</li>
           </ol>
         </div>
       </div>
@@ -241,7 +239,7 @@ function FeatureBlock({
       <div className="flex flex-col gap-[20px]">
         <div className="flex flex-col gap-[6px]">
           <div className="font-geist-mono text-[12px] text-[rgba(50,64,79,0.45)] uppercase leading-[22.5px]">Pain point</div>
-          <div className="font-geist font-normal text-[15px] text-[rgba(50,64,79,0.72)] leading-[24px]">{painPoint}</div>
+          <div className="font-geist font-normal text-[15px] text-[#32404f] leading-[24px]">{painPoint}</div>
         </div>
         <div className="flex flex-col gap-[6px]">
           <div className="font-geist-mono text-[12px] text-[rgba(50,64,79,0.45)] uppercase leading-[22.5px]">Improvement</div>
@@ -255,22 +253,22 @@ function FeatureBlock({
 function WhatIMadeSection() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="What I Made">
-      <SectionLabel label="what i made" />
+      <SectionLabel label="what i built" />
       <div className="flex flex-col gap-[80px] sm:gap-[110px] w-full">
         <FeatureBlock
-          title="Feature 1: [Name]"
-          painPoint="[What was broken or frustrating before this existed]"
-          improvement="[One sentence: what changed and why it's better]"
+          title="Feature 1: Branch Chat"
+          painPoint="In a single vertical chat, exploring a tangent interrupts the main thread, so users either lose momentum or carry “I’ll come back later” mental load."
+          improvement="Branch Chat lets users open a focused side thread from a specific snippet, so they can dig deeper without breaking the main conversation flow."
         />
         <FeatureBlock
-          title="Feature 2: [Name]"
-          painPoint="[What was broken or frustrating before]"
-          improvement="[One sentence: what changed]"
+          title="Feature 2: Prompt Queue"
+          painPoint="While ChatGPT is answering, users can’t type and submit their next questions, so they either wait doing nothing or hold follow-ups in their head and risk forgetting them."
+          improvement="Prompt Queue lets users keep drafting and lining up questions while an answer is generating, so the next prompt is ready to run without interrupting the current response."
         />
         <FeatureBlock
-          title="Feature 3: [Name]"
-          painPoint="[What was broken or frustrating before]"
-          improvement="[One sentence: what changed]"
+          title="Feature 3: Chat History Manager"
+          painPoint="As chat lists grow, infinite scrolling and weak recall-based search make it hard to find past conversations, so users give up and create new chats—making history even more unmanageable."
+          improvement="Chat History Manager provides a full-page, searchable, sortable view with bulk archive/delete, so users can quickly locate and manage past chats with a clearer sense of control."
         />
       </div>
     </div>
