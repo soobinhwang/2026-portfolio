@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
+import imgGptMoment from "../assets/ai/project-1/gpt moment.gif";
 import featureBranchChatVideo from "../assets/ai/project-2/branch chat.mov";
 import featurePromptQueueVideo from "../assets/ai/project-2/Prompt Queue.mov";
 import featureChatHistoryManagerVideo from "../assets/ai/project-2/Chat History Manager.mov";
-import imgChatGptLogo from "../assets/ai/project-2/gpt logo.jpg";
-import imgClaudeLogo from "../assets/ai/project-2/claude logo.png";
-import imgCursorLogo from "../assets/ai/project-2/cursor logo.png";
+import imgChatGptLogo from "../assets/ai/project-1/gpt logo.jpg";
+import imgClaudeLogo from "../assets/ai/project-1/claude logo.png";
+import imgCursorLogo from "../assets/ai/project-1/cursor logo.png";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
@@ -62,7 +63,7 @@ function LottieThumbnail({ srcUrl, fallbackVideoSrc }: { srcUrl: string; fallbac
   if (!hasPlayer || scriptFailed) {
     return fallbackVideoSrc ? (
       <video
-        className="absolute inset-0 size-full object-cover"
+        className="absolute inset-0 size-full object-cover scale-[1.1] origin-center"
         src={fallbackVideoSrc}
         autoPlay
         loop
@@ -83,7 +84,7 @@ function LottieThumbnail({ srcUrl, fallbackVideoSrc }: { srcUrl: string; fallbac
         autoplay
         loop
         speed="1"
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%", transform: "scale(1.1)", transformOrigin: "center center" }}
       />
     </div>
   );
@@ -185,13 +186,16 @@ function WhySection() {
             <span className="italic font-medium">I wish it did this</span>?
           </p>
         </div>
+        <div className="w-[40%] bg-[#f0f3f5] rounded-[10px] overflow-hidden">
+          <img alt="GPT moment" className="block w-full h-auto object-contain" src={imgGptMoment} />
+        </div>
         <div className="flex flex-col font-geist font-normal gap-[12px] justify-center relative shrink-0 text-[#32404f] text-[16px] w-full">
           <p className="leading-[27px] whitespace-pre-wrap">That's what triggered this project.</p>
           <p className="leading-[27px] whitespace-pre-wrap">Instead of letting that thought loop in my head, I decided to visualize the ideas, make them feel real, and share them with others to see what resonates.</p>
         </div>
         <div className="bg-[#f5f7f8] border border-[#ebeced] rounded-[10px] px-[16px] py-[14px] sm:px-[20px] sm:py-[16px] w-full">
           <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">
-            Here are three feature ideas designed to reduce clicks and remove mental blocks:
+            Here are three feature ideas designed to reduce clicks and remove mental blocks
           </p>
           <ol className="mt-[8px] pl-[20px] font-geist text-[15px] text-[#5b6a79] leading-[25px] list-decimal">
             <li>Branch Chat</li>
@@ -272,11 +276,11 @@ function FeatureBlock({
       </div>
       <div className="flex flex-col gap-[14px]">
         <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#f1d8d8] bg-[#fcf4f4] px-[14px] py-[12px]">
-          <div className="font-geist-mono text-[12px] text-[#b05555] uppercase leading-[22.5px]">Pain point</div>
+          <div className="font-geist-mono text-[12px] text-[#b05555] uppercase leading-[22.5px]">Problem</div>
           <div className="font-geist font-normal text-[15px] text-[#6b5050] leading-[24px]">{painPoint}</div>
         </div>
         <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#d7e9db] bg-[#f3f9f4] px-[14px] py-[12px]">
-          <div className="font-geist-mono text-[12px] text-[#3f8654] uppercase leading-[22.5px]">Improvement</div>
+          <div className="font-geist-mono text-[12px] text-[#3f8654] uppercase leading-[22.5px]">Solution</div>
           <div className="font-geist font-normal text-[15px] text-[#45604e] leading-[24px]">{improvement}</div>
         </div>
       </div>

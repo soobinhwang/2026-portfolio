@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link as RouterLink } from "react-router";
 import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
-import project2ThumbnailImage from "../assets/ai/project-2/ai-p2-thumbnail.png";
-import imgStar25 from "../assets/ai/project-2/2-5-Star.png";
+import project2ThumbnailImage from "../assets/ai/project-1/ai-p2-thumbnail.png";
+import imgStar25 from "../assets/ai/2-5-Star.png";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
@@ -86,7 +86,7 @@ function LottieThumbnail({ srcUrl, fallbackVideoSrc }: { srcUrl: string; fallbac
   if (!hasPlayer || scriptFailed) {
     return fallbackVideoSrc ? (
       <video
-        className="block w-full aspect-[4/3] object-cover"
+        className="block w-full aspect-[4/3] object-cover scale-[1.1] origin-center"
         src={fallbackVideoSrc}
         autoPlay
         loop
@@ -107,7 +107,7 @@ function LottieThumbnail({ srcUrl, fallbackVideoSrc }: { srcUrl: string; fallbac
         autoplay
         loop
         speed="1"
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%", transform: "scale(1.1)", transformOrigin: "center center" }}
       />
     </div>
   );
@@ -115,7 +115,7 @@ function LottieThumbnail({ srcUrl, fallbackVideoSrc }: { srcUrl: string; fallbac
 
 function AiThumbnail({ src, videoSrc, animationSrcUrl, comingSoon }: { src?: string; videoSrc?: string; animationSrcUrl?: string; comingSoon?: boolean }) {
   return (
-    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="AI Thumbnail">
+    <div className="bg-[#1e242a] shrink-0 w-full relative overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="AI Thumbnail">
       {animationSrcUrl ? (
         <LottieThumbnail srcUrl={animationSrcUrl} fallbackVideoSrc={videoSrc} />
       ) : videoSrc ? (
