@@ -197,7 +197,7 @@ function ProjectsGrid() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] sm:gap-[32px] items-start relative shrink-0 w-full" data-name="Projects Grid">
       <ProjectCard
         to="/ai/project-1"
-        title="Chat GPT Feature Improvements"
+        title="Chat GPT Feature Concepts"
         subtitle="Prototype • PoC"
         thumbnailAnimationSrcUrl={project1ThumbnailJsonUrl}
         thumbnailVideoSrc={project1ThumbnailVideo}

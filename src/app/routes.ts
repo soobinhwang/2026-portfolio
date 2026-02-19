@@ -5,6 +5,7 @@ import AiProjectPage from "../imports/AiProjectPage";
 import AboutPage from "../imports/AboutPage";
 import EngagementPlatform from "../imports/EngagementPlatform";
 import AiProject1Detail from "../imports/AiProject1Detail";
+import AiProject2Detail from "../imports/AiProject2Detail";
 import GlobalRewardStorefront from "../imports/GlobalRewardStorefront";
 import DesignLibrary from "../imports/DesignLibrary";
 
