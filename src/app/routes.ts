@@ -26,6 +26,10 @@ export const router = createBrowserRouter([
         Component: AiProject1Detail,
       },
       {
+        path: "/ai/project-2",
+        Component: AiProject2Detail,
+      },
+      {
         path: "/about",
         Component: AboutPage,
       },

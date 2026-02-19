@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
 import imgGptMoment from "../assets/ai/project-1/gpt moment.gif";
-import featureBranchChatVideo from "../assets/ai/project-2/branch chat.mov";
-import featurePromptQueueVideo from "../assets/ai/project-2/Prompt Queue.mov";
-import featureChatHistoryManagerVideo from "../assets/ai/project-2/Chat History Manager.mov";
+import featureBranchChatVideo from "../assets/ai/project-1/branch chat.mov";
+import featurePromptQueueVideo from "../assets/ai/project-1/Prompt Queue.mov";
+import featureChatHistoryManagerVideo from "../assets/ai/project-1/Chat History Manager.mov";
 import imgChatGptLogo from "../assets/ai/project-1/gpt logo.jpg";
 import imgClaudeLogo from "../assets/ai/project-1/claude logo.png";
 import imgCursorLogo from "../assets/ai/project-1/cursor logo.png";

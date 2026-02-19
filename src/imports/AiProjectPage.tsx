@@ -202,7 +202,7 @@ function ProjectsGrid() {
         thumbnailAnimationSrcUrl={project1ThumbnailJsonUrl}
         thumbnailVideoSrc={project1ThumbnailVideo}
       />
-      <ProjectCard title="Design Decision Note" subtitle="Figma Plugin" thumbnailSrc={project2ThumbnailImage} />
+      <ProjectCard to="/ai/project-2" title="Design Decision Note" subtitle="Figma Plugin" thumbnailSrc={project2ThumbnailImage} />
     </div>
   );
 }
