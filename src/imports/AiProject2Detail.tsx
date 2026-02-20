@@ -262,17 +262,32 @@ function BuildingProcessSection() {
     },
     {
       title: "Scoping the MVP",
-      description:
-        "I used GPT to turn a vague idea into a shippable MVP by clarifying the value proposition, MVP feature set, UX flow, data model, and required Figma API surface area. I also parked non-essential ideas as a post-MVP backlog to keep the build focused.",
+      hideMedia: true,
+      scopingPoints: [
+        "Reviewed my work logs and retrospectives to identify repetitive friction and decision-context loss.",
+        "Defined an automation approach to anchor decisions to frames.",
+        "Scoped the MVP feature set, UX flow, decision data model, and required Figma API.",
+      ],
     },
     {
       title: "Implementation",
-      description:
-        "I built the plugin in Visual Studio Code with AI agents to accelerate scaffolding, troubleshooting, and iteration (Claude for UI/planning; Codex for complex problem-solving and debugging).",
+      description: (
+        <>
+          I built the plugin in <span className="italic">Visual Studio Code</span> with AI agents to accelerate
+          scaffolding, troubleshooting, and iteration (Claude for UI/planning; Codex for complex problem-solving and
+          debugging).
+        </>
+      ),
       imageSrc: imgImplementation,
       keyPoints: [
-        "I asked an AI agent to generate the essential plugin files (manifest.json and code.js) so I could start from a valid baseline and iterate quickly.",
-        "I used VS Code to reliably edit, refactor, and debug the code during repeated runs in Figma.",
+        <>
+          Ask an AI agent to generate the essential plugin files (<span className="italic">manifest.json</span>{" "}
+          and <span className="italic">code.js</span>).
+        </>,
+        <>
+          Use <span className="italic">VS Code</span> to reliably edit, refactor, and debug the code during
+          repeated runs in Figma.
+        </>,
       ],
     },
     {
@@ -289,14 +304,28 @@ function BuildingProcessSection() {
       <div className="flex flex-col gap-[110px] sm:gap-[170px] w-full">
         {steps.filter((step) => !step.hidden).map((step) => (
           <div key={step.title} className="flex flex-col gap-[20px] w-full">
-            <FeatureBlock title={step.title} imageSrc={step.imageSrc} videoSrc={step.videoSrc} />
-            <p className="font-geist font-normal text-[15px] text-[#5b6a79] leading-[25px]">{step.description}</p>
+            {step.hideMedia ? (
+              <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
+                <p className="leading-[32px]">{step.title}</p>
+              </div>
+            ) : (
+              <FeatureBlock title={step.title} imageSrc={step.imageSrc} videoSrc={step.videoSrc} />
+            )}
+            {step.scopingPoints ? (
+              <ol className="pl-[20px] font-geist font-normal text-[15px] text-[#5b6a79] leading-[25px] list-decimal">
+                {step.scopingPoints.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ol>
+            ) : (
+              <p className="font-geist font-normal text-[15px] text-[#5b6a79] leading-[25px]">{step.description}</p>
+            )}
             {step.keyPoints ? (
               <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#f2dfcf] bg-[#fff7ef] px-[14px] py-[12px]">
                 <div className="font-geist-mono text-[12px] text-[#b26f32] uppercase leading-[22.5px]">Key points</div>
                 <ol className="pl-[20px] font-geist font-normal text-[15px] text-[#8d6439] leading-[24px] list-decimal">
-                  {step.keyPoints.map((point) => (
-                    <li key={point}>{point}</li>
+                  {step.keyPoints.map((point, index) => (
+                    <li key={index}>{point}</li>
                   ))}
                 </ol>
               </div>
