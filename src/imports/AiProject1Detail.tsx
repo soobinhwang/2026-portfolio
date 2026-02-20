@@ -351,7 +351,7 @@ function TryItSection() {
 function SectionContainer() {
   return (
     <div
-      className="content-stretch flex flex-col gap-[80px] sm:gap-[110px] items-start max-w-[774px] pt-[48px] pb-[48px] relative shrink-0 w-full"
+      className="content-stretch flex flex-col gap-[110px] sm:gap-[170px] items-start max-w-[774px] pt-[48px] pb-[48px] relative shrink-0 w-full"
       data-name="Section Container"
     >
       <OverviewSection />

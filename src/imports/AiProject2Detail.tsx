@@ -2,8 +2,14 @@ import { useRef, useState } from "react";
 import imgDetailThumbnail from "../assets/ai/project-2/ai-p2-detail-thumbnail.png";
 import imgFigmaLogo from "../assets/ai/project-2/figma logo.png";
 import imgChatGptLogo from "../assets/ai/project-1/gpt logo.jpg";
+import imgClaudeLogo from "../assets/ai/project-1/claude logo.png";
 import imgVsCodeLogo from "../assets/ai/project-2/visual studio code logo.png";
 import imgBusyMoment from "../assets/ai/project-2/busy.gif";
+import imgWhatIBuilt from "../assets/ai/project-2/What I built - image.png";
+import imgProblemFraming from "../assets/ai/project-2/Problem Framing.png";
+import imgImplementation from "../assets/ai/project-2/Implementation.png";
+import videoMvp from "../assets/ai/project-2/MVP.mov";
+import videoPostMvp from "../assets/ai/project-2/Post MVP.mov";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
@@ -67,6 +73,10 @@ function OverviewSection() {
                 <span>Chat GPT</span>
               </span>
               <span className="inline-flex items-center gap-[6px]">
+                <img alt="Claude logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgClaudeLogo} />
+                <span>Claude Code</span>
+              </span>
+              <span className="inline-flex items-center gap-[6px]">
                 <img alt="Visual Studio Code logo" className="h-[16px] w-[16px] rounded-[4px] bg-[#1e242a] p-[2px] object-contain" src={imgVsCodeLogo} />
                 <span>Visual Studio Code</span>
               </span>
@@ -120,8 +130,16 @@ function WhySection() {
           <img alt="Busy moment" className="block w-full h-auto object-contain" src={imgBusyMoment} />
         </div>
         <div className="flex flex-col font-geist font-normal gap-[12px] justify-center relative shrink-0 text-[#32404f] text-[16px] w-full">
-          <p className="leading-[27px] whitespace-pre-wrap">With multiple stakeholders giving different feedback, decisions shifted often, and I lost track of what was final versus what was still a question.</p>
-          <p className="leading-[27px] whitespace-pre-wrap">I wanted a fast, structured way to write labelled notes directly next to the design frame and share them without extra cleanup.</p>
+          <p className="leading-[27px] whitespace-pre-wrap">
+            With multiple stakeholders giving different feedback, decisions shifted often,
+            <br />
+            and I lost track of what was final versus what was still a question.
+          </p>
+          <p className="leading-[27px] whitespace-pre-wrap">
+            I wanted a fast, structured way to write labelled notes directly next to the design frame
+            <br />
+            and share them without extra cleanup.
+          </p>
           <p className="leading-[27px] whitespace-pre-wrap">That’s what pushed me to build this Figma plugin.</p>
         </div>
       </div>
@@ -136,9 +154,11 @@ function WhySection() {
 function FeatureBlock({
   title,
   videoSrc,
+  imageSrc,
 }: {
-  title: string;
+  title?: string;
   videoSrc?: string;
+  imageSrc?: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -156,11 +176,15 @@ function FeatureBlock({
 
   return (
     <div className="flex flex-col gap-[20px] w-full" data-name="Feature">
-      <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
-        <p className="leading-[32px]">{title}</p>
-      </div>
+      {title ? (
+        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
+          <p className="leading-[32px]">{title}</p>
+        </div>
+      ) : null}
       <div className="bg-[#1e242a] w-full relative shrink-0">
-        {videoSrc ? (
+        {imageSrc ? (
+          <img alt="" className="block w-full h-auto object-contain" src={imageSrc} />
+        ) : videoSrc ? (
           <button
             type="button"
             className="group relative block w-full cursor-pointer border-0 bg-transparent p-0"
@@ -198,20 +222,94 @@ function WhatIMadeSection() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="What I Made">
       <SectionLabel label="what i built" />
-      <div className="flex flex-col gap-[80px] sm:gap-[110px] w-full">
-        <FeatureBlock
-          title="MVP"
-        />
-        <FeatureBlock
-          title="Release"
-        />
+      <div className="flex flex-col gap-[20px] w-full">
+        <FeatureBlock imageSrc={imgWhatIBuilt} />
+        <FeatureBlock videoSrc={videoPostMvp} />
+        <div className="bg-[#f5f7f8] border border-[#ebeced] rounded-[10px] px-[16px] py-[14px] sm:px-[20px] sm:py-[16px] w-full">
+          <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">How it works</p>
+          <ol className="mt-[8px] pl-[20px] font-geist text-[15px] text-[#5b6a79] leading-[25px] list-decimal">
+            <li>Launch the plugin.</li>
+            <li>Add your note.</li>
+            <li>
+              Select a frame to attach it <span className="text-[rgba(91,106,121,0.7)]">(optional)</span>.
+            </li>
+            <li>
+              Re-run to update{" "}
+              <span className="text-[rgba(91,106,121,0.7)]">
+                (It edits the existing note from saved content)
+              </span>
+              .
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   );
 }
 
 /* ───────────────────────────────────────────────
-   Section 4: Try It On Your Own
+   Section 4: Building Process
+   ─────────────────────────────────────────────── */
+
+function BuildingProcessSection() {
+  const steps = [
+    {
+      title: "Problem framing",
+      description:
+        "Defined the core pain points from real note-taking workflows and clarified what the plugin needed to solve first.",
+      imageSrc: imgProblemFraming,
+      hidden: true,
+    },
+    {
+      title: "Scoping the MVP",
+      description:
+        "I used GPT to turn a vague idea into a shippable MVP by clarifying the value proposition, MVP feature set, UX flow, data model, and required Figma API surface area. I also parked non-essential ideas as a post-MVP backlog to keep the build focused.",
+    },
+    {
+      title: "Implementation",
+      description:
+        "I built the plugin in Visual Studio Code with AI agents to accelerate scaffolding, troubleshooting, and iteration (Claude for UI/planning; Codex for complex problem-solving and debugging).",
+      imageSrc: imgImplementation,
+      keyPoints: [
+        "I asked an AI agent to generate the essential plugin files (manifest.json and code.js) so I could start from a valid baseline and iterate quickly.",
+        "I used VS Code to reliably edit, refactor, and debug the code during repeated runs in Figma.",
+      ],
+    },
+    {
+      title: "MVP release",
+      description:
+        "Shipped the first usable version to validate the workflow and gather feedback for the next iteration.",
+      videoSrc: videoMvp,
+    },
+  ];
+
+  return (
+    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Building Process">
+      <SectionLabel label="Building Process" />
+      <div className="flex flex-col gap-[80px] sm:gap-[110px] w-full">
+        {steps.filter((step) => !step.hidden).map((step) => (
+          <div key={step.title} className="flex flex-col gap-[20px] w-full">
+            <FeatureBlock title={step.title} imageSrc={step.imageSrc} videoSrc={step.videoSrc} />
+            <p className="font-geist font-normal text-[15px] text-[#5b6a79] leading-[25px]">{step.description}</p>
+            {step.keyPoints ? (
+              <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#f2dfcf] bg-[#fff7ef] px-[14px] py-[12px]">
+                <div className="font-geist-mono text-[12px] text-[#b26f32] uppercase leading-[22.5px]">Key points</div>
+                <ol className="pl-[20px] font-geist font-normal text-[15px] text-[#8d6439] leading-[24px] list-decimal">
+                  {step.keyPoints.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ol>
+              </div>
+            ) : null}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ───────────────────────────────────────────────
+   Section 5: Try It On Your Own
    ─────────────────────────────────────────────── */
 
 function TryItSection() {
@@ -219,16 +317,16 @@ function TryItSection() {
     <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Try It">
       <SectionLabel label="try it on your own" />
       <div className="grid grid-cols-1 gap-[32px] w-full">
-        <div className="content-stretch flex flex-col gap-[14px] items-start relative">
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-[8px] px-[20px] py-[11px] font-geist text-[15px] font-medium rounded-[8px] transition-opacity duration-200 hover:opacity-70 whitespace-nowrap bg-[#1e242a] text-white"
+        <div className="content-stretch flex flex-col gap-[14px] items-start relative" data-cursor="coming-soon">
+          <button
+            type="button"
+            disabled
+            aria-disabled="true"
+            className="inline-flex items-center gap-[8px] px-[20px] py-[11px] font-geist text-[15px] font-medium rounded-[8px] whitespace-nowrap bg-[#1e242a] text-white opacity-70 cursor-not-allowed"
           >
-            Try the plugin
+            Coming soon
             <span aria-hidden="true">↗</span>
-          </a>
+          </button>
           <p className="font-geist font-normal text-[14px] text-[rgba(50,64,79,0.58)] leading-[22px]">
             Install from the Figma Community
           </p>
@@ -245,7 +343,7 @@ function TryItSection() {
 function SectionContainer() {
   return (
     <div
-      className="content-stretch flex flex-col gap-[80px] sm:gap-[110px] items-start max-w-[774px] pt-[48px] pb-[48px] relative shrink-0 w-full"
+      className="content-stretch flex flex-col gap-[110px] sm:gap-[170px] items-start max-w-[774px] pt-[48px] pb-[48px] relative shrink-0 w-full"
       data-name="Section Container"
     >
       <OverviewSection />
@@ -253,6 +351,8 @@ function SectionContainer() {
       <WhySection />
       <Divider />
       <WhatIMadeSection />
+      <Divider />
+      <BuildingProcessSection />
       <Divider />
       <TryItSection />
     </div>
