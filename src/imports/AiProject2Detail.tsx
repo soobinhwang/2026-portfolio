@@ -286,7 +286,7 @@ function BuildingProcessSection() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Building Process">
       <SectionLabel label="Building Process" />
-      <div className="flex flex-col gap-[80px] sm:gap-[110px] w-full">
+      <div className="flex flex-col gap-[110px] sm:gap-[170px] w-full">
         {steps.filter((step) => !step.hidden).map((step) => (
           <div key={step.title} className="flex flex-col gap-[20px] w-full">
             <FeatureBlock title={step.title} imageSrc={step.imageSrc} videoSrc={step.videoSrc} />

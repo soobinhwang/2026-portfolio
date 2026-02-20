@@ -292,7 +292,7 @@ function WhatIMadeSection() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="What I Made">
       <SectionLabel label="what i built" />
-      <div className="flex flex-col gap-[80px] sm:gap-[110px] w-full">
+      <div className="flex flex-col gap-[110px] sm:gap-[170px] w-full">
         <FeatureBlock
           title="Feature 1: Branch Chat"
           videoSrc={featureBranchChatVideo}
