@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import resumePdf from "../../Sue Hwang, Product Designer.pdf";
+import resumePdf from "../../assets/About/Sue Hwang - Resume.pdf";
 
 const NAV_ITEMS = [
   { label: "Work", to: "/" },
