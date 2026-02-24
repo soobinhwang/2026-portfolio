@@ -71,7 +71,7 @@ function ProfileImageContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0" data-name="Profile Image Container">
       <div className="h-[200px] sm:h-[221px] relative shrink-0 w-[194px] sm:w-[214px] perspective-800" data-name="sue 1">
-        <img
+        <img loading="lazy" decoding="async"
           alt=""
           className={`absolute inset-0 max-w-none object-cover size-full cursor-pointer transition-opacity duration-400 ease-in-out ${profileSpinning && profilePhase === "toSecond" ? (profileSpinDir === "reverse" ? "spin-y-reverse" : "spin-y") : ""} ${profileClicked ? "opacity-0" : "opacity-100"}`}
           src={imgSue1}
@@ -100,7 +100,7 @@ function ProfileImageContainer() {
             }
           }}
         />
-        <img
+        <img loading="lazy" decoding="async"
           alt=""
           className={`absolute inset-0 max-w-none object-cover size-full pointer-events-none transition-opacity duration-400 ease-in-out ${profileSpinning && profilePhase === "toOriginal" ? (profileSpinDir === "reverse" ? "spin-y-reverse" : "spin-y") : ""} ${profileClicked ? "opacity-100" : "opacity-0"}`}
           src={imgSueClick}
@@ -121,7 +121,7 @@ function FloatingVisual({ className, src, axis = "y" }: { className: string; src
   const [spinning, setSpinning] = useState(false);
 
   return (
-    <img
+    <img loading="lazy" decoding="async"
       alt=""
       className={`${className} cursor-pointer hover-pop ${spinning ? (axis === "x" ? "spin-x" : axis === "z" ? "spin-z" : "spin-y") : ""}`}
       src={src}
@@ -158,7 +158,7 @@ function ProfileContainer() {
 function Thumbnail() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
-      <img alt="" className="block w-full h-auto object-contain" src={imgP1Thumbnail} />
+      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP1Thumbnail} />
     </div>
   );
 }
@@ -197,7 +197,7 @@ function Container1() {
 function Thumbnail1() {
   return (
     <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
-      <img alt="" className="block w-full h-auto object-contain" src={imgP2Thumbnail} />
+      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP2Thumbnail} />
     </div>
   );
 }
@@ -244,7 +244,7 @@ function Container() {
 function Thumbnail2() {
   return (
     <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
-      <img alt="" className="block w-full h-auto object-contain" src={imgP3Thumbnail} />
+      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP3Thumbnail} />
     </div>
   );
 }
@@ -283,7 +283,7 @@ function Container6() {
 function Thumbnail3() {
   return (
     <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
-      <img alt="" className="block w-full h-auto object-contain" src={imgP4Thumbnail} />
+      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP4Thumbnail} />
     </div>
   );
 }

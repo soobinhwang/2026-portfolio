@@ -138,7 +138,7 @@ function SectionImageLg1() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgAudit1} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgAudit1} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -149,7 +149,7 @@ function SectionImageLg1b() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgAudit2} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgAudit2} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -194,7 +194,7 @@ function SectionImageLgRequirement() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgRequirementAnalysis} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgRequirementAnalysis} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -237,7 +237,7 @@ function SectionHeader() {
 function Thumbnail() {
   return (
     <div className="bg-[#f0f3f5] h-[240px] sm:h-[440px] shrink-0 w-full overflow-clip relative" data-name="Detail Thumbnail">
-      <img alt="" className="absolute inset-0 size-full object-cover" src={imgDetailThumbnail} />
+      <img loading="eager" fetchPriority="high" decoding="async" alt="" className="absolute inset-0 size-full object-cover" src={imgDetailThumbnail} />
     </div>
   );
 }
@@ -455,7 +455,7 @@ function SectionImageLg3() {
           aria-label="Open challenge image full view"
         >
           <div className="overflow-clip relative rounded-[inherit] w-full">
-            <img alt="" className="block w-full h-auto object-contain" src={imgChallenge1} />
+            <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgChallenge1} />
           </div>
           <div
             className="absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] bg-white/60 border border-[#eceff2] transition-opacity duration-200 group-hover:opacity-80"
@@ -475,7 +475,7 @@ function SectionImageLg3() {
         </button>
       </DialogTrigger>
       <DialogContent className="w-[1362px] max-w-[96vw] sm:w-[1362px] sm:max-w-[96vw] p-0 border-0 bg-transparent shadow-none">
-        <img alt="" className="w-full h-auto max-h-[90vh] object-contain rounded-[12px]" src={imgChallenge1} />
+        <img loading="lazy" decoding="async" alt="" className="w-full h-auto max-h-[90vh] object-contain rounded-[12px]" src={imgChallenge1} />
       </DialogContent>
     </Dialog>
   );
@@ -518,7 +518,7 @@ function SectionImageLg4() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgSolutionOverview1} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolutionOverview1} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -529,7 +529,7 @@ function SectionImageLg4b() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgSolutionOverview2} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolutionOverview2} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -574,7 +574,7 @@ function SectionImageLg5() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgSolution1Before} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution1Before} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -585,7 +585,7 @@ function SectionImageLg5b() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgSolution1After} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution1After} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -630,7 +630,7 @@ function SectionImageLg6() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgSolution2Before} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution2Before} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -641,7 +641,7 @@ function SectionImageLg6b() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgSolution2After} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution2After} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -686,7 +686,7 @@ function SectionImageLg7() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgSolution3Before} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution3Before} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -697,7 +697,7 @@ function SectionImageLg7b() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgSolution3After} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution3After} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -742,7 +742,7 @@ function SectionImageDesignOutcome1() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome1} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome1} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -753,7 +753,7 @@ function SectionImageDesignOutcome2() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome2} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome2} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>

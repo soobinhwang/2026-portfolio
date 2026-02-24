@@ -248,7 +248,7 @@ function SubsectionContainer1() {
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid items-[start] justify-items-[start] leading-[0] relative shrink-0" data-name="Subsection Container">
       <div className="col-1 ml-0 mt-0 relative row-1 size-[98px]">
-        <img alt="" className="block max-w-none size-full" height="98" src={imgEllipse440} width="98" />
+        <img loading="lazy" decoding="async" alt="" className="block max-w-none size-full" height="98" src={imgEllipse440} width="98" />
       </div>
       <div className="col-1 ml-[33.76px] mt-[33.76px] relative row-1 size-[30.489px]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 30.4889 30.4889">
@@ -338,7 +338,7 @@ function SectionImage() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Section Image">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgMyRole} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgMyRole} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -374,7 +374,7 @@ function SectionImageSm() {
   return (
     <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgSolutionOnePrimary} />
+        <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgSolutionOnePrimary} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -407,7 +407,7 @@ function SectionImageSm1() {
   return (
     <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgSolutionOneSecondary} />
+        <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgSolutionOneSecondary} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -482,7 +482,7 @@ function SectionImageLg() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgSolutionThree} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolutionThree} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -753,7 +753,7 @@ function SectionImageLg1() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgRoadmap} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgRoadmap} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -892,7 +892,7 @@ function SectionImageLg2() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgNeedSynthesis} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgNeedSynthesis} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -936,7 +936,7 @@ function SectionImageSm2() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome1} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome1} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -969,7 +969,7 @@ function SectionImageSm3() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome2} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome2} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -1011,7 +1011,7 @@ function SectionImageSm4() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome3} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome3} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -1044,10 +1044,10 @@ function Group32() {
   return (
     <div className="absolute contents left-[33px] top-[24px]">
       <div className="absolute h-[862.333px] left-[33px] top-[24px] w-[144.67px]" data-name="Theme 8">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTheme8} />
+        <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTheme8} />
       </div>
       <div className="absolute h-[834.963px] left-[192px] top-[24px] w-[144.67px]" data-name="Theme 9">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTheme9} />
+        <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgTheme9} />
       </div>
     </div>
   );
@@ -1057,7 +1057,7 @@ function SectionImageSm5() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome4} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome4} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f3f5] border-solid inset-0 pointer-events-none" />
     </div>
@@ -1354,7 +1354,7 @@ function Avatar() {
     <div className="relative rounded-[49.216px] shrink-0 size-[9.843px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[49.216px]">
         <div className="absolute bg-[#c7b9da] inset-0 rounded-[49.216px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar} />
       </div>
     </div>
   );
@@ -1375,7 +1375,7 @@ function Avatar1() {
     <div className="relative rounded-[49.216px] shrink-0 size-[9.843px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[49.216px]">
         <div className="absolute bg-[#aa9c75] inset-0 rounded-[49.216px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar1} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar1} />
       </div>
     </div>
   );
@@ -1396,7 +1396,7 @@ function Avatar2() {
     <div className="relative rounded-[49.216px] shrink-0 size-[9.843px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[49.216px]">
         <div className="absolute bg-[#d4b5ad] inset-0 rounded-[49.216px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar2} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar2} />
       </div>
     </div>
   );
@@ -1417,7 +1417,7 @@ function Avatar3() {
     <div className="relative rounded-[49.216px] shrink-0 size-[9.843px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[49.216px]">
         <div className="absolute bg-[#bea887] inset-0 rounded-[49.216px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar3} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar3} />
       </div>
     </div>
   );
@@ -1438,7 +1438,7 @@ function Avatar4() {
     <div className="relative rounded-[49.216px] shrink-0 size-[9.843px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[49.216px]">
         <div className="absolute bg-[#a2a8cd] inset-0 rounded-[49.216px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar4} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar4} />
       </div>
     </div>
   );
@@ -1459,7 +1459,7 @@ function Avatar5() {
     <div className="relative rounded-[49.216px] shrink-0 size-[9.843px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[49.216px]">
         <div className="absolute bg-[#d1baa9] inset-0 rounded-[49.216px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar5} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar5} />
       </div>
     </div>
   );
@@ -1480,7 +1480,7 @@ function Avatar6() {
     <div className="relative rounded-[49.216px] shrink-0 size-[9.843px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[49.216px]">
         <div className="absolute bg-[#d1dfc3] inset-0 rounded-[49.216px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar6} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar6} />
       </div>
     </div>
   );
@@ -1501,7 +1501,7 @@ function Avatar7() {
     <div className="relative rounded-[49.216px] shrink-0 size-[9.843px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[49.216px]">
         <div className="absolute bg-[#cfc3a7] inset-0 rounded-[49.216px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar7} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar7} />
       </div>
     </div>
   );
@@ -1522,7 +1522,7 @@ function Avatar8() {
     <div className="relative rounded-[49.216px] shrink-0 size-[9.843px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[49.216px]">
         <div className="absolute bg-[#d2c7ac] inset-0 rounded-[49.216px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar8} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar8} />
       </div>
     </div>
   );
@@ -1543,7 +1543,7 @@ function Avatar9() {
     <div className="relative rounded-[49.216px] shrink-0 size-[9.843px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[49.216px]">
         <div className="absolute bg-[#dbc0dd] inset-0 rounded-[49.216px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar9} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[49.216px] size-full" src={imgAvatar9} />
       </div>
     </div>
   );
@@ -3906,7 +3906,7 @@ function MbCoins13() {
 function MbCoins14() {
   return (
     <div className="opacity-80 relative shrink-0 size-[7.382px]" data-name="MB Coins">
-      <img alt="" className="block max-w-none size-full" height="7.382" src={imgMbCoins} width="7.382" />
+      <img loading="lazy" decoding="async" alt="" className="block max-w-none size-full" height="7.382" src={imgMbCoins} width="7.382" />
     </div>
   );
 }
@@ -5407,7 +5407,7 @@ function Title1() {
 function Avatar10() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar10} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar10} />
     </div>
   );
 }
@@ -5470,7 +5470,7 @@ function Member() {
 function Avatar11() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar11} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar11} />
     </div>
   );
 }
@@ -5541,7 +5541,7 @@ function Member1() {
 function Avatar12() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar12} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar12} />
     </div>
   );
 }
@@ -5606,7 +5606,7 @@ function Avatar13() {
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[35.985px]">
         <div className="absolute bg-[#bea887] inset-0 rounded-[35.985px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar3} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar3} />
       </div>
     </div>
   );
@@ -5678,7 +5678,7 @@ function Member3() {
 function Avatar14() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar13} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar13} />
     </div>
   );
 }
@@ -5761,7 +5761,7 @@ function List1() {
 function Avatar15() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar14} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar14} />
     </div>
   );
 }
@@ -5824,7 +5824,7 @@ function Member5() {
 function Avatar16() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar15} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar15} />
     </div>
   );
 }
@@ -5895,7 +5895,7 @@ function Member6() {
 function Avatar17() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar16} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar16} />
     </div>
   );
 }
@@ -5958,7 +5958,7 @@ function Member7() {
 function Avatar18() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar17} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar17} />
     </div>
   );
 }
@@ -6031,7 +6031,7 @@ function Avatar19() {
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[35.985px]">
         <div className="absolute bg-[#dbc0dd] inset-0 rounded-[35.985px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar9} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar9} />
       </div>
     </div>
   );
@@ -6115,7 +6115,7 @@ function List2() {
 function Avatar20() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar18} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar18} />
     </div>
   );
 }
@@ -6180,7 +6180,7 @@ function Avatar21() {
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[35.985px]">
         <div className="absolute bg-[#d4b2af] inset-0 rounded-[35.985px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar19} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar19} />
       </div>
     </div>
   );
@@ -6254,7 +6254,7 @@ function Avatar22() {
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[35.985px]">
         <div className="absolute bg-[#dab9bb] inset-0 rounded-[35.985px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar20} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar20} />
       </div>
     </div>
   );
@@ -6318,7 +6318,7 @@ function Member12() {
 function Avatar23() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar21} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar21} />
     </div>
   );
 }
@@ -6389,7 +6389,7 @@ function Member13() {
 function Avatar24() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar22} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar22} />
     </div>
   );
 }
@@ -6472,7 +6472,7 @@ function List4() {
 function Avatar25() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar23} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar23} />
     </div>
   );
 }
@@ -6537,7 +6537,7 @@ function Avatar26() {
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[35.985px]">
         <div className="absolute bg-[#d4b2af] inset-0 rounded-[35.985px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar19} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar19} />
       </div>
     </div>
   );
@@ -6611,7 +6611,7 @@ function Avatar27() {
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[35.985px]">
         <div className="absolute bg-[#dbc0dd] inset-0 rounded-[35.985px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar24} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar24} />
       </div>
     </div>
   );
@@ -6677,7 +6677,7 @@ function Avatar28() {
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[35.985px]">
         <div className="absolute bg-[#d8c7b6] inset-0 rounded-[35.985px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar25} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar25} />
       </div>
     </div>
   );
@@ -6749,7 +6749,7 @@ function Member18() {
 function Avatar29() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar23} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar23} />
     </div>
   );
 }
@@ -6832,7 +6832,7 @@ function List6() {
 function Avatar30() {
   return (
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar23} />
+      <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[35.985px] size-full" src={imgAvatar23} />
     </div>
   );
 }
@@ -6897,7 +6897,7 @@ function Avatar31() {
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[35.985px]">
         <div className="absolute bg-[#d4b2af] inset-0 rounded-[35.985px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar19} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar19} />
       </div>
     </div>
   );
@@ -6971,7 +6971,7 @@ function Avatar32() {
     <div className="relative rounded-[35.985px] shrink-0 size-[7.197px]" data-name="Avatar">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[35.985px]">
         <div className="absolute bg-[#dbc0dd] inset-0 rounded-[35.985px]" />
-        <img alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar24} />
+        <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[35.985px] size-full" src={imgAvatar24} />
       </div>
     </div>
   );
@@ -7868,7 +7868,7 @@ function PromoBanner() {
   return (
     <div className="content-stretch flex gap-[5.906px] items-center justify-center relative rounded-[1.476px] shrink-0 w-full" data-name="Promo banner">
       <div className="aspect-[213.20989990234375/178.9109344482422] flex-[1_0_0] min-h-px min-w-px relative rounded-[1.969px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[1.969px] size-full" src={imgRectangle204} />
+        <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[1.969px] size-full" src={imgRectangle204} />
       </div>
       <Frame26 />
     </div>
@@ -7979,9 +7979,9 @@ function PromoBanner1() {
       <div className="aspect-[213.20989990234375/178.9109344482422] flex-[1_0_0] min-h-px min-w-px relative rounded-[1.969px]">
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[1.969px]">
           <div className="absolute bg-[#d9d9d9] inset-0 rounded-[1.969px]" />
-          <img alt="" className="absolute max-w-none object-cover rounded-[1.969px] size-full" src={imgRectangle205} />
+          <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover rounded-[1.969px] size-full" src={imgRectangle205} />
           <div className="absolute inset-0 overflow-hidden rounded-[1.969px]">
-            <img alt="" className="absolute h-[153.3%] left-[-67.25%] max-w-none top-[-20.07%] w-[215.44%]" src={imgRectangle206} />
+            <img loading="lazy" decoding="async" alt="" className="absolute h-[153.3%] left-[-67.25%] max-w-none top-[-20.07%] w-[215.44%]" src={imgRectangle206} />
           </div>
         </div>
       </div>
@@ -8064,8 +8064,8 @@ function ButtonImage() {
     <div className="bg-white content-stretch flex items-start p-[0.726px] relative shrink-0 size-[16.332px]" data-name="Button/Image">
       <div className="flex-[1_0_0] h-full min-h-px min-w-px relative">
         <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-          <img alt="" className="absolute max-w-none object-cover size-full" src={imgRectangle194} />
-          <img alt="" className="absolute max-w-none object-cover size-full" src={imgRectangle195} />
+          <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover size-full" src={imgRectangle194} />
+          <img loading="lazy" decoding="async" alt="" className="absolute max-w-none object-cover size-full" src={imgRectangle195} />
         </div>
       </div>
     </div>
@@ -8186,7 +8186,7 @@ function ButtonImage1() {
   return (
     <div className="bg-white content-stretch flex items-start p-[0.726px] relative shrink-0 size-[16.332px]" data-name="Button/Image">
       <div className="flex-[1_0_0] h-full min-h-px min-w-px relative">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle196} />
+        <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle196} />
       </div>
     </div>
   );
@@ -8306,7 +8306,7 @@ function ButtonImage2() {
   return (
     <div className="bg-white content-stretch flex items-start p-[0.726px] relative shrink-0 size-[16.332px]" data-name="Button/Image">
       <div className="flex-[1_0_0] h-full min-h-px min-w-px relative">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle197} />
+        <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle197} />
       </div>
     </div>
   );
@@ -8503,7 +8503,7 @@ function Property6() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Property">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgSolutionTwo} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolutionTwo} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -8665,7 +8665,7 @@ function Container21() {
   return (
     <div className="absolute h-[405px] left-[68px] overflow-clip rounded-[4.83px] shadow-[0px_3.575px_30.385px_0px_rgba(192,192,192,0.25)] top-[62px] w-[442px]" data-name="Container">
       <div className="absolute h-[1429.645px] left-0 top-[0.09px] w-[442.227px]" data-name="Image">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDtVer1} />
+        <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDtVer1} />
       </div>
     </div>
   );
@@ -8675,7 +8675,7 @@ function Container22() {
   return (
     <div className="absolute left-[264px] overflow-clip rounded-[4.83px] shadow-[0px_3.575px_30.385px_0px_rgba(192,192,192,0.25)] size-[442px] top-[25px]" data-name="Container">
       <div className="absolute h-[1202.871px] left-[-0.36px] top-0 w-[442.267px]" data-name="Image">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
+        <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAdminInterface1} />
       </div>
     </div>
   );
@@ -8684,7 +8684,7 @@ function Container22() {
 function Thumbnail() {
   return (
     <div className="bg-[#f0f3f5] overflow-clip relative shrink-0 w-full" data-name="Static Thumbnail">
-      <img alt="" className="block w-full h-auto object-cover" src={imgDetailThumbnail} />
+      <img loading="eager" fetchPriority="high" decoding="async" alt="" className="block w-full h-auto object-cover" src={imgDetailThumbnail} />
     </div>
   );
 }
@@ -8945,7 +8945,7 @@ function Property10() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Property">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgBackground} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgBackground} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -8978,7 +8978,7 @@ function ImpactImage() {
   return (
     <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-full sm:w-[242px]" data-name="Impact image">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="block w-full h-full object-contain" src={imgKeyInsight1} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-full object-contain" src={imgKeyInsight1} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -9008,7 +9008,7 @@ function ImpactImage1() {
   return (
     <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-full sm:w-[242px]" data-name="Impact image">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="block w-full h-full object-contain" src={imgKeyInsight2} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-full object-contain" src={imgKeyInsight2} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -9038,7 +9038,7 @@ function ImpactImage2() {
   return (
     <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-full sm:w-[242px]" data-name="Impact image">
       <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img alt="" className="block w-full h-full object-contain" src={imgKeyInsight3} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-full object-contain" src={imgKeyInsight3} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -9276,7 +9276,7 @@ function SectionImageLg3() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgChallenge} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgChallenge} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
@@ -10137,7 +10137,7 @@ function SectionImage1() {
   return (
     <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Section Image">
       <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img alt="" className="block w-full h-auto object-contain" src={imgDesignDirection} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignDirection} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>

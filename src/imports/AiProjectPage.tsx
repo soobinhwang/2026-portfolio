@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link as RouterLink } from "react-router";
 import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
-import project2ThumbnailImage from "../assets/ai/project-1/ai-p2-thumbnail.png";
+import project2ThumbnailImage from "../assets/ai/project-2/ai-p2-detail-thumbnail.png";
 import imgStar25 from "../assets/ai/2-5-Star.png";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
@@ -12,7 +12,7 @@ function InteractiveStarBadge() {
   const [spinning, setSpinning] = useState(false);
 
   return (
-    <img
+    <img loading="lazy" decoding="async"
       alt=""
       className={`w-[13.5px] h-auto float-soft float-soft-delayed-2 hover-pop cursor-pointer ${spinning ? "spin-y" : ""}`}
       src={imgStar25}
@@ -129,7 +129,7 @@ function AiThumbnail({ src, videoSrc, animationSrcUrl, comingSoon }: { src?: str
           preload="metadata"
         />
       ) : src ? (
-        <img alt="" className="block w-full h-auto object-contain" src={src} />
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={src} />
       ) : (
         <div className="w-full aspect-[4/3] flex items-center justify-center">
           {comingSoon && (

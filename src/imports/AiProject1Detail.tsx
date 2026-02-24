@@ -126,15 +126,15 @@ function OverviewSection() {
           <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
             <div className="flex flex-wrap items-center gap-x-[14px] gap-y-[8px] leading-[24px]">
               <span className="inline-flex items-center gap-[6px]">
-                <img alt="ChatGPT logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgChatGptLogo} />
+                <img loading="lazy" decoding="async" alt="ChatGPT logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgChatGptLogo} />
                 <span>Chat GPT</span>
               </span>
               <span className="inline-flex items-center gap-[6px]">
-                <img alt="Claude logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgClaudeLogo} />
+                <img loading="lazy" decoding="async" alt="Claude logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgClaudeLogo} />
                 <span>Claude Code</span>
               </span>
               <span className="inline-flex items-center gap-[6px]">
-                <img alt="" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgCursorLogo} />
+                <img loading="lazy" decoding="async" alt="" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgCursorLogo} />
                 <span>Cursor</span>
               </span>
             </div>
@@ -187,7 +187,7 @@ function WhySection() {
           </p>
         </div>
         <div className="w-[40%] bg-[#f0f3f5] rounded-[10px] overflow-hidden">
-          <img alt="GPT moment" className="block w-full h-auto object-contain" src={imgGptMoment} />
+          <img loading="lazy" decoding="async" alt="GPT moment" className="block w-full h-auto object-contain" src={imgGptMoment} />
         </div>
         <div className="flex flex-col font-geist font-normal gap-[12px] justify-center relative shrink-0 text-[#32404f] text-[16px] w-full">
           <p className="leading-[27px] whitespace-pre-wrap">That's what triggered this project.</p>

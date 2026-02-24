@@ -34,7 +34,7 @@ function StatusIndicator() {
 function ProfileContainer() {
   return (
     <div className="relative shrink-0" data-name="Profile Container">
-      <img alt="Sue Hwang" className="w-[300px] h-auto" src={imgProfileContainer} />
+      <img loading="lazy" decoding="async" alt="Sue Hwang" className="w-[300px] h-auto" src={imgProfileContainer} />
     </div>
   );
 }

@@ -36,7 +36,7 @@ function Divider() {
 function DetailThumbnail() {
   return (
     <div className="bg-[#1e242a] h-[240px] sm:h-[440px] shrink-0 w-full overflow-clip relative" data-name="Detail Thumbnail">
-      <img alt="" className="absolute inset-0 size-full object-cover" src={imgDetailThumbnail} />
+      <img loading="eager" fetchPriority="high" decoding="async" alt="" className="absolute inset-0 size-full object-cover" src={imgDetailThumbnail} />
     </div>
   );
 }
@@ -65,19 +65,19 @@ function OverviewSection() {
           <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
             <div className="flex flex-wrap items-center gap-x-[14px] gap-y-[8px] leading-[24px]">
               <span className="inline-flex items-center gap-[6px]">
-                <img alt="Figma logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgFigmaLogo} />
+                <img loading="lazy" decoding="async" alt="Figma logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgFigmaLogo} />
                 <span>Figma</span>
               </span>
               <span className="inline-flex items-center gap-[6px]">
-                <img alt="ChatGPT logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgChatGptLogo} />
+                <img loading="lazy" decoding="async" alt="ChatGPT logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgChatGptLogo} />
                 <span>Chat GPT</span>
               </span>
               <span className="inline-flex items-center gap-[6px]">
-                <img alt="Claude logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgClaudeLogo} />
+                <img loading="lazy" decoding="async" alt="Claude logo" className="h-[16px] w-[16px] rounded-[4px] object-cover" src={imgClaudeLogo} />
                 <span>Claude Code</span>
               </span>
               <span className="inline-flex items-center gap-[6px]">
-                <img alt="Visual Studio Code logo" className="h-[16px] w-[16px] rounded-[4px] bg-[#1e242a] p-[2px] object-contain" src={imgVsCodeLogo} />
+                <img loading="lazy" decoding="async" alt="Visual Studio Code logo" className="h-[16px] w-[16px] rounded-[4px] bg-[#1e242a] p-[2px] object-contain" src={imgVsCodeLogo} />
                 <span>Visual Studio Code</span>
               </span>
             </div>
@@ -127,7 +127,7 @@ function WhySection() {
           <p className="leading-[38px] whitespace-pre-wrap">I’m a heavy note-taker, but in fast-paced design reviews, my notes kept getting messy and scattered.</p>
         </div>
         <div className="w-[40%] bg-[#f0f3f5] rounded-[10px] overflow-hidden">
-          <img alt="Busy moment" className="block w-full h-auto object-contain" src={imgBusyMoment} />
+          <img loading="lazy" decoding="async" alt="Busy moment" className="block w-full h-auto object-contain" src={imgBusyMoment} />
         </div>
         <div className="flex flex-col font-geist font-normal gap-[12px] justify-center relative shrink-0 text-[#32404f] text-[16px] w-full">
           <p className="leading-[27px] whitespace-pre-wrap">
@@ -183,7 +183,7 @@ function FeatureBlock({
       ) : null}
       <div className="bg-[#1e242a] w-full relative shrink-0">
         {imageSrc ? (
-          <img alt="" className="block w-full h-auto object-contain" src={imageSrc} />
+          <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imageSrc} />
         ) : videoSrc ? (
           <button
             type="button"
