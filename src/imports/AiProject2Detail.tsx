@@ -6,12 +6,15 @@ import imgClaudeLogo from "../assets/ai/project-1/claude logo.png";
 import imgVsCodeLogo from "../assets/ai/project-2/visual studio code logo.png";
 import imgBusyMoment from "../assets/ai/project-2/busy.gif";
 import imgWhatIBuilt from "../assets/ai/project-2/What I built - image.png";
-import imgProblemFraming from "../assets/ai/project-2/Problem Framing.png";
+import imgAnalyzingWorklog from "../assets/ai/project-2/Analyzing worklog.png";
+import imgScopingMvp from "../assets/ai/project-2/scoping the mvp.png";
 import imgImplementation from "../assets/ai/project-2/Implementation.png";
+import imgOfficialLaunch from "../assets/ai/project-2/official launch.png";
 import videoMvp from "../assets/ai/project-2/MVP.mov";
 import videoPostMvp from "../assets/ai/project-2/Post MVP.mov";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
+import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 
 /* ───────────────────────────────────────────────
    Shared primitives
@@ -155,10 +158,20 @@ function FeatureBlock({
   title,
   videoSrc,
   imageSrc,
+  imageClassName,
+  mediaClassName,
+  enableFullView,
+  fullViewAriaLabel,
+  fullViewOnDark,
 }: {
   title?: string;
   videoSrc?: string;
   imageSrc?: string;
+  imageClassName?: string;
+  mediaClassName?: string;
+  enableFullView?: boolean;
+  fullViewAriaLabel?: string;
+  fullViewOnDark?: boolean;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -181,39 +194,79 @@ function FeatureBlock({
           <p className="leading-[32px]">{title}</p>
         </div>
       ) : null}
-      <div className="bg-[#1e242a] w-full relative shrink-0">
-        {imageSrc ? (
-          <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imageSrc} />
-        ) : videoSrc ? (
-          <button
-            type="button"
-            className="group relative block w-full cursor-pointer border-0 bg-transparent p-0"
-            onClick={togglePlay}
-            aria-label={isPlaying ? "Pause video preview" : "Play video preview"}
+      {imageSrc && enableFullView ? (
+        <Dialog>
+          <DialogTrigger asChild>
+            <button
+              type="button"
+              className={mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0 cursor-pointer group"}
+              aria-label={fullViewAriaLabel ?? "Open image full view"}
+            >
+              <img loading="lazy" decoding="async" alt="" className={imageClassName ?? "block w-full h-auto object-contain"} src={imageSrc} />
+              <div
+                className={`absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] transition-opacity duration-200 group-hover:opacity-80 ${
+                  fullViewOnDark ? "bg-black/45 border border-white/45" : "bg-white/60 border border-[#eceff2]"
+                }`}
+                aria-hidden="true"
+              >
+                <svg aria-hidden="true" className="h-[14px] w-[14px]" fill="none" viewBox="0 0 24 24">
+                  <path
+                    d="M14 3h7v7M21 3l-7 7M10 21H3v-7M3 21l7-7"
+                    stroke={fullViewOnDark ? "#f3f6f9" : "#6b7785"}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.4"
+                  />
+                </svg>
+              </div>
+              <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+            </button>
+          </DialogTrigger>
+          <DialogContent
+            className={
+              fullViewOnDark
+                ? "w-[1362px] max-w-[96vw] sm:w-[1362px] sm:max-w-[96vw] p-0 border-0 bg-transparent shadow-none [&>button]:bg-black/55 [&>button]:border [&>button]:border-white/40 [&>button]:text-white [&>button]:opacity-100 [&>button]:rounded-[7px]"
+                : "w-[1362px] max-w-[96vw] sm:w-[1362px] sm:max-w-[96vw] p-0 border-0 bg-transparent shadow-none"
+            }
           >
-            <video
-              ref={videoRef}
-              className="block w-full h-auto object-contain"
-              src={videoSrc}
-              muted
-              playsInline
-              preload="metadata"
-              onPlay={() => setIsPlaying(true)}
-              onPause={() => setIsPlaying(false)}
-              onEnded={() => setIsPlaying(false)}
-            />
-            {!isPlaying ? (
-              <span className="absolute inset-0 grid place-items-center pointer-events-none">
-                <span className="inline-flex h-[42px] w-[42px] items-center justify-center rounded-full bg-black/55 text-white text-[16px]">
-                  ▶
+            <img loading="lazy" decoding="async" alt="" className="w-full h-auto max-h-[90vh] object-contain rounded-[12px]" src={imageSrc} />
+          </DialogContent>
+        </Dialog>
+      ) : (
+        <div className={mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0"}>
+          {imageSrc ? (
+            <img loading="lazy" decoding="async" alt="" className={imageClassName ?? "block w-full h-auto object-contain"} src={imageSrc} />
+          ) : videoSrc ? (
+            <button
+              type="button"
+              className="group relative block w-full cursor-pointer border-0 bg-transparent p-0"
+              onClick={togglePlay}
+              aria-label={isPlaying ? "Pause video preview" : "Play video preview"}
+            >
+              <video
+                ref={videoRef}
+                className="block w-full h-auto object-contain"
+                src={videoSrc}
+                muted
+                playsInline
+                preload="metadata"
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                onEnded={() => setIsPlaying(false)}
+              />
+              {!isPlaying ? (
+                <span className="absolute inset-0 grid place-items-center pointer-events-none">
+                  <span className="inline-flex h-[42px] w-[42px] items-center justify-center rounded-full bg-black/55 text-white text-[16px]">
+                    ▶
+                  </span>
                 </span>
-              </span>
-            ) : null}
-          </button>
-        ) : (
-          <div className="w-full aspect-[16/9]" />
-        )}
-      </div>
+              ) : null}
+            </button>
+          ) : (
+            <div className="w-full aspect-[16/9]" />
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -256,13 +309,15 @@ function BuildingProcessSection() {
     {
       title: "Problem framing",
       description:
-        "Defined the core pain points from real note-taking workflows and clarified what the plugin needed to solve first.",
-      imageSrc: imgProblemFraming,
-      hidden: true,
+        "I diagnosed decision-context loss as a recurring collaboration cost, then used GPT to accelerate the definition, clarifying the value proposition, decision data model, UX flow, and the minimum Figma API needed to anchor decisions to frames.",
+      imageSrc: imgAnalyzingWorklog,
     },
     {
       title: "Scoping the MVP",
-      hideMedia: true,
+      imageSrc: imgScopingMvp,
+      enableFullView: true,
+      fullViewOnDark: true,
+      fullViewAriaLabel: "Open scoping the MVP image full view",
       scopingPoints: [
         "Reviewed my work logs and retrospectives to identify repetitive friction and decision-context loss.",
         "Defined an automation approach to anchor decisions to frames.",
@@ -296,20 +351,36 @@ function BuildingProcessSection() {
         "Shipped the first usable version to validate the workflow and gather feedback for the next iteration.",
       videoSrc: videoMvp,
     },
+    {
+      title: "Official launch",
+      description: "Officially launched on February 23, 2026, and currently waiting for final review from Figma.",
+      imageSrc: imgOfficialLaunch,
+      mediaClassName: "bg-[#1e242a] w-full relative shrink-0 h-[460px] overflow-hidden",
+      imageClassName: "block w-full h-full object-cover",
+    },
   ];
 
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Building Process">
       <SectionLabel label="Building Process" />
       <div className="flex flex-col gap-[110px] sm:gap-[170px] w-full">
-        {steps.filter((step) => !step.hidden).map((step) => (
+        {steps.map((step) => (
           <div key={step.title} className="flex flex-col gap-[20px] w-full">
             {step.hideMedia ? (
               <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
                 <p className="leading-[32px]">{step.title}</p>
               </div>
             ) : (
-              <FeatureBlock title={step.title} imageSrc={step.imageSrc} videoSrc={step.videoSrc} />
+              <FeatureBlock
+                title={step.title}
+                imageSrc={step.imageSrc}
+                videoSrc={step.videoSrc}
+                imageClassName={step.imageClassName}
+                mediaClassName={step.mediaClassName}
+                enableFullView={step.enableFullView}
+                fullViewAriaLabel={step.fullViewAriaLabel}
+                fullViewOnDark={step.fullViewOnDark}
+              />
             )}
             {step.scopingPoints ? (
               <ol className="pl-[20px] font-geist font-normal text-[15px] text-[#5b6a79] leading-[25px] list-decimal">
