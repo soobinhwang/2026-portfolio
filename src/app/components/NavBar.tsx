@@ -19,7 +19,7 @@ export default function NavBar() {
   return (
     <div className="-translate-x-1/2 fixed content-stretch flex flex-col items-start left-1/2 top-[40px] z-50">
       <div className="content-stretch flex flex-col items-end justify-center relative shrink-0">
-        <div className="bg-white content-stretch flex items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0">
+        <div className="bg-white content-stretch flex items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0 shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
           <div className="content-stretch flex gap-[16px] items-center justify-center relative shrink-0">
             {NAV_ITEMS.map((item) => {
               const active = item.to ? isActive(pathname, item.to) : false;

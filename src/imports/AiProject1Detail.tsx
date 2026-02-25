@@ -331,7 +331,7 @@ function TryItSection() {
             target="_blank"
             rel="noopener noreferrer"
             data-cursor="case-study"
-            className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] transition-colors duration-200 hover:bg-[#2a3138] whitespace-nowrap bg-[#1e242a] text-white uppercase"
+            className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
           >
             Try the prototype
             <span aria-hidden="true">↗</span>
