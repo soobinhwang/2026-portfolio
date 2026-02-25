@@ -225,10 +225,10 @@ function SectionHeader() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Data Visualization</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[34px] sm:text-[42px] tracking-[-1.04px] w-full">
-        <p className="leading-[42px] sm:leading-[normal] whitespace-pre-wrap">Design System</p>
+        <p className="leading-[42px] sm:leading-[normal] whitespace-pre-wrap">Incentive Experience Redesign</p>
       </div>
       <div className="flex flex-col font-geist justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Redesigning the interface that reduced user frustration and task completion time</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Centralized pages and a consistent UI revamp that reduced errors, frustration, and clicks.</p>
       </div>
     </div>
   );

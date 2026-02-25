@@ -294,7 +294,7 @@ function InfoContainer3() {
       data-name="Info Container"
     >
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">Design System</p>
+        <p className="leading-[28px] sm:leading-[38px]">Incentive Experience Redesign</p>
       </div>
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
         <p className="leading-[20px] sm:leading-[22.5px]">Data Visualization</p>
