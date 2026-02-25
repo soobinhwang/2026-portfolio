@@ -192,13 +192,13 @@ function DownloadResumeTextContainer() {
   );
 }
 
-function ArrowDown({ className }: { className?: string }) {
+function ArrowDown({ className, strokeColor = "#1E242A" }: { className?: string; strokeColor?: string }) {
   return (
     <div className={className || "overflow-clip relative shrink-0 size-[20px]"} data-name="arrow-down">
       <div className="absolute inset-[20.83%]" data-name="Icon">
         <div className="absolute inset-[-8.57%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.6667 13.6667">
-            <path d={svgPaths.p2e1b3c60} id="Icon" stroke="var(--stroke-0, #1E242A)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+            <path d={svgPaths.p2e1b3c60} id="Icon" stroke={strokeColor} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
           </svg>
         </div>
       </div>
@@ -208,8 +208,9 @@ function ArrowDown({ className }: { className?: string }) {
 
 function DownloadResumeContainer() {
   return (
-    <div className="bg-[#1e242a] content-stretch flex gap-[4px] items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0 transition-colors duration-200 group-hover:bg-[#2a3138]" data-name="Download Resume Container">
+    <div className="bg-[#1e242a] content-stretch flex gap-[8px] items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0 transition-colors duration-200 group-hover:bg-[#2a3138]" data-name="Download Resume Container">
       <DownloadResumeTextContainer />
+      <ArrowDown className="overflow-clip relative shrink-0 size-[18px]" strokeColor="#FFFFFF" />
     </div>
   );
 }

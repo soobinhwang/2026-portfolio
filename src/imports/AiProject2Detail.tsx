@@ -276,7 +276,7 @@ function WhatIMadeSection() {
     <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="What I Made">
       <SectionLabel label="what i built" />
       <div className="flex flex-col gap-[20px] w-full">
-        <FeatureBlock imageSrc={imgWhatIBuilt} />
+        <FeatureBlock imageSrc={imgWhatIBuilt2} />
         <FeatureBlock videoSrc={videoPostMvp} />
         <div className="bg-[#f5f7f8] border border-[#ebeced] rounded-[10px] px-[16px] py-[14px] sm:px-[20px] sm:py-[16px] w-full">
           <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">How it works</p>
@@ -354,7 +354,7 @@ function BuildingProcessSection() {
     {
       title: "Official launch",
       description: "Launched on February 25, 2026, and now available on the Figma Community! 🎉",
-      imageSrc: imgWhatIBuilt2,
+      imageSrc: imgWhatIBuilt,
     },
   ];
 
