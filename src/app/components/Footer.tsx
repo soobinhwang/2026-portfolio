@@ -106,8 +106,8 @@ export default function Footer({
             </a>
           </div>
         </div>
-        <div className={`order-2 ${textDesktopOrderClass} flex flex-col items-center font-geist font-normal justify-center leading-[0] text-[#32404f] text-[16px] text-center tracking-[-0.2px] sm:items-start sm:text-left`}>
-          <p className="leading-[24px]">Designed + vibe coded by Sue</p>
+        <div className={`order-2 ${textDesktopOrderClass} flex flex-col items-center font-normal justify-center leading-[0] text-[#32404f] text-[16px] text-center tracking-[-0.2px] sm:items-start sm:text-left`}>
+          <p className="font-geist-mono leading-[24px] uppercase">Designed + vibe coded by Sue</p>
         </div>
       </div>
     </footer>
