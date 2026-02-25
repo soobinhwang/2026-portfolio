@@ -177,7 +177,7 @@ function MainContainer() {
 function DownloadResumeHeading() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Download Resume Heading">
-      <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] text-center tracking-[-0.5px] whitespace-nowrap">
+      <div className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-white text-[15px] text-center tracking-[-0.3px] whitespace-nowrap uppercase">
         <p className="leading-[24px]">Download Resume</p>
       </div>
     </div>
@@ -208,10 +208,7 @@ function ArrowDown({ className }: { className?: string }) {
 
 function DownloadResumeContainer() {
   return (
-    <div className="bg-white content-stretch flex gap-[4px] items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0 transition-colors duration-200 group-hover:bg-[#f7f8f9]" data-name="Download Resume Container">
-      <div className="absolute inset-0 rounded-[24px]" data-name="Download Resume Border">
-        <div aria-hidden="true" className="absolute border border-[#e6e6e6] border-solid inset-0 pointer-events-none rounded-[24px] transition-colors duration-200 group-hover:border-[#d6dbe0]" />
-      </div>
+    <div className="bg-[#1e242a] content-stretch flex gap-[4px] items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0 transition-colors duration-200 group-hover:bg-[#2a3138]" data-name="Download Resume Container">
       <DownloadResumeTextContainer />
     </div>
   );

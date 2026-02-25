@@ -6,10 +6,10 @@ import imgClaudeLogo from "../assets/ai/project-1/claude logo.png";
 import imgVsCodeLogo from "../assets/ai/project-2/visual studio code logo.png";
 import imgBusyMoment from "../assets/ai/project-2/busy.gif";
 import imgWhatIBuilt from "../assets/ai/project-2/What I built - image.png";
+import imgWhatIBuilt2 from "../assets/ai/project-2/What I built - image 2.png";
 import imgAnalyzingWorklog from "../assets/ai/project-2/Analyzing worklog.png";
 import imgScopingMvp from "../assets/ai/project-2/scoping the mvp.png";
 import imgImplementation from "../assets/ai/project-2/Implementation.png";
-import imgOfficialLaunch from "../assets/ai/project-2/official launch.png";
 import videoMvp from "../assets/ai/project-2/MVP.mov";
 import videoPostMvp from "../assets/ai/project-2/Post MVP.mov";
 import Footer from "../app/components/Footer";
@@ -353,10 +353,8 @@ function BuildingProcessSection() {
     },
     {
       title: "Official launch",
-      description: "Officially launched on February 23, 2026, and currently waiting for final review from Figma.",
-      imageSrc: imgOfficialLaunch,
-      mediaClassName: "bg-[#1e242a] w-full relative shrink-0 h-[460px] overflow-hidden",
-      imageClassName: "block w-full h-full object-cover",
+      description: "Launched on February 25, 2026, and now available on the Figma Community! 🎉",
+      imageSrc: imgWhatIBuilt2,
     },
   ];
 
@@ -417,16 +415,17 @@ function TryItSection() {
     <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Try It">
       <SectionLabel label="try it on your own" />
       <div className="grid grid-cols-1 gap-[32px] w-full">
-        <div className="content-stretch flex flex-col gap-[14px] items-start relative" data-cursor="coming-soon">
-          <button
-            type="button"
-            disabled
-            aria-disabled="true"
-            className="inline-flex items-center gap-[8px] px-[20px] py-[11px] font-geist text-[15px] font-medium rounded-[8px] whitespace-nowrap bg-[#1e242a] text-white opacity-70 cursor-not-allowed"
+        <div className="content-stretch flex flex-col gap-[14px] items-start relative">
+          <a
+            href="https://www.figma.com/community/plugin/1607992754736451698/decision-note"
+            target="_blank"
+            rel="noreferrer"
+            data-cursor="case-study"
+            className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
           >
-            Coming soon
+            Try the plugin
             <span aria-hidden="true">↗</span>
-          </button>
+          </a>
           <p className="font-geist font-normal text-[14px] text-[rgba(50,64,79,0.58)] leading-[22px]">
             Install from the Figma Community
           </p>

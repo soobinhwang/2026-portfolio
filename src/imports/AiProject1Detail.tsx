@@ -330,7 +330,8 @@ function TryItSection() {
             href="https://chatgpt-ux-improvements.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-[8px] px-[20px] py-[11px] font-geist text-[15px] font-medium rounded-[8px] transition-opacity duration-200 hover:opacity-70 whitespace-nowrap bg-[#1e242a] text-white"
+            data-cursor="case-study"
+            className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] transition-colors duration-200 hover:bg-[#2a3138] whitespace-nowrap bg-[#1e242a] text-white uppercase"
           >
             Try the prototype
             <span aria-hidden="true">↗</span>
