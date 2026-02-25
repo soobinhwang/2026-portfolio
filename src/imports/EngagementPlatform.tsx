@@ -72,7 +72,7 @@ function Frame255() {
         <p className="leading-[22.5px]">impact</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[46px] whitespace-pre-wrap">Helped the business grow without growing the team</p>
+        <p className="leading-[46px] whitespace-pre-wrap">The business scaled without growing headcount</p>
       </div>
     </div>
   );
@@ -200,9 +200,9 @@ function Container() {
 
   return (
     <div ref={containerRef} className="content-stretch grid grid-cols-1 min-[481px]:grid-cols-3 gap-[24px] min-[481px]:gap-[40px] items-start relative w-full" data-name="Container">
-      <Container1 isVisible={isVisible} />
       <Container2 isVisible={isVisible} />
       <Container3 isVisible={isVisible} />
+      <Container1 isVisible={isVisible} />
     </div>
   );
 }
@@ -231,15 +231,20 @@ function SectionContainer1() {
         <p className="leading-[22.5px]">My Role</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[46px] whitespace-pre-wrap">Led the shift from one-off builds to a template-driven product</p>
+        <p className="leading-[46px] whitespace-pre-wrap">What I led as a lead designer</p>
       </div>
-      <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-[min-content]">
-        <p className="leading-[22.5px] whitespace-pre-wrap">
-          {`I led problem identification and synthesis, spotting a scalability issue through repeated one-off delivery patterns. I translated stakeholder and user input into shared system needs, `}
-          <br aria-hidden="true" />
-          then defined the system and CMS foundations before moving into interface design.
-        </p>
-      </div>
+    </div>
+  );
+}
+
+function MyRoleDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-[min-content]">
+      <p className="leading-[22.5px] whitespace-pre-wrap">
+        {`I led problem identification and synthesis, spotting a scalability issue through repeated one-off delivery patterns. I translated stakeholder and user input into shared system needs, `}
+        <br aria-hidden="true" />
+        then defined the system and CMS foundations before moving into interface design.
+      </p>
     </div>
   );
 }
@@ -347,9 +352,10 @@ function SectionImage() {
 
 function ContentSections() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Content Sections">
       <SectionContainer1 />
       <SectionImage />
+      <MyRoleDescription />
     </div>
   );
 }
@@ -361,7 +367,7 @@ function Frame258() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 1</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Layout: Prioritizing what users do</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Page structure: prioritizing what users do</p>
       </div>
       <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">To support clarity and predictability, the key design decision was to split the landing page into 3 clear sections based on the user intent.</p>
@@ -469,11 +475,18 @@ function Frame256() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 3</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">CMS Improvement: Strengthening self-service</p>
+        <p className="leading-[46px] whitespace-pre-wrap">CMS improvement: Strengthening self-service</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">To make the system operationally scalable, I updated the legacy CMS with clearer configuration options, improved language, and visual previews. This reduced support tickets and enabled true self-service.</p>
-      </div>
+    </div>
+  );
+}
+
+function Solution3Description() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">
+        To make the system operationally scalable, I updated the legacy CMS with clearer configuration options, improved language, and visual previews. This reduced support tickets and enabled true self-service.
+      </p>
     </div>
   );
 }
@@ -502,6 +515,7 @@ function Property2() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0" data-name="Property">
       <Frame256 />
       <Frame266 />
+      <Solution3Description />
     </div>
   );
 }
@@ -513,11 +527,18 @@ function Frame257() {
         <p className="leading-[22.5px] whitespace-pre-wrap">roadmap</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Bringing structure to an ambiguous problem</p>
+        <p className="leading-[46px] whitespace-pre-wrap">The ambiguous problem became visible to the team</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">With the team, I shaped the roadmap collaboratively based on dependency and impact, stabilizing the core programme first, extending proven patterns to secondary use cases, introducing reusable engagement widgets, and updating the CMS last to support clear configuration boundaries.</p>
-      </div>
+    </div>
+  );
+}
+
+function RoadmapDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">
+        With the team, I shaped the roadmap collaboratively based on dependency and impact, stabilizing the core programme first, extending proven patterns to secondary use cases, introducing reusable engagement widgets, and updating the CMS last to support clear configuration boundaries.
+      </p>
     </div>
   );
 }
@@ -773,6 +794,7 @@ function Property3() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[15] self-start shrink-0" data-name="Property">
       <Frame257 />
       <Frame267 />
+      <RoadmapDescription />
     </div>
   );
 }
@@ -784,14 +806,20 @@ function Frame259() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Need Synthesis</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Listening to stakeholders for common needs</p>
+        <p className="leading-[46px] whitespace-pre-wrap">What are the shared needs?</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">
-          {`My goal was to identify shared needs that could inform a scalable design direction. `}
-          <br aria-hidden="true" />I gathered perspectives from everyone involved in using, delivering, and maintaining the programmes, and analyses their pain points to find common patterns.
-        </p>
-      </div>
+    </div>
+  );
+}
+
+function NeedSynthesisDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">
+        {`I identified shared needs to inform a scalable design direction. `}
+        <br aria-hidden="true" />
+        I gathered perspectives from stakeholders involved in using, delivering, and maintaining the programs, then analyzed pain points to find common patterns.
+      </p>
     </div>
   );
 }
@@ -912,6 +940,7 @@ function Property4() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[12] shrink-0 w-full" data-name="Property">
       <Frame259 />
       <Frame269 />
+      <NeedSynthesisDescription />
     </div>
   );
 }
@@ -1120,7 +1149,7 @@ function SectionContainer2() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 2</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Reusable Components: Standardizing what matters</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Reusable components: Standardizing what matters</p>
       </div>
       <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">{`To scale across brands and content, supporting client-preferred layouts without new one-off design work. Reusable components kept a consistent structure while flexing through CSS and imagery. `}</p>
@@ -8649,7 +8678,7 @@ function SectionHeader1() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Header">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Enterprise</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Enterprise · CMS</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-1.04px] w-full">
         <p className="leading-[normal] whitespace-pre-wrap">{`Rewards & Recognition Engagement Product`}</p>
@@ -8803,15 +8832,20 @@ function SectionContainer5() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Background</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">{`A B2B platform for employee Rewards & Recognition`}</p>
+        <p className="leading-[46px] whitespace-pre-wrap">{`What's Rewards & Recognition product?`}</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">
-          {`CarltonOne is a B2B SaaS rewards and recognition platform used by enterprise companies. `}
-          <br aria-hidden="true" />
-          It allows them to create branded reward programs where employees earn points and redeem them through an online storefront.
-        </p>
-      </div>
+    </div>
+  );
+}
+
+function BackgroundDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">
+        {`It's a B2B SaaS rewards and recognition platform used by enterprise companies. `}
+        <br aria-hidden="true" />
+        It allows them to create branded reward programs where employees earn points and redeem them through an online storefront.
+      </p>
     </div>
   );
 }
@@ -8963,9 +8997,10 @@ function Property10() {
 
 function ContentSections4() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0" data-name="Content Sections">
       <SectionContainer5 />
       <Property10 />
+      <BackgroundDescription />
     </div>
   );
 }
@@ -8977,7 +9012,7 @@ function Frame261() {
         <p className="leading-[22.5px]">Key insights</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[46px] whitespace-pre-wrap">Common needs behind repeated asks</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Shared needs behind repeated asks</p>
       </div>
     </div>
   );
@@ -9106,9 +9141,6 @@ function SectionContainer7() {
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">outcome</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-0.9px] w-full">
-        <p className="leading-[50px] whitespace-pre-wrap">Impact at product, team, and business scale</p>
-      </div>
     </div>
   );
 }
@@ -9225,18 +9257,23 @@ function Frame262() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Challenge</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Problem</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Effort scaled with new clients, but the system didn’t.</p>
+        <p className="leading-[46px] whitespace-pre-wrap">The system didn’t scale with client growth</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">
-          {`As the company grew, more client programs were still being built from scratch. `}
-          <br aria-hidden="true" />
-          It wasn’t just a design problem anymore, but a system that couldn’t scale, leading to slow launches and inconsistent user experiences.
-        </p>
-      </div>
+    </div>
+  );
+}
+
+function ProblemDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">
+        {`As the company grew, more client programs were still being built from scratch. `}
+        <br aria-hidden="true" />
+        It wasn’t just a design problem anymore, but a system that couldn’t scale, leading to slow launches and inconsistent user experiences.
+      </p>
     </div>
   );
 }
@@ -9302,9 +9339,10 @@ function Frame271() {
 
 function Property12() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Property">
       <Frame262 />
       <Frame271 />
+      <ProblemDescription />
     </div>
   );
 }
@@ -9313,18 +9351,23 @@ function SectionContainer9() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Solution</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Solution Overview</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Turning common needs into reusable templates</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Shared needs turned into scalable templates</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">
-          {`I designed a three-layer system that turned repeatable design asks into reusable templates. `}
-          <br aria-hidden="true" />
-          This enabled more consistent member experiences and faster, on-brand launches across clients.
-        </p>
-      </div>
+    </div>
+  );
+}
+
+function SolutionOverviewDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">
+        {`I designed a three-layer system that turned repeatable design asks into reusable templates. `}
+        <br aria-hidden="true" />
+        This enabled more consistent member experiences and faster, on-brand launches across clients.
+      </p>
     </div>
   );
 }
@@ -9347,6 +9390,7 @@ function ContentSections6() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[6] self-start shrink-0" data-name="Content Sections">
       <SectionContainer9 />
       <Property13 />
+      <SolutionOverviewDescription />
     </div>
   );
 }
@@ -9358,15 +9402,20 @@ function SectionContainer10() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Design direction</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Translating common needs into a direction</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Translating the needs into a direction</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">
-          {`The key insights shaped the direction for addressing different user needs at scale. `}
-          <br aria-hidden="true" />
-          Rather than treating the insights as isolated problems, I mapped each one to the layer where it could be most effectively addressed.
-        </p>
-      </div>
+    </div>
+  );
+}
+
+function DesignDirectionDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">
+        {`The key insights shaped the direction for addressing different user needs at scale. `}
+        <br aria-hidden="true" />
+        Rather than treating the insights as isolated problems, I mapped each one to the layer where it could be most effectively addressed.
+      </p>
     </div>
   );
 }
@@ -10158,6 +10207,7 @@ function ContentSections7() {
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[14] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionContainer10 />
       <SectionImage1 />
+      <DesignDirectionDescription />
     </div>
   );
 }
