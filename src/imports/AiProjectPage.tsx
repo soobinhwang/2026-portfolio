@@ -2,49 +2,23 @@ import { useEffect, useRef, useState } from "react";
 import { Link as RouterLink } from "react-router";
 import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
 import project2ThumbnailImage from "../assets/ai/project-2/ai-p2-thumbnail.png";
-import imgStar25 from "../assets/ai/2-5-Star.png";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
 const project1ThumbnailJsonUrl = new URL("../assets/ai/project-1/Frame-32.json", import.meta.url).href;
-
-function InteractiveStarBadge() {
-  const [spinning, setSpinning] = useState(false);
-
-  return (
-    <img loading="lazy" decoding="async"
-      alt=""
-      className={`w-[13.5px] h-auto float-soft float-soft-delayed-2 hover-pop cursor-pointer ${spinning ? "spin-y" : ""}`}
-      src={imgStar25}
-      data-cursor="visual"
-      onClick={() => setSpinning(true)}
-      onAnimationEnd={() => setSpinning(false)}
-    />
-  );
-}
 
 function HeaderContainer() {
   return (
     <div className="content-stretch flex flex-col items-start mt-[120px] sm:mt-[160px] mx-auto max-w-[1200px] w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Header Container">
       <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[0px] tracking-[-1.04px] w-full text-left">
         <p className="text-[32px] sm:text-[44px] whitespace-pre-wrap">
-          <span className="leading-[36px] sm:leading-[44px] text-[#32404f]">{`I build what I wish existed `}</span>
-          <span className="font-newsreader font-normal italic leading-[36px] sm:leading-[44px] text-[#858e97]">
-            with{" "}
-            <span className="relative inline-block">
-              AI
-              <span className="absolute -top-[21%] -right-[44%]">
-                <InteractiveStarBadge />
-              </span>
-            </span>
-          </span>
+          <span className="leading-[36px] sm:leading-[44px] text-[#32404f]">AI</span>
+          <span className="leading-[36px] sm:leading-[44px] text-[#32404f]">{` builds that turn ambiguity into direction`}</span>
         </p>
       </div>
-      <div className="mt-[16px] max-w-[980px] font-geist font-normal text-[#5b6a79] text-[17px] sm:text-[18px] leading-[27px] sm:leading-[29px] tracking-[-0.2px]">
+      <div className="mt-[10px] max-w-[980px] font-geist font-normal text-[#5b6a79] text-[17px] sm:text-[18px] leading-[27px] sm:leading-[29px] tracking-[-0.2px]">
         <p>
-          I turn everyday friction into buildable ideas. These projects reflect my design-engineering mindset:
-          <br />
-          proactive ownership, systems thinking, and making direction visibe.
+          AI-assisted builds that turn vague thoughts into tangible, testable solutions, making direction visible early.
         </p>
       </div>
     </div>
