@@ -51,13 +51,13 @@ export default function Footer({
               <div className="hidden sm:flex items-center gap-[10px] bg-[#f0f3f5] rounded-full px-[16px] py-[8px] text-[#32404f] text-[14px]">
                 <span className="leading-[20px]">soobinhwang317@gmail.com</span>
                 <button
-                  className="bg-white text-[#32404f] text-[13px] leading-[20px] rounded-full px-[12px] py-[4px] hover:bg-[#eef1f4] hover:text-[#1e242a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30 transition-colors"
+                  className="bg-white text-[#32404f] text-[13px] sm:text-[15px] uppercase leading-[20px] rounded-full px-[12px] py-[4px] hover:bg-[#eef1f4] hover:text-[#1e242a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30 transition-colors"
                   type="button"
                   data-cursor="lets-chat"
                   onClick={handleCopy}
                   aria-label="Copy email"
                 >
-                  Copy
+                  COPY
                 </button>
               </div>
               <div className="relative sm:hidden">
@@ -67,7 +67,7 @@ export default function Footer({
                   </span>
                 ) : null}
                 <button
-                  className="border-0 bg-transparent m-0 p-0 font-normal text-[#32404f] text-[13px] uppercase tracking-[0.06em] hover:text-[#1e242a] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30"
+                  className="border-0 bg-transparent m-0 p-0 font-normal text-[#32404f] text-[13px] sm:text-[15px] uppercase tracking-[0.06em] hover:text-[#1e242a] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30"
                   type="button"
                   data-cursor="copy-email"
                   onClick={handleCopy}
@@ -86,7 +86,7 @@ export default function Footer({
                   </span>
                 ) : null}
                 <button
-                  className="border-0 bg-transparent m-0 p-0 font-normal text-[#32404f] text-[13px] uppercase tracking-[0.06em] hover:text-[#1e242a] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30"
+                  className="border-0 bg-transparent m-0 p-0 font-normal text-[#32404f] text-[13px] sm:text-[15px] uppercase tracking-[0.06em] hover:text-[#1e242a] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30"
                   type="button"
                   data-cursor="copy-email"
                   onClick={handleCopy}
@@ -97,7 +97,7 @@ export default function Footer({
               </div>
             </>
           )}
-          <div className="flex items-center gap-[16px] text-[13px] uppercase tracking-[0.06em] text-[#32404f]">
+          <div className="flex items-center gap-[16px] text-[13px] sm:text-[15px] uppercase tracking-[0.06em] text-[#32404f]">
             <a className="hover:text-[#1e242a] transition-colors" href="https://github.com/soobinhwang" target="_blank" rel="noreferrer">
               Github
             </a>
@@ -106,7 +106,7 @@ export default function Footer({
             </a>
           </div>
         </div>
-        <div className={`order-2 ${textDesktopOrderClass} flex flex-col items-center font-normal justify-center leading-[0] text-[#32404f] text-[16px] text-center tracking-[-0.2px] sm:items-start sm:text-left`}>
+        <div className={`order-2 ${textDesktopOrderClass} flex flex-col items-center font-normal justify-center leading-[0] text-[#32404f] text-[16px] sm:text-[15px] text-center tracking-[-0.2px] sm:items-start sm:text-left`}>
           <p className="font-geist-mono leading-[24px] uppercase">Designed + vibe coded by Sue</p>
         </div>
       </div>
