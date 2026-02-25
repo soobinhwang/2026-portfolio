@@ -8689,33 +8689,15 @@ function Thumbnail() {
   );
 }
 
-function Container23() {
-  return (
-    <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Role</p>
-      </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
-        <p>
-          <span className="leading-[24px] text-[#5b6a79]">{`UX `}</span>
-          <span className="leading-[24px]">·</span>
-          <span className="leading-[24px] text-[#5b6a79]">{` Product Designer`}</span>
-        </p>
-      </div>
-    </div>
-  );
-}
-
 function Container24() {
   return (
     <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Timeline</p>
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[132px]">
+        <p className="leading-[22.5px] whitespace-nowrap">Timeline</p>
       </div>
       <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
-        <p className="leading-[24px]">6 months · Sep 2022 - Feb 2023</p>
+        <p className="leading-[24px]">Sep 2022 - Feb 2023 (6 months)</p>
       </div>
     </div>
   );
@@ -8725,8 +8707,8 @@ function Container25() {
   return (
     <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Team</p>
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[132px]">
+        <p className="leading-[22.5px] whitespace-nowrap">Team</p>
       </div>
       <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
         <p>
@@ -8747,17 +8729,16 @@ function Container25() {
 
 function Container26() {
   return (
-    <div className="content-stretch flex flex-col sm:flex-row font-normal gap-[8px] sm:gap-[76px] items-start sm:items-center leading-[0] relative shrink-0 text-[15px] w-full" data-name="Container">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Skills</p>
+    <div className="content-stretch flex flex-col sm:flex-row font-normal gap-[8px] sm:gap-[76px] items-start sm:items-center leading-[0] pb-[12px] relative shrink-0 text-[15px] w-full" data-name="Container">
+      <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[132px]">
+        <p className="leading-[22.5px] whitespace-nowrap">Contribution</p>
       </div>
       <div className="flex flex-col font-geist justify-center min-h-px min-w-0 relative text-[#5b6a79] w-full">
         <p>
           <span className="leading-[24px] text-[#5b6a79]">{`Systems Thinking `}</span>
           <span className="leading-[24px]">·</span>
           <span className="leading-[24px] text-[#5b6a79]">{`  Product Strategy `}</span>
-          <span className="leading-[24px]">·</span>
-          <span className="leading-[24px] text-[#5b6a79]">{` Interaction Design `}</span>
           <span className="leading-[24px]">{`· `}</span>
           <span className="leading-[24px] text-[#5b6a79]">Cross-functional Collaboration</span>
         </p>
@@ -8766,13 +8747,41 @@ function Container26() {
   );
 }
 
+function MetaContainerDeliverable() {
+  return (
+    <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
+      <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[132px]">
+        <p className="leading-[22.5px] whitespace-nowrap">Deliverable</p>
+      </div>
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
+        <p className="leading-[24px]">Web App</p>
+      </div>
+    </div>
+  );
+}
+
+function MetaContainerTargetUsers() {
+  return (
+    <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center relative shrink-0 w-full" data-name="Container">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[132px]">
+        <p className="leading-[22.5px] whitespace-nowrap">Target Users</p>
+      </div>
+      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
+        <p className="leading-[24px]">Program Admins · Employees</p>
+      </div>
+    </div>
+  );
+}
+
 function Property9() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full" data-name="Property">
-      <Container23 />
       <Container24 />
       <Container25 />
       <Container26 />
+      <MetaContainerDeliverable />
+      <MetaContainerTargetUsers />
     </div>
   );
 }
