@@ -55,7 +55,7 @@ function BrutalismCircleIcon() {
 function ImpactItem({ title, subtitle, icon }: { title: string; subtitle: string; icon: React.ReactNode }) {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start justify-center relative w-full sm:min-h-px sm:min-w-px">
-      {icon}
+      <div className="h-[65px] flex items-end">{icon}</div>
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
           <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[22px] tracking-[-0.424px] w-full">

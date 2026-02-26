@@ -30,11 +30,16 @@ function SectionContainer1() {
         <p className="leading-[22.5px]">My Role</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[46px] whitespace-pre-wrap">From problem framing to system-level UI design</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Problem framing and scalable UI design</p>
       </div>
-      <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-[min-content]">
-        <p className="leading-[22.5px] whitespace-pre-wrap">I led the end-to-end definition and redesign of the shopping discovery experience, from reframing the core problem to designing system-level UI solutions, working closely with product and engineering through development-ready phases.</p>
-      </div>
+    </div>
+  );
+}
+
+function MyRoleDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-[min-content]">
+      <p className="leading-[22.5px] whitespace-pre-wrap">I led the end-to-end definition and redesign of the shopping discovery experience, from reframing the core problem to designing system-level UI solutions, working closely with product and engineering through development-ready phases.</p>
     </div>
   );
 }
@@ -60,9 +65,10 @@ function Frame13() {
 
 function ContentSections() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Content Sections">
       <SectionContainer1 />
       <Frame13 />
+      <MyRoleDescription />
     </div>
   );
 }
@@ -74,11 +80,16 @@ function Frame5() {
         <p className="leading-[22.5px] whitespace-pre-wrap">program Structure analysis</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Understanding how discovery was structured across programs</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Why users need exploration first</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">{` I reviewed the end-to-end user flow across different programs to understand how the storefront was structured and where discovery broke down. This revealed that users lacked fast access to a complete view of available categories, making it difficult to grasp the full breadth of options early in the journey.`}</p>
-      </div>
+    </div>
+  );
+}
+
+function ProgramStructureAnalysisDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">{` I reviewed the end-to-end user flow across different programs to understand how the storefront was structured and where discovery broke down. This revealed that users lacked fast access to a complete view of available categories, making it difficult to grasp the full breadth of options early in the journey.`}</p>
     </div>
   );
 }
@@ -137,6 +148,7 @@ function Property1() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[11] self-start shrink-0 w-full" data-name="Property">
       <Frame5 />
       <Frame14 />
+      <ProgramStructureAnalysisDescription />
     </div>
   );
 }
@@ -242,11 +254,16 @@ function Frame7() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Prioritization</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Starting small, learning fast within constraints</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Let's start small, learn fast within constraints</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">With these insights in place, I prioritized changes that would create the most impact with minimal complexity. Rather than over-engineering the experience, the team aligned on shipping high-impact, low-effort improvements quickly, allowing us to learn, validate, and iterate within scope.</p>
-      </div>
+    </div>
+  );
+}
+
+function PrioritizationDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">With these insights in place, I prioritized changes that would create the most impact with minimal complexity. Rather than over-engineering the experience, the team aligned on shipping high-impact, low-effort improvements quickly, allowing us to learn, validate, and iterate within scope.</p>
     </div>
   );
 }
@@ -275,6 +292,7 @@ function Property3() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[13] self-start shrink-0 w-full" data-name="Property">
       <Frame7 />
       <Frame15 />
+      <PrioritizationDescription />
     </div>
   );
 }
@@ -419,11 +437,16 @@ function SectionContainer2() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Background</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">A global storefront for employee rewards</p>
+        <p className="leading-[46px] whitespace-pre-wrap">What's the Global Reward Storefront?</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">The Global Rewards Storefront (GRS) is a points-based rewards store where employees redeem earned points for products, gift cards, or experiences, with global availability and client-specific branding.</p>
-      </div>
+    </div>
+  );
+}
+
+function BackgroundDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">The Global Rewards Storefront (GRS) is a points-based rewards store where employees redeem earned points for products, gift cards, or experiences, with global availability and client-specific branding.</p>
     </div>
   );
 }
@@ -441,9 +464,10 @@ function Property5() {
 
 function ContentSections2() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0" data-name="Content Sections">
       <SectionContainer2 />
       <Property5 />
+      <BackgroundDescription />
     </div>
   );
 }
@@ -453,9 +477,6 @@ function SectionContainer7() {
     <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">outcome</p>
-      </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-0.9px] w-full">
-        <p className="leading-[50px] whitespace-pre-wrap">Laying the groundwork for future phases</p>
       </div>
     </div>
   );
@@ -558,14 +579,19 @@ function Frame4() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Challenge</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Problem</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">A fragmented discovery experience</p>
+        <p className="leading-[46px] whitespace-pre-wrap">A fragmented item discovery experience</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Users struggled to form a clear mental model of where they were and what value they could use, while key shopping options remained hidden. This led to unnecessary steps and prevented users from fully experiencing the program’s breadth and value.</p>
-      </div>
+    </div>
+  );
+}
+
+function ProblemDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">Users struggled to form a clear mental model of where they were and what value they could use, while key shopping options remained hidden. This led to unnecessary steps and prevented users from fully experiencing the program’s breadth and value.</p>
     </div>
   );
 }
@@ -655,9 +681,10 @@ function Frame12() {
 
 function Property6() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Property">
       <Frame4 />
       <Frame12 />
+      <ProblemDescription />
     </div>
   );
 }
@@ -666,14 +693,19 @@ function Frame8() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Solution</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Solution Overview</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Designing discoverability as a layered system</p>
+        <p className="leading-[46px] whitespace-pre-wrap">The goal was to reduce clicks</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">To reduce unnecessary steps in discovery, I designed discoverability as a system with two layers: establishing a clear mental model to anchor users in context, followed by early exposure of product breadth to accelerate exploration.</p>
-      </div>
+    </div>
+  );
+}
+
+function SolutionOverviewDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">To reduce unnecessary steps in discovery, I designed discoverability as a system with two layers: establishing a clear mental model to anchor users in context, followed by early exposure of product breadth to accelerate exploration.</p>
     </div>
   );
 }
@@ -702,6 +734,7 @@ function Property7() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0" data-name="Property">
       <Frame8 />
       <Frame16 />
+      <SolutionOverviewDescription />
     </div>
   );
 }
@@ -713,11 +746,16 @@ function Frame9() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 1</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Establishing a clear mental model</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Clarifying where users are and what to do next</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">To remove this cognitive friction, I redesigned the master header and points display to create a consistent orientation layer across the storefront. This clarified program context, applicable points, and pathways across storefronts.</p>
-      </div>
+    </div>
+  );
+}
+
+function SolutionOneDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">To remove this cognitive friction, I redesigned the master header and points display to create a consistent orientation layer across the storefront. This clarified program context, applicable points, and pathways across storefronts.</p>
     </div>
   );
 }
@@ -753,6 +791,7 @@ function Property8() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[8] self-start shrink-0" data-name="Property">
       <Frame9 />
       <Frame17 />
+      <SolutionOneDescription />
     </div>
   );
 }
@@ -764,11 +803,16 @@ function Frame10() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 2</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Making product breadth visible upfront</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Showing all options upfront</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">To remove navigational friction, I surfaced category structures early through upfront category displays and a mega-menu. This allowed users to scan available options quickly and jump directly to relevant areas while showcasing the platform’s breadth as a competitive strength.</p>
-      </div>
+    </div>
+  );
+}
+
+function SolutionTwoDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">To remove navigational friction, I surfaced category structures early through upfront category displays and a mega-menu. This allowed users to scan available options quickly and jump directly to relevant areas while showcasing the platform’s breadth as a competitive strength.</p>
     </div>
   );
 }
@@ -804,6 +848,7 @@ function Property9() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0" data-name="Property">
       <Frame10 />
       <Frame18 />
+      <SolutionTwoDescription />
     </div>
   );
 }
