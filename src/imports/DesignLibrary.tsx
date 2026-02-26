@@ -25,6 +25,7 @@ function Property() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0 w-full" data-name="Property">
       <ImpactSectionGRS
         hideThird
+        impactTitle="Higher task success and user confidence"
         firstTitle="Increased Flexibility"
         firstSubtitle="Eliminated hardcoded values so the tool could adapt quickly to new requirements."
         secondTitle="Improved Workflow Efficiency"
@@ -41,11 +42,16 @@ function SectionContainer1() {
         <p className="leading-[22.5px]">My Role</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Driving UX strategy and system design from ambiguity to launch</p>
+        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">From UX strategy to UI design</p>
       </div>
-      <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-[min-content]">
-        <p className="leading-[22.5px] whitespace-pre-wrap">I led the work from audit to implementation, turning user pain points into a scalable component system with product and engineering.</p>
-      </div>
+    </div>
+  );
+}
+
+function MyRoleDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-[min-content]">
+      <p className="leading-[22.5px] whitespace-pre-wrap">I led the work from audit to implementation, turning user pain points into a scalable component system with product and engineering.</p>
     </div>
   );
 }
@@ -111,9 +117,10 @@ function Frame13() {
 
 function ContentSections() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0 w-full" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionContainer1 />
       <Frame13 />
+      <MyRoleDescription />
     </div>
   );
 }
@@ -127,9 +134,14 @@ function Frame5() {
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Audited existing components and user flows</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">{`Given the project's large scale, I created a user flow and sitemap to simplify communication and align the team's understanding, focusing on two key user tasks: submitting forms and tracking submissions.`}</p>
-      </div>
+    </div>
+  );
+}
+
+function AuditDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">{`Given the project's large scale, I created a user flow and sitemap to simplify communication and align the team's understanding, focusing on two key user tasks: submitting forms and tracking submissions.`}</p>
     </div>
   );
 }
@@ -170,6 +182,7 @@ function Property1() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[11] self-start shrink-0 w-full" data-name="Property">
       <Frame5 />
       <Frame14 />
+      <AuditDescription />
     </div>
   );
 }
@@ -183,9 +196,14 @@ function Frame5Requirement() {
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Analyzed requirements and usages for new components</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">{`I found there was an inconsistency and accessibility issues in the user interface and in displaying information, no feedback in the submission process or status which made it easy to make mistakes.`}</p>
-      </div>
+    </div>
+  );
+}
+
+function RequirementAnalysisDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">{`I found there was an inconsistency and accessibility issues in the user interface and in displaying information, no feedback in the submission process or status which made it easy to make mistakes.`}</p>
     </div>
   );
 }
@@ -214,6 +232,7 @@ function PropertyRequirement() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[12] self-start shrink-0 w-full" data-name="Property">
       <Frame5Requirement />
       <Frame14Requirement />
+      <RequirementAnalysisDescription />
     </div>
   );
 }
@@ -357,9 +376,6 @@ function SectionContainer7() {
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">outcome</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[34px] sm:text-[42px] tracking-[-0.9px] w-full">
-        <p className="leading-[42px] sm:leading-[50px] whitespace-pre-wrap">Created a scalable foundation for faster product evolution</p>
-      </div>
     </div>
   );
 }
@@ -461,14 +477,19 @@ function Frame4() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Challenge</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Problem</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Unclear and inconsistent submission experience</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">The product was initially developed without solid UX guidelines and lacked understanding of end user behaviour, causing frustration. </p>
-      </div>
+    </div>
+  );
+}
+
+function ProblemDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">The product was initially developed without solid UX guidelines and lacked understanding of end user behaviour, causing frustration. </p>
     </div>
   );
 }
@@ -520,9 +541,10 @@ function Frame12() {
 
 function Property6() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0 w-full" data-name="Property">
       <Frame4 />
       <Frame12 />
+      <ProblemDescription />
     </div>
   );
 }
@@ -535,9 +557,6 @@ function Frame8() {
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Built a component library for consistency and faster delivery</p>
-      </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">to ensure a consistent user experience and streamline the development process</p>
       </div>
     </div>
   );
@@ -592,9 +611,6 @@ function Frame9() {
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Enhanced reliability via consistency and accessibility</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Improved the readability</p>
-      </div>
     </div>
   );
 }
@@ -648,9 +664,14 @@ function Frame10() {
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Guidance, error prevention and recovery</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">It empowers users to confidently interact with the product and complete tasks independently, reducing mistakes and ensuring smooth user flows.</p>
-      </div>
+    </div>
+  );
+}
+
+function Solution2Description() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">It empowers users to confidently interact with the product and complete tasks independently, reducing mistakes and ensuring smooth user flows.</p>
     </div>
   );
 }
@@ -691,6 +712,7 @@ function Property9() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0 w-full" data-name="Property">
       <Frame10 />
       <Frame18 />
+      <Solution2Description />
     </div>
   );
 }
@@ -704,9 +726,14 @@ function Frame11() {
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Increased task completion rate via optimized modals</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Modals are integral to the user's main tasks, providing visual indicators and guidelines to reduce errors and completion time.</p>
-      </div>
+    </div>
+  );
+}
+
+function Solution3Description() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">Modals are integral to the user's main tasks, providing visual indicators and guidelines to reduce errors and completion time.</p>
     </div>
   );
 }
@@ -747,6 +774,7 @@ function Property10() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[8] self-start shrink-0 w-full" data-name="Property">
       <Frame11 />
       <Frame19 />
+      <Solution3Description />
     </div>
   );
 }
@@ -760,9 +788,14 @@ function Frame11DesignOutcome() {
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">All-in-one pages for faster, clearer actions</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">I redesigned two high-traffic workflows into centralized, all-in-one pages that reduce clicks, replace fragmented modals, and give users a clear top-down view of key details, history, and status, so they can act with confidence and control.</p>
-      </div>
+    </div>
+  );
+}
+
+function DesignOutcomeDescription() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">I redesigned two high-traffic workflows into centralized, all-in-one pages that reduce clicks, replace fragmented modals, and give users a clear top-down view of key details, history, and status, so they can act with confidence and control.</p>
     </div>
   );
 }
@@ -803,6 +836,7 @@ function PropertyOutcome() {
     <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0 w-full" data-name="Property">
       <Frame11DesignOutcome />
       <Frame19DesignOutcome />
+      <DesignOutcomeDescription />
     </div>
   );
 }
