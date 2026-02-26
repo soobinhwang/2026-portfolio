@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
 import imgGptMoment from "../assets/ai/project-1/gpt moment.gif";
+import imgProblemFraming from "../assets/ai/project-1/problem framing.png";
+import videoGptWorkingWithCodex from "../assets/ai/project-1/gpt-working with codex.mov";
 import featureBranchChatVideo from "../assets/ai/project-1/branch chat.mov";
 import featurePromptQueueVideo from "../assets/ai/project-1/Prompt Queue.mov";
 import featureChatHistoryManagerVideo from "../assets/ai/project-1/Chat History Manager.mov";
@@ -223,21 +225,6 @@ function FeatureBlock({
   painPoint: string;
   improvement: string;
 }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const togglePlay = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    if (video.paused) {
-      void video.play().then(() => setIsPlaying(true)).catch(() => {});
-    } else {
-      video.pause();
-      setIsPlaying(false);
-    }
-  };
-
   return (
     <div className="flex flex-col gap-[20px] w-full" data-name="Feature">
       <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
@@ -245,31 +232,7 @@ function FeatureBlock({
       </div>
       <div className="bg-[#1e242a] w-full relative shrink-0">
         {videoSrc ? (
-          <button
-            type="button"
-            className="group relative block w-full cursor-pointer border-0 bg-transparent p-0"
-            onClick={togglePlay}
-            aria-label={isPlaying ? "Pause video preview" : "Play video preview"}
-          >
-            <video
-              ref={videoRef}
-              className="block w-full h-auto object-contain"
-              src={videoSrc}
-              muted
-              playsInline
-              preload="metadata"
-              onPlay={() => setIsPlaying(true)}
-              onPause={() => setIsPlaying(false)}
-              onEnded={() => setIsPlaying(false)}
-            />
-            {!isPlaying ? (
-              <span className="absolute inset-0 grid place-items-center pointer-events-none">
-                <span className="inline-flex h-[42px] w-[42px] items-center justify-center rounded-full bg-black/55 text-white text-[16px]">
-                  ▶
-                </span>
-              </span>
-            ) : null}
-          </button>
+          <video className="block w-full h-auto object-contain" src={videoSrc} controls playsInline preload="metadata" />
         ) : (
           <div className="w-full aspect-[16/9]" />
         )}
@@ -317,7 +280,47 @@ function WhatIMadeSection() {
 }
 
 /* ───────────────────────────────────────────────
-   Section 4: Try It On Your Own
+   Section 4: Building Process
+   ─────────────────────────────────────────────── */
+
+function BuildingProcessSection() {
+  return (
+    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Building Process">
+      <SectionLabel label="building process" />
+      <div className="content-stretch flex flex-col gap-[110px] sm:gap-[170px] items-start relative w-full">
+        <div className="content-stretch flex flex-col gap-[20px] items-start relative w-full">
+          <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
+            <p className="leading-[32px]">Documented daily friction that turned into testable concepts</p>
+          </div>
+          <div className="bg-[#1e242a] w-full relative shrink-0">
+            <img loading="lazy" decoding="async" alt="Problem framing" className="block w-full h-auto object-contain" src={imgProblemFraming} />
+          </div>
+          <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">
+            I captured real ChatGPT pain points as they happened, annotated screenshots with “wish it worked like this”
+            ideas, and vibe-coded them into prototype-ready concepts.
+          </p>
+        </div>
+
+        <div className="content-stretch flex flex-col gap-[20px] items-start relative w-full">
+          <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
+            <p className="leading-[32px]">Plan, build, and troubleshoot with AI agents</p>
+          </div>
+          <div className="bg-[#1e242a] w-full relative shrink-0">
+            <video className="block w-full h-auto object-contain" src={videoGptWorkingWithCodex} controls playsInline preload="metadata" />
+          </div>
+          <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">
+            I used Codex as the main agent throughout the workflow to scope steps, implement features, and debug
+            issues quickly. When I hit limits or didn&apos;t get the result I wanted, I switched to Claude Code for
+            stronger visual output.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ───────────────────────────────────────────────
+   Section 5: Try It On Your Own
    ─────────────────────────────────────────────── */
 
 function TryItSection() {
@@ -360,6 +363,8 @@ function SectionContainer() {
       <WhySection />
       <Divider />
       <WhatIMadeSection />
+      <Divider />
+      <BuildingProcessSection />
       <Divider />
       <TryItSection />
     </div>
