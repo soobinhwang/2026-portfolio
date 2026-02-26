@@ -80,7 +80,7 @@ function Frame5() {
         <p className="leading-[22.5px] whitespace-pre-wrap">program Structure analysis</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Why users need exploration first</p>
+        <p className="leading-[46px] whitespace-pre-wrap">What does discovery look like for users?</p>
       </div>
     </div>
   );
@@ -160,7 +160,7 @@ function Frame23() {
         <p className="leading-[22.5px] whitespace-pre-wrap">User Behaviour analysis</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Rewards shopping follows a different exploration pattern</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Why users need exploration first</p>
       </div>
     </div>
   );
@@ -254,7 +254,7 @@ function Frame7() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Prioritization</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Let's start small, learn fast within constraints</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Start small, learn fast within constraints</p>
       </div>
     </div>
   );
