@@ -195,11 +195,37 @@ function WhySection() {
           <p className="leading-[27px] whitespace-pre-wrap">That's what triggered this project.</p>
           <p className="leading-[27px] whitespace-pre-wrap">Instead of letting that thought loop in my head, I decided to visualize the ideas, make them feel real, and share them with others to see what resonates.</p>
         </div>
-        <div className="bg-[#f5f7f8] border border-[#ebeced] rounded-[10px] px-[16px] py-[14px] sm:px-[20px] sm:py-[16px] w-full">
-          <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">
-            Here are three feature ideas designed to reduce clicks and remove mental blocks
+      </div>
+    </div>
+  );
+}
+
+/* ───────────────────────────────────────────────
+   Section 3: Feature Scope
+   ─────────────────────────────────────────────── */
+
+function FeatureScopeSection() {
+  return (
+    <div className="content-stretch flex flex-col gap-[24px] items-start relative w-full" data-name="Feature Scope">
+      <SectionLabel label="concept overview" />
+      <div className="flex flex-col gap-[10px] w-full">
+        <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#dbe4ec] bg-[#f4f8fb] px-[14px] py-[12px]">
+          <div className="font-geist-mono text-[12px] text-[#5b6a79] uppercase leading-[22.5px]">Goal</div>
+          <p className="font-geist font-normal text-[16px] text-[#4e5e6d] leading-[26px]">
+            Reduce clicks and mental blocks in day-to-day ChatGPT usage
           </p>
-          <ol className="mt-[8px] pl-[20px] font-geist text-[15px] text-[#5b6a79] leading-[25px] list-decimal">
+        </div>
+        <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#dbe4ec] bg-[#f4f8fb] px-[14px] py-[12px]">
+          <div className="font-geist-mono text-[12px] text-[#5b6a79] uppercase leading-[22.5px]">Target user</div>
+          <ul className="pl-[20px] list-disc font-geist font-normal text-[15px] text-[#4e5e6d] leading-[24px]">
+            <li>Frequent ChatGPT users managing complex tasks</li>
+            <li>Users who run parallel ideas and need stronger context control</li>
+            <li>Power users who revisit and organize long chat histories</li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#dbe4ec] bg-[#f4f8fb] px-[14px] py-[12px]">
+          <div className="font-geist-mono text-[12px] text-[#5b6a79] uppercase leading-[22.5px]">Features</div>
+          <ol className="pl-[20px] font-geist font-normal text-[15px] text-[#4e5e6d] leading-[24px] list-decimal">
             <li>Branch Chat</li>
             <li>Prompt Queue</li>
             <li>Chat History Manager</li>
@@ -211,7 +237,7 @@ function WhySection() {
 }
 
 /* ───────────────────────────────────────────────
-   Section 3: What I Made
+   Section 4: What I Made
    ─────────────────────────────────────────────── */
 
 function FeatureBlock({
@@ -296,7 +322,7 @@ function WhatIMadeSection() {
 }
 
 /* ───────────────────────────────────────────────
-   Section 4: Building Process
+   Section 5: Building Process
    ─────────────────────────────────────────────── */
 
 function BuildingProcessSection() {
@@ -352,7 +378,7 @@ function BuildingProcessSection() {
 }
 
 /* ───────────────────────────────────────────────
-   Section 5: Try It On Your Own
+   Section 6: Try It On Your Own
    ─────────────────────────────────────────────── */
 
 function TryItSection() {
@@ -393,6 +419,8 @@ function SectionContainer() {
       <OverviewSection />
       <Divider />
       <WhySection />
+      <Divider />
+      <FeatureScopeSection />
       <Divider />
       <WhatIMadeSection />
       <Divider />
