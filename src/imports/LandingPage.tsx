@@ -19,7 +19,7 @@ function ProfileInfoItem() {
   return (
     <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] max-[392px]:px-[4px] max-[392px]:py-[1px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
       <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] max-[392px]:text-[8px] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px] max-[392px]:leading-[14px]">+3 years</p>
+        <p className="leading-[22.5px] max-[392px]:leading-[14px]">AI Pioneer</p>
       </div>
     </div>
   );
@@ -29,7 +29,7 @@ function ProfileInfoItem1() {
   return (
     <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] max-[392px]:px-[4px] max-[392px]:py-[1px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
       <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] max-[392px]:text-[8px] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px] max-[392px]:leading-[14px]">b2b B2B2C saas</p>
+        <p className="leading-[22.5px] max-[392px]:leading-[14px]">B2B SaaS</p>
       </div>
     </div>
   );
@@ -39,7 +39,7 @@ function ProfileInfoItem2() {
   return (
     <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] max-[392px]:px-[4px] max-[392px]:py-[1px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
       <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] max-[392px]:text-[8px] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px] max-[392px]:leading-[14px]">enterprise designer</p>
+        <p className="leading-[22.5px] max-[392px]:leading-[14px]">Platform & Systems</p>
       </div>
     </div>
   );

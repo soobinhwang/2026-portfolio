@@ -247,7 +247,7 @@ function SectionHeader() {
         <p className="leading-[42px] sm:leading-[normal] whitespace-pre-wrap">Incentive Experience Redesign</p>
       </div>
       <div className="flex flex-col font-geist justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Centralized pages and a consistent UI revamp that reduced errors, frustration, and clicks.</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Centralized pages and a consistent UI revamp that reduced clicks, errors, and frustration.</p>
       </div>
     </div>
   );
