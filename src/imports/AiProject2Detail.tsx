@@ -10,6 +10,7 @@ import imgWhatIBuilt2 from "../assets/ai/project-2/What I built - image 2.png";
 import imgAnalyzingWorklog from "../assets/ai/project-2/Analyzing worklog.png";
 import imgScopingMvp from "../assets/ai/project-2/scoping the mvp.png";
 import imgImplementation from "../assets/ai/project-2/Implementation.png";
+import imgIteration from "../assets/ai/project-2/Iteration.png";
 import videoMvp from "../assets/ai/project-2/MVP.mov";
 import videoPostMvp from "../assets/ai/project-2/Post MVP.mov";
 import Footer from "../app/components/Footer";
@@ -144,6 +145,18 @@ function WhySection() {
             and share them without extra cleanup.
           </p>
           <p className="leading-[27px] whitespace-pre-wrap">That’s what pushed me to build this Figma plugin.</p>
+          <div className="content-stretch flex flex-col gap-[14px] items-start relative mt-[6px]">
+            <a
+              href="https://www.figma.com/community/plugin/1607992754736451698/decision-note"
+              target="_blank"
+              rel="noreferrer"
+              data-cursor="case-study"
+              className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
+            >
+              Try the plugin
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -346,15 +359,21 @@ function BuildingProcessSection() {
       ],
     },
     {
-      title: "MVP release",
+      title: "MVP outcome",
       description:
         "Shipped the first usable version to validate the workflow and gather feedback for the next iteration.",
       videoSrc: videoMvp,
     },
     {
+      title: "Testing & Iteration",
+      imageSrc: imgIteration,
+    },
+    {
       title: "Official launch",
       description: "Launched on February 25, 2026, and now available on the Figma Community! 🎉",
       imageSrc: imgWhatIBuilt,
+      ctaHref: "https://www.figma.com/community/plugin/1607992754736451698/decision-note",
+      ctaLabel: "Try the plugin",
     },
   ];
 
@@ -399,37 +418,22 @@ function BuildingProcessSection() {
                 </ol>
               </div>
             ) : null}
+            {step.ctaLabel && step.ctaHref ? (
+              <div className="content-stretch flex flex-col gap-[14px] items-start relative">
+                <a
+                  href={step.ctaHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-cursor="case-study"
+                  className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
+                >
+                  {step.ctaLabel}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            ) : null}
           </div>
         ))}
-      </div>
-    </div>
-  );
-}
-
-/* ───────────────────────────────────────────────
-   Section 5: Try It On Your Own
-   ─────────────────────────────────────────────── */
-
-function TryItSection() {
-  return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Try It">
-      <SectionLabel label="try it on your own" />
-      <div className="grid grid-cols-1 gap-[32px] w-full">
-        <div className="content-stretch flex flex-col gap-[14px] items-start relative">
-          <a
-            href="https://www.figma.com/community/plugin/1607992754736451698/decision-note"
-            target="_blank"
-            rel="noreferrer"
-            data-cursor="case-study"
-            className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
-          >
-            Try the plugin
-            <span aria-hidden="true">↗</span>
-          </a>
-          <p className="font-geist font-normal text-[14px] text-[rgba(50,64,79,0.58)] leading-[22px]">
-            Install from the Figma Community
-          </p>
-        </div>
       </div>
     </div>
   );
@@ -452,8 +456,6 @@ function SectionContainer() {
       <WhatIMadeSection />
       <Divider />
       <BuildingProcessSection />
-      <Divider />
-      <TryItSection />
     </div>
   );
 }
