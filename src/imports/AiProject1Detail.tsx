@@ -310,8 +310,8 @@ function BuildingProcessSection() {
           </div>
           <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">
             I used Codex as the main agent throughout the workflow to scope steps, implement features, and debug
-            issues quickly. When I hit limits or didn&apos;t get the result I wanted, I switched to Claude Code for
-            stronger visual output.
+            issues quickly. When I didn&apos;t get the result I wanted, I switched to Claude Code for stronger visual
+            output.
           </p>
         </div>
       </div>
