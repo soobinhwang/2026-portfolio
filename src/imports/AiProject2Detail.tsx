@@ -321,8 +321,7 @@ function BuildingProcessSection() {
       description: (
         <>
           I built the plugin in <span className="italic">Visual Studio Code</span> with AI agents to accelerate
-          scaffolding, troubleshooting, and iteration (Claude for UI/planning; Codex for complex problem-solving and
-          debugging).
+          scaffolding, troubleshooting, and iteration.
         </>
       ),
       imageSrc: imgImplementation,
@@ -334,6 +333,10 @@ function BuildingProcessSection() {
         <>
           Use <span className="italic">VS Code</span> to reliably edit, refactor, and debug the code during
           repeated runs in Figma.
+        </>,
+        <>
+          <span className="italic">Codex</span> for technical planning, complex problem-solving, and debugging;{" "}
+          <span className="italic">ClaudeCode</span> for UI.
         </>,
       ],
     },
