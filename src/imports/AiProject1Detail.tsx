@@ -3,9 +3,9 @@ import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
 import imgGptMoment from "../assets/ai/project-1/gpt moment.gif";
 import imgProblemFraming from "../assets/ai/project-1/problem framing.png";
 import videoGptWorkingWithCodex from "../assets/ai/project-1/gpt-working with codex.mov";
-import featureBranchChatVideo from "../assets/ai/project-1/branch chat.mov";
-import featurePromptQueueVideo from "../assets/ai/project-1/Prompt Queue.mov";
-import featureChatHistoryManagerVideo from "../assets/ai/project-1/Chat History Manager.mov";
+import featureBranchChatVideo from "../assets/ai/project-1/trimmed-branch chat.mov";
+import featurePromptQueueVideo from "../assets/ai/project-1/trimmed - prompt queue.mov";
+import featureChatHistoryManagerVideo from "../assets/ai/project-1/trimmed - chat history view.mov";
 import imgChatGptLogo from "../assets/ai/project-1/gpt logo.jpg";
 import imgClaudeLogo from "../assets/ai/project-1/claude logo.png";
 import imgCursorLogo from "../assets/ai/project-1/cursor logo.png";
@@ -225,14 +225,30 @@ function FeatureBlock({
   painPoint: string;
   improvement: string;
 }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <div className="flex flex-col gap-[20px] w-full" data-name="Feature">
       <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
         <p className="leading-[32px]">{title}</p>
       </div>
-      <div className="bg-[#1e242a] w-full relative shrink-0">
+      <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={isPlaying ? "true" : "false"}>
         {videoSrc ? (
-          <video className="block w-full h-auto object-contain" src={videoSrc} controls playsInline preload="metadata" />
+          <video
+            ref={videoRef}
+            className="ai-muted-controls block w-full h-auto object-contain"
+            src={videoSrc}
+            muted
+            controls
+            controlsList="nodownload nopictureinpicture"
+            disablePictureInPicture
+            playsInline
+            preload="metadata"
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
+            onEnded={() => setIsPlaying(false)}
+          />
         ) : (
           <div className="w-full aspect-[16/9]" />
         )}
@@ -284,6 +300,9 @@ function WhatIMadeSection() {
    ─────────────────────────────────────────────── */
 
 function BuildingProcessSection() {
+  const codexVideoRef = useRef<HTMLVideoElement>(null);
+  const [isCodexVideoPlaying, setIsCodexVideoPlaying] = useState(false);
+
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Building Process">
       <SectionLabel label="building process" />
@@ -305,8 +324,21 @@ function BuildingProcessSection() {
           <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
             <p className="leading-[32px]">Plan, build, and troubleshoot with AI agents</p>
           </div>
-          <div className="bg-[#1e242a] w-full relative shrink-0">
-            <video className="block w-full h-auto object-contain" src={videoGptWorkingWithCodex} controls playsInline preload="metadata" />
+          <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={isCodexVideoPlaying ? "true" : "false"}>
+            <video
+              ref={codexVideoRef}
+              className="ai-muted-controls block w-full h-auto object-contain"
+              src={videoGptWorkingWithCodex}
+              muted
+              controls
+              controlsList="nodownload nopictureinpicture"
+              disablePictureInPicture
+              playsInline
+              preload="metadata"
+              onPlay={() => setIsCodexVideoPlaying(true)}
+              onPause={() => setIsCodexVideoPlaying(false)}
+              onEnded={() => setIsCodexVideoPlaying(false)}
+            />
           </div>
           <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">
             I used Codex as the main agent throughout the workflow to scope steps, implement features, and debug

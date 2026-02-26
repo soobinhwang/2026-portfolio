@@ -2,3 +2,25 @@
 @import './tailwind.css';
 @import './theme.css';
 @import './cursor.css';
+
+/* AI Project 1 video controls: keep timeline/play controls, hide audio controls */
+.ai-muted-controls::-webkit-media-controls-mute-button,
+.ai-muted-controls::-webkit-media-controls-volume-slider,
+.ai-muted-controls::-webkit-media-controls-volume-control-container {
+  display: none !important;
+}
+
+/* While playing: hide controller unless hovered */
+.ai-video-shell[data-playing="true"]:not(:hover) .ai-muted-controls::-webkit-media-controls,
+.ai-video-shell[data-playing="true"]:not(:hover) .ai-muted-controls::-webkit-media-controls-panel,
+.ai-video-shell[data-playing="true"]:not(:hover) .ai-muted-controls::-webkit-media-controls-enclosure {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 120ms ease;
+}
+
+.ai-video-shell:hover .ai-muted-controls::-webkit-media-controls,
+.ai-video-shell:hover .ai-muted-controls::-webkit-media-controls-panel,
+.ai-video-shell:hover .ai-muted-controls::-webkit-media-controls-enclosure {
+  opacity: 1 !important;
+}
