@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import imgDetailThumbnail from "../assets/ai/project-2/ai-p2-detail-thumbnail.png";
 import imgFigmaLogo from "../assets/ai/project-2/figma logo.png";
 import imgChatGptLogo from "../assets/ai/project-1/gpt logo.jpg";
@@ -186,19 +186,7 @@ function FeatureBlock({
   fullViewAriaLabel?: string;
   fullViewOnDark?: boolean;
 }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-
-  const togglePlay = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    if (video.paused) {
-      void video.play().then(() => setIsPlaying(true)).catch(() => {});
-    } else {
-      video.pause();
-      setIsPlaying(false);
-    }
-  };
 
   return (
     <div className="flex flex-col gap-[20px] w-full" data-name="Feature">
@@ -246,35 +234,26 @@ function FeatureBlock({
           </DialogContent>
         </Dialog>
       ) : (
-        <div className={mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0"}>
+        <div
+          className={videoSrc ? `ai-video-shell ${mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0"}` : mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0"}
+          data-playing={videoSrc ? (isPlaying ? "true" : "false") : undefined}
+        >
           {imageSrc ? (
             <img loading="lazy" decoding="async" alt="" className={imageClassName ?? "block w-full h-auto object-contain"} src={imageSrc} />
           ) : videoSrc ? (
-            <button
-              type="button"
-              className="group relative block w-full cursor-pointer border-0 bg-transparent p-0"
-              onClick={togglePlay}
-              aria-label={isPlaying ? "Pause video preview" : "Play video preview"}
-            >
-              <video
-                ref={videoRef}
-                className="block w-full h-auto object-contain"
-                src={videoSrc}
-                muted
-                playsInline
-                preload="metadata"
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
-                onEnded={() => setIsPlaying(false)}
-              />
-              {!isPlaying ? (
-                <span className="absolute inset-0 grid place-items-center pointer-events-none">
-                  <span className="inline-flex h-[42px] w-[42px] items-center justify-center rounded-full bg-black/55 text-white text-[16px]">
-                    ▶
-                  </span>
-                </span>
-              ) : null}
-            </button>
+            <video
+              className="ai-muted-controls block w-full h-auto object-contain"
+              src={videoSrc}
+              muted
+              controls
+              controlsList="nodownload nopictureinpicture"
+              disablePictureInPicture
+              playsInline
+              preload="metadata"
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+              onEnded={() => setIsPlaying(false)}
+            />
           ) : (
             <div className="w-full aspect-[16/9]" />
           )}
