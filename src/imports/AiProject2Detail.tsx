@@ -11,8 +11,10 @@ import imgAnalyzingWorklog from "../assets/ai/project-2/Analyzing worklog.png";
 import imgScopingMvp from "../assets/ai/project-2/scoping the mvp.png";
 import imgImplementation from "../assets/ai/project-2/Implementation.png";
 import imgIteration from "../assets/ai/project-2/Iteration.png";
+import videoPluginFinal from "../assets/ai/project-2/Figma Plugin Final 3.mp4";
 import videoMvp from "../assets/ai/project-2/MVP.mov";
 import videoPostMvp from "../assets/ai/project-2/Post MVP.mov";
+import videoWhatIBuilt from "../assets/ai/project-2/What I built.mov";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
@@ -119,7 +121,65 @@ function OverviewSection() {
 }
 
 /* ───────────────────────────────────────────────
-   Section 2: Why I Did This
+   Section 2: Plugin Demo
+   ─────────────────────────────────────────────── */
+
+function PluginDemoSection() {
+  const [demoPlaying, setDemoPlaying] = useState(false);
+
+  return (
+    <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full" data-name="Plugin Demo">
+      <SectionLabel label="plugin demo" />
+      <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[28px] w-full">
+        <p className="leading-[38px] whitespace-pre-wrap">Published plugin in action</p>
+      </div>
+      <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={demoPlaying ? "true" : "false"}>
+        <video
+          className="ai-muted-controls block w-full h-auto object-contain"
+          src={videoPluginFinal}
+          muted
+          controls
+          controlsList="nodownload nopictureinpicture"
+          disablePictureInPicture
+          playsInline
+          preload="metadata"
+          onPlay={() => setDemoPlaying(true)}
+          onPause={() => setDemoPlaying(false)}
+          onEnded={() => setDemoPlaying(false)}
+        />
+      </div>
+      <div className="bg-[#f5f7f8] border border-[#ebeced] rounded-[10px] px-[16px] py-[14px] sm:px-[20px] sm:py-[16px] w-full">
+        <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">How it works</p>
+        <ol className="mt-[8px] pl-[20px] font-geist text-[15px] text-[#5b6a79] leading-[25px] list-decimal">
+          <li>Launch the plugin.</li>
+          <li>Add your note.</li>
+          <li>
+            Select a frame to attach it <span className="text-[rgba(91,106,121,0.7)]">(optional)</span>.
+          </li>
+          <li>
+            Re-run to update{" "}
+            <span className="text-[rgba(91,106,121,0.7)]">(It edits the existing note from saved content)</span>.
+          </li>
+        </ol>
+      </div>
+      <div className="content-stretch flex flex-col gap-[14px] items-start relative">
+        <a
+          href="https://www.figma.com/community/plugin/1607992754736451698/decision-note"
+          target="_blank"
+          rel="noreferrer"
+          data-cursor="case-study"
+          className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
+        >
+          Try the plugin
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  );
+}
+
+/* ───────────────────────────────────────────────
+   Section 3: Why I Did This
    ─────────────────────────────────────────────── */
 
 function WhySection() {
@@ -145,18 +205,6 @@ function WhySection() {
             and share them without extra cleanup.
           </p>
           <p className="leading-[27px] whitespace-pre-wrap">That’s what pushed me to build this Figma plugin.</p>
-          <div className="content-stretch flex flex-col gap-[14px] items-start relative mt-[6px]">
-            <a
-              href="https://www.figma.com/community/plugin/1607992754736451698/decision-note"
-              target="_blank"
-              rel="noreferrer"
-              data-cursor="case-study"
-              className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
-            >
-              Try the plugin
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -263,37 +311,8 @@ function FeatureBlock({
   );
 }
 
-function WhatIMadeSection() {
-  return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="What I Made">
-      <SectionLabel label="what i built" />
-      <div className="flex flex-col gap-[20px] w-full">
-        <FeatureBlock imageSrc={imgWhatIBuilt2} />
-        <FeatureBlock videoSrc={videoPostMvp} />
-        <div className="bg-[#f5f7f8] border border-[#ebeced] rounded-[10px] px-[16px] py-[14px] sm:px-[20px] sm:py-[16px] w-full">
-          <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">How it works</p>
-          <ol className="mt-[8px] pl-[20px] font-geist text-[15px] text-[#5b6a79] leading-[25px] list-decimal">
-            <li>Launch the plugin.</li>
-            <li>Add your note.</li>
-            <li>
-              Select a frame to attach it <span className="text-[rgba(91,106,121,0.7)]">(optional)</span>.
-            </li>
-            <li>
-              Re-run to update{" "}
-              <span className="text-[rgba(91,106,121,0.7)]">
-                (It edits the existing note from saved content)
-              </span>
-              .
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /* ───────────────────────────────────────────────
-   Section 4: Building Process
+   Section 3: Building Process
    ─────────────────────────────────────────────── */
 
 function BuildingProcessSection() {
@@ -353,7 +372,7 @@ function BuildingProcessSection() {
     {
       title: "Official launch",
       description: "Launched on February 25, 2026, and now available on the Figma Community! 🎉",
-      imageSrc: imgWhatIBuilt,
+      videoSrc: videoWhatIBuilt,
       ctaHref: "https://www.figma.com/community/plugin/1607992754736451698/decision-note",
       ctaLabel: "Try the plugin",
     },
@@ -369,6 +388,36 @@ function BuildingProcessSection() {
               <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
                 <p className="leading-[32px]">{step.title}</p>
               </div>
+            ) : step.title === "Testing & Iteration" ? (
+              <>
+                <FeatureBlock
+                  title={step.title}
+                  imageSrc={step.imageSrc}
+                  imageClassName={step.imageClassName}
+                  mediaClassName={step.mediaClassName}
+                  enableFullView={step.enableFullView}
+                  fullViewAriaLabel={step.fullViewAriaLabel}
+                  fullViewOnDark={step.fullViewOnDark}
+                />
+                <FeatureBlock videoSrc={videoPostMvp} />
+              </>
+            ) : step.title === "Official launch" ? (
+              <>
+                <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
+                  <p className="leading-[32px]">{step.title}</p>
+                </div>
+                <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing="true">
+                  <video
+                    className="ai-muted-controls block w-full h-auto object-contain"
+                    src={videoWhatIBuilt}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                  />
+                </div>
+              </>
             ) : (
               <FeatureBlock
                 title={step.title}
@@ -433,9 +482,9 @@ function SectionContainer() {
     >
       <OverviewSection />
       <Divider />
-      <WhySection />
+      <PluginDemoSection />
       <Divider />
-      <WhatIMadeSection />
+      <WhySection />
       <Divider />
       <BuildingProcessSection />
     </div>
