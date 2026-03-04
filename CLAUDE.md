@@ -22,7 +22,8 @@
 - NEVER modify source files without explicit permission
 - Always use live Vercel site for Figma captures (never localhost)
 - NEVER overlap frames — always place them side by side with at least 100px spacing between each frame
-- Always use the figma MCP tool generate_figma_design to capture pages — NEVER write custom capture scripts and NEVER open a visible browser window waiting for manual input
+- Always use the figma MCP tool generate_figma_design to capture pages — NEVER write custom capture scripts
+- NEVER use Playwright MCP — it opens a visible browser requiring manual input
 - Always capture headlessly and automatically without any user interaction required
 - Always capture ALL 8 pages in a single session, one by one sequentially — never stop after the first page
 - Always use the Figma file link from this CLAUDE.md — never use a previously cached or hardcoded link
@@ -42,5 +43,5 @@ Capture these URLs in order:
 7. https://suehwang-dsgn.vercel.app/global-reward-storefront
 8. https://suehwang-dsgn.vercel.app/design-library
 
-Do NOT stop after the first page. Do NOT modify any source files. Do NOT open a visible browser window. Capture headlessly and automatically. Place each frame side by side with 100px spacing — never overlap frames.
+Do NOT stop after the first page. Do NOT modify any source files. Do NOT use Playwright MCP. Do NOT open a visible browser window. Capture headlessly and automatically. Place each frame side by side with 100px spacing — never overlap frames.
 ```
