@@ -1,0 +1,23 @@
+[     104ms] [ERROR] Warning: React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element.%s fetchPriority fetchpriority 
+    at img
+    at div
+    at Thumbnail
+    at div
+    at ContentSections1
+    at div
+    at SectionContainer
+    at div
+    at ContentContainer
+    at div
+    at MainContent
+    at div
+    at GlobalRewardStorefront
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router.js?v=2762fd45:6299:26)
+    at Outlet (http://localhost:5174/node_modules/.vite/deps/react-router.js?v=2762fd45:7080:26)
+    at ScrollToTop (http://localhost:5174/src/app/components/ScrollToTop.tsx:22:24)
+    at RenderedRoute (http://localhost:5174/node_modules/.vite/deps/react-router.js?v=2762fd45:6299:26)
+    at RenderErrorBoundary (http://localhost:5174/node_modules/.vite/deps/react-router.js?v=2762fd45:6209:5)
+    at DataRoutes (http://localhost:5174/node_modules/.vite/deps/react-router.js?v=2762fd45:6997:3)
+    at Router (http://localhost:5174/node_modules/.vite/deps/react-router.js?v=2762fd45:7089:13)
+    at RouterProvider (http://localhost:5174/node_modules/.vite/deps/react-router.js?v=2762fd45:6763:3)
+    at App @ http://localhost:5174/node_modules/.vite/deps/chunk-NXESFFTV.js?v=2762fd45:520
