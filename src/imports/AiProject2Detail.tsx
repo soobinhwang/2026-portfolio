@@ -54,11 +54,11 @@ function OverviewSection() {
         <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
           <p className="leading-[22.5px] whitespace-pre-wrap">Figma Plugin</p>
         </div>
-        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[34px] sm:text-[42px] tracking-[-1.04px] w-full">
-          <p className="leading-[42px] sm:leading-[normal] whitespace-pre-wrap">Design Decision Note</p>
+        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-1.04px] w-full">
+          <p className="leading-[normal] whitespace-pre-wrap">Design Decision Note</p>
         </div>
         <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
-          <p className="leading-[26px]">Speeds up design decision tracking by turning scattered meeting notes into clear, labelled decision cards.</p>
+          <p className="leading-[22.5px]">Speeds up design decision tracking by turning scattered meeting notes into clear, labelled decision cards.</p>
         </div>
       </div>
       <DetailThumbnail />
@@ -129,9 +129,9 @@ function PluginDemoSection() {
 
   return (
     <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full" data-name="Plugin Demo">
-      <SectionLabel label="plugin demo" />
-      <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[28px] w-full">
-        <p className="leading-[38px] whitespace-pre-wrap">Published plugin in action</p>
+      <SectionLabel label="what i built" />
+      <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px] w-full">
+        <p className="leading-[42px] whitespace-pre-wrap">A plugin that keeps decisions where designs live</p>
       </div>
       <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={demoPlaying ? "true" : "false"}>
         <video
@@ -187,24 +187,38 @@ function WhySection() {
     <div className="content-stretch flex flex-col gap-[24px] items-start relative w-full" data-name="Why">
       <SectionLabel label="How it started" />
       <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full">
-        <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#1e242a] text-[28px] w-full">
-          <p className="leading-[38px] whitespace-pre-wrap">I’m a heavy note-taker, but in fast-paced design reviews, my notes kept getting messy and scattered.</p>
+        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px] w-full">
+          <p className="leading-[42px] whitespace-pre-wrap">Design reviews move fast. Decisions don’t always stick.</p>
         </div>
         <div className="w-[40%] bg-[#f0f3f5] rounded-[10px] overflow-hidden">
           <img loading="lazy" decoding="async" alt="Busy moment" className="block w-full h-auto object-contain" src={imgBusyMoment} />
         </div>
         <div className="flex flex-col font-geist font-normal gap-[12px] justify-center relative shrink-0 text-[#32404f] text-[16px] w-full">
-          <p className="leading-[27px] whitespace-pre-wrap">
-            With multiple stakeholders giving different feedback, decisions shifted often,
+          <p className="leading-[27px] whitespace-pre-wrap text-[#5b6a79]">
+            Multiple stakeholders give different feedback.
             <br />
-            and I lost track of what was final versus what was still a question.
+            Priorities shift mid-conversation.
           </p>
-          <p className="leading-[27px] whitespace-pre-wrap">
-            I wanted a fast, structured way to write labelled notes directly next to the design frame
+          <p className="leading-[27px] whitespace-pre-wrap text-[#5b6a79]">
+            A few days later…
             <br />
-            and share them without extra cleanup.
+            <span className="italic font-medium">“wait, what was the last decision we made again?”</span>
           </p>
-          <p className="leading-[27px] whitespace-pre-wrap">That’s what pushed me to build this Figma plugin.</p>
+          <p className="leading-[27px] whitespace-pre-wrap text-[#5b6a79]">
+            I noticed this in my own work too.
+            <br />
+            I’m a heavy note-taker, but in fast-paced reviews my notes kept getting scattered.
+            <br />
+            I lost track of what was final versus what was still a question.
+          </p>
+          <p className="leading-[27px] whitespace-pre-wrap text-[#5b6a79]">
+            I kept thinking…
+            <br />
+            <span className="italic font-medium">“what if there was a labelled note on the frame —</span>
+            <br />
+            <span className="italic font-medium">easy to update, trackable, and visible to the whole team?”</span>
+          </p>
+          <p className="leading-[27px] whitespace-pre-wrap text-[#5b6a79]">That’s what pushed me to build this plugin.</p>
         </div>
       </div>
     </div>
@@ -239,8 +253,8 @@ function FeatureBlock({
   return (
     <div className="flex flex-col gap-[20px] w-full" data-name="Feature">
       {title ? (
-        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
-          <p className="leading-[32px]">{title}</p>
+        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+          <p className="leading-[42px]">{title}</p>
         </div>
       ) : null}
       {imageSrc && enableFullView ? (
@@ -312,15 +326,30 @@ function FeatureBlock({
 }
 
 /* ───────────────────────────────────────────────
-   Section 3: Building Process
+   Section 3: How I built
    ─────────────────────────────────────────────── */
 
 function BuildingProcessSection() {
   const steps = [
     {
-      title: "Problem framing",
-      description:
-        "I diagnosed decision-context loss as a recurring collaboration cost, then used GPT to accelerate the definition, clarifying the value proposition, decision data model, UX flow, and the minimum Figma API needed to anchor decisions to frames.",
+      title: "Starting with the problem",
+      description: (
+        <>
+          First I needed to get the problem out of my head and into something structured.
+          <br />
+          I fed my personal work logs into GPT and asked it to analyze the patterns.
+          <br />
+          <br />• Where was I losing context?
+          <br />• What kind of tool could fix it?
+          <br />
+          <br />
+          From there, I worked through the details.
+          <br />
+          <br />• What's the real value?
+          <br />• How should decisions be stored?
+          <br />• What does Figma actually need?
+        </>
+      ),
       imageSrc: imgAnalyzingWorklog,
     },
     {
@@ -330,9 +359,9 @@ function BuildingProcessSection() {
       fullViewOnDark: true,
       fullViewAriaLabel: "Open scoping the MVP image full view",
       scopingPoints: [
-        "Reviewed my work logs and retrospectives to identify repetitive friction and decision-context loss.",
-        "Defined an automation approach to anchor decisions to frames.",
-        "Scoped the MVP feature set, UX flow, decision data model, and required Figma API.",
+        "Now it was time to decide what to ship for MVP.",
+        "My focus was simple: nail the core feature, ship fast, and let real feedback drive the next iteration.",
+        "The core behaviour: a labelled ready note on the frame for scanability, updatable without generating a new one every time. That was the hassle I was trying to eliminate.",
       ],
     },
     {
@@ -379,17 +408,17 @@ function BuildingProcessSection() {
   ];
 
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Building Process">
-      <SectionLabel label="Building Process" />
+    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="How I built">
+      <SectionLabel label="How I built" />
       <div className="flex flex-col gap-[110px] sm:gap-[170px] w-full">
         {steps.map((step) => (
           <div key={step.title} className="flex flex-col gap-[20px] w-full">
             {step.hideMedia ? (
-              <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
-                <p className="leading-[32px]">{step.title}</p>
-              </div>
-            ) : step.title === "Testing & Iteration" ? (
-              <>
+                <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+                  <p className="leading-[42px]">{step.title}</p>
+                </div>
+              ) : step.title === "Testing & Iteration" ? (
+                <>
                 <FeatureBlock
                   title={step.title}
                   imageSrc={step.imageSrc}
@@ -403,8 +432,8 @@ function BuildingProcessSection() {
               </>
             ) : step.title === "Official launch" ? (
               <>
-                <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
-                  <p className="leading-[32px]">{step.title}</p>
+                <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+                  <p className="leading-[42px]">{step.title}</p>
                 </div>
                 <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing="true">
                   <video

@@ -111,11 +111,11 @@ function OverviewSection() {
         <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
           <p className="leading-[22.5px] whitespace-pre-wrap">Prototype • PoC</p>
         </div>
-        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[34px] sm:text-[42px] tracking-[-1.04px] w-full">
-          <p className="leading-[42px] sm:leading-[normal] whitespace-pre-wrap">Chat GPT Feature Concepts</p>
+        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-1.04px] w-full">
+          <p className="leading-[normal] whitespace-pre-wrap">Chat GPT Feature Concepts</p>
         </div>
         <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
-          <p className="leading-[26px]">Three interaction improvements prototyped to help users navigate long chats, keep context, and act faster.</p>
+          <p className="leading-[22.5px]">Three interaction improvements prototyped to help users navigate long chats, keep context, and act faster.</p>
         </div>
       </div>
       <DetailThumbnail />
@@ -182,8 +182,8 @@ function WhySection() {
     <div className="content-stretch flex flex-col gap-[24px] items-start relative w-full" data-name="Why">
       <SectionLabel label="How it started" />
       <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full">
-        <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#1e242a] text-[28px] w-full">
-          <p className="leading-[38px] whitespace-pre-wrap">
+        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px] w-full">
+          <p className="leading-[42px] whitespace-pre-wrap">
             If you're a ChatGPT user, have you ever had that moment where you think,{" "}
             <span className="italic font-medium">I wish it did this</span>?
           </p>
@@ -256,8 +256,8 @@ function FeatureBlock({
 
   return (
     <div className="flex flex-col gap-[20px] w-full" data-name="Feature">
-      <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
-        <p className="leading-[32px]">{title}</p>
+      <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+        <p className="leading-[42px]">{title}</p>
       </div>
       <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={isPlaying ? "true" : "false"}>
         {videoSrc ? (
@@ -334,8 +334,8 @@ function BuildingProcessSection() {
       <SectionLabel label="building process" />
       <div className="content-stretch flex flex-col gap-[110px] sm:gap-[170px] items-start relative w-full">
         <div className="content-stretch flex flex-col gap-[20px] items-start relative w-full">
-          <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
-            <p className="leading-[32px]">Documented daily friction that turned into testable concepts</p>
+          <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+            <p className="leading-[42px]">Documented daily friction that turned into testable concepts</p>
           </div>
           <div className="bg-[#1e242a] w-full relative shrink-0">
             <img loading="lazy" decoding="async" alt="Problem framing" className="block w-full h-auto object-contain" src={imgProblemFraming} />
@@ -347,8 +347,8 @@ function BuildingProcessSection() {
         </div>
 
         <div className="content-stretch flex flex-col gap-[20px] items-start relative w-full">
-          <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[22px] tracking-[-0.4px]">
-            <p className="leading-[32px]">Plan, build, and troubleshoot with AI agents</p>
+          <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+            <p className="leading-[42px]">Plan, build, and troubleshoot with AI agents</p>
           </div>
           <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={isCodexVideoPlaying ? "true" : "false"}>
             <video
