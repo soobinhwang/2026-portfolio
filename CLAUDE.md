@@ -24,7 +24,10 @@
 - NEVER overlap frames — always place them side by side with at least 100px spacing between each frame
 - Always use the figma MCP tool generate_figma_design to capture pages — NEVER write custom capture scripts and NEVER open a visible browser window waiting for manual input
 - Always capture headlessly and automatically without any user interaction required
+- Always capture ALL 8 pages in a single session, one by one sequentially — never stop after the first page
+- Always use the Figma file link from this CLAUDE.md — never use a previously cached or hardcoded link
 
 ## Capture Template
 To bring all pages into Figma, just say:
 "Capture my portfolio to Figma"
+```
