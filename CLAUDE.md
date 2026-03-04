@@ -22,6 +22,7 @@
 - NEVER modify source files without explicit permission
 - Always use live Vercel site for Figma captures (never localhost)
 - NEVER overlap frames — always place them side by side with at least 100px spacing between each frame
+- Always use the Playwright MCP browser tool for captures — NEVER write custom capture scripts
 
 ## Capture Template
 To bring all pages into Figma, just say:
