@@ -6,7 +6,7 @@
 - Dev server: npm run dev (port 5174)
 
 ## Figma
-- Main file: https://www.figma.com/design/NiUKkDCaDY3C2o7tFmZFZH/2026-Portfolio-Artifacts?node-id=930-172&p=f&t=nbVgNefaFAbfvhG6-11
+- Main file: https://www.figma.com/design/NiUKkDCaDY3C2o7tFmZFZH/2026-Portfolio-Artifacts?node-id=930-172&p=f&t=DXY9ozl5zbmAziNb-0
 
 ## Pages
 - / (Landing)
