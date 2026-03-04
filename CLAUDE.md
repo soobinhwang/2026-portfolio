@@ -28,6 +28,19 @@
 - Always use the Figma file link from this CLAUDE.md — never use a previously cached or hardcoded link
 
 ## Capture Template
-To bring all pages into Figma, just say:
-"Capture my portfolio to Figma"
+When I say "Capture my portfolio to Figma", run this exact workflow:
+
+Use the figma MCP tool generate_figma_design to capture all 8 pages one by one sequentially and send each to this exact Figma file: https://www.figma.com/design/NiUKkDCaDY3C2o7tFmZFZH/2026-Portfolio-Artifacts?node-id=930-172&p=f&t=DXY9ozl5zbmAziNb-0
+
+Capture these URLs in order:
+1. https://suehwang-dsgn.vercel.app/
+2. https://suehwang-dsgn.vercel.app/ai
+3. https://suehwang-dsgn.vercel.app/ai/project-1
+4. https://suehwang-dsgn.vercel.app/ai/project-2
+5. https://suehwang-dsgn.vercel.app/about
+6. https://suehwang-dsgn.vercel.app/engagement-platform
+7. https://suehwang-dsgn.vercel.app/global-reward-storefront
+8. https://suehwang-dsgn.vercel.app/design-library
+
+Do NOT stop after the first page. Do NOT modify any source files. Do NOT open a visible browser window. Capture headlessly and automatically. Place each frame side by side with 100px spacing — never overlap frames.
 ```
