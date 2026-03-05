@@ -17,7 +17,7 @@ import ImpactSectionGRS from "./ImpactSectionGRS";
 
 function Property() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0" data-name="Property">
       <ImpactSectionGRS />
     </div>
   );
@@ -65,7 +65,7 @@ function Frame13() {
 
 function ContentSections() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0" data-name="Content Sections">
       <SectionContainer1 />
       <Frame13 />
       <MyRoleDescription />
@@ -77,10 +77,10 @@ function Frame5() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">program Structure analysis</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Sitemap Audit</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">What does discovery look like for users?</p>
+        <p className="leading-[46px] whitespace-pre-wrap">What does discovery look like for users today?</p>
       </div>
     </div>
   );
@@ -145,7 +145,7 @@ function Frame14() {
 
 function Property1() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[11] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[7] self-start shrink-0 w-full" data-name="Property">
       <Frame5 />
       <Frame14 />
       <ProgramStructureAnalysisDescription />
@@ -157,7 +157,7 @@ function Frame23() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">User Behaviour analysis</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">User Behaviour Analysis</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[46px] whitespace-pre-wrap">Why users need exploration first</p>
@@ -241,7 +241,7 @@ function Frame6() {
 
 function Property2() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[12] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[9] self-start shrink-0 w-full" data-name="Property">
       <Frame6 />
     </div>
   );
@@ -289,7 +289,7 @@ function Frame15() {
 
 function Property3() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[13] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[8] self-start shrink-0 w-full" data-name="Property">
       <Frame7 />
       <Frame15 />
       <PrioritizationDescription />
@@ -464,7 +464,7 @@ function Property5() {
 
 function ContentSections2() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Content Sections">
       <SectionContainer2 />
       <Property5 />
       <BackgroundDescription />
@@ -681,7 +681,7 @@ function Frame12() {
 
 function Property6() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Property">
       <Frame4 />
       <Frame12 />
       <ProblemDescription />
@@ -693,7 +693,7 @@ function Frame8() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Solution Overview</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Solution</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[46px] whitespace-pre-wrap">The goal was to reduce clicks</p>
@@ -731,7 +731,7 @@ function Frame16() {
 
 function Property7() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[11] self-start shrink-0" data-name="Property">
       <Frame8 />
       <Frame16 />
       <SolutionOverviewDescription />
@@ -788,7 +788,7 @@ function Frame17() {
 
 function Property8() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[8] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0" data-name="Property">
       <Frame9 />
       <Frame17 />
       <SolutionOneDescription />
@@ -845,7 +845,7 @@ function Frame18() {
 
 function Property9() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0" data-name="Property">
       <Frame10 />
       <Frame18 />
       <SolutionTwoDescription />
@@ -856,20 +856,21 @@ function Property9() {
 function SectionContainer() {
   return (
     <div className="gap-[110px] sm:gap-[170px] grid-cols-1 grid-rows-[repeat(15,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
-      <Property />
-      <ContentSections />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[10] shrink-0" data-name="Horizontal Divider" />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[14] shrink-0" data-name="Horizontal Divider" />
-      <Property1 />
-      <Property2 />
-      <Property3 />
       <ContentSections1 />
+      <ContentSections />
+      <Property />
       <ContentSections2 />
-      <ContentSections3 />
       <Property6 />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[6] shrink-0" data-name="Horizontal Divider" />
+      <Property1 />
+      <Property3 />
+      <Property2 />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[10] shrink-0" data-name="Horizontal Divider" />
       <Property7 />
       <Property8 />
       <Property9 />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[14] shrink-0" data-name="Horizontal Divider" />
+      <ContentSections3 />
     </div>
   );
 }

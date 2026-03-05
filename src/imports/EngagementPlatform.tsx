@@ -217,7 +217,7 @@ function Frame265() {
 
 function Property() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[50px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[50px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0" data-name="Property">
       <Frame255 />
       <Frame265 />
     </div>
@@ -352,7 +352,7 @@ function SectionImage() {
 
 function ContentSections() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0" data-name="Content Sections">
       <SectionContainer1 />
       <SectionImage />
       <MyRoleDescription />
@@ -461,7 +461,7 @@ function Frame268() {
 
 function Property1() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0" data-name="Property">
       <Frame258 />
       <Frame268 />
     </div>
@@ -512,7 +512,7 @@ function Frame266() {
 
 function Property2() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[15] self-start shrink-0" data-name="Property">
       <Frame256 />
       <Frame266 />
       <Solution3Description />
@@ -791,7 +791,7 @@ function Frame267() {
 
 function Property3() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[15] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0" data-name="Property">
       <Frame257 />
       <Frame267 />
       <RoadmapDescription />
@@ -937,7 +937,7 @@ function Frame269() {
 
 function Property4() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[12] shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[8] shrink-0 w-full" data-name="Property">
       <Frame259 />
       <Frame269 />
       <NeedSynthesisDescription />
@@ -1135,7 +1135,7 @@ function Frame254() {
 
 function Property5() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[10] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[16] self-start shrink-0" data-name="Property">
       <Frame260 />
       <Frame254 />
     </div>
@@ -8667,7 +8667,7 @@ function SectionContainer3() {
 
 function ContentContainer1() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[40px] items-start max-w-[774px] relative row-[8] self-start shrink-0 w-full" data-name="Content Container">
+    <div className="col-[1] content-stretch flex flex-col gap-[40px] items-start max-w-[774px] relative row-[14] self-start shrink-0 w-full" data-name="Content Container">
       <ContentSections1 />
       <SectionContainer3 />
     </div>
@@ -8841,11 +8841,7 @@ function SectionContainer5() {
 function BackgroundDescription() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">
-        {`It's a B2B SaaS rewards and recognition platform used by enterprise companies. `}
-        <br aria-hidden="true" />
-        It allows them to create branded reward programs where employees earn points and redeem them through an online storefront.
-      </p>
+      <p className="leading-[22.5px] whitespace-pre-wrap">A platform rebuilt from scratch for every new client.</p>
     </div>
   );
 }
@@ -8997,7 +8993,7 @@ function Property10() {
 
 function ContentSections4() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Content Sections">
       <SectionContainer5 />
       <Property10 />
       <BackgroundDescription />
@@ -9014,6 +9010,14 @@ function Frame261() {
       <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
         <p className="leading-[46px] whitespace-pre-wrap">Shared needs behind repeated asks</p>
       </div>
+    </div>
+  );
+}
+
+function KeyInsightsIntro() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">Repeated requests pointed to a systemic gap.</p>
     </div>
   );
 }
@@ -9128,8 +9132,9 @@ function Frame270() {
 
 function Property11() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0" data-name="Property">
       <Frame261 />
+      <KeyInsightsIntro />
       <Frame270 />
     </div>
   );
@@ -9247,7 +9252,7 @@ function SectionContainer6() {
 
 function ContentSections5() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[17] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[18] self-start shrink-0" data-name="Content Sections">
       <SectionContainer6 />
     </div>
   );
@@ -9269,11 +9274,7 @@ function Frame262() {
 function ProblemDescription() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">
-        {`As the company grew, more client programs were still being built from scratch. `}
-        <br aria-hidden="true" />
-        It wasn’t just a design problem anymore, but a system that couldn’t scale, leading to slow launches and inconsistent user experiences.
-      </p>
+      <p className="leading-[22.5px] whitespace-pre-wrap">Custom builds were slowing delivery and frustrating clients.</p>
     </div>
   );
 }
@@ -9339,7 +9340,7 @@ function Frame271() {
 
 function Property12() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Property">
       <Frame262 />
       <Frame271 />
       <ProblemDescription />
@@ -9351,7 +9352,7 @@ function SectionContainer9() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Solution Overview</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Solution</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[46px] whitespace-pre-wrap">Shared needs turned into scalable templates</p>
@@ -9387,7 +9388,7 @@ function Property13() {
 
 function ContentSections6() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[6] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0" data-name="Content Sections">
       <SectionContainer9 />
       <Property13 />
       <SolutionOverviewDescription />
@@ -10204,7 +10205,7 @@ function SectionImage1() {
 
 function ContentSections7() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[14] self-start shrink-0 w-full" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[10] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionContainer10 />
       <SectionImage1 />
       <DesignDirectionDescription />
@@ -10214,24 +10215,25 @@ function ContentSections7() {
 
 function SectionContainer() {
   return (
-    <div className="gap-[110px] sm:gap-[170px] grid-cols-1 grid-rows-[repeat(17,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
-      <Property />
-      <ContentSections />
-      <Property1 />
-      <Property2 />
-      <Property3 />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[11] shrink-0" data-name="Horizontal Divider" />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[16] shrink-0" data-name="Horizontal Divider" />
-      <Property4 />
-      <Property5 />
-      <ContentContainer1 />
+    <div className="gap-[110px] sm:gap-[170px] grid-cols-1 grid-rows-[repeat(18,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
       <ContentSections3 />
+      <ContentSections />
+      <Property />
       <ContentSections4 />
-      <Property11 />
-      <ContentSections5 />
       <Property12 />
-      <ContentSections6 />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[6] shrink-0" data-name="Horizontal Divider" />
+      <Property3 />
+      <Property4 />
+      <Property11 />
       <ContentSections7 />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[11] shrink-0" data-name="Horizontal Divider" />
+      <ContentSections6 />
+      <Property1 />
+      <ContentContainer1 />
+      <Property2 />
+      <Property5 />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[17] shrink-0" data-name="Horizontal Divider" />
+      <ContentSections5 />
     </div>
   );
 }
