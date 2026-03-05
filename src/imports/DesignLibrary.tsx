@@ -22,7 +22,7 @@ import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialo
 
 function Property() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0 w-full" data-name="Property">
       <ImpactSectionGRS
         hideThird
         impactTitle="Higher task success and user confidence"
@@ -117,7 +117,7 @@ function Frame13() {
 
 function ContentSections() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0 w-full" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionContainer1 />
       <Frame13 />
       <MyRoleDescription />
@@ -179,7 +179,7 @@ function Frame14() {
 
 function Property1() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[11] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[6] self-start shrink-0 w-full" data-name="Property">
       <Frame5 />
       <Frame14 />
       <AuditDescription />
@@ -229,7 +229,7 @@ function Frame14Requirement() {
 
 function PropertyRequirement() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[12] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[7] self-start shrink-0 w-full" data-name="Property">
       <Frame5Requirement />
       <Frame14Requirement />
       <RequirementAnalysisDescription />
@@ -467,7 +467,7 @@ function SectionContainer6() {
 
 function ContentSections3() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[14] self-start shrink-0 w-full" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[15] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionContainer6 />
     </div>
   );
@@ -541,7 +541,7 @@ function Frame12() {
 
 function Property6() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0 w-full" data-name="Property">
       <Frame4 />
       <Frame12 />
       <ProblemDescription />
@@ -595,7 +595,7 @@ function Frame16() {
 
 function Property7() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0 w-full" data-name="Property">
       <Frame8 />
       <Frame16 />
     </div>
@@ -648,7 +648,7 @@ function Frame17() {
 
 function Property8() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[6] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[10] self-start shrink-0 w-full" data-name="Property">
       <Frame9 />
       <Frame17 />
     </div>
@@ -709,7 +709,7 @@ function Frame18() {
 
 function Property9() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[11] self-start shrink-0 w-full" data-name="Property">
       <Frame10 />
       <Frame18 />
       <Solution2Description />
@@ -771,7 +771,7 @@ function Frame19() {
 
 function Property10() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[8] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0 w-full" data-name="Property">
       <Frame11 />
       <Frame19 />
       <Solution3Description />
@@ -833,7 +833,7 @@ function Frame19DesignOutcome() {
 
 function PropertyOutcome() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0 w-full" data-name="Property">
       <Frame11DesignOutcome />
       <Frame19DesignOutcome />
       <DesignOutcomeDescription />
@@ -843,21 +843,22 @@ function PropertyOutcome() {
 
 function SectionContainer() {
   return (
-    <div className="gap-[110px] sm:gap-[170px] grid-cols-1 grid-rows-[repeat(14,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
-      <Property />
+    <div className="gap-[110px] sm:gap-[170px] grid-cols-1 grid-rows-[repeat(15,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
+      <ContentSections1 />
       <ContentSections />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[10] shrink-0" data-name="Horizontal Divider" />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[13] shrink-0" data-name="Horizontal Divider" />
+      <Property />
+      <Property6 />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[5] shrink-0" data-name="Horizontal Divider" />
       <Property1 />
       <PropertyRequirement />
-      <ContentSections1 />
-      <ContentSections3 />
-      <Property6 />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[8] shrink-0" data-name="Horizontal Divider" />
       <Property7 />
       <Property8 />
       <Property9 />
       <Property10 />
       <PropertyOutcome />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[14] shrink-0" data-name="Horizontal Divider" />
+      <ContentSections3 />
     </div>
   );
 }
