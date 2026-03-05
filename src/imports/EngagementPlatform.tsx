@@ -354,8 +354,8 @@ function ContentSections() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0" data-name="Content Sections">
       <SectionContainer1 />
-      <SectionImage />
       <MyRoleDescription />
+      <SectionImage />
     </div>
   );
 }
@@ -514,8 +514,8 @@ function Property2() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[15] self-start shrink-0" data-name="Property">
       <Frame256 />
-      <Frame266 />
       <Solution3Description />
+      <Frame266 />
     </div>
   );
 }
@@ -793,8 +793,8 @@ function Property3() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0" data-name="Property">
       <Frame257 />
-      <Frame267 />
       <RoadmapDescription />
+      <Frame267 />
     </div>
   );
 }
@@ -939,8 +939,8 @@ function Property4() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[8] shrink-0 w-full" data-name="Property">
       <Frame259 />
-      <Frame269 />
       <NeedSynthesisDescription />
+      <Frame269 />
     </div>
   );
 }
@@ -8997,8 +8997,8 @@ function ContentSections4() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Content Sections">
       <SectionContainer5 />
-      <Property10 />
       <BackgroundDescription />
+      <Property10 />
     </div>
   );
 }
@@ -9019,7 +9019,7 @@ function Frame261() {
 function KeyInsightsIntro() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">Repeated requests pointed to a systemic gap.</p>
+      <p className="leading-[22.5px] whitespace-pre-wrap"></p>
     </div>
   );
 }
@@ -9274,9 +9274,6 @@ function ProblemDescription() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
       <p className="leading-[22.5px] whitespace-pre-wrap">
-        Custom builds were slowing delivery and frustrating clients.
-        <br />
-        <br />
         As the company grew, more client programs were still being built from scratch. It wasn’t just a design problem anymore, but a system that couldn’t scale, leading to slow launches and inconsistent user experiences.
       </p>
     </div>
@@ -9346,8 +9343,8 @@ function Property12() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Property">
       <Frame262 />
-      <Frame271 />
       <ProblemDescription />
+      <Frame271 />
     </div>
   );
 }
@@ -10211,8 +10208,8 @@ function ContentSections7() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[10] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionContainer10 />
-      <SectionImage1 />
       <DesignDirectionDescription />
+      <SectionImage1 />
     </div>
   );
 }
