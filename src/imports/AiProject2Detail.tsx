@@ -49,8 +49,8 @@ function DetailThumbnail() {
 
 function OverviewSection() {
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Overview">
-      <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Overview">
+      <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full">
         <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
           <p className="leading-[22.5px] whitespace-pre-wrap">Figma Plugin</p>
         </div>
@@ -184,7 +184,7 @@ function PluginDemoSection() {
 
 function WhySection() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start relative w-full" data-name="Why">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Why">
       <SectionLabel label="How it started" />
       <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full">
         <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px] w-full">
@@ -408,7 +408,7 @@ function BuildingProcessSection() {
   ];
 
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="How I built">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="How I built">
       <SectionLabel label="How I built" />
       <div className="flex flex-col gap-[110px] sm:gap-[170px] w-full">
         {steps.map((step) => (

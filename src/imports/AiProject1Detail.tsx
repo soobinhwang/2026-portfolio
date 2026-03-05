@@ -106,8 +106,8 @@ function DetailThumbnail() {
 
 function OverviewSection() {
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Overview">
-      <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Overview">
+      <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full">
         <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
           <p className="leading-[22.5px] whitespace-pre-wrap">Prototype • PoC</p>
         </div>
@@ -179,7 +179,7 @@ function OverviewSection() {
 
 function WhySection() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start relative w-full" data-name="Why">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Why">
       <SectionLabel label="How it started" />
       <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full">
         <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px] w-full">
@@ -206,9 +206,9 @@ function WhySection() {
 
 function FeatureScopeSection() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start relative w-full" data-name="Feature Scope">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Feature Scope">
       <SectionLabel label="concept overview" />
-      <div className="flex flex-col gap-[10px] w-full">
+      <div className="flex flex-col gap-[16px] w-full">
         <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#dbe4ec] bg-[#f4f8fb] px-[14px] py-[12px]">
           <div className="font-geist-mono text-[12px] text-[#5b6a79] uppercase leading-[22.5px]">Goal</div>
           <p className="font-geist font-normal text-[16px] text-[#4e5e6d] leading-[26px]">
@@ -295,7 +295,7 @@ function FeatureBlock({
 
 function WhatIMadeSection() {
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="What I Made">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="What I Made">
       <SectionLabel label="what i built" />
       <div className="flex flex-col gap-[110px] sm:gap-[170px] w-full">
         <FeatureBlock
@@ -330,7 +330,7 @@ function BuildingProcessSection() {
   const [isCodexVideoPlaying, setIsCodexVideoPlaying] = useState(false);
 
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Building Process">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Building Process">
       <SectionLabel label="building process" />
       <div className="content-stretch flex flex-col gap-[110px] sm:gap-[170px] items-start relative w-full">
         <div className="content-stretch flex flex-col gap-[20px] items-start relative w-full">
@@ -383,9 +383,9 @@ function BuildingProcessSection() {
 
 function TryItSection() {
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Try It">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Try It">
       <SectionLabel label="try it on your own" />
-      <div className="grid grid-cols-1 gap-[32px] w-full">
+      <div className="grid grid-cols-1 gap-[16px] w-full">
         <div className="content-stretch flex flex-col gap-[14px] items-start relative">
           <a
             href="https://chatgpt-ux-improvements.vercel.app"

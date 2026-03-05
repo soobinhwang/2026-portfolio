@@ -67,7 +67,7 @@ import imgDesignOutcome1 from "../assets/work/engagement-platform/Design Outcome
 
 function Frame255() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase whitespace-nowrap">
         <p className="leading-[22.5px]">impact</p>
       </div>
@@ -199,7 +199,7 @@ function Container() {
   }, []);
 
   return (
-    <div ref={containerRef} className="content-stretch grid grid-cols-1 min-[481px]:grid-cols-3 gap-[24px] min-[481px]:gap-[40px] items-start relative w-full" data-name="Container">
+    <div ref={containerRef} className="content-stretch grid grid-cols-1 min-[481px]:grid-cols-3 gap-[16px] min-[481px]:gap-[40px] items-start relative w-full" data-name="Container">
       <Container2 isVisible={isVisible} />
       <Container3 isVisible={isVisible} />
       <Container1 isVisible={isVisible} />
@@ -226,7 +226,7 @@ function Property() {
 
 function SectionContainer1() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase whitespace-nowrap">
         <p className="leading-[22.5px]">My Role</p>
       </div>
@@ -352,7 +352,7 @@ function SectionImage() {
 
 function ContentSections() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0" data-name="Content Sections">
       <SectionContainer1 />
       <SectionImage />
       <MyRoleDescription />
@@ -362,12 +362,12 @@ function ContentSections() {
 
 function Frame258() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 1</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Page structure: prioritizing what users do</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Page structure: Prioritizing what users do</p>
       </div>
       <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">To support clarity and predictability, the key design decision was to split the landing page into 3 clear sections based on the user intent.</p>
@@ -444,7 +444,7 @@ function Container6() {
 
 function Frame1() {
   return (
-    <div className="content-stretch flex flex-col sm:flex-row gap-[32px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[16px] items-start relative shrink-0 w-full">
       <Container4 />
       <Container6 />
     </div>
@@ -461,7 +461,7 @@ function Frame268() {
 
 function Property1() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0" data-name="Property">
       <Frame258 />
       <Frame268 />
     </div>
@@ -470,7 +470,7 @@ function Property1() {
 
 function Frame256() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.38)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 3</p>
       </div>
@@ -512,7 +512,7 @@ function Frame266() {
 
 function Property2() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[15] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[15] self-start shrink-0" data-name="Property">
       <Frame256 />
       <Frame266 />
       <Solution3Description />
@@ -522,7 +522,7 @@ function Property2() {
 
 function Frame257() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">roadmap</p>
       </div>
@@ -728,7 +728,7 @@ function Frame199() {
 
 function Frame200() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[10px] items-start left-[45px] top-[38px] w-[683px]">
+    <div className="absolute content-stretch flex flex-col gap-[16px] items-start left-[45px] top-[38px] w-[683px]">
       <Frame187 />
       <Frame198 />
       <Frame199 />
@@ -791,7 +791,7 @@ function Frame267() {
 
 function Property3() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0" data-name="Property">
       <Frame257 />
       <Frame267 />
       <RoadmapDescription />
@@ -801,7 +801,7 @@ function Property3() {
 
 function Frame259() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Need Synthesis</p>
       </div>
@@ -937,7 +937,7 @@ function Frame269() {
 
 function Property4() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[8] shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[8] shrink-0 w-full" data-name="Property">
       <Frame259 />
       <Frame269 />
       <NeedSynthesisDescription />
@@ -947,7 +947,7 @@ function Property4() {
 
 function Frame260() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">design outcome</p>
       </div>
@@ -1029,7 +1029,7 @@ function Container10() {
 
 function Frame2() {
   return (
-    <div className="content-stretch flex flex-col sm:flex-row gap-[32px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[16px] items-start relative shrink-0 w-full">
       <Container8 />
       <Container10 />
     </div>
@@ -1117,7 +1117,7 @@ function Container14() {
 
 function Frame3() {
   return (
-    <div className="content-stretch flex flex-col sm:flex-row gap-[32px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[16px] items-start relative shrink-0 w-full">
       <Container12 />
       <Container14 />
     </div>
@@ -1135,7 +1135,7 @@ function Frame254() {
 
 function Property5() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[16] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[16] self-start shrink-0" data-name="Property">
       <Frame260 />
       <Frame254 />
     </div>
@@ -1144,7 +1144,7 @@ function Property5() {
 
 function SectionContainer2() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 2</p>
       </div>
@@ -8520,7 +8520,7 @@ function Component12ColWidget() {
 
 function Frame264() {
   return (
-    <div className="-translate-y-1/2 absolute content-stretch flex flex-col gap-[10px] items-start left-[518px] top-[calc(50%-0.27px)] w-[223px]">
+    <div className="-translate-y-1/2 absolute content-stretch flex flex-col gap-[16px] items-start left-[518px] top-[calc(50%-0.27px)] w-[223px]">
       <Frame28 />
       <Frame42 />
       <Component12ColWidget />
@@ -8571,7 +8571,7 @@ function ContentSections2() {
 
 function ContentSections1() {
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full" data-name="Content Sections">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Content Sections">
       <SectionContainer2 />
       <ContentSections2 />
     </div>
@@ -8650,7 +8650,7 @@ function Container19() {
 
 function SectionContainer4() {
   return (
-    <div className="content-stretch flex flex-col sm:flex-row gap-[32px] items-start relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[16px] items-start relative shrink-0 w-full" data-name="Section Container">
       <Container17 />
       <Container19 />
     </div>
@@ -8676,7 +8676,7 @@ function ContentContainer1() {
 
 function SectionHeader1() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Header">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Header">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">HR Tech</p>
       </div>
@@ -8817,7 +8817,7 @@ function Property9() {
 
 function ContentSections3() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] pt-[48px] relative row-[1] self-start shrink-0 w-full" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] pt-[48px] relative row-[1] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionHeader1 />
       <Thumbnail />
       <Property9 />
@@ -8827,12 +8827,12 @@ function ContentSections3() {
 
 function SectionContainer5() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Background</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">{`What's Rewards & Recognition product?`}</p>
+        <p className="leading-[46px] whitespace-pre-wrap">A platform rebuilt from scratch for every new client.</p>
       </div>
     </div>
   );
@@ -8841,7 +8841,9 @@ function SectionContainer5() {
 function BackgroundDescription() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">A platform rebuilt from scratch for every new client.</p>
+      <p className="leading-[22.5px] whitespace-pre-wrap">
+        It&apos;s a B2B SaaS rewards and recognition platform used by enterprise companies. It allows them to create branded reward programs where employees earn points and redeem them through an online storefront.
+      </p>
     </div>
   );
 }
@@ -8993,7 +8995,7 @@ function Property10() {
 
 function ContentSections4() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0" data-name="Content Sections">
       <SectionContainer5 />
       <Property10 />
       <BackgroundDescription />
@@ -9003,7 +9005,7 @@ function ContentSections4() {
 
 function Frame261() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase whitespace-nowrap">
         <p className="leading-[22.5px]">Key insights</p>
       </div>
@@ -9114,7 +9116,7 @@ function Container30() {
 
 function Container27() {
   return (
-    <div className="content-stretch flex flex-col sm:flex-row gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Container">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[16px] items-start justify-center relative shrink-0 w-full" data-name="Container">
       <Container28 />
       <Container29 />
       <Container30 />
@@ -9132,7 +9134,7 @@ function Frame270() {
 
 function Property11() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0" data-name="Property">
       <Frame261 />
       <KeyInsightsIntro />
       <Frame270 />
@@ -9142,7 +9144,7 @@ function Property11() {
 
 function SectionContainer7() {
   return (
-    <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">outcome</p>
       </div>
@@ -9153,12 +9155,12 @@ function SectionContainer7() {
 function SubsectionContainer4() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subsection Container">
-      <ul className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
-        <li className="flex gap-[10px] items-start">
+      <ul className="content-stretch flex flex-col font-geist font-normal gap-[16px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
+        <li className="flex gap-[16px] items-start">
           <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
           <span className="leading-[26px] whitespace-pre-wrap">Established consistent, on-brand experiences across programmes</span>
         </li>
-        <li className="flex gap-[10px] items-start">
+        <li className="flex gap-[16px] items-start">
           <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
           <span className="leading-[26px] whitespace-pre-wrap">Enabled clearer self-service CMS configuration with less developer involvement.</span>
         </li>
@@ -9173,7 +9175,6 @@ function SectionContainer8() {
       <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.3px] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">{`Product & UX`}</p>
       </div>
-      <div aria-hidden="true" className="bg-[#d6dce1] h-px w-[56px]" />
       <SubsectionContainer4 />
     </div>
   );
@@ -9182,12 +9183,12 @@ function SectionContainer8() {
 function SubsectionContainer6() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subsection Container">
-      <ul className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
-        <li className="flex gap-[10px] items-start">
+      <ul className="content-stretch flex flex-col font-geist font-normal gap-[16px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
+        <li className="flex gap-[16px] items-start">
           <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
           <span className="leading-[26px] whitespace-pre-wrap">Reduced minor change requests and eliminated repeated one-off design and development work</span>
         </li>
-        <li className="flex gap-[10px] items-start">
+        <li className="flex gap-[16px] items-start">
           <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
           <span className="leading-[26px] whitespace-pre-wrap">Freed up capacity for longer-term roadmap initiatives.</span>
         </li>
@@ -9202,7 +9203,6 @@ function SubsectionContainer5() {
       <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.3px] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">{`Team & Ops`}</p>
       </div>
-      <div aria-hidden="true" className="bg-[#d6dce1] h-px w-[56px]" />
       <SubsectionContainer6 />
     </div>
   );
@@ -9211,12 +9211,12 @@ function SubsectionContainer5() {
 function SubsectionContainer8() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subsection Container">
-      <ul className="content-stretch flex flex-col font-geist font-normal gap-[10px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
-        <li className="flex gap-[10px] items-start">
+      <ul className="content-stretch flex flex-col font-geist font-normal gap-[16px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
+        <li className="flex gap-[16px] items-start">
           <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
           <span className="leading-[26px] whitespace-pre-wrap">Supported more client programmes without increasing headcount</span>
         </li>
-        <li className="flex gap-[10px] items-start">
+        <li className="flex gap-[16px] items-start">
           <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
           <span className="leading-[26px] whitespace-pre-wrap">Contributed to a 30% revenue increase in the first year after rollout</span>
         </li>
@@ -9231,7 +9231,6 @@ function SubsectionContainer7() {
       <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.3px] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">Business</p>
       </div>
-      <div aria-hidden="true" className="bg-[#d6dce1] h-px w-[56px]" />
       <SubsectionContainer8 />
     </div>
   );
@@ -9239,7 +9238,7 @@ function SubsectionContainer7() {
 
 function SectionContainer6() {
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Section Container">
       <SectionContainer7 />
       <div className="content-stretch grid grid-cols-1 sm:grid-cols-3 gap-[36px] items-start w-full">
         <SectionContainer8 />
@@ -9252,7 +9251,7 @@ function SectionContainer6() {
 
 function ContentSections5() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[18] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[18] self-start shrink-0" data-name="Content Sections">
       <SectionContainer6 />
     </div>
   );
@@ -9260,7 +9259,7 @@ function ContentSections5() {
 
 function Frame262() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Problem</p>
       </div>
@@ -9274,7 +9273,12 @@ function Frame262() {
 function ProblemDescription() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">Custom builds were slowing delivery and frustrating clients.</p>
+      <p className="leading-[22.5px] whitespace-pre-wrap">
+        Custom builds were slowing delivery and frustrating clients.
+        <br />
+        <br />
+        As the company grew, more client programs were still being built from scratch. It wasn’t just a design problem anymore, but a system that couldn’t scale, leading to slow launches and inconsistent user experiences.
+      </p>
     </div>
   );
 }
@@ -9340,7 +9344,7 @@ function Frame271() {
 
 function Property12() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0" data-name="Property">
       <Frame262 />
       <Frame271 />
       <ProblemDescription />
@@ -9350,7 +9354,7 @@ function Property12() {
 
 function SectionContainer9() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution</p>
       </div>
@@ -9388,7 +9392,7 @@ function Property13() {
 
 function ContentSections6() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0" data-name="Content Sections">
       <SectionContainer9 />
       <Property13 />
       <SolutionOverviewDescription />
@@ -9398,7 +9402,7 @@ function ContentSections6() {
 
 function SectionContainer10() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Design direction</p>
       </div>
@@ -10248,7 +10252,7 @@ function ContentContainer() {
 
 function MainContent() {
   return (
-    <div className="content-stretch flex gap-[32px] items-start max-w-[774px] relative shrink-0 w-full" data-name="Main Content">
+    <div className="content-stretch flex gap-[16px] items-start max-w-[774px] relative shrink-0 w-full" data-name="Main Content">
       <ContentContainer />
     </div>
   );
