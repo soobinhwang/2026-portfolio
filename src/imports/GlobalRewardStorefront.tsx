@@ -301,7 +301,7 @@ function SectionHeader() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[10px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Header">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Commerce</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">E-commerce</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-1.04px] w-full">
         <p className="leading-[normal] whitespace-pre-wrap">Global Reward Storefront</p>

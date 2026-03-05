@@ -170,10 +170,10 @@ function InfoContainer() {
       data-name="Info Container"
     >
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">{`Rewards & Recognition Engagement Product`}</p>
+        <p className="leading-[28px] sm:leading-[38px]">{`Rewards & Recognition Platform`}</p>
       </div>
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Enterprise · CMS</p>
+        <p className="leading-[20px] sm:leading-[22.5px]">HR Tech</p>
       </div>
     </div>
   );
@@ -212,7 +212,7 @@ function InfoContainer1() {
         <p className="leading-[28px] sm:leading-[38px]">Global Reward Storefront</p>
       </div>
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Commerce</p>
+        <p className="leading-[20px] sm:leading-[22.5px]">E-commerce</p>
       </div>
     </div>
   );
@@ -297,7 +297,7 @@ function InfoContainer3() {
         <p className="leading-[28px] sm:leading-[38px]">Budget & Incentive Manager</p>
       </div>
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Data Visualization</p>
+        <p className="leading-[20px] sm:leading-[22.5px]">Design System</p>
       </div>
     </div>
   );
