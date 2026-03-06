@@ -80,7 +80,7 @@ function Frame5() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Sitemap Audit</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Three frictions that hid the storefront’s full value</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Three frictions that slowed reward discovery{"\n"}and hid the storefront’s full value</p>
       </div>
     </div>
   );
@@ -449,7 +449,7 @@ function SectionContainer2() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Background</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">A platform rebuilt from scratch for every new client.</p>
+        <p className="leading-[46px] whitespace-pre-wrap">Employees redeem points for rewards in the storefront</p>
       </div>
     </div>
   );
@@ -459,7 +459,7 @@ function BackgroundDescription() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
       <p className="leading-[22.5px] whitespace-pre-wrap">
-        It&apos;s a B2B SaaS rewards and recognition platform used by enterprise companies. It allows them to create branded reward programs where employees earn points and redeem them through an online storefront.
+        Global Rewards Storefront is the redemption layer of the engagement platform, where employees redeem points for products, gift cards, or experiences.
       </p>
     </div>
   );

@@ -119,8 +119,8 @@ function ContentSections() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionContainer1 />
-      <Frame13 />
       <MyRoleDescription />
+      <Frame13 />
     </div>
   );
 }
@@ -181,8 +181,8 @@ function Property1() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[6] self-start shrink-0 w-full" data-name="Property">
       <Frame5 />
-      <Frame14 />
       <AuditDescription />
+      <Frame14 />
     </div>
   );
 }
@@ -231,8 +231,8 @@ function PropertyRequirement() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[7] self-start shrink-0 w-full" data-name="Property">
       <Frame5Requirement />
-      <Frame14Requirement />
       <RequirementAnalysisDescription />
+      <Frame14Requirement />
     </div>
   );
 }
@@ -540,8 +540,8 @@ function Property6() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0 w-full" data-name="Property">
       <Frame4 />
-      <Frame12 />
       <ProblemDescription />
+      <Frame12 />
     </div>
   );
 }
@@ -708,8 +708,8 @@ function Property9() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[11] self-start shrink-0 w-full" data-name="Property">
       <Frame10 />
-      <Frame18 />
       <Solution2Description />
+      <Frame18 />
     </div>
   );
 }
@@ -770,8 +770,8 @@ function Property10() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0 w-full" data-name="Property">
       <Frame11 />
-      <Frame19 />
       <Solution3Description />
+      <Frame19 />
     </div>
   );
 }
@@ -832,8 +832,8 @@ function PropertyOutcome() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0 w-full" data-name="Property">
       <Frame11DesignOutcome />
-      <Frame19DesignOutcome />
       <DesignOutcomeDescription />
+      <Frame19DesignOutcome />
     </div>
   );
 }
