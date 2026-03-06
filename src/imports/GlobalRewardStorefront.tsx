@@ -10,6 +10,7 @@ import imgChallenge1 from "../assets/work/reward-storefront/Challenge 1.png";
 import imgChallenge2 from "../assets/work/reward-storefront/Challenge 2.png";
 import imgDesignOutcome from "../assets/work/reward-storefront/Design Outcome.png";
 import imgStar from "../assets/work/reward-storefront/star.png";
+import imgUserBehaviourAnalysis from "../assets/work/reward-storefront/User Behaviour Analysis.png";
 import videoSolution1 from "../assets/work/reward-storefront/Solution 1.mp4";
 import videoSolution2 from "../assets/work/reward-storefront/Solution 2.mp4";
 import NavBar from "../app/components/NavBar";
@@ -170,7 +171,7 @@ function ProgramStructureAnalysisDescription() {
         I reviewed the end-to-end redeeming flow to see where discovery broke down.
         <br />
         <br />
-        This revealed three friction points:
+        This revealed 3 friction points:
       </p>
       <ol className="list-decimal pl-[20px] mt-[8px] space-y-[4px] leading-[22.5px]">
         <li>
@@ -264,19 +265,26 @@ function Frame23() {
   );
 }
 
+function UserBehaviourAnalysisImage() {
+  return (
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="User Behaviour Analysis Image">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgUserBehaviourAnalysis} />
+      </div>
+      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+    </div>
+  );
+}
+
 function Frame19() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col items-center justify-center size-full">
-      <div className="content-stretch flex flex-col font-geist font-normal gap-[16px] items-center justify-center leading-[0] p-[24px] relative text-[16px] w-full">
-          <div className="flex flex-col justify-center relative shrink-0 text-[#32404f] w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Rewards users arrive without purchase intent</p>
-          </div>
-          <div className="flex flex-col justify-center relative shrink-0 text-[#858e97] w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Unlike traditional e-commerce, rewards users don’t visit with a specific product in mind. Infrequent visits to spend accumulated points make exploration more important than search.</p>
-          </div>
-        </div>
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[12px] items-start relative shrink-0 text-[16px] w-full">
+      <div className="flex flex-col justify-center relative shrink-0 text-[#32404f] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">1. Reward users arrive without purchase intent</p>
+      </div>
+      <div className="flex flex-col justify-center relative shrink-0 text-[#858e97] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">{`Unlike traditional e-commerce, reward users typically come to browse rather than search for 
+a specific item.`}</p>
       </div>
     </div>
   );
@@ -284,17 +292,12 @@ function Frame19() {
 
 function Frame20() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col items-center justify-center size-full">
-      <div className="content-stretch flex flex-col font-geist font-normal gap-[16px] items-center justify-center leading-[0] p-[24px] relative text-[16px] w-full">
-          <div className="flex flex-col justify-center relative shrink-0 text-[#32404f] w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Infrequent visits weaken product awareness</p>
-          </div>
-          <div className="flex flex-col justify-center relative shrink-0 text-[#858e97] w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Because users don’t visit often, they don’t have a clear sense of what the store offers. Over time, it becomes hard to understand the full breadth of rewards.</p>
-          </div>
-        </div>
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[12px] items-start relative shrink-0 text-[16px] w-full">
+      <div className="flex flex-col justify-center relative shrink-0 text-[#32404f] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">2. Infrequent visits weaken product awareness</p>
+      </div>
+      <div className="flex flex-col justify-center relative shrink-0 text-[#858e97] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Because points take time to accumulate, visits are occasional, and users don’t build a strong mental model of what the store offers.</p>
       </div>
     </div>
   );
@@ -302,17 +305,12 @@ function Frame20() {
 
 function Frame21() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col items-center justify-center size-full">
-      <div className="content-stretch flex flex-col font-geist font-normal gap-[16px] items-center justify-center leading-[0] p-[24px] relative text-[16px] w-full">
-          <div className="flex flex-col justify-center relative shrink-0 text-[#32404f] w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Search fails without prior discovery</p>
-          </div>
-          <div className="flex flex-col justify-center relative shrink-0 text-[#858e97] w-full">
-            <p className="leading-[22.5px] whitespace-pre-wrap">Search only works once users know what exists. Without upfront visibility into available options, users don’t know what to search for and disengage early.</p>
-          </div>
-        </div>
+    <div className="content-stretch flex flex-col font-geist font-normal gap-[12px] items-start relative shrink-0 text-[16px] w-full">
+      <div className="flex flex-col justify-center relative shrink-0 text-[#32404f] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">3. Search fails without prior discovery</p>
+      </div>
+      <div className="flex flex-col justify-center relative shrink-0 text-[#858e97] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Without early visibility into the full breadth of available rewards, users don’t know what to search for.</p>
       </div>
     </div>
   );
@@ -321,6 +319,9 @@ function Frame21() {
 function Frame22() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">This revealed 3 behaviour patterns that create discovery friction:</p>
+      </div>
       <Frame19 />
       <Frame20 />
       <Frame21 />
@@ -332,6 +333,7 @@ function Frame6() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative shrink-0 w-full">
       <Frame23 />
+      <UserBehaviourAnalysisImage />
       <Frame22 />
     </div>
   );
