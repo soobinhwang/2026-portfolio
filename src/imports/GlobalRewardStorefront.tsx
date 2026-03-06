@@ -849,7 +849,7 @@ function Frame16() {
 
 function Property7() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[11] self-start shrink-0" data-name="Property">
       <Frame8 />
       <SolutionOverviewDescription />
       <Frame16 />
@@ -998,8 +998,8 @@ function SectionContainer() {
       <Property1 />
       <Property3 />
       <Property2 />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[11] shrink-0" data-name="Horizontal Divider" />
       <Property7 />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[12] shrink-0" data-name="Horizontal Divider" />
       <Property8 />
       <Property9 />
       <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[15] shrink-0" data-name="Horizontal Divider" />
