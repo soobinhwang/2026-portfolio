@@ -101,7 +101,7 @@ export default function Footer({
             <a className="hover:text-[#1e242a] transition-colors" href="https://github.com/soobinhwang" target="_blank" rel="noreferrer">
               Github
             </a>
-            <a className="hover:text-[#1e242a] transition-colors" href="https://www.linkedin.com/in/sue-uxdesigner/" target="_blank" rel="noreferrer">
+            <a className="hover:text-[#1e242a] transition-colors" href="https://www.linkedin.com/in/sue-product-dsgn/" target="_blank" rel="noreferrer">
               LinkedIn
             </a>
           </div>

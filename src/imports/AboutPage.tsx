@@ -93,9 +93,9 @@ function LinkedInIconContainer() {
 
 function LinkedInLink() {
   return (
-    <div className="relative shrink-0 size-[24px]" data-name="LinkedIn Link">
+    <a href="https://www.linkedin.com/in/sue-product-dsgn/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="relative shrink-0 size-[24px] block">
       <LinkedInIconContainer />
-    </div>
+    </a>
   );
 }
 
@@ -134,9 +134,9 @@ function GitHubIconContainer() {
 
 function GitHubLink() {
   return (
-    <div className="relative shrink-0 size-[24px]" data-name="GitHub Link">
+    <a href="https://github.com/soobinhwang" target="_blank" rel="noreferrer" aria-label="GitHub" className="relative shrink-0 size-[24px] block">
       <GitHubIconContainer />
-    </div>
+    </a>
   );
 }
 

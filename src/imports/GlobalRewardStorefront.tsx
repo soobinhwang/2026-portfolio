@@ -534,7 +534,7 @@ function SectionContainer2() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Background</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Context</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
         <p className="leading-[46px] whitespace-pre-wrap">Employees redeem points for rewards in the storefront</p>
