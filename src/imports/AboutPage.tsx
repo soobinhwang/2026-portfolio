@@ -45,14 +45,9 @@ function ProfileDescriptionContainer() {
       <div className="flex flex-col font-newsreader justify-center leading-[0] relative shrink-0 text-[#32404f] text-[28px] sm:text-[39px] tracking-[-1.04px] w-full">
         <p className="leading-[34px] sm:leading-[44px] whitespace-pre-wrap">Sue is a Product Designer</p>
       </div>
-      <div className="flex flex-col font-geist justify-center leading-[24px] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-full whitespace-pre-wrap">
-        <p className="mb-0">who believes growth is something we do together. I love creating spaces where people can learn from each other, stay curious, and feel comfortable asking any questions.</p>
-        <p className="mb-0">&nbsp;</p>
-        <p>
-          {`Design is how I live my values of humanity, growth, and doing my best work. I care about building products that quietly make everyday life easier, especially for people who may have fewer options or more barriers. `}
-          <br aria-hidden="true" />
-          <br aria-hidden="true" />I see design as a responsibility as much as a craft, and that sense of impact is what keeps me creating.
-        </p>
+      <div className="flex flex-col font-geist justify-center leading-[26px] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-full">
+        <p className="mb-[16px]">with 3+ years designing enterprise B2B SaaS products at scale. At CarltonOne, I owned end-to-end design across a rewards and recognition platform serving 500+ enterprise clients — from discovery and IA through system design and launch, across multiple product lines and user roles.</p>
+        <p>I work best on hard, ambiguous problems: where the brief is vague, the constraints are real, and someone needs to move before next week. I bring clarity — through structured thinking, fast prototyping, and a bias toward getting something testable in front of people as early as possible.</p>
       </div>
     </div>
   );
@@ -161,6 +156,24 @@ function ContentColumn() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Content Column">
       <ProfileDescriptionContainer />
+      <div className="flex flex-row gap-[12px] items-center">
+        <a
+          href="https://cal.com/sue-hwang-dwcdjs"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-[#1e242a] hover:bg-[#2a3138] transition-colors duration-200 flex gap-[8px] items-center justify-center px-[16px] py-[8px] rounded-[24px]"
+        >
+          <span className="font-geist-mono font-medium text-white text-[13px] tracking-[-0.3px] uppercase leading-[20px] whitespace-nowrap">Let's Chat</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/sue-product-dsgn/"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-[#f0f3f5] hover:bg-[#e8ecf0] transition-colors duration-200 flex gap-[8px] items-center justify-center px-[16px] py-[8px] rounded-[24px]"
+        >
+          <span className="font-geist-mono font-medium text-[#1e242a] text-[13px] tracking-[-0.3px] uppercase leading-[20px] whitespace-nowrap">LinkedIn</span>
+        </a>
+      </div>
     </div>
   );
 }
@@ -752,15 +765,8 @@ function AwardsContainer() {
 function PublicSpeakingEventContainer() {
   return (
     <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end relative shrink-0 text-[rgba(50,64,79,0.58)] w-full sm:w-auto" data-name="Public Speaking Event Container">
-      <div className="flex flex-col justify-center relative shrink-0 text-[0px]">
-        <p className="text-[13px] sm:text-[14px]">
-          <span className="leading-[24px]">{`Target `}</span>
-          <span className="font-geist font-extralight leading-[24px]">X</span>
-          <span className="leading-[24px]">{` Adobe`}</span>
-        </p>
-      </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[13px] sm:text-[14px]">
-        <p className="leading-[24px] sm:whitespace-nowrap">Oct 2021</p>
+        <p className="leading-[24px] sm:whitespace-nowrap">Jan 3, 2022</p>
       </div>
     </div>
   );
@@ -770,7 +776,7 @@ function PublicSpeakingContent() {
   return (
     <div className="content-stretch flex flex-col sm:flex-row sm:items-start sm:justify-between gap-[4px] sm:gap-0 relative shrink-0 tracking-[-0.25px] w-full" data-name="Public Speaking Content">
       <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
-        <p className="leading-[24px]">Thriving Success in Design Competitions</p>
+        <p className="leading-[24px]">Achieving Success in Design Competitions</p>
       </div>
       <PublicSpeakingEventContainer />
     </div>
@@ -983,10 +989,49 @@ function WritingsContainer() {
   );
 }
 
+function StandOutItem({ title, body }: { title: string; body: string }) {
+  return (
+    <div className="flex flex-col gap-[6px] relative shrink-0 w-full">
+      <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
+        <p className="leading-[24px]">{title}</p>
+      </div>
+      <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px]">
+        <p className="leading-[26px]">{body}</p>
+      </div>
+    </div>
+  );
+}
+
+function WhatMakesMeStandOut() {
+  return (
+    <div className="content-stretch flex flex-col gap-[32px] items-start pb-[48px] relative shrink-0 w-full">
+      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] uppercase">
+        <p className="leading-[24px]">What makes me stand out</p>
+      </div>
+      <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full">
+        <StandOutItem
+          title="I build with AI, not just talk about it."
+          body="I use Claude Code, Figma Make, Cursor, and Google AI Studio as actual workflow tools — not side experiments. I built the Figma plugin in this portfolio. I vibe-coded parts of this site. I led internal AI workshops that changed how fast the team could ship concepts."
+        />
+        <StandOutItem
+          title="I bridge design and delivery."
+          body="I've shipped design systems, written front-end code, and worked closely enough with engineers to know what 'hard to build' actually means. That makes my designs more realistic and my handoffs cleaner — feature delivery time dropped ~33% after we shipped the design system together."
+        />
+        <StandOutItem
+          title="I've operated at enterprise scale."
+          body="500+ clients, Goldman Sachs investor sign-off, C-suite alignment on product strategy. I'm comfortable in rooms where design decisions carry real business consequences."
+        />
+      </div>
+      <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
+    </div>
+  );
+}
+
 function MainFrame2() {
   return (
     <div className="content-stretch flex flex-col gap-[138px] items-start relative shrink-0 w-full" data-name="Main Frame">
       <MainContainer />
+      <WhatMakesMeStandOut />
       <ExperienceContainer />
       <WritingsContainer />
     </div>
@@ -1012,9 +1057,9 @@ function MainFrame() {
 
 export default function AboutPage() {
   return (
-    <div className="bg-dot-grid min-h-screen flex flex-col relative w-full" data-name="About Page">
+    <div className="bg-dot-grid-soft-center min-h-screen flex flex-col relative w-full" data-name="About Page">
       <MainFrame />
-      <Footer maxWidthClass="max-w-[550px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
+      <Footer maxWidthClass="max-w-[550px]" emailVariant="text" stacked paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
   );

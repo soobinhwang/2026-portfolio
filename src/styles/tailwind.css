@@ -7,6 +7,7 @@
   --dot-grid-color: rgba(30, 36, 42, 0.08);
   --dot-grid-dot: 1.2px;
   --dot-grid-size: 18px;
+  --dot-grid-edge-fade: clamp(56px, 10vw, 180px);
 }
 
 body {
@@ -28,9 +29,29 @@ body {
 
 .bg-dot-grid {
   background-color: #fbfdfd;
-  background-image: radial-gradient(circle, var(--dot-grid-color) var(--dot-grid-dot), transparent var(--dot-grid-dot));
-  background-size: var(--dot-grid-size) var(--dot-grid-size);
-  background-position: 0 0;
+  background-image:
+    linear-gradient(to right, #fbfdfd 0, rgba(251, 253, 253, 0) var(--dot-grid-edge-fade)),
+    linear-gradient(to left, #fbfdfd 0, rgba(251, 253, 253, 0) var(--dot-grid-edge-fade)),
+    linear-gradient(to bottom, #fbfdfd 0, rgba(251, 253, 253, 0) var(--dot-grid-edge-fade)),
+    linear-gradient(to top, #fbfdfd 0, rgba(251, 253, 253, 0) var(--dot-grid-edge-fade)),
+    radial-gradient(circle, var(--dot-grid-color) var(--dot-grid-dot), transparent var(--dot-grid-dot));
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, var(--dot-grid-size) var(--dot-grid-size);
+  background-position: left top, right top, left top, left bottom, 0 0;
+}
+
+.bg-dot-grid-soft-center {
+  background-color: #fbfdfd;
+  background-image:
+    linear-gradient(to right, #fbfdfd 0, rgba(251, 253, 253, 0) var(--dot-grid-edge-fade)),
+    linear-gradient(to left, #fbfdfd 0, rgba(251, 253, 253, 0) var(--dot-grid-edge-fade)),
+    linear-gradient(to bottom, #fbfdfd 0, rgba(251, 253, 253, 0) var(--dot-grid-edge-fade)),
+    linear-gradient(to top, #fbfdfd 0, rgba(251, 253, 253, 0) var(--dot-grid-edge-fade)),
+    radial-gradient(ellipse 72% 56% at 50% 50%, rgba(251, 253, 253, 0.72) 0, rgba(251, 253, 253, 0.42) 36%, rgba(251, 253, 253, 0) 72%),
+    radial-gradient(circle, var(--dot-grid-color) var(--dot-grid-dot), transparent var(--dot-grid-dot));
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, var(--dot-grid-size) var(--dot-grid-size);
+  background-position: left top, right top, left top, left bottom, center center, 0 0;
 }
 
 @layer utilities {

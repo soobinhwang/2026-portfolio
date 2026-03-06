@@ -132,6 +132,29 @@ function FloatingVisual({ className, src, axis = "y" }: { className: string; src
   );
 }
 
+function ProfileCTAs() {
+  return (
+    <div className="flex flex-row gap-[12px] items-center justify-center">
+      <a
+        href="https://cal.com/sue-hwang-dwcdjs"
+        target="_blank"
+        rel="noreferrer"
+        className="group bg-[#1e242a] hover:bg-[#2a3138] transition-colors duration-200 overflow-clip flex gap-[8px] items-center justify-center px-[16px] py-[8px] rounded-[24px]"
+      >
+        <span className="font-geist-mono font-medium text-white text-[13px] tracking-[-0.3px] uppercase leading-[20px] whitespace-nowrap">Let's Chat</span>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/sue-product-dsgn/"
+        target="_blank"
+        rel="noreferrer"
+        className="group bg-[#f0f3f5] hover:bg-[#e8ecf0] transition-colors duration-200 overflow-clip flex gap-[8px] items-center justify-center px-[16px] py-[8px] rounded-[24px]"
+      >
+        <span className="font-geist-mono font-medium text-[#1e242a] text-[13px] tracking-[-0.3px] uppercase leading-[20px] whitespace-nowrap">LinkedIn</span>
+      </a>
+    </div>
+  );
+}
+
 function ProfileContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] sm:gap-[34px] items-center self-center max-w-[619px] mt-[120px] sm:mt-[160px] w-full px-[20px] sm:px-0" data-name="Profile Container">
@@ -151,6 +174,7 @@ function ProfileContainer() {
           <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">into scalable solutions.</span>
         </p>
       </div>
+      {/* <ProfileCTAs /> */}
     </div>
   );
 }

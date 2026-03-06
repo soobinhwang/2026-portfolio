@@ -185,9 +185,6 @@ function MainFrame() {
   return (
     <div className="content-stretch flex flex-col gap-[64px] sm:gap-[120px] items-start max-w-[1200px] mt-[40px] sm:mt-[60px] mx-auto w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Main Frame">
       <ProjectsGrid />
-      <div className="w-full text-center">
-        <p className="font-geist text-[16px] text-[#5b6a79] leading-[26px]">Stay tuned! More exciting things are coming ;)</p>
-      </div>
     </div>
   );
 }
