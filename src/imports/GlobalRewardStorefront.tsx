@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import imgMyRole from "../assets/work/reward-storefront/My Role.png";
 import imgDetailThumbnail from "../assets/work/reward-storefront/P2-Detail-Thumbnail.png";
 import imgPrioritization from "../assets/work/reward-storefront/Prioritization.png";
@@ -8,8 +8,8 @@ import imgSolution from "../assets/work/reward-storefront/Solution.png";
 import imgBackground from "../assets/work/reward-storefront/Background.png";
 import imgChallenge1 from "../assets/work/reward-storefront/Challenge 1.png";
 import imgChallenge2 from "../assets/work/reward-storefront/Challenge 2.png";
-import videoSolution1 from "../assets/work/reward-storefront/Solution 1.mov";
-import videoSolution2 from "../assets/work/reward-storefront/Solution 2.mov";
+import videoSolution1 from "../assets/work/reward-storefront/Solution 1.mp4";
+import videoSolution2 from "../assets/work/reward-storefront/Solution 2.mp4";
 import NavBar from "../app/components/NavBar";
 import Footer from "../app/components/Footer";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
@@ -53,6 +53,28 @@ function SectionImageLg() {
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
     </div>
   );
+}
+
+function usePlayOnView(ref: React.RefObject<HTMLVideoElement>) {
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    node.pause();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            node.play().catch(() => {});
+          } else {
+            node.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 }
 
 function Frame13() {
@@ -485,7 +507,7 @@ function BackgroundDescription2() {
         Most rewards users arrive to discover, not search.
         <br />
         <br />
-        If the storefront doesn’t clearly expose what’s available, the experience feels smaller than it actually is. When discovery is slow or hidden behind multiple steps, users miss the full breadth of rewards, weakening excitement, discovery, and overall program engagement.
+        If the storefront doesn’t clearly expose what’s available, the experience feels smaller than it actually is. When discovery is slow or hidden, users miss the full breadth of rewards, weakening excitement and program engagement.
       </p>
     </div>
   );
@@ -776,16 +798,20 @@ function SolutionOneDescription() {
 }
 
 function SectionImageLg5() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  usePlayOnView(videoRef);
+
   return (
-    <div className="bg-[#f0f3f5] max-[560px]:bg-transparent h-[300px] max-[560px]:h-auto relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip max-[560px]:overflow-visible relative rounded-[inherit] max-[560px]:rounded-none h-full max-[560px]:h-auto w-full">
+    <div className="bg-[#f0f3f5] max-[560px]:bg-transparent relative shrink-0 w-full" data-name="section image lg">
+      <div className="overflow-clip max-[560px]:overflow-visible relative rounded-[inherit] max-[560px]:rounded-none w-full">
         <video
-          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top max-[560px]:static max-[560px]:block max-[560px]:h-auto max-[560px]:w-full max-[560px]:scale-100"
+          ref={videoRef}
+          className="block w-full h-auto object-contain"
           src={videoSolution1}
-          autoPlay
           loop
           muted
           playsInline
+          preload="metadata"
         />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none max-[560px]:hidden" />
@@ -833,16 +859,20 @@ function SolutionTwoDescription() {
 }
 
 function SectionImageLg6() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  usePlayOnView(videoRef);
+
   return (
-    <div className="bg-[#f0f3f5] max-[560px]:bg-transparent h-[350px] max-[560px]:h-auto relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip max-[560px]:overflow-visible relative rounded-[inherit] max-[560px]:rounded-none h-full max-[560px]:h-auto w-full">
+    <div className="bg-[#f0f3f5] max-[560px]:bg-transparent relative shrink-0 w-full" data-name="section image lg">
+      <div className="overflow-clip max-[560px]:overflow-visible relative rounded-[inherit] max-[560px]:rounded-none w-full">
         <video
-          className="absolute inset-x-0 top-[50px] bottom-0 w-full object-contain scale-[0.91] origin-top max-[560px]:static max-[560px]:block max-[560px]:h-auto max-[560px]:w-full max-[560px]:scale-100"
+          ref={videoRef}
+          className="block w-full h-auto object-contain"
           src={videoSolution2}
-          autoPlay
           loop
           muted
           playsInline
+          preload="metadata"
         />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none max-[560px]:hidden" />
