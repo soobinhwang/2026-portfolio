@@ -2,12 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 
 const CLICKABLE = "a, button, [role='button'], input, textarea, select, label, [onclick], [tabindex]";
 const THUMBNAIL = '[data-name="Thumbnail"], [data-name="AI Thumbnail"], [data-name="Project"]';
+const PROJECT = '[data-cursor="project"]';
 const VISUAL = '[data-cursor="visual"]';
 const COMING_SOON = '[data-cursor="coming-soon"]';
 const LETS_CHAT = '[data-cursor="lets-chat"]';
 const COPY_EMAIL = '[data-cursor="copy-email"]';
 
-type CursorMode = "default" | "clickable" | "case-study" | "visual" | "coming-soon" | "lets-chat" | "copy-email";
+type CursorMode = "default" | "clickable" | "case-study" | "project" | "visual" | "coming-soon" | "lets-chat" | "copy-email";
 
 const DOT_SIZE = 15.84;
 const ICON_SIZE = 16;
@@ -51,6 +52,8 @@ export default function CustomCursor() {
         setMode("lets-chat");
       } else if (target?.closest(COMING_SOON)) {
         setMode("coming-soon");
+      } else if (target?.closest(PROJECT)) {
+        setMode("project");
       } else if (target?.closest(THUMBNAIL)) {
         setMode("case-study");
       } else if (target?.closest(VISUAL)) {
@@ -106,6 +109,7 @@ export default function CustomCursor() {
   }, []);
 
   const isCaseStudy = mode === "case-study";
+  const isProject = mode === "project";
   const isComingSoon = mode === "coming-soon";
   const isLetsChat = mode === "lets-chat";
   const isCopyEmail = mode === "copy-email";
@@ -115,16 +119,18 @@ export default function CustomCursor() {
   const dotScale = isClickable ? 1.2 : 1;
   const baseOpacity = isClickable ? 0.6 : isVisual ? 0.5 : 1;
 
-  const showPill = isCaseStudy || isComingSoon || isLetsChat || isCopyEmail || !!flashMessage;
-  const showIcon = isCaseStudy || isCopyEmail;
+  const showPill = isCaseStudy || isProject || isComingSoon || isLetsChat || isCopyEmail || !!flashMessage;
+  const showIcon = isCaseStudy || isProject || isCopyEmail;
   const message = flashMessage
     ? flashMessage
     : isComingSoon
       ? "Coming Soon!"
       : isLetsChat
         ? "♥ Lets Chat!"
-        : isCopyEmail
+      : isCopyEmail
           ? "Copy Email"
+          : isProject
+            ? "View Project"
           : "View Case Study";
 
   if (!isEnabled) return null;
@@ -136,7 +142,7 @@ export default function CustomCursor() {
         position: "fixed",
         left: position.x,
         top: position.y,
-        transform: `translate(-50%, -50%) scale(${isCaseStudy ? 1 : dotScale})`,
+        transform: `translate(-50%, -50%) scale(${isCaseStudy || isProject ? 1 : dotScale})`,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -173,8 +179,8 @@ export default function CustomCursor() {
         strokeLinejoin="round"
         style={{
           flexShrink: 0,
-          opacity: isCaseStudy ? 1 : 0,
-          width: isCaseStudy ? ICON_SIZE : 0,
+          opacity: isCaseStudy || isProject ? 1 : 0,
+          width: isCaseStudy || isProject ? ICON_SIZE : 0,
           transition:
             "opacity 0.2s ease 0.05s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
         }}

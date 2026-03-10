@@ -181,7 +181,7 @@ function ProfileContainer() {
 
 function Thumbnail() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP1Thumbnail} />
     </div>
   );
@@ -220,7 +220,7 @@ function Container1() {
 
 function Thumbnail1() {
   return (
-    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP2Thumbnail} />
     </div>
   );
@@ -305,7 +305,7 @@ function Container6() {
 
 function Thumbnail3() {
   return (
-    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP4Thumbnail} />
     </div>
   );
