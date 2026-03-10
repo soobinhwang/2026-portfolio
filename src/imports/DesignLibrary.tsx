@@ -1,5 +1,4 @@
 /// <reference types="vite/client" />
-import React from "react";
 import imgDetailThumbnail from "../assets/work/design-library/P3-Detail-Thumbnail.png";
 import imgAudit1 from "../assets/work/design-library/Audit 1.png";
 import imgAudit2 from "../assets/work/design-library/Audit 2.png";
@@ -19,6 +18,55 @@ import NavBar from "../app/components/NavBar";
 import Footer from "../app/components/Footer";
 import ImpactSectionGRS from "./ImpactSectionGRS";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
+
+function ZoomableImage({
+  src,
+  alt = "",
+  ariaLabel,
+  darkBadge = false,
+}: {
+  src: string;
+  alt?: string;
+  ariaLabel: string;
+  darkBadge?: boolean;
+}) {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <button
+          type="button"
+          className="bg-[#f0f3f5] relative shrink-0 w-full cursor-pointer group"
+          data-name="zoomable image"
+          aria-label={ariaLabel}
+        >
+          <div className="overflow-clip relative rounded-[inherit] w-full">
+            <img loading="lazy" decoding="async" alt={alt} className="block w-full h-auto object-contain" src={src} />
+          </div>
+          <div
+            className={`absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] border transition-opacity duration-200 group-hover:opacity-90 ${
+              darkBadge ? "bg-[rgba(30,36,42,0.78)] border-[#1e242a]" : "bg-white/60 border-[#eceff2]"
+            }`}
+            aria-hidden="true"
+          >
+            <svg aria-hidden="true" className="h-[14px] w-[14px]" fill="none" viewBox="0 0 24 24">
+              <path
+                d="M14 3h7v7M21 3l-7 7M10 21H3v-7M3 21l7-7"
+                stroke={darkBadge ? "#f0f3f5" : "#6b7785"}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.4"
+              />
+            </svg>
+          </div>
+          <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+        </button>
+      </DialogTrigger>
+      <DialogContent className="w-[1362px] max-w-[96vw] sm:w-[1362px] sm:max-w-[96vw] p-0 border-0 bg-transparent shadow-none">
+        <img loading="lazy" decoding="async" alt={alt} className="w-full h-auto max-h-[90vh] object-contain rounded-[12px]" src={src} />
+      </DialogContent>
+    </Dialog>
+  );
+}
 
 function Property() {
   return (
@@ -148,23 +196,13 @@ function AuditDescription() {
 
 function SectionImageLg1() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgAudit1} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgAudit1} ariaLabel="Open first audit image full view" />
   );
 }
 
 function SectionImageLg1b() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgAudit2} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgAudit2} ariaLabel="Open second audit image full view" />
   );
 }
 
@@ -203,19 +241,14 @@ function Frame5Requirement() {
 function RequirementAnalysisDescription() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">{`I found there was an inconsistency and accessibility issues in the user interface and in displaying information, no feedback in the submission process or status which made it easy to make mistakes.`}</p>
+      <p className="leading-[22.5px] whitespace-pre-wrap">{`I found inconsistent UI patterns, accessibility issues, and weak status feedback across the submission flow, which made it easy for users to miss important information and make mistakes.`}</p>
     </div>
   );
 }
 
 function SectionImageLgRequirement() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgRequirementAnalysis} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgRequirementAnalysis} ariaLabel="Open requirement analysis image full view" />
   );
 }
 
@@ -486,45 +519,14 @@ function Frame4() {
 function ProblemDescription() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">The product was initially developed without solid UX guidelines and lacked understanding of end user behaviour, causing frustration. </p>
+      <p className="leading-[22.5px] whitespace-pre-wrap">The product was initially developed without clear UX standards or a strong understanding of end-user behavior, which led to inconsistent patterns, avoidable friction, and user frustration.</p>
     </div>
   );
 }
 
 function SectionImageLg3() {
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <button
-          type="button"
-          className="bg-[#f0f3f5] relative shrink-0 w-full cursor-pointer group"
-          data-name="section image lg"
-          aria-label="Open challenge image full view"
-        >
-          <div className="overflow-clip relative rounded-[inherit] w-full">
-            <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgChallenge1} />
-          </div>
-          <div
-            className="absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] bg-white/60 border border-[#eceff2] transition-opacity duration-200 group-hover:opacity-80"
-            aria-hidden="true"
-          >
-            <svg aria-hidden="true" className="h-[14px] w-[14px]" fill="none" viewBox="0 0 24 24">
-              <path
-                d="M14 3h7v7M21 3l-7 7M10 21H3v-7M3 21l7-7"
-                stroke="#6b7785"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.4"
-              />
-            </svg>
-          </div>
-          <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-        </button>
-      </DialogTrigger>
-      <DialogContent className="w-[1362px] max-w-[96vw] sm:w-[1362px] sm:max-w-[96vw] p-0 border-0 bg-transparent shadow-none">
-        <img loading="lazy" decoding="async" alt="" className="w-full h-auto max-h-[90vh] object-contain rounded-[12px]" src={imgChallenge1} />
-      </DialogContent>
-    </Dialog>
+    <ZoomableImage src={imgChallenge1} ariaLabel="Open challenge image full view" />
   );
 }
 
@@ -561,23 +563,13 @@ function Frame8() {
 
 function SectionImageLg4() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolutionOverview1} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgSolutionOverview1} ariaLabel="Open solution overview first image full view" />
   );
 }
 
 function SectionImageLg4b() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolutionOverview2} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgSolutionOverview2} ariaLabel="Open solution overview second image full view" />
   );
 }
 
@@ -594,6 +586,9 @@ function Property7() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0 w-full" data-name="Property">
       <Frame8 />
+      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">I translated the audit into a reusable component system so the team could standardize common patterns instead of repeatedly solving the same UX problems screen by screen.</p>
+      </div>
       <Frame16 />
     </div>
   );
@@ -614,23 +609,13 @@ function Frame9() {
 
 function SectionImageLg5() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution1Before} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgSolution1Before} ariaLabel="Open solution one before image full view" />
   );
 }
 
 function SectionImageLg5b() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution1After} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgSolution1After} ariaLabel="Open solution one after image full view" />
   );
 }
 
@@ -647,6 +632,9 @@ function Property8() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[10] self-start shrink-0 w-full" data-name="Property">
       <Frame9 />
+      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">I standardized layouts, hierarchy, and accessibility patterns so users could scan pages faster and complete requests with less uncertainty.</p>
+      </div>
       <Frame17 />
     </div>
   );
@@ -675,23 +663,13 @@ function Solution2Description() {
 
 function SectionImageLg6() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution2Before} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgSolution2Before} ariaLabel="Open solution two before image full view" />
   );
 }
 
 function SectionImageLg6b() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution2After} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgSolution2After} ariaLabel="Open solution two after image full view" />
   );
 }
 
@@ -737,23 +715,13 @@ function Solution3Description() {
 
 function SectionImageLg7() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution3Before} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgSolution3Before} ariaLabel="Open solution three before image full view" />
   );
 }
 
 function SectionImageLg7b() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolution3After} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgSolution3After} ariaLabel="Open solution three after image full view" />
   );
 }
 
@@ -799,23 +767,13 @@ function DesignOutcomeDescription() {
 
 function SectionImageDesignOutcome1() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome1} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgDesignOutcome1} ariaLabel="Open first design outcome image full view" darkBadge />
   );
 }
 
 function SectionImageDesignOutcome2() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome2} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
+    <ZoomableImage src={imgDesignOutcome2} ariaLabel="Open second design outcome image full view" darkBadge />
   );
 }
 

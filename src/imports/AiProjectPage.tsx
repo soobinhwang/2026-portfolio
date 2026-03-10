@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link as RouterLink } from "react-router";
 import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
 import project2ThumbnailImage from "../assets/ai/project-2/ai-p2-thumbnail.png";
+import project3ThumbnailImage from "../assets/ai/project-3/ai-p3-thumbnail.png";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
@@ -135,7 +136,7 @@ function ProjectInfo({ title, subtitle, comingSoon }: { title: string; subtitle?
   );
 }
 
-function ProjectCard({ to, title, subtitle, thumbnailSrc, thumbnailVideoSrc, thumbnailAnimationSrcUrl, showTopBorder = true, comingSoon }: { to?: string; title: string; subtitle?: string; thumbnailSrc?: string; thumbnailVideoSrc?: string; thumbnailAnimationSrcUrl?: string; showTopBorder?: boolean; comingSoon?: boolean }) {
+function ProjectCard({ to, href, title, subtitle, thumbnailSrc, thumbnailVideoSrc, thumbnailAnimationSrcUrl, showTopBorder = true, comingSoon }: { to?: string; href?: string; title: string; subtitle?: string; thumbnailSrc?: string; thumbnailVideoSrc?: string; thumbnailAnimationSrcUrl?: string; showTopBorder?: boolean; comingSoon?: boolean }) {
   const inner = (
     <>
       {showTopBorder && <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />}
@@ -153,6 +154,20 @@ function ProjectCard({ to, title, subtitle, thumbnailSrc, thumbnailVideoSrc, thu
       >
         {inner}
       </RouterLink>
+    );
+  }
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        {inner}
+      </a>
     );
   }
 
@@ -177,6 +192,12 @@ function ProjectsGrid() {
         thumbnailVideoSrc={project1ThumbnailVideo}
       />
       <ProjectCard to="/ai/project-2" title="Design Decision Note" subtitle="Figma Plugin" thumbnailSrc={project2ThumbnailImage} />
+      <ProjectCard
+        href="https://www.linkedin.com/posts/sue-product-dsgn_ai-aidesign-aitools-activity-7431900399055413249-lo7t?utm_source=share&utm_medium=member_desktop&rcm=ACoAACul4igBoaqG7fZIRGkVmlNdfVyEmfYkpAI"
+        title="Building a Portfolio with Vibe Coding"
+        subtitle="Personal Build"
+        thumbnailSrc={project3ThumbnailImage}
+      />
     </div>
   );
 }
