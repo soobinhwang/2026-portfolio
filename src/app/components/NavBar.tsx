@@ -1,124 +1,102 @@
 import { Link, useLocation } from "react-router";
-import resumePdf from "../../assets/About/Sue Hwang - Resume.pdf";
 
 const NAV_ITEMS = [
-  { label: "Work", to: "/" },
-  { label: "AI", to: "/ai" },
-  { label: "About", to: "/about" },
-  { label: "Resume", href: resumePdf },
+  {
+    label: "Work",
+    to: "/",
+    isActive: (pathname: string) =>
+      pathname === "/" ||
+      pathname.startsWith("/engagement-platform") ||
+      pathname.startsWith("/global-reward-storefront") ||
+      pathname.startsWith("/design-library"),
+  },
+  {
+    label: "AI",
+    to: "/ai",
+    isActive: (pathname: string) => pathname === "/ai" || pathname.startsWith("/ai/"),
+  },
+  {
+    label: "About",
+    to: "/about",
+    isActive: (pathname: string) => pathname === "/about",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/sue-product-dsgn/",
+    isActive: () => false,
+  },
 ];
 
-function isActive(pathname: string, to: string) {
-  if (to === "/") return pathname === "/";
-  return pathname.startsWith(to);
-}
+const ACTION_ITEMS = [
+  { label: "Let's Chat!", href: "https://cal.com/sue-hwang-dwcdjs" },
+];
 
 export default function NavBar() {
   const { pathname } = useLocation();
-  const isTopLevelPage = pathname === "/" || pathname === "/ai" || pathname === "/about";
 
   return (
-    <>
-    <style>{`
-      @keyframes ai-shine-slide {
-        0%   { transform: translateX(-150%); }
-        25%  { transform: translateX(150%); }
-        100% { transform: translateX(150%); }
-      }
-      .ai-shine-container {
-        overflow: hidden;
-      }
-      .ai-shine-container::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0) 100%);
-        transform: translateX(-150%);
-        animation: ai-shine-slide 5s ease-in-out 2s infinite;
-        pointer-events: none;
-        z-index: 1;
-      }
-    `}</style>
-    <div className="-translate-x-1/2 fixed content-stretch flex flex-col items-start left-1/2 top-[40px] z-50">
-      <div className="content-stretch flex flex-col items-end justify-center relative shrink-0">
-        <div className="bg-white content-stretch flex items-center justify-center overflow-clip px-[24px] py-[12px] relative rounded-[24px] shrink-0 shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
-          <div className="content-stretch flex gap-[16px] items-center justify-center relative shrink-0">
-            {NAV_ITEMS.map((item) => {
-              const active = item.to ? isActive(pathname, item.to) : false;
-              const disabled = Boolean(item.disabled);
-              const textColor = active ? "#1700CF" : disabled ? "#9aa3ad" : "#32404f";
+    <header className="w-full border-b border-[rgba(215,221,226,0.5)] bg-[#fbfdfd]">
+      <div className="mx-auto grid w-full max-w-[1200px] gap-[18px] px-[20px] py-[18px] sm:px-[32px] sm:py-[20px] lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:items-center lg:gap-[24px] lg:px-0">
+        <Link to="/" className="flex items-center text-left no-underline">
+          <span className="font-geist-mono text-[15px] font-medium tracking-[-0.45px] text-[#32404f] uppercase">
+            Sue Hwang
+          </span>
+        </Link>
 
-              const inner = (
-                <div
-                  className={`flex items-center justify-center relative shrink-0 group${item.label === "AI" && !active && isTopLevelPage ? " ai-shine-container" : ""}`}
-                  data-cursor={disabled ? "coming-soon" : undefined}
-                >
-                  <div
-                    className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[16px] text-center tracking-[-0.5px] whitespace-nowrap transition-colors duration-200 uppercase"
-                    style={{ color: textColor }}
-                    onMouseEnter={(e) => {
-                      if (!active && !disabled) e.currentTarget.style.color = "#1700CF";
-                    }}
-                    onMouseLeave={(e) => {
-                      if (!active && !disabled) e.currentTarget.style.color = "#32404f";
-                    }}
-                  >
-                    <p className="leading-[24px]">{item.label}</p>
-                  </div>
-                </div>
-              );
+        <nav className="flex flex-wrap items-center gap-x-[28px] gap-y-[10px] lg:justify-self-center">
+          {NAV_ITEMS.map((item) => {
+            const active = item.isActive(pathname);
+            const className = `font-geist-mono text-[15px] tracking-[-0.35px] uppercase transition-colors duration-200 ${
+              active ? "text-[#1700cf]" : "text-[#8a95a0] hover:text-[#1700cf]"
+            }`;
+            const labelContent = item.label === "AI" ? (
+              <span className="relative inline-flex">
+                <span>{item.label}</span>
+                <span
+                  aria-hidden="true"
+                  className="absolute -right-[7px] top-[2px] inline-flex size-[5px] rounded-full bg-[#1700cf]/70"
+                />
+              </span>
+            ) : (
+              item.label
+            );
 
-              if (item.to && !disabled) {
-                return (
-                  <Link
-                    key={item.label}
-                    to={item.to}
-                    className="content-stretch flex flex-col items-start relative shrink-0"
-                    style={{ textDecoration: "none", color: "inherit" }}
-                  >
-                    {inner}
-                  </Link>
-                );
-              }
-
-              if (item.href && !disabled) {
-                return (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="content-stretch flex flex-col items-start relative shrink-0"
-                    style={{ textDecoration: "none", color: "inherit" }}
-                  >
-                    {inner}
-                  </a>
-                );
-              }
-
+            if (item.to) {
               return (
-                <div
-                  key={item.label}
-                  className="content-stretch flex flex-col items-start relative shrink-0"
-                  style={{ cursor: disabled ? "not-allowed" : "default", opacity: disabled ? 0.7 : 1 }}
-                >
-                  {inner}
-                </div>
+                <Link key={item.label} to={item.to} className={className}>
+                  {labelContent}
+                </Link>
               );
-            })}
-          </div>
-          <div className="absolute inset-0 rounded-[24px] pointer-events-none">
-            <div
-              aria-hidden="true"
-              className="absolute border border-[#e6e6e6] border-solid inset-0 pointer-events-none rounded-[24px]"
-            />
-          </div>
+            }
+
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className={className}
+              >
+                {labelContent}
+              </a>
+            );
+          })}
+        </nav>
+
+        <div className="flex flex-wrap items-center gap-x-[20px] gap-y-[10px] lg:justify-self-end">
+          {ACTION_ITEMS.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              className="font-geist-mono text-[15px] tracking-[-0.35px] text-[#8a95a0] uppercase transition-colors duration-200 hover:text-[#1700cf]"
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
       </div>
-    </div>
-    </>
+    </header>
   );
 }

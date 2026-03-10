@@ -13,7 +13,6 @@ import imgStar from "../assets/work/reward-storefront/star.png";
 import imgUserBehaviourAnalysis from "../assets/work/reward-storefront/User Behaviour Analysis.png";
 import videoSolution1 from "../assets/work/reward-storefront/Solution 1.mp4";
 import videoSolution2 from "../assets/work/reward-storefront/Solution 2.mp4";
-import NavBar from "../app/components/NavBar";
 import Footer from "../app/components/Footer";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 import ImpactSectionGRS from "./ImpactSectionGRS";
@@ -1028,10 +1027,9 @@ function MainContent() {
 
 export default function GlobalRewardStorefront() {
   return (
-    <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[96px] sm:pt-[110px] px-[20px] relative w-full" data-name="Global Reward Storefront">
+    <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[40px] sm:pt-[56px] px-[20px] relative w-full" data-name="Global Reward Storefront">
       <MainContent />
       <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
-      <NavBar />
     </div>
   );
 }

@@ -15,7 +15,6 @@ import imgSolution3After from "../assets/work/design-library/Solution 3 After.pn
 import imgDesignOutcome1 from "../assets/work/design-library/Design Outcome 1.png";
 import imgDesignOutcome2 from "../assets/work/design-library/Design Outcome 2.png";
 import imgChallenge1 from "../assets/work/design-library/Challenge 1.png";
-import NavBar from "../app/components/NavBar";
 import Footer from "../app/components/Footer";
 import ImpactSectionGRS from "./ImpactSectionGRS";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
@@ -878,10 +877,9 @@ function MainContent() {
 
 export default function DesignLibrary() {
   return (
-    <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[96px] sm:pt-[110px] relative w-full px-[20px]" data-name="Design Library">
+    <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[40px] sm:pt-[56px] relative w-full px-[20px]" data-name="Design Library">
       <MainContent />
       <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
-      <NavBar />
     </div>
   );
 }

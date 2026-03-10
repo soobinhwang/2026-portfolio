@@ -13,7 +13,56 @@ import imgP3Thumbnail from "../assets/landing/P3 Thumbnail.png";
 import imgP4Thumbnail from "../assets/landing/P4 Thumbnail.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
-import NavBar from "../app/components/NavBar";
+
+type ProjectCardProps = {
+  category: string;
+  description: string;
+  thumbnailAlt: string;
+  thumbnailBgClassName: string;
+  thumbnailSrc: string;
+  title: string;
+  to?: string;
+  comingSoon?: boolean;
+};
+
+const PROJECTS: ProjectCardProps[] = [
+  {
+    title: "Rewards & Recognition Platform",
+    category: "HR Tech",
+    description: "Led the shift from one-off client builds to a scalable template-driven product and self-serve CMS.",
+    thumbnailSrc: imgP1Thumbnail,
+    thumbnailAlt: "Rewards and Recognition platform preview",
+    thumbnailBgClassName: "bg-[#f0f3f5]",
+    to: "/engagement-platform",
+  },
+  {
+    title: "Global Reward Storefront",
+    category: "E-commerce",
+    description: "Led the storefront discovery redesign, aligning product and engineering on scalable browsing patterns.",
+    thumbnailSrc: imgP2Thumbnail,
+    thumbnailAlt: "Global reward storefront preview",
+    thumbnailBgClassName: "bg-[#1e242a]",
+    to: "/global-reward-storefront",
+  },
+  {
+    title: "Budget & Incentive Manager",
+    category: "Design System",
+    description: "Led the redesign of fragmented budgeting workflows into centralized, scalable system flows.",
+    thumbnailSrc: imgP4Thumbnail,
+    thumbnailAlt: "Budget and Incentive Manager preview",
+    thumbnailBgClassName: "bg-[#1e242a]",
+    to: "/design-library",
+  },
+  {
+    title: "C1 Wallet",
+    category: "Rewards Wallet",
+    description: "Designing a rewards wallet concept that makes balances, incentives, and value easier to understand.",
+    thumbnailSrc: imgP3Thumbnail,
+    thumbnailAlt: "C1 Wallet preview",
+    thumbnailBgClassName: "bg-[#1e242a]",
+    comingSoon: true,
+  },
+];
 
 function ProfileInfoItem() {
   return (
@@ -47,7 +96,7 @@ function ProfileInfoItem2() {
 
 function ProfileInfoContainer() {
   return (
-    <div className="content-center flex flex-wrap max-[392px]:flex-nowrap gap-[10px] max-[392px]:gap-[4px] items-center relative shrink-0 w-full" data-name="Profile Info Container">
+    <div className="flex flex-wrap max-[392px]:flex-nowrap gap-[10px] max-[392px]:gap-[4px] items-center justify-start relative shrink-0 w-fit max-w-[260px]" data-name="Profile Info Container">
       <ProfileInfoItem />
       <ProfileInfoItem1 />
       <ProfileInfoItem2 />
@@ -69,7 +118,7 @@ function ProfileImageContainer() {
   }, []);
 
   return (
-    <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0" data-name="Profile Image Container">
+    <div className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-fit" data-name="Profile Image Container">
       <div className="h-[200px] sm:h-[221px] relative shrink-0 w-[194px] sm:w-[214px] perspective-800" data-name="sue 1">
         <img loading="lazy" decoding="async"
           alt=""
@@ -112,7 +161,6 @@ function ProfileImageContainer() {
         <FloatingVisual className="absolute right-[-20px] top-[74px] w-[50px] h-auto float-soft float-soft-delayed-3" src={imgSmile} axis="z" />
         <FloatingVisual className="absolute right-[27px] bottom-[7px] w-[42px] h-auto float-soft float-soft-delayed-4" src={imgScale} />
       </div>
-      <ProfileInfoContainer />
     </div>
   );
 }
@@ -157,212 +205,104 @@ function ProfileCTAs() {
 
 function ProfileContainer() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] sm:gap-[34px] items-center self-center max-w-[619px] mt-[120px] sm:mt-[160px] w-full px-[20px] sm:px-0" data-name="Profile Container">
+    <div className="content-stretch mx-auto flex w-full max-w-[1200px] flex-col items-center gap-[28px] px-[20px] sm:gap-[32px] sm:px-[32px] lg:px-0" data-name="Profile Container">
       <ProfileImageContainer />
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] min-w-full relative shrink-0 text-[#32404f] text-[0px] text-center tracking-[-1.04px] w-[min-content]">
-        <p className="text-[32px] sm:text-[50px] whitespace-pre-wrap">
-          <span className="leading-[36px] sm:leading-[50px] text-[#32404f]">{`I'm Sue, a product designer `}</span>
-          <span className="leading-[36px] sm:leading-[50px]">
-            <br aria-hidden="true" />
-          </span>
-          <span className="leading-[36px] sm:leading-[50px] text-[#858e97]">{`who `}</span>
-          <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">{`turns `}</span>
-          <span className="font-newsreader font-normal italic leading-[36px] sm:leading-[50px] text-[#858e97]">
-            ambiguity
-            <br aria-hidden="true" />
-          </span>
-          <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">into scalable solutions.</span>
-        </p>
-      </div>
-      {/* <ProfileCTAs /> */}
-    </div>
-  );
-}
-
-function Thumbnail() {
-  return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP1Thumbnail} />
-    </div>
-  );
-}
-
-function InfoContainer() {
-  return (
-    <div
-      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
-      data-name="Info Container"
-    >
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">{`Rewards & Recognition Platform`}</p>
-      </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">HR Tech</p>
+      <div className="flex flex-col items-center gap-[10px] sm:gap-[12px] max-w-[780px] relative shrink-0 text-center w-full">
+        <div className="flex flex-col items-center font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[0px] tracking-[-1.04px] w-full">
+          <p className="text-[32px] sm:text-[42px] lg:text-[46px] xl:text-[50px]">
+            <span className="block leading-[36px] sm:leading-[46px] lg:leading-[50px] text-[#32404f] lg:whitespace-nowrap">
+              I&apos;m Sue, a Product Designer
+            </span>
+            <span className="block leading-[36px] sm:leading-[46px] lg:leading-[50px] text-[#858e97] lg:whitespace-nowrap">
+              who turns <span className="italic">ambiguity</span>
+            </span>
+            <span className="block leading-[36px] sm:leading-[46px] lg:leading-[50px] text-[#858e97] lg:whitespace-nowrap">
+              into scalable solutions.
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );
 }
 
-function Container1() {
+function ProjectCardContent({
+  category,
+  comingSoon,
+  description,
+  thumbnailAlt,
+  thumbnailBgClassName,
+  thumbnailSrc,
+  title,
+}: ProjectCardProps) {
   return (
-    <RouterLink
-      to="/engagement-platform"
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
-      data-name="Container"
-      style={{ textDecoration: "none", color: "inherit" }}
-    >
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
-      <Thumbnail />
-      <InfoContainer />
-    </RouterLink>
-  );
-}
-
-function Thumbnail1() {
-  return (
-    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP2Thumbnail} />
-    </div>
-  );
-}
-
-function InfoContainer1() {
-  return (
-    <div
-      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
-      data-name="Info Container"
-    >
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">Global Reward Storefront</p>
+    <div className="flex w-full flex-col gap-[20px] border-t border-[#ebeced] pt-[20px] sm:gap-[24px] sm:pt-[24px] lg:flex-row lg:items-start lg:gap-[48px]">
+      <div className="flex w-full max-w-[360px] flex-col gap-[12px] sm:gap-[16px] lg:max-w-[520px] lg:shrink-0">
+        <div className="font-geist-mono text-[13px] sm:text-[14px] leading-[20px] tracking-[-0.3px] text-[rgba(50,64,79,0.58)] uppercase">
+          {category}
+        </div>
+        <div className="font-newsreader text-[#32404f] text-[24px] sm:text-[28px] lg:text-[32px] tracking-[-0.8px]">
+          <p className="leading-[30px] sm:leading-[34px] lg:leading-[38px] lg:whitespace-nowrap">{title}</p>
+        </div>
+        <div className="font-geist text-[#5b6a79] text-[15px] sm:text-[16px] leading-[25px] sm:leading-[27px] tracking-[-0.18px] lg:max-w-[520px]">
+          <p>{description}</p>
+        </div>
+        <div className="font-geist-mono text-[13px] sm:text-[14px] leading-[20px] tracking-[-0.3px] text-[#1700cf] uppercase">
+          {comingSoon ? "Coming Soon" : "Read Case Study"}
+        </div>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">E-commerce</p>
-      </div>
-    </div>
-  );
-}
-
-function Container4() {
-  return (
-    <RouterLink
-      to="/global-reward-storefront"
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
-      data-name="Container"
-      style={{ textDecoration: "none", color: "inherit" }}
-    >
-      <Thumbnail1 />
-      <InfoContainer1 />
-    </RouterLink>
-  );
-}
-
-function Container() {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] sm:gap-[32px] items-start relative w-full" data-name="Container">
-      <Container1 />
-      <Container4 />
-    </div>
-  );
-}
-
-function Thumbnail2() {
-  return (
-    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP3Thumbnail} />
-    </div>
-  );
-}
-
-function InfoContainer2() {
-  return (
-    <div
-      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
-      data-name="Info Container"
-    >
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">C1 Wallet</p>
-      </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Rewards Wallet</p>
+      <div
+        className={`${thumbnailBgClassName} relative w-full overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60 lg:ml-auto lg:flex-1 lg:max-w-[560px]`}
+        data-cursor={comingSoon ? "coming-soon" : "project"}
+      >
+        <img
+          loading="lazy"
+          decoding="async"
+          alt={thumbnailAlt}
+          className="block h-auto w-full object-contain"
+          src={thumbnailSrc}
+        />
       </div>
     </div>
   );
 }
 
-function Container6() {
-  return (
-    <div
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
-      data-name="Container"
-      data-cursor="coming-soon"
-    >
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
-      <Thumbnail2 />
-      <InfoContainer2 />
-    </div>
-  );
-}
+function ProjectCard(props: ProjectCardProps) {
+  if (props.to && !props.comingSoon) {
+    return (
+      <RouterLink
+        to={props.to}
+        className="group block w-full"
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <ProjectCardContent {...props} />
+      </RouterLink>
+    );
+  }
 
-function Thumbnail3() {
   return (
-    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP4Thumbnail} />
-    </div>
-  );
-}
-
-function InfoContainer3() {
-  return (
-    <div
-      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
-      data-name="Info Container"
-    >
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">Budget & Incentive Manager</p>
-      </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Design System</p>
-      </div>
-    </div>
-  );
-}
-
-function Container7() {
-  return (
-    <RouterLink
-      to="/design-library"
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
-      data-name="Container"
-      style={{ textDecoration: "none", color: "inherit" }}
-    >
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
-      <Thumbnail3 />
-      <InfoContainer3 />
-    </RouterLink>
-  );
-}
-
-function Container5() {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] sm:gap-[32px] items-start relative w-full" data-name="Container">
-      <Container7 />
-      <Container6 />
+    <div className="group w-full" data-cursor="coming-soon">
+      <ProjectCardContent {...props} />
     </div>
   );
 }
 
 function MainFrame1() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] sm:gap-[40px] items-start relative shrink-0 w-full" data-name="Main Frame">
-      <Container />
-      <Container5 />
+    <div className="content-stretch flex flex-col gap-[24px] sm:gap-[28px] items-start relative shrink-0 w-full" data-name="Main Frame">
+      {PROJECTS.map((project) => (
+        <ProjectCard
+          key={project.title}
+          {...project}
+        />
+      ))}
     </div>
   );
 }
 
 function MainFrame() {
   return (
-    <div className="content-stretch flex flex-col gap-[64px] sm:gap-[120px] items-start max-w-[1200px] mt-[40px] sm:mt-[60px] mx-auto w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Main Frame">
+    <div className="content-stretch flex flex-col gap-[64px] sm:gap-[120px] items-start max-w-[1200px] mx-auto w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Main Frame">
       <MainFrame1 />
     </div>
   );
@@ -371,11 +311,15 @@ function MainFrame() {
 
 export default function LandingPage() {
   return (
-    <div className="bg-dot-grid min-h-screen flex flex-col relative w-full" data-name="Landing Page">
-      <ProfileContainer />
+    <div className="min-h-screen flex flex-col relative w-full bg-[#fbfdfd]" data-name="Landing Page">
+      <section className="relative w-full overflow-hidden py-[60px] sm:py-[80px]">
+        <div aria-hidden="true" className="bg-dot-grid-hero pointer-events-none absolute inset-0" />
+        <div className="relative z-10">
+          <ProfileContainer />
+        </div>
+      </section>
       <MainFrame />
       <Footer />
-      <NavBar />
     </div>
   );
 }

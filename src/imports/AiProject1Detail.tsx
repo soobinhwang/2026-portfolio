@@ -10,7 +10,6 @@ import imgChatGptLogo from "../assets/ai/project-1/gpt logo.jpg";
 import imgClaudeLogo from "../assets/ai/project-1/claude logo.png";
 import imgCursorLogo from "../assets/ai/project-1/cursor logo.png";
 import Footer from "../app/components/Footer";
-import NavBar from "../app/components/NavBar";
 
 const project1ThumbnailJsonUrl = new URL("../assets/ai/project-1/Frame-32.json", import.meta.url).href;
 
@@ -434,12 +433,11 @@ function SectionContainer() {
 export default function AiProject1Detail() {
   return (
     <div
-      className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px] sm:px-0 relative w-full"
+      className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[40px] sm:pt-[56px] px-[20px] sm:px-0 relative w-full"
       data-name="AI Project 1 Detail"
     >
       <SectionContainer />
       <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
-      <NavBar />
     </div>
   );
 }

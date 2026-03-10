@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import svgPaths from "./svg-m1k5znvmzs";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
-import NavBar from "../app/components/NavBar";
 import imgEllipse440 from "../assets/work/engagement-platform/87bcf6cc5a6f499816d2a7d5fa8cd9b840c67f41.png";
 import imgAdminInterface1 from "../assets/work/engagement-platform/e2603487797800f429d28e829f2654d0a052c61f.png";
 import imgDtAdminViewVer2 from "../assets/work/engagement-platform/e0d6461f579531510d4283e58dda859846a30a11.png";
@@ -10303,11 +10302,10 @@ function NextProjectNudge() {
 
 export default function EngagementPlatform() {
   return (
-    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px] relative w-full" data-name="Engagement Platform">
+    <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[40px] sm:pt-[56px] px-[20px] relative w-full" data-name="Engagement Platform">
       <MainContent />
       {/* <NextProjectNudge /> */}
       <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
-      <NavBar />
     </div>
   );
 }

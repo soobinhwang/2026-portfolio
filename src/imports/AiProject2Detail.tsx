@@ -16,7 +16,6 @@ import videoMvp from "../assets/ai/project-2/MVP.mov";
 import videoPostMvp from "../assets/ai/project-2/Post MVP.mov";
 import videoWhatIBuilt from "../assets/ai/project-2/What I built.mov";
 import Footer from "../app/components/Footer";
-import NavBar from "../app/components/NavBar";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 
 /* ───────────────────────────────────────────────
@@ -523,12 +522,11 @@ function SectionContainer() {
 export default function AiProject2Detail() {
   return (
     <div
-      className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px] sm:px-0 relative w-full"
+      className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[40px] sm:pt-[56px] px-[20px] sm:px-0 relative w-full"
       data-name="AI Project 2 Detail"
     >
       <SectionContainer />
       <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
-      <NavBar />
     </div>
   );
 }

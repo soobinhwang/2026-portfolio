@@ -2,7 +2,6 @@ import svgPaths from "./svg-81bzjcs43u";
 import imgProfileContainer from "../assets/About/Profile Container.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
-import NavBar from "../app/components/NavBar";
 import resumePdf from "../assets/About/Sue Hwang - Resume.pdf";
 
 function StatusIndicator() {
@@ -1049,7 +1048,7 @@ function MainFrame1() {
 
 function MainFrame() {
   return (
-    <div className="content-stretch flex flex-col items-start self-center max-w-[550px] mt-[120px] sm:mt-[190px] w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Main Frame">
+    <div className="content-stretch flex flex-col items-start self-center max-w-[550px] mt-[56px] sm:mt-[88px] w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Main Frame">
       <MainFrame1 />
     </div>
   );
@@ -1061,7 +1060,6 @@ export default function AboutPage() {
     <div className="bg-dot-grid-soft-center min-h-screen flex flex-col relative w-full" data-name="About Page">
       <MainFrame />
       <Footer maxWidthClass="max-w-[550px]" emailVariant="text" stacked paddingXClass="px-[20px] sm:px-0" />
-      <NavBar />
     </div>
   );
 }
