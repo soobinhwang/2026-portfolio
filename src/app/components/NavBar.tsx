@@ -1,11 +1,10 @@
 import { Link, useLocation } from "react-router";
-import resumePdf from "../../assets/About/Sue Hwang - Resume.pdf";
 
 const NAV_ITEMS = [
   { label: "Work", to: "/" },
   { label: "AI", to: "/ai" },
   { label: "About", to: "/about" },
-  { label: "Resume", href: resumePdf },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sue-product-dsgn" },
 ];
 
 function isActive(pathname: string, to: string) {
