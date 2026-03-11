@@ -2,18 +2,26 @@
 import imgDetailThumbnail from "../assets/work/design-library/P3-Detail-Thumbnail.png";
 import imgAudit1 from "../assets/work/design-library/Audit 1.png";
 import imgAudit2 from "../assets/work/design-library/Audit 2.png";
+import imgIssueDefined1 from "../assets/work/design-library/Issue defined 1.png";
+import imgIssueDefined2 from "../assets/work/design-library/Issue defined 2.png";
+import imgIssueDefined3 from "../assets/work/design-library/Issue defined 3.png";
 import imgRequirementAnalysis from "../assets/work/design-library/Requirement Analysis.png";
+import imgDesignGoal from "../assets/work/design-library/Design Goal.png";
 import imgSolutionOverview1 from "../assets/work/design-library/Solution Overview 1.png";
 import imgSolutionOverview2 from "../assets/work/design-library/Solution Overview 2.png";
 import imgSolution1Before from "../assets/work/design-library/Solution 1 Before.png";
 import imgSolution1After from "../assets/work/design-library/Solution 1 After.png";
+import imgSolutionTwo from "../assets/work/design-library/Solution 2.png";
 import imgSolution2Before from "../assets/work/design-library/Solution 2 Before.png";
 import imgSolution2After from "../assets/work/design-library/Solution 2 After.png";
+import imgSolutionThree from "../assets/work/design-library/Solution 3.png";
 import imgSolution3Before from "../assets/work/design-library/Solution 3 Before.png";
 import imgSolution3After from "../assets/work/design-library/Solution 3 After.png";
+import imgDesignOutcome from "../assets/work/design-library/Design Outcome.png";
 import imgDesignOutcome1 from "../assets/work/design-library/Design Outcome 1.png";
 import imgDesignOutcome2 from "../assets/work/design-library/Design Outcome 2.png";
-import imgChallenge1 from "../assets/work/design-library/Challenge 1.png";
+import imgChallenge from "../assets/work/design-library/Challenge.png";
+import imgStar from "../assets/work/reward-storefront/star.png";
 import NavBar from "../app/components/NavBar";
 import Footer from "../app/components/Footer";
 import ImpactSectionGRS from "./ImpactSectionGRS";
@@ -70,15 +78,36 @@ function ZoomableImage({
 
 function Property() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0 w-full" data-name="Property">
       <ImpactSectionGRS
         hideThird
         impactTitle="Higher task success and user confidence"
-        firstTitle="Increased Flexibility"
-        firstSubtitle="Eliminated hardcoded values so the tool could adapt quickly to new requirements."
-        secondTitle="Improved Workflow Efficiency"
-        secondSubtitle="Streamlined budgeting/incentive request workflows to reduce errors during org changes."
+        firstTitle="Clear operational visibility"
+        firstSubtitle="Managers could view incentive details, budgets, and status updates from a single place."
+        secondTitle="Reduced mistakes in high-pressure tasks"
+        secondSubtitle="Clear feedback and system guidance helped users complete submissions and status updates with more confidence."
       />
+    </div>
+  );
+}
+
+function ContextSection() {
+  return (
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0 w-full" data-name="Context Section">
+      <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
+        <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
+          <p className="leading-[22.5px] whitespace-pre-wrap">Context</p>
+        </div>
+        <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
+          <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Why the project started</p>
+        </div>
+      </div>
+      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+        <ul className="list-disc pl-[20px] space-y-[8px]">
+          <li className="leading-[22.5px]">The project began when the client requested additional operational capabilities for the existing Budget Incentive Manager.</li>
+          <li className="leading-[22.5px]">While evaluating the current experience, I identified underlying UX issues that needed to be resolved to support long-term scalability and expansion.</li>
+        </ul>
+      </div>
     </div>
   );
 }
@@ -90,7 +119,7 @@ function SectionContainer1() {
         <p className="leading-[22.5px]">My Role</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">From UX strategy to UI design</p>
+        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">UX improvement and workflow redesign for incentive operations</p>
       </div>
     </div>
   );
@@ -99,7 +128,9 @@ function SectionContainer1() {
 function MyRoleDescription() {
   return (
     <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-[min-content]">
-      <p className="leading-[22.5px] whitespace-pre-wrap">I led the work from audit to implementation, turning user pain points into a scalable component system with product and engineering.</p>
+      <p className="leading-[22.5px] whitespace-pre-wrap">{`I led the UX improvement of the Budget Incentive Manager by identifying usability gaps across Incentive, Budget, and Reconciliation modules and redesigning the workflows to support clearer operational decision-making.
+
+My work focused on improving system clarity, reducing user errors in high-pressure financial tasks, and introducing scalable UI patterns that improve consistency across the platform.`}</p>
     </div>
   );
 }
@@ -163,9 +194,17 @@ function Frame13() {
   );
 }
 
+function DesignOutcomeHeroSection() {
+  return (
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0 w-full" data-name="Design Outcome Hero">
+      <ZoomableImage src={imgDesignOutcome} ariaLabel="Open design outcome image full view" darkBadge />
+    </div>
+  );
+}
+
 function ContentSections() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[2] self-start shrink-0 w-full" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[3] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionContainer1 />
       <MyRoleDescription />
       <Frame13 />
@@ -177,19 +216,37 @@ function Frame5() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Audit</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Key Issues</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Audited existing components and user flows</p>
+        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">3 key issues that prevented user flows</p>
       </div>
     </div>
   );
 }
 
-function AuditDescription() {
+function KeyIssuesIntro() {
+  return null;
+}
+
+function KeyIssueBlock({
+  title,
+  description,
+  image,
+  ariaLabel,
+}: {
+  title: string;
+  description: string;
+  image: string;
+  ariaLabel: string;
+}) {
   return (
-    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">{`Given the project's large scale, I created a user flow and sitemap to simplify communication and align the team's understanding, focusing on two key user tasks: submitting forms and tracking submissions.`}</p>
+    <div className="flex flex-col gap-[16px] w-full">
+      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+        <p className="leading-[22.5px] text-[#32404f]">{title}</p>
+        <p className="leading-[22.5px]">{description}</p>
+      </div>
+      <ZoomableImage src={image} ariaLabel={ariaLabel} />
     </div>
   );
 }
@@ -217,10 +274,27 @@ function Frame14() {
 
 function Property1() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[6] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] relative row-[8] self-start shrink-0 w-full" data-name="Property">
       <Frame5 />
-      <AuditDescription />
-      <Frame14 />
+      <KeyIssuesIntro />
+      <KeyIssueBlock
+        title="1. Inconsistent interface patterns created confusion"
+        description="Layouts and information hierarchy varied across modules, making it difficult for users to predict how the system behaved."
+        image={imgIssueDefined1}
+        ariaLabel="Open issue defined one image full view"
+      />
+      <KeyIssueBlock
+        title="2. Lack of feedback during submission increased errors"
+        description="Critical actions such as submissions and status updates lacked clear confirmation and progress feedback."
+        image={imgIssueDefined2}
+        ariaLabel="Open issue defined two image full view"
+      />
+      <KeyIssueBlock
+        title="3. No centralized view for monitoring incentives"
+        description="Users had to navigate across multiple screens to check program details, budgets, and status updates."
+        image={imgIssueDefined3}
+        ariaLabel="Open issue defined three image full view"
+      />
     </div>
   );
 }
@@ -232,7 +306,7 @@ function Frame5Requirement() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Requirement Analysis</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Analyzed requirements and usages for new components</p>
+        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Analyzed requirements and usages for new{"\n"}components</p>
       </div>
     </div>
   );
@@ -262,10 +336,29 @@ function Frame14Requirement() {
 
 function PropertyRequirement() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[7] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[9] self-start shrink-0 w-full" data-name="Property">
       <Frame5Requirement />
       <RequirementAnalysisDescription />
       <Frame14Requirement />
+    </div>
+  );
+}
+
+function DesignGoalSection() {
+  return (
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[10] self-start shrink-0 w-full" data-name="Design Goal Section">
+      <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
+        <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
+          <p className="leading-[22.5px] whitespace-pre-wrap">Design Goal</p>
+        </div>
+        <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
+          <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Create a predictable management system that supports confident decision-making</p>
+        </div>
+      </div>
+      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">This approach ensures users can understand system state quickly and complete high-stakes tasks with confidence.</p>
+      </div>
+      <ZoomableImage src={imgDesignGoal} ariaLabel="Open design goal image full view" />
     </div>
   );
 }
@@ -274,7 +367,7 @@ function SectionHeader() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Header">
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Design System</p>
+        <p className="leading-[22.5px] whitespace-pre-wrap">Data Visualization</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[34px] sm:text-[42px] tracking-[-1.04px] w-full">
         <p className="leading-[42px] sm:leading-[normal] whitespace-pre-wrap">Budget & Incentive Manager</p>
@@ -497,7 +590,7 @@ function SectionContainer6() {
 
 function ContentSections3() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[15] self-start shrink-0 w-full" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[16] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionContainer6 />
     </div>
   );
@@ -510,7 +603,7 @@ function Frame4() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Problem</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Unclear and inconsistent submission experience</p>
+        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Users struggled to manage tasks with confidence, increasing the risk of mistakes and cognitive load</p>
       </div>
     </div>
   );
@@ -526,7 +619,12 @@ function ProblemDescription() {
 
 function SectionImageLg3() {
   return (
-    <ZoomableImage src={imgChallenge1} ariaLabel="Open challenge image full view" />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
+      <div className="overflow-clip relative rounded-[inherit] w-full">
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgChallenge} />
+      </div>
+      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+    </div>
   );
 }
 
@@ -540,7 +638,7 @@ function Frame12() {
 
 function Property6() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[4] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[6] self-start shrink-0 w-full" data-name="Property">
       <Frame4 />
       <ProblemDescription />
       <Frame12 />
@@ -548,48 +646,20 @@ function Property6() {
   );
 }
 
-function Frame8() {
+function HmwSection() {
   return (
-    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Solution</p>
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0 w-full" data-name="HMW Section">
+      <div className="bg-[rgba(50,64,79,0.1)] h-px w-full" />
+      <div className="flex flex-col font-normal gap-[16px] items-center leading-[0] relative shrink-0 w-full text-center py-[110px] sm:py-[170px]">
+        <img loading="lazy" decoding="async" alt="" className="h-[26px] w-[26px]" src={imgStar} />
+        <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
+          <p className="leading-[22.5px] whitespace-pre-wrap">How Might We</p>
+        </div>
+        <div className="flex flex-col font-geist justify-center relative shrink-0 text-[#1e242a] text-[26px] tracking-[-0.64px] w-full">
+          <p className="leading-[40px] whitespace-pre-wrap">How might we help managers clearly understand system state and manage incentives with confidence in a high-stakes environment?</p>
+        </div>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Built a component library for consistency and faster delivery</p>
-      </div>
-    </div>
-  );
-}
-
-function SectionImageLg4() {
-  return (
-    <ZoomableImage src={imgSolutionOverview1} ariaLabel="Open solution overview first image full view" />
-  );
-}
-
-function SectionImageLg4b() {
-  return (
-    <ZoomableImage src={imgSolutionOverview2} ariaLabel="Open solution overview second image full view" />
-  );
-}
-
-function Frame16() {
-  return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-      <SectionImageLg4 />
-      <SectionImageLg4b />
-    </div>
-  );
-}
-
-function Property7() {
-  return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0 w-full" data-name="Property">
-      <Frame8 />
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">I translated the audit into a reusable component system so the team could standardize common patterns instead of repeatedly solving the same UX problems screen by screen.</p>
-      </div>
-      <Frame16 />
+      <div className="bg-[rgba(50,64,79,0.1)] h-px w-full" />
     </div>
   );
 }
@@ -601,21 +671,39 @@ function Frame9() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 1</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Enhanced reliability via consistency and accessibility</p>
+        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">All-in-one pages for faster, clearer actions</p>
       </div>
+    </div>
+  );
+}
+
+function Solution1Description() {
+  return (
+    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">I introduced a centralized management page that consolidates the key information needed to manage incentive programs.</p>
+      <div className="mt-[12px]">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Managers can now:</p>
+        <ul className="list-disc pl-[20px] mt-[8px] space-y-[4px]">
+          <li className="leading-[22.5px]">View incentive details</li>
+          <li className="leading-[22.5px]">Track progress</li>
+          <li className="leading-[22.5px]">Update program status</li>
+          <li className="leading-[22.5px]">Monitor related budget information</li>
+        </ul>
+      </div>
+      <p className="leading-[22.5px] whitespace-pre-wrap mt-[12px]">This reduces navigation overhead and allows users to manage incentives from a single operational view rather than jumping across multiple pages.</p>
     </div>
   );
 }
 
 function SectionImageLg5() {
   return (
-    <ZoomableImage src={imgSolution1Before} ariaLabel="Open solution one before image full view" />
+    <ZoomableImage src={imgSolutionOverview2} ariaLabel="Open solution one first image full view" />
   );
 }
 
 function SectionImageLg5b() {
   return (
-    <ZoomableImage src={imgSolution1After} ariaLabel="Open solution one after image full view" />
+    <ZoomableImage src={imgDesignOutcome1} ariaLabel="Open solution one second image full view" />
   );
 }
 
@@ -630,11 +718,9 @@ function Frame17() {
 
 function Property8() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[10] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0 w-full" data-name="Property">
       <Frame9 />
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">I standardized layouts, hierarchy, and accessibility patterns so users could scan pages faster and complete requests with less uncertainty.</p>
-      </div>
+      <Solution1Description />
       <Frame17 />
     </div>
   );
@@ -647,7 +733,7 @@ function Frame10() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 2</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Guidance, error prevention and recovery</p>
+        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Redesigning core task modals for clarity and consistency</p>
       </div>
     </div>
   );
@@ -656,20 +742,14 @@ function Frame10() {
 function Solution2Description() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">It empowers users to confidently interact with the product and complete tasks independently, reducing mistakes and ensuring smooth user flows.</p>
+      <p className="leading-[22.5px] whitespace-pre-wrap">{`Because incentive submission and calculation happen inside modals, improving them was critical to the overall workflow. I redesigned and standardized 8 modals to make the experience more consistent, clearer to follow, and easier to complete with confidence.`}</p>
     </div>
   );
 }
 
 function SectionImageLg6() {
   return (
-    <ZoomableImage src={imgSolution2Before} ariaLabel="Open solution two before image full view" />
-  );
-}
-
-function SectionImageLg6b() {
-  return (
-    <ZoomableImage src={imgSolution2After} ariaLabel="Open solution two after image full view" />
+    <ZoomableImage src={imgSolutionTwo} ariaLabel="Open solution two image full view" />
   );
 }
 
@@ -677,14 +757,13 @@ function Frame18() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
       <SectionImageLg6 />
-      <SectionImageLg6b />
     </div>
   );
 }
 
 function Property9() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[11] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0 w-full" data-name="Property">
       <Frame10 />
       <Solution2Description />
       <Frame18 />
@@ -699,7 +778,7 @@ function Frame11() {
         <p className="leading-[22.5px] whitespace-pre-wrap">Solution 3</p>
       </div>
       <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Increased task completion rate via optimized modals</p>
+        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">Guidance and confidence in high-stakes tasks</p>
       </div>
     </div>
   );
@@ -708,20 +787,16 @@ function Frame11() {
 function Solution3Description() {
   return (
     <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">Modals are integral to the user's main tasks, providing visual indicators and guidelines to reduce errors and completion time.</p>
+      <p className="leading-[22.5px] whitespace-pre-wrap">{`I introduced clearer submission feedback, status indicators, and error-prevention patterns across the submission journey. The experience needed stronger feedback and guidance because tworkflows involve financial decisions,
+
+The system now supports both error prevention and recovery, helping users confidently complete critical tasks and reducing mistakes.`}</p>
     </div>
   );
 }
 
 function SectionImageLg7() {
   return (
-    <ZoomableImage src={imgSolution3Before} ariaLabel="Open solution three before image full view" />
-  );
-}
-
-function SectionImageLg7b() {
-  return (
-    <ZoomableImage src={imgSolution3After} ariaLabel="Open solution three after image full view" />
+    <ZoomableImage src={imgSolutionThree} ariaLabel="Open solution three image full view" />
   );
 }
 
@@ -729,14 +804,13 @@ function Frame19() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
       <SectionImageLg7 />
-      <SectionImageLg7b />
     </div>
   );
 }
 
 function Property10() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[14] self-start shrink-0 w-full" data-name="Property">
       <Frame11 />
       <Solution3Description />
       <Frame19 />
@@ -744,75 +818,24 @@ function Property10() {
   );
 }
 
-function Frame11DesignOutcome() {
-  return (
-    <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Design Outcome</p>
-      </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[30px] sm:text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[40px] sm:leading-[46px] whitespace-pre-wrap">All-in-one pages for faster, clearer actions</p>
-      </div>
-    </div>
-  );
-}
-
-function DesignOutcomeDescription() {
-  return (
-    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">I redesigned two high-traffic workflows into centralized, all-in-one pages that reduce clicks, replace fragmented modals, and give users a clear top-down view of key details, history, and status, so they can act with confidence and control.</p>
-    </div>
-  );
-}
-
-function SectionImageDesignOutcome1() {
-  return (
-    <ZoomableImage src={imgDesignOutcome1} ariaLabel="Open first design outcome image full view" darkBadge />
-  );
-}
-
-function SectionImageDesignOutcome2() {
-  return (
-    <ZoomableImage src={imgDesignOutcome2} ariaLabel="Open second design outcome image full view" darkBadge />
-  );
-}
-
-function Frame19DesignOutcome() {
-  return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-      <SectionImageDesignOutcome1 />
-      <SectionImageDesignOutcome2 />
-    </div>
-  );
-}
-
-function PropertyOutcome() {
-  return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0 w-full" data-name="Property">
-      <Frame11DesignOutcome />
-      <DesignOutcomeDescription />
-      <Frame19DesignOutcome />
-    </div>
-  );
-}
-
 function SectionContainer() {
   return (
-    <div className="gap-[110px] sm:gap-[170px] grid-cols-1 grid-rows-[repeat(15,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
+    <div className="gap-[110px] sm:gap-[170px] grid-cols-1 grid-rows-[repeat(16,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
       <ContentSections1 />
+      <DesignOutcomeHeroSection />
       <ContentSections />
       <Property />
+      <ContextSection />
       <Property6 />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[5] shrink-0" data-name="Horizontal Divider" />
+      <HmwSection />
       <Property1 />
       <PropertyRequirement />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[8] shrink-0" data-name="Horizontal Divider" />
-      <Property7 />
+      <DesignGoalSection />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[11] shrink-0" data-name="Horizontal Divider" />
       <Property8 />
       <Property9 />
       <Property10 />
-      <PropertyOutcome />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[14] shrink-0" data-name="Horizontal Divider" />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[15] shrink-0" data-name="Horizontal Divider" />
       <ContentSections3 />
     </div>
   );
