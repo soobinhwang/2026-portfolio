@@ -184,19 +184,19 @@ function ProjectCard({ to, href, title, subtitle, thumbnailSrc, thumbnailVideoSr
 function ProjectsGrid() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] sm:gap-[32px] items-start relative shrink-0 w-full" data-name="Projects Grid">
-      <ProjectCard
-        to="/ai/project-1"
-        title="Chat GPT Feature Concepts"
-        subtitle="Prototype • PoC"
-        thumbnailAnimationSrcUrl={project1ThumbnailJsonUrl}
-        thumbnailVideoSrc={project1ThumbnailVideo}
-      />
       <ProjectCard to="/ai/project-2" title="Design Decision Note" subtitle="Figma Plugin" thumbnailSrc={project2ThumbnailImage} />
       <ProjectCard
         href="https://www.linkedin.com/posts/sue-product-dsgn_ai-aidesign-aitools-activity-7431900399055413249-lo7t?utm_source=share&utm_medium=member_desktop&rcm=ACoAACul4igBoaqG7fZIRGkVmlNdfVyEmfYkpAI"
         title="Building a Portfolio with Vibe Coding"
         subtitle="Personal Build"
         thumbnailSrc={project3ThumbnailImage}
+      />
+      <ProjectCard
+        to="/ai/project-1"
+        title="Chat GPT Feature Concepts"
+        subtitle="Prototype • PoC"
+        thumbnailAnimationSrcUrl={project1ThumbnailJsonUrl}
+        thumbnailVideoSrc={project1ThumbnailVideo}
       />
     </div>
   );
