@@ -120,17 +120,17 @@ function AiThumbnail({ src, videoSrc, animationSrcUrl, comingSoon }: { src?: str
   );
 }
 
-function ProjectInfo({ title, subtitle, comingSoon }: { title: string; subtitle?: string; comingSoon?: boolean }) {
+function ProjectInfo({ title, subtitle }: { title: string; subtitle?: string }) {
   return (
     <div
       className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
       data-name="Info Container"
     >
-      <div className={`flex flex-col font-newsreader justify-center relative shrink-0 text-[18px] sm:text-[20px] tracking-[-0.64px] ${comingSoon ? "text-[rgba(50,64,79,0.3)]" : "text-[#32404f]"}`}>
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[18px] sm:text-[20px] tracking-[-0.64px] text-[#32404f]">
         <p className="leading-[28px] sm:leading-[38px]">{title}</p>
       </div>
       {subtitle ? (
-        <div className={`flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] uppercase ${comingSoon ? "text-[rgba(50,64,79,0.3)]" : "text-[rgba(50,64,79,0.58)]"}`}>
+        <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] uppercase text-[rgba(50,64,79,0.58)]">
           <p className="leading-[20px] sm:leading-[22.5px]">{subtitle}</p>
         </div>
       ) : null}
@@ -143,7 +143,7 @@ function ProjectCard({ to, href, title, subtitle, thumbnailSrc, thumbnailVideoSr
     <>
       {showTopBorder && <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />}
       <AiThumbnail src={thumbnailSrc} videoSrc={thumbnailVideoSrc} animationSrcUrl={thumbnailAnimationSrcUrl} comingSoon={comingSoon} />
-      <ProjectInfo title={title} subtitle={subtitle} comingSoon={comingSoon} />
+      <ProjectInfo title={title} subtitle={subtitle} />
     </>
   );
 
