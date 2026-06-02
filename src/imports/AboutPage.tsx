@@ -389,7 +389,7 @@ function AwardsEventContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-name="Awards Event Container">
       <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.25px] whitespace-nowrap">
-        <p className="leading-[24px]">1st Place</p>
+        <p className="leading-[24px]">🥇 1st Place</p>
       </div>
       <AwardsProjectContainer />
     </div>
@@ -451,7 +451,7 @@ function AwardsEventContainer2() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-name="Awards Event Container">
       <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.25px] whitespace-nowrap">
-        <p className="leading-[24px]">2nd Place</p>
+        <p className="leading-[24px]">🥈 2nd Place</p>
       </div>
       <AwardsProjectContainer1 />
     </div>
@@ -517,7 +517,7 @@ function AwardsEventContainer4() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-name="Awards Event Container">
       <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.25px] whitespace-nowrap">
-        <p className="leading-[24px]">2nd Place</p>
+        <p className="leading-[24px]">🥈 2nd Place</p>
       </div>
       <AwardsProjectContainer2 />
     </div>
@@ -583,7 +583,7 @@ function AwardsEventContainer6() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center relative shrink-0" data-name="Awards Event Container">
       <div className="flex flex-col font-geist font-medium justify-center leading-[0] relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.25px] whitespace-nowrap">
-        <p className="leading-[24px]">3rd Place</p>
+        <p className="leading-[24px]">🥉 3rd Place</p>
       </div>
       <AwardsProjectContainer3 />
     </div>
