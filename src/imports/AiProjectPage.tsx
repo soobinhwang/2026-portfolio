@@ -3,6 +3,7 @@ import { Link as RouterLink } from "react-router";
 import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
 import project2ThumbnailImage from "../assets/ai/project-2/ai-p2-thumbnail.png";
 import project3ThumbnailImage from "../assets/ai/project-3/ai-p3-thumbnail.png";
+import project4ThumbnailImage from "../assets/ai/project-4/ai-p4-thumbnail.png";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
@@ -186,10 +187,21 @@ function ProjectsGrid() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] sm:gap-[32px] items-start relative shrink-0 w-full" data-name="Projects Grid">
       <ProjectCard to="/ai/project-2" title="Design Decision Note" subtitle="Figma Plugin" thumbnailSrc={project2ThumbnailImage} />
       <ProjectCard
+        href="https://www.linkedin.com/feed/update/urn:li:activity:7445938090139095042/"
+        title="Never Forget to Commit Again"
+        subtitle="Claude Code Skill"
+        thumbnailSrc={project4ThumbnailImage}
+      />
+      <ProjectCard
         href="https://www.linkedin.com/posts/sue-product-dsgn_ai-aidesign-aitools-activity-7431900399055413249-lo7t?utm_source=share&utm_medium=member_desktop&rcm=ACoAACul4igBoaqG7fZIRGkVmlNdfVyEmfYkpAI"
         title="Building a Portfolio with Vibe Coding"
         subtitle="Personal Build"
         thumbnailSrc={project3ThumbnailImage}
+      />
+      <ProjectCard
+        title="Mobile App"
+        subtitle="Coming Soon"
+        comingSoon
       />
       <ProjectCard
         to="/ai/project-1"
