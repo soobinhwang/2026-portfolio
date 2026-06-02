@@ -1,5 +1,7 @@
 import svgPaths from "./svg-81bzjcs43u";
 import imgProfileContainer from "../assets/About/Profile Container.png";
+import imgSpeech from "../assets/About/speech.JPG";
+import imgMentor from "../assets/About/mentor.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
@@ -173,7 +175,7 @@ function ContentColumn() {
           className="border border-[#c6d0da] bg-white hover:bg-[#f7f9fb] hover:border-[#aebbc7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30 transition-colors duration-200 flex min-h-[48px] min-w-[184px] gap-[8px] items-center justify-center overflow-clip px-[24px] py-[12px] rounded-[24px]"
           aria-label="LinkedIn"
         >
-          <span className="font-geist-mono font-medium text-[#1e242a] text-[15px] tracking-[-0.3px] uppercase leading-[24px] whitespace-nowrap">LinkedIn</span>
+          <span className="font-geist-mono font-medium text-[#1e242a] text-[15px] tracking-[-0.3px] uppercase leading-[24px] whitespace-nowrap">View LinkedIn</span>
         </a>
       </div>
     </div>
@@ -270,11 +272,14 @@ function MentorshipEventContainer() {
 
 function MentorshipContent() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
-      <div className="flex flex-col font-geist font-medium justify-center relative text-[#32404f] text-[16px]">
-        <p className="leading-[24px]">Career Mentor</p>
+    <div className="flex flex-col gap-[8px] w-full">
+      <img src={imgMentor} alt="Career Mentor at KOTRA Job Fair" className="w-full rounded-[8px] object-cover" style={{ maxHeight: 320 }} />
+      <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
+        <div className="flex flex-col font-geist font-medium justify-center relative text-[#32404f] text-[16px]">
+          <p className="leading-[24px]">Career Mentor</p>
+        </div>
+        <MentorshipEventContainer />
       </div>
-      <MentorshipEventContainer />
     </div>
   );
 }
@@ -340,11 +345,11 @@ function MentorshipContentContainer() {
 function MentorshipLine() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start pb-[48px] relative shrink-0 w-full" data-name="Mentorship Line">
+      <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
       <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
         <p className="leading-[24px] whitespace-pre-wrap">MENTORSHIP</p>
       </div>
       <MentorshipContentContainer />
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
     </div>
   );
 }
@@ -759,39 +764,61 @@ function AwardsContainer() {
         <p className="leading-[24px] whitespace-pre-wrap">AWARDS</p>
       </div>
       <AwardsContentContainer />
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
     </div>
   );
 }
 
-function PublicSpeakingEventContainer() {
+function PublicSpeakingEntry({ title, date, href, img }: { title: string; date: string; href?: string; img?: string }) {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end relative shrink-0 text-[rgba(50,64,79,0.58)] w-full sm:w-auto" data-name="Public Speaking Event Container">
-      <div className="flex flex-col justify-center relative shrink-0 text-[13px] sm:text-[14px]">
-        <p className="leading-[24px] sm:whitespace-nowrap">Jan 3, 2022</p>
+    <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 tracking-[-0.25px] w-full" data-name="Public Speaking Content">
+      {img && (
+        <img src={img} alt={title} className="w-full rounded-[8px] object-cover mb-[8px]" style={{ maxHeight: 320 }} />
+      )}
+      <div className="content-stretch flex flex-col sm:flex-row sm:items-start sm:justify-between gap-[4px] sm:gap-0 w-full">
+        <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
+          <p className="leading-[24px]">{title}</p>
+        </div>
+        <div className="flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end relative shrink-0 text-[rgba(50,64,79,0.58)] w-full sm:w-auto">
+          <div className="flex flex-col justify-center relative shrink-0 text-[13px] sm:text-[14px]">
+            <p className="leading-[24px] sm:whitespace-nowrap">{date}</p>
+          </div>
+        </div>
       </div>
-    </div>
-  );
-}
-
-function PublicSpeakingContent() {
-  return (
-    <div className="content-stretch flex flex-col sm:flex-row sm:items-start sm:justify-between gap-[4px] sm:gap-0 relative shrink-0 tracking-[-0.25px] w-full" data-name="Public Speaking Content">
-      <div className="flex flex-col font-geist font-medium justify-center relative shrink-0 text-[#32404f] text-[16px]">
-        <p className="leading-[24px]">Achieving Success in Design Competitions</p>
-      </div>
-      <PublicSpeakingEventContainer />
+      {href && (
+        <a
+          className="content-stretch flex flex-wrap gap-[4px] items-center relative shrink-0"
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[14px] text-[rgba(50,64,79,0.58)] tracking-[-0.25px]">
+            <p className="leading-[24px] underline-offset-2 hover:underline">View Post</p>
+          </div>
+          <ArrowNarrowUpRight />
+        </a>
+      )}
     </div>
   );
 }
 
 function PublicSpeakingContainer() {
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start leading-[0] relative shrink-0 w-full" data-name="Public Speaking Container">
+    <div className="content-stretch flex flex-col gap-[32px] items-start pb-[48px] leading-[0] relative shrink-0 w-full" data-name="Public Speaking Container">
+      <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
       <div className="flex flex-col font-geist-mono font-normal justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
         <p className="leading-[24px] whitespace-pre-wrap">PUBLIC SPEAKING</p>
       </div>
-      <PublicSpeakingContent />
+      <div className="flex flex-col gap-[24px] w-full">
+        <PublicSpeakingEntry
+          title="AI & Designers: New Workflow Supported by Lovable"
+          date="Mar 22, 2026"
+          img={imgSpeech}
+        />
+        <PublicSpeakingEntry
+          title="Achieving Success in Design Competitions"
+          date="Jan 3, 2022"
+        />
+      </div>
     </div>
   );
 }
@@ -799,16 +826,16 @@ function PublicSpeakingContainer() {
 function MentorshipContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[48px] items-start justify-center relative shrink-0 w-full" data-name="Mentorship Container">
+      <PublicSpeakingContainer />
       <MentorshipLine />
       <AwardsContainer />
-      <PublicSpeakingContainer />
     </div>
   );
 }
 
 function ExperienceContainer() {
   return (
-    <div className="content-stretch flex flex-col gap-[70px] items-start relative shrink-0 w-full" data-name="Experience Container">
+    <div className="content-stretch flex flex-col gap-[50px] items-start relative shrink-0 w-full" data-name="Experience Container">
       <ExperienceHeaderContainer />
       <MentorshipContainer />
     </div>
@@ -1031,7 +1058,7 @@ function WhatMakesMeStandOut() {
 
 function MainFrame2() {
   return (
-    <div className="content-stretch flex flex-col gap-[138px] items-start relative shrink-0 w-full" data-name="Main Frame">
+    <div className="content-stretch flex flex-col gap-[170px] items-start relative shrink-0 w-full" data-name="Main Frame">
       <MainContainer />
       <ExperienceContainer />
       <WritingsContainer />
