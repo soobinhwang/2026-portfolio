@@ -4,6 +4,7 @@ import project1ThumbnailVideo from "../assets/ai/project-1/thumbnail.mp4";
 import project2ThumbnailImage from "../assets/ai/project-2/ai-p2-thumbnail.png";
 import project3ThumbnailImage from "../assets/ai/project-3/ai-p3-thumbnail.png";
 import project4ThumbnailImage from "../assets/ai/project-4/ai-p4-thumbnail.png";
+import project5ThumbnailImage from "../assets/ai/project-5/ai-p5-thumbnail.png";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
@@ -128,8 +129,8 @@ function ProjectInfo({ title, subtitle, comingSoon }: { title: string; subtitle?
       <div className={`flex flex-col font-newsreader justify-center relative shrink-0 text-[18px] sm:text-[20px] tracking-[-0.64px] ${comingSoon ? "text-[rgba(50,64,79,0.3)]" : "text-[#32404f]"}`}>
         <p className="leading-[28px] sm:leading-[38px]">{title}</p>
       </div>
-      {!comingSoon && subtitle ? (
-        <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
+      {subtitle ? (
+        <div className={`flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] uppercase ${comingSoon ? "text-[rgba(50,64,79,0.3)]" : "text-[rgba(50,64,79,0.58)]"}`}>
           <p className="leading-[20px] sm:leading-[22.5px]">{subtitle}</p>
         </div>
       ) : null}
@@ -199,8 +200,9 @@ function ProjectsGrid() {
         thumbnailSrc={project3ThumbnailImage}
       />
       <ProjectCard
-        title="Mobile App"
-        subtitle="Coming Soon"
+        title="App-in-app for a Korean Fintech"
+        subtitle="Mobile App"
+        thumbnailSrc={project5ThumbnailImage}
         comingSoon
       />
       <ProjectCard
