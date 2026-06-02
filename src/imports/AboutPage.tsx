@@ -236,7 +236,7 @@ function DownloadResumeLink() {
       className="content-stretch flex items-center justify-center relative shrink-0 group"
       data-name="Download Resume Link"
       href={resumePdf}
-      download
+      download="Sue Hwang - Resume.pdf"
       aria-label="Download resume"
     >
       <DownloadResumeContainer />
