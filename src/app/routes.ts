@@ -8,6 +8,8 @@ import AiProject1Detail from "../imports/AiProject1Detail";
 import AiProject2Detail from "../imports/AiProject2Detail";
 import GlobalRewardStorefront from "../imports/GlobalRewardStorefront";
 import DesignLibrary from "../imports/DesignLibrary";
+import WeFair from "../imports/WeFair";
+import Connecteer from "../imports/Connecteer";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +46,14 @@ export const router = createBrowserRouter([
       {
         path: "/design-library",
         Component: DesignLibrary,
+      },
+      {
+        path: "/wefair",
+        Component: WeFair,
+      },
+      {
+        path: "/connecteer",
+        Component: Connecteer,
       },
     ],
   },

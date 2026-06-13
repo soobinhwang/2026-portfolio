@@ -158,26 +158,6 @@ function ContentColumn() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Content Column">
       <ProfileDescriptionContainer />
-      <div className="flex flex-row flex-wrap gap-[12px] items-center">
-        <a
-          href="https://cal.com/sue-hwang-dwcdjs"
-          target="_blank"
-          rel="noreferrer"
-          className="bg-[#1e242a] hover:bg-[#2a3138] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30 transition-colors duration-200 flex min-h-[48px] min-w-[184px] gap-[8px] items-center justify-center overflow-clip px-[24px] py-[12px] rounded-[24px]"
-          aria-label="Let's chat"
-        >
-          <span className="font-geist-mono font-medium text-white text-[15px] tracking-[-0.3px] uppercase leading-[24px] whitespace-nowrap">Let's Chat</span>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/sue-product-dsgn/"
-          target="_blank"
-          rel="noreferrer"
-          className="border border-[#c6d0da] bg-white hover:bg-[#f7f9fb] hover:border-[#aebbc7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#32404f]/30 transition-colors duration-200 flex min-h-[48px] min-w-[184px] gap-[8px] items-center justify-center overflow-clip px-[24px] py-[12px] rounded-[24px]"
-          aria-label="LinkedIn"
-        >
-          <span className="font-geist-mono font-medium text-[#1e242a] text-[15px] tracking-[-0.3px] uppercase leading-[24px] whitespace-nowrap">View LinkedIn</span>
-        </a>
-      </div>
     </div>
   );
 }

@@ -11,6 +11,8 @@ import imgP1Thumbnail from "../assets/landing/P1 Thumbnail.png";
 import imgP2Thumbnail from "../assets/landing/P2 Thumbnail.png";
 import imgP3Thumbnail from "../assets/landing/P3 Thumbnail.png";
 import imgP4Thumbnail from "../assets/landing/P4 Thumbnail.png";
+import imgP5Thumbnail from "../assets/landing/P5 Thumbnail.png";
+import imgP6Thumbnail from "../assets/landing/P6 Thumbnail.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
@@ -197,7 +199,7 @@ function InfoContainer() {
         <p className="leading-[28px] sm:leading-[38px]">{`Rewards & Recognition Platform`}</p>
       </div>
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">HR Tech</p>
+        <p className="leading-[20px] sm:leading-[22.5px]">Engagement Platform</p>
       </div>
     </div>
   );
@@ -351,11 +353,93 @@ function Container5() {
   );
 }
 
+function ThumbnailWeFair() {
+  return (
+    <div className="relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP5Thumbnail} />
+    </div>
+  );
+}
+
+function InfoContainerWeFair() {
+  return (
+    <div className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full" data-name="Info Container">
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
+        <p className="leading-[28px] sm:leading-[38px]">Ethical Shopping App WeFair</p>
+      </div>
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
+        <p className="leading-[20px] sm:leading-[22.5px]">Hackathon · 2nd Place</p>
+      </div>
+    </div>
+  );
+}
+
+function ContainerWeFair() {
+  return (
+    <RouterLink
+      to="/wefair"
+      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+      data-name="Container"
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
+      <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
+      <ThumbnailWeFair />
+      <InfoContainerWeFair />
+    </RouterLink>
+  );
+}
+
+function ThumbnailConnecteer() {
+  return (
+    <div className="relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP6Thumbnail} />
+    </div>
+  );
+}
+
+function InfoContainerConnecteer() {
+  return (
+    <div className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full" data-name="Info Container">
+      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
+        <p className="leading-[28px] sm:leading-[38px]">Volunteer Matching App Connecteer</p>
+      </div>
+      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
+        <p className="leading-[20px] sm:leading-[22.5px]">Hackathon · 2nd Place</p>
+      </div>
+    </div>
+  );
+}
+
+function ContainerConnecteer() {
+  return (
+    <RouterLink
+      to="/connecteer"
+      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+      data-name="Container"
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
+      <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
+      <ThumbnailConnecteer />
+      <InfoContainerConnecteer />
+    </RouterLink>
+  );
+}
+
+function Container8() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] sm:gap-[32px] items-start relative w-full" data-name="Container">
+      <ContainerWeFair />
+      <ContainerConnecteer />
+    </div>
+  );
+}
+
 function MainFrame1() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] sm:gap-[40px] items-start relative shrink-0 w-full" data-name="Main Frame">
       <Container />
       <Container5 />
+      <Container8 />
     </div>
   );
 }
