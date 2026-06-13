@@ -1,6 +1,7 @@
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
+import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 import imgDetailThumbnail from "../assets/work/wefair/P5-Detail-Thumbnail.png";
 import imgOverview from "../assets/work/wefair/Overview.png";
 import imgRoadmap from "../assets/work/wefair/Roadmap.png";
@@ -13,6 +14,26 @@ import imgSolution1 from "../assets/work/wefair/solution 1.png";
 import imgSolution2 from "../assets/work/wefair/solution 2.png";
 import imgSolution3 from "../assets/work/wefair/solution 3.png";
 import imgSolution4 from "../assets/work/wefair/solution 4.png";
+
+function ZoomableImage({ src, alt = "", darkBadge = false }: { src: string; alt?: string; darkBadge?: boolean }) {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <button type="button" className="relative shrink-0 w-full cursor-pointer group" aria-label="Open image full view">
+          <img loading="lazy" decoding="async" alt={alt} className="block w-full h-auto" src={src} />
+          <div className={`absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] border transition-opacity duration-200 group-hover:opacity-90 ${darkBadge ? "bg-[rgba(30,36,42,0.78)] border-[#1e242a]" : "bg-white/60 border-[#eceff2]"}`} aria-hidden="true">
+            <svg aria-hidden="true" className="h-[14px] w-[14px]" fill="none" viewBox="0 0 24 24">
+              <path d="M14 3h7v7M21 3l-7 7M10 21H3v-7M3 21l7-7" stroke={darkBadge ? "#f0f3f5" : "#6b7785"} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.4" />
+            </svg>
+          </div>
+        </button>
+      </DialogTrigger>
+      <DialogContent className="w-[1362px] max-w-[96vw] sm:w-[1362px] sm:max-w-[96vw] p-0 border-0 bg-transparent shadow-none">
+        <img loading="lazy" decoding="async" alt={alt} className="w-full h-auto max-h-[90vh] object-contain rounded-[12px]" src={src} />
+      </DialogContent>
+    </Dialog>
+  );
+}
 
 function Divider() {
   return <div className="bg-[rgba(50,64,79,0.1)] h-px w-full shrink-0" />;
@@ -102,7 +123,7 @@ function OverviewSection() {
     <div className="flex flex-col gap-[16px] w-full">
       <SectionLabel text="Overview" />
       <BodyText>
-        Inform consumer segment about brands who support living wages directly benefiting workers and their families. Provide transparent information on brands and allow users to learn more about fair trade, shop items from ethical brands or support them through diverse activities.{"\n\n"}Got 90/100 and landed on 2nd place of 432 competitors.
+        Inform consumer segment about brands who support living wages directly benefiting workers and their families. Provide transparent information on brands and allow users to learn more about fair trade, shop items from ethical brands or support them through diverse activities.{"\n\n"}Got 90/100 and landed on 🥈 2nd place of 432 competitors.
       </BodyText>
       <PrototypeLink />
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgOverview} />
@@ -178,7 +199,7 @@ function BenchMarkingSection() {
       <BodyText>
         It was quite challenging to find the product on the market that had the same goal with what we were trying to make.{"\n\n"}However, Patagonia website was a good example to see how to deliver a consistent message by telling customers the stories behind each product. So we benchmarked their way of conveying message with the products.
       </BodyText>
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgBenchmark} />
+      <ZoomableImage src={imgBenchmark} />
     </div>
   );
 }
@@ -193,7 +214,7 @@ function CompetitiveAnalysisSection() {
       <BodyText>
         I was quite surprised there are many good brands out there that I didn't know before. In this analysis step, we focused on their pros and cons as these four competitors have their own unique ways to tell their stories of their manufacturing process, but there wasn't enough supporting data so it was hard to tell if that's reliable resources.
       </BodyText>
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgCompetitiveAnalysis} />
+      <ZoomableImage src={imgCompetitiveAnalysis} />
     </div>
   );
 }
@@ -282,7 +303,7 @@ function IdeationSection() {
     <div className="flex flex-col gap-[16px] w-full">
       <SectionLabel text="Ideation" />
       <SectionTitle text="Low fidelity Wireframes" />
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgIdeation} />
+      <ZoomableImage src={imgIdeation} />
     </div>
   );
 }
@@ -299,7 +320,7 @@ function FinalDesign({ number, title, description, image }: {
         <SectionTitle text={title} />
         <BodyText>{description}</BodyText>
       </div>
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={image} />
+      <ZoomableImage src={image} darkBadge />
     </div>
   );
 }

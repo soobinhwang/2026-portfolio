@@ -1,6 +1,7 @@
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
+import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 import imgDetailThumbnail from "../assets/work/connecteer/P6-Detail-Thumbnail.png";
 import imgOverview from "../assets/work/connecteer/Overview.png";
 import imgSecondaryResearch from "../assets/work/connecteer/secondary research.png";
@@ -14,6 +15,26 @@ import imgSolution3 from "../assets/work/connecteer/Solution 3.png";
 import imgSolution4 from "../assets/work/connecteer/Solution 4.png";
 import imgSolution5 from "../assets/work/connecteer/Solution 5.png";
 import imgSolution6 from "../assets/work/connecteer/Solution 6.png";
+
+function ZoomableImage({ src, alt = "", darkBadge = false }: { src: string; alt?: string; darkBadge?: boolean }) {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        <button type="button" className="relative shrink-0 w-full cursor-pointer group" aria-label="Open image full view">
+          <img loading="lazy" decoding="async" alt={alt} className="block w-full h-auto" src={src} />
+          <div className={`absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] border transition-opacity duration-200 group-hover:opacity-90 ${darkBadge ? "bg-[rgba(30,36,42,0.78)] border-[#1e242a]" : "bg-white/60 border-[#eceff2]"}`} aria-hidden="true">
+            <svg aria-hidden="true" className="h-[14px] w-[14px]" fill="none" viewBox="0 0 24 24">
+              <path d="M14 3h7v7M21 3l-7 7M10 21H3v-7M3 21l7-7" stroke={darkBadge ? "#f0f3f5" : "#6b7785"} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.4" />
+            </svg>
+          </div>
+        </button>
+      </DialogTrigger>
+      <DialogContent className="w-[1362px] max-w-[96vw] sm:w-[1362px] sm:max-w-[96vw] p-0 border-0 bg-transparent shadow-none">
+        <img loading="lazy" decoding="async" alt={alt} className="w-full h-auto max-h-[90vh] object-contain rounded-[12px]" src={src} />
+      </DialogContent>
+    </Dialog>
+  );
+}
 
 function Divider() {
   return <div className="bg-[rgba(50,64,79,0.1)] h-px w-full shrink-0" />;
@@ -103,7 +124,7 @@ function OverviewSection() {
     <div className="flex flex-col gap-[16px] w-full">
       <SectionLabel text="Overview" />
       <BodyText>
-        Design an inclusive experience for high school students looking for opportunities to volunteer to help their local community, no matter their background or ability. Tailored volunteer recommendations based on interests. Filters for locations, durations, ratings, and categories. Accessibility settings for personalized assistance.{"\n\n"}Got 89/100 and landed on 2nd place of 432 competitors.
+        Design an inclusive experience for high school students looking for opportunities to volunteer to help their local community, no matter their background or ability. Tailored volunteer recommendations based on interests. Filters for locations, durations, ratings, and categories. Accessibility settings for personalized assistance.{"\n\n"}Got 89/100 and landed on 🥈 2nd place of 432 competitors.
       </BodyText>
       <PrototypeLink />
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgOverview} />
@@ -121,7 +142,7 @@ function SecondaryResearchSection() {
       <BodyText>
         {`"...Not everyone is the same when it comes to vision, hearing, cognitive and motor abilities, language, environment, race, culture, and literacy. Equitable design is aimed to accommodate differences in the contexts of students' identities, access, and experiences, not to treat all of them the same. Design with excluded and diverse communities, not for them, and that will help contribute to more inclusive technology."`}
       </BodyText>
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgSecondaryResearch} />
+      <ZoomableImage src={imgSecondaryResearch} />
     </div>
   );
 }
@@ -136,7 +157,7 @@ function UserResearchSection() {
       <BodyText>
         We asked a few people who just turned their 20s to see what features they might want it to be added. We got 4 pain points based on user interview.
       </BodyText>
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgUserResearch} />
+      <ZoomableImage src={imgUserResearch} />
     </div>
   );
 }
@@ -146,8 +167,8 @@ function UserResearchSection() {
 function IdeationSection() {
   return (
     <div className="flex flex-col gap-[16px] w-full">
-      <SectionLabel text="Ideation" />
-      <SectionTitle text="Explore potential features designed to meet users' needs" />
+      <SectionLabel text="Approach" />
+      <SectionTitle text="Exploring features for user needs" />
       <BodyText>
         Based on our understanding of what users need, we developed our ideas and made a list of goals of our app and possible features that can solve users' pain points and make our app stand out from competitors as well.
       </BodyText>
@@ -161,10 +182,10 @@ function IdeationSection() {
 function CompetitiveAnalysisSection() {
   return (
     <div className="flex flex-col gap-[16px] w-full">
-      <SectionLabel text="Competitive Analysis" />
+      <SectionLabel text="Ideation" />
       <SectionTitle text="Crafted the sitemap and user flow" />
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgUserFlow1} />
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgUserFlow2} />
+      <ZoomableImage src={imgUserFlow1} />
+      <ZoomableImage src={imgUserFlow2} />
     </div>
   );
 }
@@ -181,7 +202,7 @@ function FinalDesign({ number, title, description, image }: {
         <SectionTitle text={title} />
         <BodyText>{description}</BodyText>
       </div>
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={image} />
+      <ZoomableImage src={image} darkBadge />
     </div>
   );
 }
