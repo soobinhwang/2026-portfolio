@@ -199,7 +199,7 @@ function InfoContainer() {
         <p className="leading-[28px] sm:leading-[38px]">{`Rewards & Recognition Platform`}</p>
       </div>
       <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Engagement Platform</p>
+        <p className="leading-[20px] sm:leading-[22.5px]">Employee Experience</p>
       </div>
     </div>
   );

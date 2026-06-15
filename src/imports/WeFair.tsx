@@ -110,8 +110,8 @@ function MetaTable() {
   return (
     <div className="flex flex-col gap-[12px] w-full">
       <MetaRow label="Timeline" value="Dec 10–16, 2021 (1 week)" />
-      <MetaRow label="Role" value="UX UI Designer" />
-      <MetaRow label="Team" value="UX UI Designer · UX UI Designer" />
+      <MetaRow label="Role" value="UX Designer" />
+      <MetaRow label="Team" value="2 UX Designers" />
       <MetaRow label="Contribution" value="Project Management · Articulating Vague Concepts · UX Research · UI Design" />
       <MetaRow label="Deliverables" value="Mobile App Prototype" />
     </div>
