@@ -169,11 +169,11 @@ function ProfileContainer() {
           </span>
           <span className="leading-[36px] sm:leading-[50px] text-[#858e97]">{`who `}</span>
           <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">{`turns `}</span>
-          <span className="font-newsreader font-normal italic leading-[36px] sm:leading-[50px] text-[#858e97]">
+          <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">
             ambiguity
             <br aria-hidden="true" />
           </span>
-          <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">into scalable solutions.</span>
+          <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">into </span><span className="font-newsreader font-normal italic leading-[36px] sm:leading-[50px] text-[#858e97]">scalable</span><span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]"> solutions</span>
         </p>
       </div>
       {/* <ProfileCTAs /> */}
