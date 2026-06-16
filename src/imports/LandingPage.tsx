@@ -455,7 +455,7 @@ function MainFrame() {
 
 export default function LandingPage() {
   return (
-    <div className="bg-dot-grid min-h-screen flex flex-col relative w-full" data-name="Landing Page">
+    <div className="bg-dot-grid-center-strip min-h-screen flex flex-col relative w-full" data-name="Landing Page">
       <ProfileContainer />
       <MainFrame />
       <Footer />
