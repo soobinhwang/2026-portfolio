@@ -48,8 +48,7 @@ function ProfileDescriptionContainer() {
         <p className="leading-[34px] sm:leading-[44px] whitespace-pre-wrap">Sue is a Product Designer</p>
       </div>
       <div className="flex flex-col font-geist justify-center leading-[26px] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-full">
-        <p className="mb-[16px]">with 3+ years designing enterprise B2B SaaS products at scale. At CarltonOne, I owned end-to-end design across a rewards and recognition platform serving 500+ enterprise clients — from discovery and IA through system design and launch, across multiple product lines and user roles.</p>
-        <p>I work best on hard, ambiguous problems: where the brief is vague, the constraints are real, and someone needs to move before next week. I bring clarity — through structured thinking, fast prototyping, and a bias toward getting something testable in front of people as early as possible.</p>
+        <p>She pays attention to both the user experience and the team experience, often improving the process alongside the product.<br /><br />She makes invisible ideas visible by asking the right questions, runs workshops to build shared understanding, and designs for independence so people can use products confidently on their own. At the core: clarity is care, for users and for teams.</p>
       </div>
     </div>
   );
@@ -253,7 +252,7 @@ function MentorshipEventContainer() {
 function MentorshipContent() {
   return (
     <div className="flex flex-col gap-[8px] w-full">
-      <img src={imgMentor} alt="Career Mentor at KOTRA Job Fair" className="w-full rounded-[8px] object-cover" style={{ maxHeight: 320 }} />
+      <img src={imgMentor} alt="Career Mentor at KOTRA Job Fair" className="hidden w-full rounded-[8px] object-cover" style={{ maxHeight: 320 }} />
       <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto] items-start gap-[6px] sm:gap-[12px] relative shrink-0 w-full" data-name="Mentorship Content">
         <div className="flex flex-col font-geist font-medium justify-center relative text-[#32404f] text-[16px]">
           <p className="leading-[24px]">Career Mentor</p>
@@ -1056,7 +1055,7 @@ function MainFrame1() {
 
 function MainFrame() {
   return (
-    <div className="content-stretch flex flex-col items-start self-center max-w-[550px] mt-[120px] sm:mt-[190px] w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Main Frame">
+    <div className="about-enter content-stretch flex flex-col items-start self-center max-w-[550px] mt-[120px] sm:mt-[190px] w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Main Frame">
       <MainFrame1 />
     </div>
   );
