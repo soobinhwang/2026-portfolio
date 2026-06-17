@@ -238,13 +238,10 @@ function ExperienceHeaderContainer() {
 
 function MentorshipEventContainer() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)] w-full sm:w-auto" data-name="Mentorship Event Container">
-      <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] sm:whitespace-nowrap">KOTRA Job Fair</p>
-      </div>
-      <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] sm:whitespace-nowrap">Oct 2025</p>
-      </div>
+    <div className="flex font-geist font-normal items-center gap-[6px] relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
+      <p className="leading-[24px]">KOTRA Job Fair</p>
+      <span className="text-[rgba(50,64,79,0.3)]">·</span>
+      <p className="leading-[24px]">Oct 2025</p>
     </div>
   );
 }
@@ -265,13 +262,10 @@ function MentorshipContent() {
 
 function MentorshipEventContainer1() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)] w-full sm:w-auto" data-name="Mentorship Event Container">
-      <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] sm:whitespace-nowrap">KOTRA Job Fair</p>
-      </div>
-      <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] sm:whitespace-nowrap">Sep 2022</p>
-      </div>
+    <div className="flex font-geist font-normal items-center gap-[6px] relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
+      <p className="leading-[24px]">KOTRA Job Fair</p>
+      <span className="text-[rgba(50,64,79,0.3)]">·</span>
+      <p className="leading-[24px]">Sep 2022</p>
     </div>
   );
 }
@@ -289,13 +283,10 @@ function MentorshipContent1() {
 
 function MentorshipEventContainer2() {
   return (
-    <div className="content-stretch flex flex-col font-geist font-normal gap-[2px] sm:gap-[4px] items-start sm:items-end relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)] w-full sm:w-auto" data-name="Mentorship Event Container">
-      <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] sm:whitespace-nowrap">Euonia UX Hackathon</p>
-      </div>
-      <div className="flex flex-col justify-center relative shrink-0">
-        <p className="leading-[24px] sm:whitespace-nowrap">May 2022</p>
-      </div>
+    <div className="flex font-geist font-normal items-center gap-[6px] relative shrink-0 text-[13px] sm:text-[14px] text-[rgba(50,64,79,0.58)]" data-name="Mentorship Event Container">
+      <p className="leading-[24px]">Euonia UX Hackathon</p>
+      <span className="text-[rgba(50,64,79,0.3)]">·</span>
+      <p className="leading-[24px]">May 2022</p>
     </div>
   );
 }
