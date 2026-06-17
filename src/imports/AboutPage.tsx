@@ -173,7 +173,7 @@ function MainContainer() {
 function DownloadResumeHeading() {
   return (
     <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Download Resume Heading">
-      <div className="flex flex-col font-inter font-medium justify-center leading-[0] relative shrink-0 text-white text-[15px] text-center tracking-[-0.3px] whitespace-nowrap uppercase">
+      <div className="flex flex-col font-inter font-medium justify-center leading-[0] relative shrink-0 text-white text-[15px] text-center tracking-[-0.3px] whitespace-nowrap">
         <p className="leading-[24px]">Download Resume</p>
       </div>
     </div>
@@ -228,8 +228,8 @@ function DownloadResumeLink() {
 function ExperienceHeaderContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[14px] items-start sm:flex-row sm:items-center sm:justify-between relative shrink-0 w-full" data-name="Experience Header Container">
-      <div className="flex flex-col font-inter font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.04em] uppercase whitespace-nowrap">
-        <p className="leading-[normal]">experience</p>
+      <div className="flex flex-col font-inter font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.04em] whitespace-nowrap">
+        <p className="leading-[normal]">Experience</p>
       </div>
       <DownloadResumeLink />
     </div>
@@ -326,7 +326,7 @@ function MentorshipLine() {
     <div className="content-stretch flex flex-col gap-[32px] items-start pb-[48px] relative shrink-0 w-full" data-name="Mentorship Line">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
       <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
-        <p className="leading-[24px] whitespace-pre-wrap">MENTORSHIP</p>
+        <p className="leading-[24px] whitespace-pre-wrap">Mentorship</p>
       </div>
       <MentorshipContentContainer />
     </div>
@@ -740,7 +740,7 @@ function AwardsContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start pb-[48px] relative shrink-0 w-full" data-name="Awards Container">
       <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
-        <p className="leading-[24px] whitespace-pre-wrap">AWARDS</p>
+        <p className="leading-[24px] whitespace-pre-wrap">Awards</p>
       </div>
       <AwardsContentContainer />
     </div>
@@ -785,7 +785,7 @@ function PublicSpeakingContainer() {
     <div className="content-stretch flex flex-col gap-[32px] items-start pb-[48px] leading-[0] relative shrink-0 w-full" data-name="Public Speaking Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
       <div className="flex flex-col font-inter font-normal justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.15px] w-[142px]">
-        <p className="leading-[24px] whitespace-pre-wrap">PUBLIC SPEAKING</p>
+        <p className="leading-[24px] whitespace-pre-wrap">Public Speaking</p>
       </div>
       <div className="flex flex-col gap-[24px] w-full">
         <PublicSpeakingEntry
