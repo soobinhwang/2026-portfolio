@@ -128,7 +128,7 @@ function ProfileContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] sm:gap-[34px] items-center self-center max-w-[619px] mt-[120px] sm:mt-[160px] w-full px-[20px] sm:px-0" data-name="Profile Container">
       <ProfileImageContainer />
-      <div className="flex flex-col gap-[20px] items-center min-w-full">
+      <div className="flex flex-col gap-[14px] sm:gap-[20px] items-center min-w-full">
         <div className="flex flex-col font-bricolage font-medium justify-center leading-[0] min-w-full relative shrink-0 text-[#1e242a] text-[0px] text-center tracking-[-2.5px] w-[min-content]">
           <p className="text-[32px] sm:text-[58px]">
             <span className="leading-[38px] sm:leading-[56px]">Sue Hwang</span>
