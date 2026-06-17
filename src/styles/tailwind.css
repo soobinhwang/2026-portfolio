@@ -237,3 +237,13 @@ img {
   user-drag: none;
   user-select: none;
 }
+
+@media (max-width: 639px) {
+  body,
+  .bg-dot-grid,
+  .bg-dot-grid-center-strip,
+  .bg-dot-grid-center-strip-edged,
+  .bg-dot-grid-soft-center {
+    background-image: none;
+  }
+}
