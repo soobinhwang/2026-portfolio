@@ -9274,7 +9274,7 @@ function SectionContainer6() {
 
 function ContentSections5() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[18] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[17] self-start shrink-0" data-name="Content Sections">
       <SectionContainer6 />
     </div>
   );
@@ -10382,7 +10382,7 @@ function SolutionFinalDesignSection() {
 
 function SectionContainer() {
   return (
-    <div className="gap-[110px] sm:gap-[200px] grid-cols-1 grid-rows-[repeat(18,_fit-content(100%))] grid max-w-[774px] pb-[200px] relative shrink-0 w-full" data-name="Section Container">
+    <div className="gap-[110px] sm:gap-[200px] grid-cols-1 grid-rows-[repeat(17,_fit-content(100%))] grid max-w-[774px] relative shrink-0 w-full" data-name="Section Container">
       <ContentSections3 />
       <MyRoleAndImpact />
       {/* <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch shrink-0" data-name="Horizontal Divider" /> */}
@@ -10406,7 +10406,6 @@ function SectionContainer() {
       <ContentContainer1 />
       <Property2 />
       <Property5 />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] row-[17] h-px justify-self-stretch shrink-0" data-name="Horizontal Divider" />
       <ContentSections5 />
     </div>
   );

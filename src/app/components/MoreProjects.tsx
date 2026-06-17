@@ -39,14 +39,14 @@ const PROJECTS: Project[] = [
     id: "design-library",
     to: "/design-library",
     title: "Budget & Incentive Manager",
-    tags: ["B2C", "Data Visualization"],
+    tags: ["B2C", "Data Visualization", "Design System"],
     thumbnailSrc: imgP4,
     thumbnailBg: "#1e242a",
   },
   {
     id: "c1-wallet",
     title: "C1 Wallet",
-    tags: ["Rewards Wallet"],
+    tags: ["B2B2C", "Rewards Wallet"],
     thumbnailSrc: imgP3,
     thumbnailBg: "#1e242a",
   },
@@ -54,7 +54,7 @@ const PROJECTS: Project[] = [
     id: "wefair",
     to: "/wefair",
     title: "Ethical Shopping App WeFair",
-    tags: ["Hackathon", "2nd Place"],
+    tags: ["Mobile App", "Hackathon", "2nd Place"],
     thumbnailSrc: imgP5,
     thumbnailBg: "#fbfdfd",
   },
@@ -62,7 +62,7 @@ const PROJECTS: Project[] = [
     id: "connecteer",
     to: "/connecteer",
     title: "Volunteer Matching App Connecteer",
-    tags: ["Hackathon", "2nd Place"],
+    tags: ["Mobile App", "Hackathon", "2nd Place"],
     thumbnailSrc: imgP6,
     thumbnailBg: "#fbfdfd",
   },
@@ -165,11 +165,14 @@ export default function MoreProjects({ currentId }: { currentId: string }) {
   const next2 = PROJECTS.find((p) => p.id === id2)!;
 
   return (
-    <div className="flex flex-col gap-[32px] items-start max-w-[774px] mx-auto w-full px-[20px] sm:px-0 pt-[80px] sm:pt-[120px]">
-      <p className="font-inter font-medium text-[#1e242a] text-[20px] tracking-[-0.4px] leading-[28px]">More projects</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-[24px] sm:gap-[32px] items-start w-full">
-        <ProjectCard project={next1} />
-        <ProjectCard project={next2} />
+    <div className="flex flex-col items-start max-w-[774px] mx-auto w-full px-[20px] sm:px-0">
+      <div className="w-full h-px bg-[rgba(50,64,79,0.1)] mt-[80px] sm:mt-[120px] mb-[80px] sm:mb-[120px]" />
+      <div className="flex flex-col gap-[32px] items-start w-full">
+        <p className="font-inter font-medium text-[#1e242a] text-[20px] tracking-[-0.4px] leading-[28px]">More projects</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-[24px] sm:gap-[32px] items-start w-full">
+          <ProjectCard project={next1} />
+          <ProjectCard project={next2} />
+        </div>
       </div>
     </div>
   );

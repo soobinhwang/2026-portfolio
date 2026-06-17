@@ -793,7 +793,7 @@ function SectionContainer6() {
 
 function ContentSections3() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[14] self-start shrink-0" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0" data-name="Content Sections">
       <SectionContainer6 />
     </div>
   );
@@ -1067,7 +1067,7 @@ function Property9() {
 
 function SectionContainer() {
   return (
-    <div className="gap-[110px] sm:gap-[200px] grid-cols-1 grid-rows-[repeat(15,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
+    <div className="gap-[110px] sm:gap-[200px] grid-cols-1 grid-rows-[repeat(14,_fit-content(100%))] grid max-w-[774px] relative shrink-0 w-full" data-name="Section Container">
       <ContentSections1 />
       {/* <DesignOutcomeSection /> */}
       <ContentSections />
@@ -1082,7 +1082,6 @@ function SectionContainer() {
       <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[10] shrink-0" data-name="Horizontal Divider" />
       <Property8 />
       <Property9 />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[13] shrink-0" data-name="Horizontal Divider" />
       <ContentSections3 />
     </div>
   );
