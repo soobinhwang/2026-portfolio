@@ -56,7 +56,7 @@ export default function NavBar() {
                   data-cursor={disabled ? "coming-soon" : undefined}
                 >
                   <div
-                    className="flex flex-col font-geist-mono font-medium justify-center leading-[0] relative shrink-0 text-[16px] text-center tracking-[-0.5px] whitespace-nowrap transition-colors duration-200 uppercase"
+                    className="flex flex-col font-inter font-medium justify-center leading-[0] relative shrink-0 text-[16px] text-center tracking-[-0.5px] whitespace-nowrap transition-colors duration-200"
                     style={{ color: textColor }}
                     onMouseEnter={(e) => {
                       if (!active && !disabled) e.currentTarget.style.color = "#1700CF";

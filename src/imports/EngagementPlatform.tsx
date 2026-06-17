@@ -49,30 +49,30 @@ import imgChallenge from "../assets/work/engagement-platform/Challenge.png";
 import videoRefinedSolution from "../assets/work/engagement-platform/refined solution.mov";
 import imgSolutionOnePrimary from "../assets/work/engagement-platform/Solution 1 - 1.png";
 import imgSolutionOneSecondary from "../assets/work/engagement-platform/Solution 1 - 2.png";
-import imgSolutionTwo from "../assets/work/engagement-platform/Solution 2.png";
+import imgSolutionTwo from "../assets/work/engagement-platform/update-reusable blocks 2.png";
 import videoReusableComponent1 from "../assets/work/engagement-platform/reusable component 1.mp4";
 import videoReusableComponent2 from "../assets/work/engagement-platform/reusable component 2.mp4";
+import imgReusableBlocks from "../assets/work/engagement-platform/update-reusable blocks.png";
 import imgSolutionThree from "../assets/work/engagement-platform/Solution 3.png";
 import imgMyRole from "../assets/work/engagement-platform/My Role.png";
-import imgNeedSynthesis from "../assets/work/engagement-platform/Need Synthesis.png";
-import imgKeyInsight1 from "../assets/work/engagement-platform/Key Insights 1.png";
-import imgKeyInsight2 from "../assets/work/engagement-platform/Key Insights 2.png";
-import imgKeyInsight3 from "../assets/work/engagement-platform/Key Insights 3.png";
 import imgDesignDirection from "../assets/work/engagement-platform/Design Direction.png";
+import imgLayoutOptions from "../assets/work/engagement-platform/layout options.png";
 import imgRoadmap from "../assets/work/engagement-platform/Roadmap.png";
 import imgDesignOutcome2 from "../assets/work/engagement-platform/Design Outcome 2.png";
 import imgDesignOutcome3 from "../assets/work/engagement-platform/Design Outcome 3.png";
 import imgDesignOutcome4 from "../assets/work/engagement-platform/Design Outcome 4.png";
 import imgDesignOutcome1 from "../assets/work/engagement-platform/Design Outcome 1.png";
+import imgUpdateProblem from "../assets/work/engagement-platform/update-problem.png";
+import imgResearchMethod1 from "../assets/work/engagement-platform/update - research method 1.png";
+import imgResearchMethod2 from "../assets/work/engagement-platform/update - research method 2.png";
+import imgResearchMethod3 from "../assets/work/engagement-platform/update - research method 3.png";
+import imgStar from "../assets/work/reward-storefront/star.png";
 
 function Frame255() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase whitespace-nowrap">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[22.5px]">impact</p>
-      </div>
-      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[46px] whitespace-pre-wrap">The business scaled without growing headcount</p>
       </div>
     </div>
   );
@@ -108,8 +108,8 @@ function Container1({ isVisible }: { isVisible: boolean }) {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative text-center w-full" data-name="Container">
       <Frame5 isVisible={isVisible} />
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[#5b6a79] w-fit">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Revenue growth</p>
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[#5b6a79] tracking-[-0.04em] w-fit">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Revenue growth in the first year</p>
       </div>
     </div>
   );
@@ -123,23 +123,23 @@ function Container2({ isVisible }: { isVisible: boolean }) {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative text-center w-full" data-name="Container">
       <Frame6 isVisible={isVisible} />
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[#5b6a79] w-fit">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Client programs</p>
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[#5b6a79] tracking-[-0.04em] w-fit">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Global clients</p>
       </div>
     </div>
   );
 }
 
 function Frame7({ isVisible }: { isVisible: boolean }) {
-  return <StaggeredNumber text="~50%" isVisible={isVisible} />;
+  return <StaggeredNumber text="~80%" isVisible={isVisible} />;
 }
 
 function Container3({ isVisible }: { isVisible: boolean }) {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative text-center w-full" data-name="Container">
       <Frame7 isVisible={isVisible} />
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[#5b6a79] w-fit">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Less change tickets</p>
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[16px] text-[#5b6a79] tracking-[-0.04em] w-fit">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Reduced launch time</p>
       </div>
     </div>
   );
@@ -227,11 +227,11 @@ function Property() {
 function SectionContainer1() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase whitespace-nowrap">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] whitespace-nowrap">
         <p className="leading-[22.5px]">My Role</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[46px] whitespace-pre-wrap">What I led as a lead designer</p>
+      <div className="flex flex-col font-inter font-medium justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-[min-content]">
+        <p className="leading-[46px] whitespace-pre-wrap">Lead UX Designer</p>
       </div>
     </div>
   );
@@ -239,11 +239,9 @@ function SectionContainer1() {
 
 function MyRoleDescription() {
   return (
-    <div className="flex flex-col font-geist justify-center min-w-full relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-[min-content]">
+    <div className="flex flex-col font-inter justify-center min-w-full relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] w-[min-content]">
       <p className="leading-[22.5px] whitespace-pre-wrap">
-        {`I led problem identification and synthesis, spotting a scalability issue through repeated one-off delivery patterns. I translated stakeholder and user input into shared system needs, `}
-        <br aria-hidden="true" />
-        then defined the system and CMS foundations before moving into interface design.
+        I owned the end-to-end process, from defining the user problem and running research, to ideation and scalable UI design. I worked cross-functionally with UX, CS, and engineering throughout.
       </p>
     </div>
   );
@@ -341,11 +339,71 @@ function SubsectionContainer() {
 
 function SectionImage() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Section Image">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full rounded-[12px] overflow-hidden" data-name="Section Image">
       <div className="overflow-clip relative rounded-[inherit] w-full">
         <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgMyRole} />
       </div>
       <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+    </div>
+  );
+}
+
+function MyRoleAndImpact() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const stats = [
+    { prefix: "+", number: "30", suffix: "%", label: "Revenue growth" },
+    { prefix: "~", number: "60", suffix: "%", label: "Reduced launch time" },
+    { prefix: "+", number: "100", suffix: "", label: "Client programs" },
+  ];
+
+  return (
+    <div className="flex flex-col gap-[32px] items-start w-full">
+      <div className="flex flex-col gap-[10px] items-start w-full">
+        <p className="font-inter text-[15px] text-[rgba(50,64,79,0.58)] leading-[22.5px]">My role &amp; Impact</p>
+        <ul className="list-disc pl-[24px] flex flex-col gap-0">
+          <li className="font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]">Initiated and led the shift from <span className="text-[#1e242a]">one-off client builds</span> to a <span className="text-[#1e242a]">template-driven engagement product</span></li>
+          <li className="font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]">Synthesized <span className="text-[#1e242a]">business goals</span>, <span className="text-[#1e242a]">client needs</span>, and <span className="text-[#1e242a]">user pain points</span> into a unified design solution</li>
+          <li className="font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]">Designed <span className="text-[#1e242a]">reusable UI components</span> within the constraints of a <span className="text-[#1e242a]">legacy CMS</span></li>
+        </ul>
+      </div>
+      <div ref={containerRef} className="flex gap-[10px] items-start w-full overflow-hidden">
+        {stats.map((stat, i) => (
+          <div
+            key={stat.number}
+            className="bg-[#f0f3f5] flex flex-col flex-1 gap-[4px] items-start p-[24px] rounded-[8px] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            style={{
+              transitionDelay: `${i * 120}ms`,
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0)" : "translateY(40px)",
+            }}
+          >
+            <p className="font-inter font-semibold text-[36px] text-[#1e242a] leading-[normal] whitespace-nowrap">{stat.prefix}{stat.number}{stat.suffix}</p>
+            <p className="font-inter text-[14px] text-[rgba(30,36,42,0.5)] tracking-[-0.04em] leading-[22.5px]">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+      {/* <a
+        href="#solution"
+        className="inline-flex items-center gap-[6px] font-inter text-[15px] text-[#1e242a] tracking-[-0.04em] hover:opacity-60 transition-opacity"
+      >
+        Jump to solution
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 2.5V11.5M7 11.5L3.5 8M7 11.5L10.5 8" stroke="#1e242a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </a> */}
     </div>
   );
 }
@@ -363,13 +421,13 @@ function ContentSections() {
 function Frame258() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Solution 1</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Solution 1: Page structure</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Page structure: Prioritizing what users do</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px] whitespace-pre-wrap">Help employees onboard and take action faster</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">To support clarity and predictability, the key design decision was to split the landing page into 3 clear sections based on the user intent.</p>
       </div>
     </div>
@@ -378,7 +436,7 @@ function Frame258() {
 
 function SectionImageSm() {
   return (
-    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
+    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px] rounded-[12px] overflow-hidden" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgSolutionOnePrimary} />
       </div>
@@ -390,10 +448,10 @@ function SectionImageSm() {
 function Container5() {
   return (
     <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">Primary Section</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Program purpose and core actions</p>
       </div>
     </div>
@@ -411,7 +469,7 @@ function Container4() {
 
 function SectionImageSm1() {
   return (
-    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
+    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px] rounded-[12px] overflow-hidden" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <img loading="lazy" decoding="async" alt="" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={imgSolutionOneSecondary} />
       </div>
@@ -423,10 +481,10 @@ function SectionImageSm1() {
 function Container7() {
   return (
     <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">Secondary + Tertiary Sections</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Context and rewards discovery</p>
       </div>
     </div>
@@ -461,7 +519,7 @@ function Frame268() {
 
 function Property1() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[13] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0" data-name="Property">
       <Frame258 />
       <Frame268 />
     </div>
@@ -471,11 +529,11 @@ function Property1() {
 function Frame256() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.38)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Solution 3</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.38)] tracking-[-0.04em] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Solution 3: CMS improvement</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">CMS improvement: Strengthening self-service</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px] whitespace-pre-wrap">Giving admins more control to manage programs</p>
       </div>
     </div>
   );
@@ -483,9 +541,9 @@ function Frame256() {
 
 function Solution3Description() {
   return (
-    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+    <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
       <p className="leading-[22.5px] whitespace-pre-wrap">
-        To make the system operationally scalable, I updated the legacy CMS with clearer configuration options, improved language, and visual previews. This reduced support tickets and enabled true self-service.
+        To make the system operationally scalable, I updated the legacy CMS with more config options, plain language, and visual previews. This reduced support tickets and enabled true self-service.
       </p>
     </div>
   );
@@ -493,7 +551,7 @@ function Solution3Description() {
 
 function SectionImageLg() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full rounded-[12px] overflow-hidden" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
         <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolutionThree} />
       </div>
@@ -512,7 +570,7 @@ function Frame266() {
 
 function Property2() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[15] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[14] self-start shrink-0" data-name="Property">
       <Frame256 />
       <Solution3Description />
       <Frame266 />
@@ -523,11 +581,11 @@ function Property2() {
 function Frame257() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">roadmap</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Approach</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">The ambiguous problem became visible to the team</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px] whitespace-pre-wrap">Prioritization with the team</p>
       </div>
     </div>
   );
@@ -535,9 +593,9 @@ function Frame257() {
 
 function RoadmapDescription() {
   return (
-    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+    <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
       <p className="leading-[22.5px] whitespace-pre-wrap">
-        With the team, I shaped the roadmap collaboratively based on dependency and impact, stabilizing the core programme first, extending proven patterns to secondary use cases, introducing reusable engagement widgets, and updating the CMS last to support clear configuration boundaries.
+        I collaborated with the UX, CS, and engineering teams to prioritize initiatives based on impact and effort. The order was intentional: solve the problem first, enable operations, then deepen engagement.
       </p>
     </div>
   );
@@ -546,8 +604,8 @@ function RoadmapDescription() {
 function Frame186() {
   return (
     <div className="bg-[#e2e8ed] content-stretch flex items-center justify-between px-[12px] py-[8.097px] relative rounded-[2.699px] shrink-0 w-[225px]">
-      <p className="font-geist font-medium relative shrink-0 text-[rgba(50,64,79,0.74)]">Phase 01</p>
-      <p className="font-geist font-normal relative shrink-0 text-[#858e97]">Sep 2022</p>
+      <p className="font-inter font-medium relative shrink-0 text-[rgba(50,64,79,0.74)]">Phase 01</p>
+      <p className="font-inter font-normal relative shrink-0 text-[#858e97]">Sep 2022</p>
     </div>
   );
 }
@@ -555,8 +613,8 @@ function Frame186() {
 function Frame188() {
   return (
     <div className="bg-[#e2e8ed] content-stretch flex items-center justify-between px-[12px] py-[8.097px] relative rounded-[2.699px] shrink-0 w-[225px]">
-      <p className="font-geist font-medium relative shrink-0 text-[rgba(50,64,79,0.74)]">Phase 02</p>
-      <p className="font-geist font-normal relative shrink-0 text-[#858e97]">Nov 2022</p>
+      <p className="font-inter font-medium relative shrink-0 text-[rgba(50,64,79,0.74)]">Phase 02</p>
+      <p className="font-inter font-normal relative shrink-0 text-[#858e97]">Nov 2022</p>
     </div>
   );
 }
@@ -564,8 +622,8 @@ function Frame188() {
 function Frame189() {
   return (
     <div className="bg-[#e2e8ed] content-stretch flex items-center justify-between px-[12px] py-[8.097px] relative rounded-[2.699px] shrink-0 w-[225px]">
-      <p className="font-geist font-medium relative shrink-0 text-[rgba(50,64,79,0.74)]">Phase 03</p>
-      <p className="font-geist font-normal relative shrink-0 text-[#858e97]">Jan 2023</p>
+      <p className="font-inter font-medium relative shrink-0 text-[rgba(50,64,79,0.74)]">Phase 03</p>
+      <p className="font-inter font-normal relative shrink-0 text-[#858e97]">Jan 2023</p>
     </div>
   );
 }
@@ -599,7 +657,7 @@ function Frame190() {
       <div aria-hidden="true" className="absolute border-[#32404f] border-[0.675px] border-solid inset-0 pointer-events-none rounded-[5.398px]" />
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-[14.845px] py-[21.592px] relative w-full">
-          <p className="flex-[1_0_0] font-geist font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">Layout and Reusable Components while leveraged existing designs</p>
+          <p className="flex-[1_0_0] font-inter font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">Landing Page Structure — Highest impact, lowest effort</p>
         </div>
       </div>
     </div>
@@ -612,7 +670,7 @@ function Frame194() {
       <div aria-hidden="true" className="absolute border-[#32404f] border-[0.675px] border-solid inset-0 pointer-events-none rounded-[5.398px]" />
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-[14.845px] py-[21.592px] relative w-full">
-          <p className="flex-[1_0_0] font-geist font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">Reusable Components with Individual Engagement Widgets</p>
+          <p className="flex-[1_0_0] font-inter font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">Individual Engagement Widgets — Deepen user engagement</p>
         </div>
       </div>
     </div>
@@ -625,7 +683,7 @@ function Frame195() {
       <div aria-hidden="true" className="absolute border-[#32404f] border-[0.675px] border-solid inset-0 pointer-events-none rounded-[5.398px]" />
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-[14.845px] py-[21.592px] relative size-full">
-          <p className="flex-[1_0_0] font-geist font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">CMS Improvement</p>
+          <p className="flex-[1_0_0] font-inter font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">CMS Update — Enable operations</p>
         </div>
       </div>
     </div>
@@ -670,7 +728,7 @@ function Frame191() {
       <div aria-hidden="true" className="absolute border-[#32404f] border-[0.675px] border-solid inset-0 pointer-events-none rounded-[5.398px]" />
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-[16.194px] py-[21.592px] relative size-full">
-          <p className="flex-[1_0_0] font-geist font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">{`Reward Program & Storefront`}</p>
+          <p className="flex-[1_0_0] font-inter font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">Landing Page</p>
         </div>
       </div>
     </div>
@@ -683,11 +741,7 @@ function Frame192() {
       <div aria-hidden="true" className="absolute border-[#32404f] border-[0.675px] border-solid inset-0 pointer-events-none rounded-[5.398px]" />
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-[16.194px] py-[21.592px] relative size-full">
-          <p className="flex-[1_0_0] font-geist font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">
-            {`Sales Incentives & Years of Service & `}
-            <br aria-hidden="true" />
-            Gifting Programs
-          </p>
+          <p className="flex-[1_0_0] font-inter font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">Engagement Widgets</p>
         </div>
       </div>
     </div>
@@ -700,7 +754,7 @@ function Frame193() {
       <div aria-hidden="true" className="absolute border-[#32404f] border-[0.675px] border-solid inset-0 pointer-events-none rounded-[5.398px]" />
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-[16.194px] py-[21.592px] relative size-full">
-          <p className="flex-[1_0_0] font-geist font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">CMS UX for Non-Designers</p>
+          <p className="flex-[1_0_0] font-inter font-normal leading-[1.5] min-h-px min-w-px relative text-[#dfdfdf] text-[10.796px] text-center whitespace-pre-wrap">CMS Update</p>
         </div>
       </div>
     </div>
@@ -772,7 +826,7 @@ function Group34() {
 
 function SectionImageLg1() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full rounded-[12px] overflow-hidden" data-name="section image lg">
       <div className="overflow-clip relative rounded-[inherit] w-full">
         <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgRoadmap} />
       </div>
@@ -791,10 +845,11 @@ function Frame267() {
 
 function Property3() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0" data-name="Property">
       <Frame257 />
       <RoadmapDescription />
       <Frame267 />
+      <SectionImage1 />
     </div>
   );
 }
@@ -802,11 +857,11 @@ function Property3() {
 function Frame259() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Need Synthesis</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Research</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">What are the shared needs?</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px] whitespace-pre-wrap">Validating the problem and gathering insights<br />for a user-centred, scalable solution</p>
       </div>
     </div>
   );
@@ -814,12 +869,8 @@ function Frame259() {
 
 function NeedSynthesisDescription() {
   return (
-    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">
-        {`I identified shared needs to inform a scalable design direction. `}
-        <br aria-hidden="true" />
-        I gathered perspectives from stakeholders involved in using, delivering, and maintaining the programs, then analyzed pain points to find common patterns.
-      </p>
+    <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">Each source filled a gap the others couldn't.<br />Heuristic evaluation surfaced UX issues, stakeholder interviews revealed client pain points, and the internal survey captured real usage behavior. Together, they validated the problem and defined the direction.</p>
     </div>
   );
 }
@@ -827,8 +878,8 @@ function NeedSynthesisDescription() {
 function Frame182() {
   return (
     <div className="bg-[#32404f] content-stretch flex flex-col gap-[2.322px] items-center justify-center leading-[1.5] mr-[-10px] opacity-94 relative rounded-[773.864px] shrink-0 size-[147.034px]">
-      <p className="font-geist font-normal relative shrink-0 text-[8.512px] text-[rgba(255,255,255,0.7)]">01</p>
-      <p className="font-geist font-medium relative shrink-0 text-[9px] text-white">End Users</p>
+      <p className="font-inter font-normal relative shrink-0 text-[8.512px] text-[rgba(255,255,255,0.7)]">01</p>
+      <p className="font-inter font-medium relative shrink-0 text-[9px] text-white">End Users</p>
     </div>
   );
 }
@@ -836,8 +887,8 @@ function Frame182() {
 function Frame183() {
   return (
     <div className="bg-[#32404f] content-stretch flex flex-col gap-[2.322px] items-center justify-center leading-[1.5] mr-[-10px] opacity-94 relative rounded-[773.864px] shrink-0 size-[147.034px]">
-      <p className="font-geist font-normal relative shrink-0 text-[8.512px] text-[rgba(255,255,255,0.7)]">02</p>
-      <p className="font-geist font-medium relative shrink-0 text-[9px] text-white">{`CS Team & Business Analysts`}</p>
+      <p className="font-inter font-normal relative shrink-0 text-[8.512px] text-[rgba(255,255,255,0.7)]">02</p>
+      <p className="font-inter font-medium relative shrink-0 text-[9px] text-white">{`CS Team & Business Analysts`}</p>
     </div>
   );
 }
@@ -845,8 +896,8 @@ function Frame183() {
 function Frame184() {
   return (
     <div className="bg-[#32404f] content-stretch flex flex-col gap-[2.322px] items-center justify-center leading-[1.5] mr-[-10px] opacity-94 relative rounded-[773.864px] shrink-0 size-[147.034px]">
-      <p className="font-geist font-normal relative shrink-0 text-[8.512px] text-[rgba(255,255,255,0.7)]">03</p>
-      <p className="font-geist font-medium relative shrink-0 text-[9px] text-white">{`UX Team & Devs`}</p>
+      <p className="font-inter font-normal relative shrink-0 text-[8.512px] text-[rgba(255,255,255,0.7)]">03</p>
+      <p className="font-inter font-medium relative shrink-0 text-[9px] text-white">{`UX Team & Devs`}</p>
     </div>
   );
 }
@@ -854,8 +905,8 @@ function Frame184() {
 function Frame185() {
   return (
     <div className="bg-[#32404f] content-stretch flex flex-col gap-[2.322px] items-center justify-center leading-[1.5] mr-[-10px] opacity-94 relative rounded-[773.864px] shrink-0 size-[147.034px]">
-      <p className="font-geist font-normal relative shrink-0 text-[8.512px] text-[rgba(255,255,255,0.7)]">04</p>
-      <p className="font-geist font-medium relative shrink-0 text-[9px] text-white">Clients</p>
+      <p className="font-inter font-normal relative shrink-0 text-[8.512px] text-[rgba(255,255,255,0.7)]">04</p>
+      <p className="font-inter font-medium relative shrink-0 text-[9px] text-white">Clients</p>
     </div>
   );
 }
@@ -916,28 +967,30 @@ function Group33() {
   );
 }
 
-function SectionImageLg2() {
-  return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgNeedSynthesis} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
-  );
-}
+const researchMethods = [
+  { src: imgResearchMethod1, label: "Heuristic evaluation" },
+  { src: imgResearchMethod2, label: "CS team interviews & client observations" },
+  { src: imgResearchMethod3, label: "Internal survey" },
+];
 
 function Frame269() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
-      <SectionImageLg2 />
+    <div className="flex flex-row gap-[12px] items-start relative shrink-0 w-full">
+      {researchMethods.map(({ src, label }, i) => (
+        <div key={i} className="bg-[#f0f3f5] flex-1 min-w-0 relative shrink-0 rounded-[12px] overflow-hidden">
+          <div className="overflow-clip relative rounded-[inherit] w-full">
+            <img loading="lazy" decoding="async" alt={label} className="block w-full h-auto object-contain" src={src} />
+          </div>
+          <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+        </div>
+      ))}
     </div>
   );
 }
 
 function Property4() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[8] shrink-0 w-full" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[6] shrink-0 w-full" data-name="Property">
       <Frame259 />
       <NeedSynthesisDescription />
       <Frame269 />
@@ -948,14 +1001,14 @@ function Property4() {
 function Frame260() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">design outcome</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Impact</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">One system, four scalable programs</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px] whitespace-pre-wrap">One foundation applied across program types</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">The same approach was applied across four program types, supporting different business goals while maintaining a consistent, scalable structure.</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">With the positive result, the business extended the same approach to three more program types.<br />The team built 30+ templates that became the backbone of how the company scales its core service.</p>
       </div>
     </div>
   );
@@ -963,7 +1016,7 @@ function Frame260() {
 
 function SectionImageSm2() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px] rounded-[12px] overflow-hidden" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] w-full">
         <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome1} />
       </div>
@@ -975,10 +1028,10 @@ function SectionImageSm2() {
 function Container9() {
   return (
     <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">Employee Recognition</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Ongoing peer and manager recognition with social activity and milestones.</p>
       </div>
     </div>
@@ -996,7 +1049,7 @@ function Container8() {
 
 function SectionImageSm3() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px] rounded-[12px] overflow-hidden" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] w-full">
         <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome2} />
       </div>
@@ -1008,10 +1061,10 @@ function SectionImageSm3() {
 function Container11() {
   return (
     <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">Incentives</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Time-bound, goal-driven programmes focused on performance and completion.</p>
       </div>
     </div>
@@ -1038,7 +1091,7 @@ function Frame2() {
 
 function SectionImageSm4() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px] rounded-[12px] overflow-hidden" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] w-full">
         <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome3} />
       </div>
@@ -1050,10 +1103,10 @@ function SectionImageSm4() {
 function Container13() {
   return (
     <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">Customer Loyalty</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Customer-facing rewards programmes with earn-and-redeem mechanics.</p>
       </div>
     </div>
@@ -1084,7 +1137,7 @@ function Group32() {
 
 function SectionImageSm5() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px]" data-name="section image sm">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full sm:w-[371px] rounded-[12px] overflow-hidden" data-name="section image sm">
       <div className="overflow-clip relative rounded-[inherit] w-full">
         <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignOutcome4} />
       </div>
@@ -1096,10 +1149,10 @@ function SectionImageSm5() {
 function Container15() {
   return (
     <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">Rewards</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Catalogue-driven redemption experiences with flexible merchandising.</p>
       </div>
     </div>
@@ -1145,14 +1198,14 @@ function Property5() {
 function SectionContainer2() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Solution 2</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Solution 2: Reusable blocks</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Reusable components: Standardizing what matters</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px] whitespace-pre-wrap">Reusable building blocks that deliver<br />consistent, branded experiences at scale</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">{`To scale across brands and content, supporting client-preferred layouts without new one-off design work. Reusable components kept a consistent structure while flexing through CSS and imagery. `}</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">In a white-label product, the brand experience has to feel native, otherwise end users don't trust.<br />This solution served both: clients got their brand expressed, employees got a familiar, trustworthy interface.</p>
       </div>
     </div>
   );
@@ -8530,7 +8583,7 @@ function Frame264() {
 
 function Property6() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Property">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full rounded-[12px] overflow-hidden" data-name="Property">
       <div className="overflow-clip relative rounded-[inherit] w-full">
         <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgSolutionTwo} />
       </div>
@@ -8542,11 +8595,11 @@ function Property6() {
 function Container16() {
   return (
     <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">ex. Individual Engagement Widgets</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">To reduce custom content decisions, I translated recurring user needs in different roles into a set of standardized engagement widgets (Promotions, nominations, milestones, leaderboards, and activity summaries).</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">To reduce custom content decisions, I translated recurring user needs in different roles into a set of standardized engagement widgets.</p>
       </div>
     </div>
   );
@@ -8580,7 +8633,7 @@ function ContentSections1() {
 
 function Property7() {
   return (
-    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px]" data-name="Property">
+    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px] rounded-[12px] overflow-hidden" data-name="Property">
       <div className="overflow-clip rounded-[inherit] size-full flex items-center justify-center">
         <video autoPlay className="max-h-full max-w-full object-contain" controlsList="nodownload" loop muted playsInline>
           <source src={videoReusableComponent1} />
@@ -8594,10 +8647,10 @@ function Property7() {
 function Container18() {
   return (
     <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">ex. Navigation</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Core actions and status, reused across programmes</p>
       </div>
     </div>
@@ -8615,7 +8668,7 @@ function Container17() {
 
 function Property8() {
   return (
-    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px]" data-name="Property">
+    <div className="bg-[#f0f3f5] h-[300px] sm:h-[420px] relative shrink-0 w-full sm:w-[371px] rounded-[12px] overflow-hidden" data-name="Property">
       <div className="overflow-clip rounded-[inherit] size-full flex items-center justify-center">
         <video autoPlay className="max-h-full max-w-full object-contain" controlsList="nodownload" loop muted playsInline>
           <source src={videoReusableComponent2} />
@@ -8629,10 +8682,10 @@ function Property8() {
 function Container20() {
   return (
     <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[20px] tracking-[-0.424px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">ex. Cards</p>
       </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Brand-flexible content blocks, reusable across layouts</p>
       </div>
     </div>
@@ -8659,17 +8712,31 @@ function SectionContainer4() {
 
 function SectionContainer3() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Section Container">
-      <SectionContainer4 />
+    <div className="flex flex-col gap-[14px] items-start w-full">
+      <div className="bg-[#f0f3f5] relative shrink-0 w-full rounded-[12px] overflow-hidden">
+        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgReusableBlocks} />
+        <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+      </div>
+      <div className="content-stretch flex flex-col font-normal items-start leading-[0] relative shrink-0 w-full">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#32404f] text-[16px] tracking-[-0.04em] w-full">
+          <p className="leading-[30px]">ex. Quick Links</p>
+        </div>
+        <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] w-full">
+          <p className="leading-[22.5px]">Three variables drive the branding: client imagery, longer content, and primary colour.<br />The CSS structure stays the same, swap those three and the experience feels completely different.</p>
+        </div>
+      </div>
     </div>
   );
 }
 
 function ContentContainer1() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[40px] items-start max-w-[774px] relative row-[14] self-start shrink-0 w-full" data-name="Content Container">
-      <ContentSections1 />
+    <div className="col-[1] content-stretch flex flex-col gap-[40px] items-start max-w-[774px] relative row-[13] self-start shrink-0 w-full" data-name="Content Container">
+      <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full">
+        <SectionContainer2 />
+      </div>
       <SectionContainer3 />
+      <ContentSections2 />
     </div>
   );
 }
@@ -8677,13 +8744,10 @@ function ContentContainer1() {
 function SectionHeader1() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Header">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Employee Experience</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-0.04em] w-full">
+        <p className="leading-[normal] whitespace-pre-wrap">Employee Recognition Landing Page</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-1.04px] w-full">
-        <p className="leading-[normal] whitespace-pre-wrap">{`Rewards & Recognition Platform`}</p>
-      </div>
-      <div className="flex flex-col font-geist justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Initiated and led the shift from one-off client builds to a template-driven engagement product</p>
       </div>
     </div>
@@ -8712,7 +8776,7 @@ function Container22() {
 
 function Thumbnail() {
   return (
-    <div className="bg-[#f0f3f5] overflow-clip relative shrink-0 w-full" data-name="Static Thumbnail">
+    <div className="bg-[#f0f3f5] overflow-hidden relative shrink-0 w-full rounded-[12px]" data-name="Static Thumbnail">
       <img loading="eager" fetchPriority="high" decoding="async" alt="" className="block w-full h-auto object-cover" src={imgDetailThumbnail} />
     </div>
   );
@@ -8722,11 +8786,11 @@ function Container24() {
   return (
     <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[132px]">
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] w-full sm:w-[132px]">
         <p className="leading-[22.5px] whitespace-nowrap">Timeline</p>
       </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
-        <p className="leading-[24px]">Sep 2022 - Feb 2023 (6 months)</p>
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] tracking-[-0.04em] w-full">
+        <p className="leading-[24px]">Sep 2022 - Feb 2023 (4 months)</p>
       </div>
     </div>
   );
@@ -8736,20 +8800,20 @@ function Container25() {
   return (
     <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[132px]">
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] w-full sm:w-[132px]">
         <p className="leading-[22.5px] whitespace-nowrap">Team</p>
       </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] tracking-[-0.04em] w-full">
         <p>
-          <span className="leading-[24px] text-[#5b6a79]">{`2 Designers `}</span>
+          <span className="leading-[24px] text-[#5b6a79]">{`UX Lead `}</span>
+          <span className="leading-[24px]">·</span>
+          <span className="leading-[24px] text-[#5b6a79]">{` 2 UX Designers `}</span>
           <span className="leading-[24px]">·</span>
           <span className="leading-[24px] text-[#5b6a79]">{` 2 Developers `}</span>
           <span className="leading-[24px]">·</span>
-          <span className="leading-[24px] text-[#5b6a79]">{` UX Lead `}</span>
+          <span className="leading-[24px] text-[#5b6a79]">{` 3 Client Success `}</span>
           <span className="leading-[24px]">·</span>
-          <span className="leading-[24px] text-[#5b6a79]">{` CS Team `}</span>
-          <span className="leading-[24px]">·</span>
-          <span className="leading-[24px] text-[#5b6a79]">{` Business Analysts`}</span>
+          <span className="leading-[24px] text-[#5b6a79]">{` 2 Business Analysts`}</span>
         </p>
       </div>
     </div>
@@ -8760,10 +8824,10 @@ function Container26() {
   return (
     <div className="content-stretch flex flex-col sm:flex-row font-normal gap-[8px] sm:gap-[76px] items-start sm:items-center leading-[0] pb-[12px] relative shrink-0 text-[15px] w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[132px]">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full sm:w-[132px]">
         <p className="leading-[22.5px] whitespace-nowrap">Contribution</p>
       </div>
-      <div className="flex flex-col font-geist justify-center min-h-px min-w-0 relative text-[#5b6a79] w-full">
+      <div className="flex flex-col font-inter justify-center min-h-px min-w-0 relative text-[#5b6a79] w-full">
         <p>
           <span className="leading-[24px] text-[#5b6a79]">{`Systems Thinking `}</span>
           <span className="leading-[24px]">·</span>
@@ -8780,10 +8844,10 @@ function MetaContainerDeliverable() {
   return (
     <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[132px]">
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] w-full sm:w-[132px]">
         <p className="leading-[22.5px] whitespace-nowrap">Deliverable</p>
       </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] tracking-[-0.04em] w-full">
         <p className="leading-[24px]">Web App</p>
       </div>
     </div>
@@ -8793,10 +8857,10 @@ function MetaContainerDeliverable() {
 function MetaContainerTargetUsers() {
   return (
     <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center relative shrink-0 w-full" data-name="Container">
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[132px]">
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] w-full sm:w-[132px]">
         <p className="leading-[22.5px] whitespace-nowrap">Target Users</p>
       </div>
-      <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
+      <div className="flex flex-col font-inter font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] tracking-[-0.04em] w-full">
         <p className="leading-[24px]">Program Admins · Employees</p>
       </div>
     </div>
@@ -8808,7 +8872,6 @@ function Property9() {
     <div className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full" data-name="Property">
       <Container24 />
       <Container25 />
-      <Container26 />
       <MetaContainerDeliverable />
       <MetaContainerTargetUsers />
     </div>
@@ -8817,7 +8880,7 @@ function Property9() {
 
 function ContentSections3() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] pt-[48px] relative row-[1] self-start shrink-0 w-full" data-name="Content Sections">
+    <div className="col-[1] content-stretch flex flex-col gap-[32px] items-start max-w-[774px] pt-[48px] relative row-[1] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionHeader1 />
       <Thumbnail />
       <Property9 />
@@ -8828,11 +8891,11 @@ function ContentSections3() {
 function SectionContainer5() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Context</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">A platform rebuilt from scratch for every new client.</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px] whitespace-pre-wrap">What is Rewards &amp; Recognition?</p>
       </div>
     </div>
   );
@@ -8840,9 +8903,9 @@ function SectionContainer5() {
 
 function BackgroundDescription() {
   return (
-    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">
-        It&apos;s a B2B SaaS rewards and recognition platform used by enterprise companies. It allows them to create branded reward programs where employees earn points and redeem them through an online storefront.
+    <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+      <p className="leading-[22.5px]">
+        Think of it like Shopify for employee rewards.<br />Companies run recognition programs on it where employees send awards and redeem points from a product catalogue. It's white-label, so every client gets their own branded program.
       </p>
     </div>
   );
@@ -8864,7 +8927,7 @@ function Frame17() {
   return (
     <div className="absolute bg-[#1d2939] content-stretch flex gap-[4px] items-center left-[548px] px-[7.503px] py-[4.69px] rounded-[90.992px] top-[142px]">
       <CoinsStacked />
-      <p className="font-geist font-medium leading-[16.378px] relative shrink-0 text-[10.919px] text-white">500 points</p>
+      <p className="font-inter font-medium leading-[16.378px] relative shrink-0 text-[10.919px] text-white">500 points</p>
     </div>
   );
 }
@@ -8984,7 +9047,7 @@ function Group38() {
 
 function Property10() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Property">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full rounded-[12px] overflow-hidden" data-name="Property">
       <div className="overflow-clip relative rounded-[inherit] w-full">
         <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgBackground} />
       </div>
@@ -9006,11 +9069,11 @@ function ContentSections4() {
 function Frame261() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px]">Key insights</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] whitespace-nowrap">
+        <p className="leading-[22.5px]">Key Insights</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-[min-content]">
-        <p className="leading-[46px] whitespace-pre-wrap">Shared needs behind repeated asks</p>
+      <div className="flex flex-col font-inter font-medium justify-center min-w-full relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-[min-content]">
+        <p className="leading-[46px] whitespace-pre-wrap">All three sources pointed to the same insights</p>
       </div>
     </div>
   );
@@ -9018,108 +9081,36 @@ function Frame261() {
 
 function KeyInsightsIntro() {
   return (
-    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap"></p>
+    <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">All three sources pointed to the same three insights.</p>
     </div>
   );
 }
 
-function ImpactImage() {
+function InsightRow({ title, description }: { title: string; description: string }) {
   return (
-    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-full sm:w-[242px]" data-name="Impact image">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-full object-contain" src={imgKeyInsight1} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
-  );
-}
-
-function Frame9() {
-  return (
-    <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[20px] text-center tracking-[-0.424px] w-full">
-        <p className="leading-[31.8px] whitespace-pre-wrap">Clear navigation</p>
-      </div>
-    </div>
-  );
-}
-
-function Container28() {
-  return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px sm:self-stretch order-1" data-name="Container">
-      <ImpactImage />
-      <Frame9 />
-    </div>
-  );
-}
-
-function ImpactImage1() {
-  return (
-    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-full sm:w-[242px]" data-name="Impact image">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-full object-contain" src={imgKeyInsight2} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
-  );
-}
-
-function Frame10() {
-  return (
-    <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[20px] text-center tracking-[-0.424px] w-full">
-        <p className="leading-[31.8px] whitespace-pre-wrap">Program value clarity</p>
-      </div>
-    </div>
-  );
-}
-
-function Container29() {
-  return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px sm:self-stretch order-2" data-name="Container">
-      <ImpactImage1 />
-      <Frame10 />
-    </div>
-  );
-}
-
-function ImpactImage2() {
-  return (
-    <div className="bg-[#f0f3f5] h-[240px] relative shrink-0 w-full sm:w-[242px]" data-name="Impact image">
-      <div className="overflow-clip relative rounded-[inherit] size-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-full object-contain" src={imgKeyInsight3} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
-    </div>
-  );
-}
-
-function Frame11() {
-  return (
-    <div className="content-stretch flex flex-col gap-[3px] items-start relative shrink-0 w-full">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[20px] text-center tracking-[-0.424px] w-full">
-        <p className="leading-[31.8px] whitespace-pre-wrap">Consistency with flexibility</p>
-      </div>
-    </div>
-  );
-}
-
-function Container30() {
-  return (
-    <div className="content-stretch flex flex-col gap-[8px] items-start relative w-full sm:flex-[1_0_0] sm:min-h-px sm:min-w-px sm:self-stretch order-3" data-name="Container">
-      <ImpactImage2 />
-      <Frame11 />
+    <div className="flex flex-col gap-[8px] items-start w-full bg-[#f0f3f5] rounded-[12px] p-[24px]">
+      <div className="font-inter font-medium text-[20px] text-[#32404f] tracking-[-0.04em] leading-[31.8px]">{title}</div>
+      <div className="font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]">{description}</div>
     </div>
   );
 }
 
 function Container27() {
   return (
-    <div className="content-stretch flex flex-col sm:flex-row gap-[16px] items-start justify-center relative shrink-0 w-full" data-name="Container">
-      <Container28 />
-      <Container29 />
-      <Container30 />
+    <div className="content-stretch flex flex-col gap-[12px] items-start w-full" data-name="Container">
+      <InsightRow
+        title="Users wandered the platform before their first recognition"
+        description="In their own words, it felt overwhelming and they didn't know where to start."
+      />
+      <InsightRow
+        title="Once familiar, users visited weekly to send recognition, check awards, or shop"
+        description="They came to act, not to explore."
+      />
+      <InsightRow
+        title="Awards and Rewards: two terms that rarely coexist, but here they do"
+        description="Users got confused, and that got in the way of taking action."
+      />
     </div>
   );
 }
@@ -9134,9 +9125,8 @@ function Frame270() {
 
 function Property11() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[9] self-start shrink-0" data-name="Property">
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[7] self-start shrink-0" data-name="Property">
       <Frame261 />
-      <KeyInsightsIntro />
       <Frame270 />
     </div>
   );
@@ -9145,8 +9135,8 @@ function Property11() {
 function SectionContainer7() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Section Container">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">outcome</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Outcome</p>
       </div>
     </div>
   );
@@ -9155,7 +9145,7 @@ function SectionContainer7() {
 function SubsectionContainer4() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subsection Container">
-      <ul className="content-stretch flex flex-col font-geist font-normal gap-[16px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
+      <ul className="content-stretch flex flex-col font-inter font-normal gap-[16px] items-start leading-[0] relative text-[#5b6a79] text-[16px] tracking-[-0.04em] w-full">
         <li className="flex gap-[16px] items-start">
           <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
           <span className="leading-[26px] whitespace-pre-wrap">Established consistent, on-brand experiences across programmes</span>
@@ -9172,7 +9162,7 @@ function SubsectionContainer4() {
 function SectionContainer8() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="Section Container">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.3px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">{`Product & UX`}</p>
       </div>
       <SubsectionContainer4 />
@@ -9183,7 +9173,7 @@ function SectionContainer8() {
 function SubsectionContainer6() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subsection Container">
-      <ul className="content-stretch flex flex-col font-geist font-normal gap-[16px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
+      <ul className="content-stretch flex flex-col font-inter font-normal gap-[16px] items-start leading-[0] relative text-[#5b6a79] text-[16px] tracking-[-0.04em] w-full">
         <li className="flex gap-[16px] items-start">
           <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
           <span className="leading-[26px] whitespace-pre-wrap">Reduced minor change requests and eliminated repeated one-off design and development work</span>
@@ -9200,7 +9190,7 @@ function SubsectionContainer6() {
 function SubsectionContainer5() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="Subsection Container">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.3px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">{`Team & Ops`}</p>
       </div>
       <SubsectionContainer6 />
@@ -9211,7 +9201,7 @@ function SubsectionContainer5() {
 function SubsectionContainer8() {
   return (
     <div className="relative shrink-0 w-full" data-name="Subsection Container">
-      <ul className="content-stretch flex flex-col font-geist font-normal gap-[16px] items-start leading-[0] relative text-[#5b6a79] text-[16px] w-full">
+      <ul className="content-stretch flex flex-col font-inter font-normal gap-[16px] items-start leading-[0] relative text-[#5b6a79] text-[16px] tracking-[-0.04em] w-full">
         <li className="flex gap-[16px] items-start">
           <span className="mt-[11px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />
           <span className="leading-[26px] whitespace-pre-wrap">Supported more client programmes without increasing headcount</span>
@@ -9228,7 +9218,7 @@ function SubsectionContainer8() {
 function SubsectionContainer7() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="Subsection Container">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.3px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[24px] tracking-[-0.04em] w-full">
         <p className="leading-[30px] whitespace-pre-wrap">Business</p>
       </div>
       <SubsectionContainer8 />
@@ -9237,13 +9227,45 @@ function SubsectionContainer7() {
 }
 
 function SectionContainer6() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Section Container">
+    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="Section Container">
       <SectionContainer7 />
-      <div className="content-stretch grid grid-cols-1 sm:grid-cols-3 gap-[36px] items-start w-full">
-        <SectionContainer8 />
-        <SubsectionContainer5 />
-        <SubsectionContainer7 />
+      <div ref={containerRef} className="flex flex-col gap-[12px] w-full overflow-hidden">
+        <div
+          className="flex flex-col gap-[8px] items-start w-full bg-[#f0f3f5] rounded-[12px] p-[24px] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(40px)" }}
+        >
+          <div className="font-inter font-medium text-[20px] text-[#32404f] tracking-[-0.04em] leading-[31.8px]">User Impact</div>
+          <ul className="flex flex-col gap-[6px]">
+            <li className="flex gap-[10px] items-start font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]"><span className="mt-[9px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />Established consistent, on-brand experiences that increased employee engagement</li>
+            <li className="flex gap-[10px] items-start font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]"><span className="mt-[9px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />Enabled clearer self-service CMS configuration with less developer involvement</li>
+          </ul>
+        </div>
+        <div
+          className="flex flex-col gap-[8px] items-start w-full bg-[#f0f3f5] rounded-[12px] p-[24px] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          style={{ transitionDelay: "120ms", opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(40px)" }}
+        >
+          <div className="font-inter font-medium text-[20px] text-[#32404f] tracking-[-0.04em] leading-[31.8px]">Business Impact</div>
+          <ul className="flex flex-col gap-[6px]">
+            <li className="flex gap-[10px] items-start font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]"><span className="mt-[9px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />Scaled to 100+ client programmes without growing headcount</li>
+            <li className="flex gap-[10px] items-start font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]"><span className="mt-[9px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />Contributed to a 30% revenue increase in the first year after rollout</li>
+            <li className="flex gap-[10px] items-start font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]"><span className="mt-[9px] size-[4px] rounded-full bg-[#9aa6b2] shrink-0" />Reduced minor change requests, freeing up capacity for longer-term roadmap initiatives</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
@@ -9260,11 +9282,11 @@ function ContentSections5() {
 function Frame262() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] max-w-[774px] relative shrink-0 w-full">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
         <p className="leading-[22.5px] whitespace-pre-wrap">Problem</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">The system didn’t scale with client growth</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px] whitespace-pre-wrap">Employees didn’t know how to participate,<br />or what they could earn</p>
       </div>
     </div>
   );
@@ -9272,10 +9294,8 @@ function Frame262() {
 
 function ProblemDescription() {
   return (
-    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">
-        As the company grew, more client programs were still being built from scratch. It wasn’t just a design problem anymore, but a system that couldn’t scale, leading to slow launches and inconsistent user experiences.
-      </p>
+    <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+      <p className="leading-[22.5px]">{/* Employees didn’t know what the program offered, how to participate, or what their points were worth.<br /> */}Every program was built without a UX foundation, so the value never reached them.<br />Engagement dropped and for a company serving 14 million members worldwide, that hurt client retention.</p>
     </div>
   );
 }
@@ -9287,7 +9307,7 @@ function Frame251() {
 function Frame250() {
   return (
     <div className="absolute bg-[#32404f] left-[77px] overflow-clip rounded-[1000px] size-[140px] top-[85px]">
-      <div className="-translate-y-1/2 absolute flex flex-col font-geist font-normal justify-center leading-[0] left-[46px] text-[15px] text-white top-[69.5px] whitespace-nowrap">
+      <div className="-translate-y-1/2 absolute flex flex-col font-inter font-normal justify-center leading-[0] left-[46px] text-[15px] text-white top-[69.5px] whitespace-nowrap">
         <p className="leading-[22.5px]">Clients</p>
       </div>
     </div>
@@ -9296,7 +9316,7 @@ function Frame250() {
 
 function Frame253() {
   return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#e5e9ec] font-geist font-normal leading-[0] left-[calc(50%+240px)] overflow-clip rounded-[1000px] size-[140px] text-[13px] text-[rgba(50,64,79,0.9)] top-1/2 whitespace-nowrap">
+    <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#e5e9ec] font-inter font-normal leading-[0] left-[calc(50%+240px)] overflow-clip rounded-[1000px] size-[140px] text-[13px] text-[rgba(50,64,79,0.9)] top-1/2 whitespace-nowrap">
       <div className="-translate-y-1/2 absolute flex flex-col justify-center left-[30px] top-[58.5px]">
         <p className="leading-[22.5px]">Slow Delivery</p>
       </div>
@@ -9309,7 +9329,7 @@ function Frame253() {
 
 function Frame252() {
   return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#32404f] border border-[#32404f] border-dashed font-geist font-normal leading-[0] left-1/2 overflow-clip rounded-[1000px] size-[66px] text-white top-1/2 whitespace-nowrap">
+    <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#32404f] border border-[#32404f] border-dashed font-inter font-normal leading-[0] left-1/2 overflow-clip rounded-[1000px] size-[66px] text-white top-1/2 whitespace-nowrap">
       <div className="-translate-y-1/2 absolute flex flex-col justify-center left-[45px] text-[15px] top-[68.5px]">
         <p className="leading-[22.5px]">Clients</p>
       </div>
@@ -9322,11 +9342,8 @@ function Frame252() {
 
 function SectionImageLg3() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="section image lg">
-      <div className="overflow-clip relative rounded-[inherit] w-full">
-        <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgChallenge} />
-      </div>
-      <div aria-hidden="true" className="absolute border border-[#f0f0f0] border-solid inset-0 pointer-events-none" />
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full rounded-[12px] overflow-hidden">
+      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto rounded-[inherit]" src={imgUpdateProblem} />
     </div>
   );
 }
@@ -9352,11 +9369,11 @@ function Property12() {
 function SectionContainer9() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Solution</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Final Design</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Shared needs turned into scalable templates</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px] whitespace-pre-wrap">A scalable template employees can navigate faster, built for every client brand</p>
       </div>
     </div>
   );
@@ -9364,11 +9381,9 @@ function SectionContainer9() {
 
 function SolutionOverviewDescription() {
   return (
-    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
+    <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
       <p className="leading-[22.5px] whitespace-pre-wrap">
-        {`I designed a three-layer system that turned repeatable design asks into reusable templates. `}
-        <br aria-hidden="true" />
-        This enabled more consistent member experiences and faster, on-brand launches across clients.
+        Three elements drove most of the branding variation: client imagery, longer content, and their primary colour. The CSS structure stays the same — swapping those three creates a drastically different branded experience, quickly.
       </p>
     </div>
   );
@@ -9376,7 +9391,7 @@ function SolutionOverviewDescription() {
 
 function Property13() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Property">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full rounded-[12px] overflow-hidden" data-name="Property">
       <div className="overflow-clip rounded-[inherit] w-full">
         <video autoPlay className="block w-full h-auto" controlsList="nodownload" loop muted playsInline>
           <source src={videoRefinedSolution} />
@@ -9389,10 +9404,10 @@ function Property13() {
 
 function ContentSections6() {
   return (
-    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[12] self-start shrink-0" data-name="Content Sections">
+    <div id="solution" className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[15] self-start shrink-0" data-name="Content Sections">
       <SectionContainer9 />
-      <Property13 />
       <SolutionOverviewDescription />
+      <Property13 />
     </div>
   );
 }
@@ -9400,11 +9415,11 @@ function ContentSections6() {
 function SectionContainer10() {
   return (
     <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full" data-name="Section Container">
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full">
-        <p className="leading-[22.5px] whitespace-pre-wrap">Design direction</p>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px] whitespace-pre-wrap">Ideation</p>
       </div>
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.64px] w-full">
-        <p className="leading-[46px] whitespace-pre-wrap">Translating the needs into a direction</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px] whitespace-pre-wrap">Exploring layout options to help employees navigate the program faster</p>
       </div>
     </div>
   );
@@ -9412,12 +9427,8 @@ function SectionContainer10() {
 
 function DesignDirectionDescription() {
   return (
-    <div className="flex flex-col font-geist justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] w-full">
-      <p className="leading-[22.5px] whitespace-pre-wrap">
-        {`The key insights shaped the direction for addressing different user needs at scale. `}
-        <br aria-hidden="true" />
-        Rather than treating the insights as isolated problems, I mapped each one to the layer where it could be most effectively addressed.
-      </p>
+    <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+      <p className="leading-[22.5px] whitespace-pre-wrap">Based on the insights, I explored two layout directions focused on clarity and ease of action, then evaluated them with the team.</p>
     </div>
   );
 }
@@ -10195,7 +10206,7 @@ function Frame319() {
 
 function SectionImage1() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full" data-name="Section Image">
+    <div className="bg-[#f0f3f5] relative shrink-0 w-full rounded-[12px] overflow-hidden" data-name="Section Image">
       <div className="overflow-clip relative rounded-[inherit] w-full">
         <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgDesignDirection} />
       </div>
@@ -10208,32 +10219,193 @@ function ContentSections7() {
   return (
     <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start max-w-[774px] relative row-[10] self-start shrink-0 w-full" data-name="Content Sections">
       <SectionContainer10 />
-      <DesignDirectionDescription />
-      <SectionImage1 />
+      <div className="flex flex-col font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px] w-full">
+        <p>Based on the insights, I explored two layout directions focused on clarity and ease of action,<br />then evaluated them with the team.<br /></p>
+        <br /><p>We went with Option 2 to move faster and keep existing users comfortable.<br />From there, I iterated on the action hierarchy to create a clear starting point.</p>
+      </div>
+      <div className="bg-[#f0f3f5] relative shrink-0 w-full rounded-[12px] overflow-hidden">
+        <img loading="lazy" decoding="async" alt="Layout options" className="rounded-[inherit] w-full" src={imgLayoutOptions} />
+      </div>
+      <div className="flex flex-col gap-[16px] font-inter text-[16px] tracking-[-0.04em] w-full">
+        <div className="flex flex-col gap-[4px]">
+          <p className="font-medium text-[#1e242a] leading-[22.5px]">Dashboard</p>
+          <ul className="flex flex-col gap-[2px]">
+            <li className="flex gap-[8px] text-[rgba(50,64,79,0.58)] leading-[22.5px]"><span className="shrink-0">+</span><span>More compact with less scrolling, quick access to actions.</span></li>
+            <li className="flex gap-[8px] text-[rgba(50,64,79,0.58)] leading-[22.5px]"><span className="shrink-0">−</span><span>Net-new layout, unfamiliar to existing users, higher dev cost.</span></li>
+          </ul>
+        </div>
+        <div className="flex flex-col gap-[4px]">
+          <p className="font-medium text-[#1e242a] leading-[22.5px]">Section-based</p>
+          <ul className="flex flex-col gap-[2px]">
+            <li className="flex gap-[8px] text-[rgba(50,64,79,0.58)] leading-[22.5px]"><span className="shrink-0">+</span><span>A familiar scrollable pattern used in programs before.</span></li>
+            <li className="flex gap-[8px] text-[rgba(50,64,79,0.58)] leading-[22.5px]"><span className="shrink-0">+</span><span>Lower dev cost and lower risk for existing users.</span></li>
+            <li className="flex gap-[8px] text-[rgba(50,64,79,0.58)] leading-[22.5px]"><span className="shrink-0">−</span><span>Users scroll to discover content.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function HMWSection() {
+  return (
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[8] self-start shrink-0 w-full">
+      <div className="bg-[rgba(50,64,79,0.1)] h-px w-full" />
+      <div className="flex flex-col font-normal gap-[16px] items-center leading-[0] relative shrink-0 w-full text-center py-[110px] sm:py-[170px]">
+        <img loading="lazy" decoding="async" alt="" className="h-[26px] w-[26px]" src={imgStar} />
+        <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+          <p className="leading-[22.5px]">How Might We</p>
+        </div>
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[26px] tracking-[-0.64px] w-full">
+          <p className="leading-[40px]">Help employees quickly understand the program and take action, while making it work across any client brand?</p>
+        </div>
+      </div>
+      <div className="bg-[rgba(50,64,79,0.1)] h-px w-full" />
+    </div>
+  );
+}
+
+function ContextWhyItMattered() {
+  return (
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative row-[5] self-start shrink-0">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px]">Why it mattered</p>
+      </div>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px]">Recognition is the core of client growth</p>
+      </div>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+        <p className="leading-[22.5px]">This company serves 14 million members worldwide.<br />However, every program being built without a UX foundation, the value never reached employees.<br />Engagement dropped, and that hurt client retention.</p>
+      </div>
+      <div className="bg-[#f0f3f5] w-full h-[400px] relative shrink-0 flex items-center justify-center rounded-[12px]">
+        <span className="text-[rgba(50,64,79,0.3)] font-inter text-[14px]">Image coming soon</span>
+      </div>
+    </div>
+  );
+}
+
+function SolutionHeroSection() {
+  return (
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative self-start shrink-0">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px]">Final Design</p>
+      </div>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px]">Helping employees understand the program from the start</p>
+      </div>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+        <p className="leading-[22.5px]">The hero section is the first thing employees see. A brief program description gives immediate context, paired with two primary actions — Send Awards for returning users who want to act right away, and About the Program for new users who need more context first. This directly addresses the insight that users wandered before taking their first action.</p>
+      </div>
+      <div className="bg-[#f0f3f5] w-full h-[400px] relative shrink-0 flex items-center justify-center rounded-[12px]">
+        <span className="text-[rgba(50,64,79,0.3)] font-inter text-[14px]">Image coming soon</span>
+      </div>
+    </div>
+  );
+}
+
+function SolutionNavSection() {
+  return (
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative self-start shrink-0">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px]">Final Design</p>
+      </div>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px]">Making the most-used actions easy to find</p>
+      </div>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+        <p className="leading-[22.5px]">Just below the hero, quick-access navigation surfaces the actions returning users always come back for. From the survey, familiar users visited weekly to send recognition, check awards, or shop — so surfacing those immediately reduces scrolling. Below that, tertiary actions like surveys, campaigns, and Q&amp;A serve users who want to engage more deeply.</p>
+      </div>
+      <div className="bg-[#f0f3f5] w-full h-[400px] relative shrink-0 flex items-center justify-center rounded-[12px]">
+        <span className="text-[rgba(50,64,79,0.3)] font-inter text-[14px]">Image coming soon</span>
+      </div>
+    </div>
+  );
+}
+
+function SolutionLearnMoreSection() {
+  return (
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative self-start shrink-0">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px]">Final Design</p>
+      </div>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px]">Showing employees how to send recognition</p>
+      </div>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+        <p className="leading-[22.5px]">For users who need more context, a Learn More section goes deeper. For simpler programs, the About the Program CTA scrolls here. For more complex ones, it links to a dedicated page and this section is hidden. Either way, users always have a next step. Below that, the nomination flow is broken into 4 steps with UI graphics that mirror the actual experience — so by the time users start a nomination, they already know what to expect.</p>
+      </div>
+      <div className="bg-[#f0f3f5] w-full h-[400px] relative shrink-0 flex items-center justify-center rounded-[12px]">
+        <span className="text-[rgba(50,64,79,0.3)] font-inter text-[14px]">Image coming soon</span>
+      </div>
+    </div>
+  );
+}
+
+function SolutionGetInspiredSection() {
+  return (
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative self-start shrink-0">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px]">Final Design</p>
+      </div>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px]">Showing employees the rewards waiting for them</p>
+      </div>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+        <p className="leading-[22.5px]">The Get Inspired section shows employees what they&apos;re working towards. Seeing the actual rewards gives them a reason to participate and keep coming back. Clicking a reward takes them directly to its product page.</p>
+      </div>
+      <div className="bg-[#f0f3f5] w-full h-[400px] relative shrink-0 flex items-center justify-center rounded-[12px]">
+        <span className="text-[rgba(50,64,79,0.3)] font-inter text-[14px]">Image coming soon</span>
+      </div>
+    </div>
+  );
+}
+
+function SolutionFinalDesignSection() {
+  return (
+    <div className="col-[1] content-stretch flex flex-col gap-[16px] items-start justify-self-stretch max-w-[774px] relative self-start shrink-0">
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] w-full">
+        <p className="leading-[22.5px]">Final Design</p>
+      </div>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[35px] tracking-[-0.04em] w-full">
+        <p className="leading-[46px]">What it looks like when it all comes together</p>
+      </div>
+      <div className="flex flex-col font-inter justify-center relative shrink-0 text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em]  w-full">
+        <p className="leading-[22.5px]">A landing page that gives employees everything they need from the moment they land. The colour shifting shows which parts of the template are reusable and swappable per client.</p>
+      </div>
+      <div className="bg-[#f0f3f5] w-full h-[500px] relative shrink-0 flex items-center justify-center rounded-[12px]">
+        <span className="text-[rgba(50,64,79,0.3)] font-inter text-[14px]">Video coming soon</span>
+      </div>
     </div>
   );
 }
 
 function SectionContainer() {
   return (
-    <div className="gap-[110px] sm:gap-[170px] grid-cols-1 grid-rows-[repeat(18,_fit-content(100%))] grid max-w-[774px] pb-[48px] relative shrink-0 w-full" data-name="Section Container">
+    <div className="gap-[110px] sm:gap-[200px] grid-cols-1 grid-rows-[repeat(18,_fit-content(100%))] grid max-w-[774px] pb-[200px] relative shrink-0 w-full" data-name="Section Container">
       <ContentSections3 />
-      <ContentSections />
-      <Property />
+      <MyRoleAndImpact />
+      {/* <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch shrink-0" data-name="Horizontal Divider" /> */}
       <ContentSections4 />
+      {/* <ContextWhyItMattered /> */}
       <Property12 />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[6] shrink-0" data-name="Horizontal Divider" />
-      <Property3 />
       <Property4 />
       <Property11 />
+      <HMWSection />
       <ContentSections7 />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[11] shrink-0" data-name="Horizontal Divider" />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch shrink-0" data-name="Horizontal Divider" />
+      <Property3 />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] row-[11] h-px justify-self-stretch shrink-0" data-name="Horizontal Divider" />
       <ContentSections6 />
+      {/* <SolutionHeroSection />
+      <SolutionNavSection />
+      <SolutionLearnMoreSection />
+      <SolutionGetInspiredSection />
+      <SolutionFinalDesignSection /> */}
       <Property1 />
       <ContentContainer1 />
       <Property2 />
       <Property5 />
-      <div className="bg-[rgba(50,64,79,0.1)] col-[1] h-px justify-self-stretch row-[17] shrink-0" data-name="Horizontal Divider" />
+      <div className="bg-[rgba(50,64,79,0.1)] col-[1] row-[17] h-px justify-self-stretch shrink-0" data-name="Horizontal Divider" />
       <ContentSections5 />
     </div>
   );
@@ -10285,7 +10457,7 @@ function NextProjectNudge() {
         <div className="flex items-center gap-[14px] pl-[16px]">
           <div className="size-[40px] rounded-full bg-[#1e242a] shrink-0" />
           <div className="flex flex-col">
-            <span className="font-geist-mono text-[11px] text-[rgba(50,64,79,0.4)] uppercase tracking-[1.5px] leading-[16px]">
+            <span className="font-inter text-[11px] text-[rgba(50,64,79,0.3)] tracking-[1.5px] leading-[16px]">
               Next case
             </span>
             <span className="font-newsreader text-[16px] text-[#1e242a] tracking-[-0.3px] leading-[22px] whitespace-nowrap">
@@ -10293,7 +10465,7 @@ function NextProjectNudge() {
             </span>
           </div>
         </div>
-        <div className="flex items-center justify-center bg-[#1e242a] text-white font-geist-mono text-[12px] uppercase tracking-[0.5px] rounded-full px-[20px] py-[10px] whitespace-nowrap hover:bg-[#32404f] transition-colors duration-200">
+        <div className="flex items-center justify-center bg-[#1e242a] text-white font-inter text-[12px] tracking-[0.5px] rounded-full px-[20px] py-[10px] whitespace-nowrap hover:bg-[#32404f] transition-colors duration-200">
           Read the case
         </div>
       </RouterLink>
@@ -10306,7 +10478,7 @@ export default function EngagementPlatform() {
     <div className="bg-[#fbfdfd] min-h-screen content-stretch flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px] relative w-full" data-name="Engagement Platform">
       <MainContent />
       {/* <NextProjectNudge /> */}
-      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
+      <Footer maxWidthClass="max-w-[774px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
   );

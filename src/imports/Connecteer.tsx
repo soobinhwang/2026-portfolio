@@ -20,7 +20,7 @@ function ZoomableImage({ src, alt = "", darkBadge = false }: { src: string; alt?
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button type="button" className="relative shrink-0 w-full cursor-pointer group" aria-label="Open image full view">
+        <button type="button" className="relative shrink-0 w-full cursor-pointer group rounded-[12px] overflow-hidden" aria-label="Open image full view">
           <img loading="lazy" decoding="async" alt={alt} className="block w-full h-auto" src={src} />
           <div className={`absolute right-[12px] top-[12px] flex h-[24px] w-[24px] items-center justify-center rounded-[7px] border transition-opacity duration-200 group-hover:opacity-90 ${darkBadge ? "bg-[rgba(30,36,42,0.78)] border-[#1e242a]" : "bg-white/60 border-[#eceff2]"}`} aria-hidden="true">
             <svg aria-hidden="true" className="h-[14px] w-[14px]" fill="none" viewBox="0 0 24 24">
@@ -42,19 +42,19 @@ function Divider() {
 
 function SectionLabel({ text }: { text: string }) {
   return (
-    <p className="font-geist-mono text-[15px] text-[rgba(50,64,79,0.58)] uppercase leading-[22.5px]">{text}</p>
+    <p className="font-inter text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] leading-[22.5px]">{text}</p>
   );
 }
 
 function SectionTitle({ text }: { text: string }) {
   return (
-    <p className="font-newsreader text-[35px] text-[#1e242a] tracking-[-0.64px] leading-[46px]">{text}</p>
+    <p className="font-inter font-medium text-[35px] text-[#1e242a] tracking-[-0.04em] leading-[46px]">{text}</p>
   );
 }
 
 function BodyText({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-geist text-[16px] text-[rgba(50,64,79,0.58)] leading-[22.5px] whitespace-pre-wrap">{children}</p>
+    <p className="font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px] whitespace-pre-wrap">{children}</p>
   );
 }
 
@@ -62,10 +62,10 @@ function BodyText({ children }: { children: React.ReactNode }) {
 function NumberedItem({ number, title, description }: { number: string; title: string; description: string }) {
   return (
     <div className="flex gap-[20px] items-start w-full">
-      <p className="font-geist-mono text-[13px] text-[rgba(50,64,79,0.35)] leading-[30px] shrink-0 w-[16px]">{number}</p>
+      <p className="font-inter text-[13px] text-[rgba(50,64,79,0.35)] leading-[30px] shrink-0 w-[16px]">{number}</p>
       <div className="flex flex-col gap-[6px]">
-        <p className="font-newsreader text-[20px] text-[#32404f] tracking-[-0.424px] leading-[30px]">{title}</p>
-        <p className="font-geist text-[16px] text-[rgba(50,64,79,0.58)] leading-[22.5px]">{description}</p>
+        <p className="font-inter font-medium text-[20px] text-[#32404f] tracking-[-0.04em] leading-[30px]">{title}</p>
+        <p className="font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]">{description}</p>
       </div>
     </div>
   );
@@ -75,8 +75,8 @@ function MetaRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative w-full">
       <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-      <p className="font-geist-mono text-[15px] text-[rgba(50,64,79,0.58)] uppercase leading-[22.5px] w-full sm:w-[132px] shrink-0">{label}</p>
-      <p className="font-geist text-[15px] text-[#5b6a79] leading-[24px] w-full">{value}</p>
+      <p className="font-inter text-[15px] text-[rgba(50,64,79,0.48)] tracking-[-0.5px] leading-[22.5px] w-full sm:w-[132px] shrink-0">{label}</p>
+      <p className="font-inter text-[15px] text-[#5b6a79] leading-[24px] w-full">{value}</p>
     </div>
   );
 }
@@ -86,13 +86,13 @@ function MetaRow({ label, value }: { label: string; value: string }) {
 function PageHeader() {
   return (
     <div className="flex flex-col gap-[16px] w-full pt-[48px] sm:pt-[48px]">
-      <p className="font-geist-mono text-[13px] text-[#858e97] uppercase tracking-wide leading-[22.5px]">
+      {/* <p className="font-inter text-[13px] text-[#858e97] uppercase tracking-wide leading-[22.5px]">
         Hackathon · 2nd Place
-      </p>
-      <p className="font-newsreader text-[42px] text-[#1e242a] tracking-[-1.04px] leading-[normal]">
+      </p> */}
+      <p className="font-inter font-medium text-[42px] text-[#1e242a] tracking-[-0.04em] leading-[normal]">
         Volunteer Matching App Connecteer
       </p>
-      <p className="font-geist text-[16px] text-[#5b6a79] leading-[22.5px]">
+      <p className="font-inter text-[16px] text-[rgba(50,64,79,0.58)] tracking-[-0.04em] leading-[22.5px]">
         An inclusive experience for high school students looking for volunteer opportunities, no matter what their background or ability.
       </p>
     </div>
@@ -101,7 +101,7 @@ function PageHeader() {
 
 function HeroThumbnail() {
   return (
-    <div className="relative shrink-0 w-full overflow-clip">
+    <div className="relative shrink-0 w-full overflow-clip rounded-[12px]">
       <img loading="eager" fetchPriority="high" decoding="async" alt="" className="block w-full h-auto object-cover" src={imgDetailThumbnail} />
     </div>
   );
@@ -127,7 +127,7 @@ function OverviewSection() {
         Design an inclusive experience for high school students looking for opportunities to volunteer to help their local community, no matter their background or ability. Tailored volunteer recommendations based on interests. Filters for locations, durations, ratings, and categories. Accessibility settings for personalized assistance.{"\n\n"}Got 89/100 and landed on 🥈 2nd place of 432 competitors.
       </BodyText>
       <PrototypeLink />
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgOverview} />
+      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto rounded-[12px]" src={imgOverview} />
     </div>
   );
 }
@@ -172,7 +172,7 @@ function IdeationSection() {
       <BodyText>
         Based on our understanding of what users need, we developed our ideas and made a list of goals of our app and possible features that can solve users' pain points and make our app stand out from competitors as well.
       </BodyText>
-      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto" src={imgIdeation} />
+      <img loading="lazy" decoding="async" alt="" className="block w-full h-auto rounded-[12px]" src={imgIdeation} />
     </div>
   );
 }
@@ -259,9 +259,18 @@ function PrototypeLink() {
         href="https://xd.adobe.com/view/0de6016a-1473-42c4-a20b-83e972fb0ad5-58b5/"
         target="_blank"
         rel="noreferrer"
-        className="font-geist text-[16px] text-[#1700cf] leading-[22.5px] hover:opacity-70 transition-opacity"
+        className="inline-flex items-center gap-[6px] font-inter text-[16px] text-[#1700cf] leading-[22.5px] underline underline-offset-2 decoration-transparent hover:decoration-current transition-[text-decoration-color] duration-200"
       >
-        View interactive prototype →
+        View interactive prototype
+        <div className="overflow-clip relative shrink-0 size-[14px]">
+          <div className="absolute inset-1/4">
+            <div className="absolute inset-[-8.93%]">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 8.25 8.25">
+                <path d="M0.625 7.625L7.625 0.625M7.625 0.625H2.95833M7.625 0.625V5.29167" stroke="#1700cf" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.25" />
+              </svg>
+            </div>
+          </div>
+        </div>
       </a>
     </div>
   );
@@ -273,12 +282,12 @@ export default function Connecteer() {
   return (
     <div className="bg-[#fbfdfd] min-h-screen flex flex-col items-center pt-[96px] sm:pt-[110px] px-[20px]">
       <div className="flex flex-col items-start w-full max-w-[774px]">
-        <div className="flex flex-col gap-[16px] w-full">
+        <div className="flex flex-col gap-[32px] w-full">
           <PageHeader />
           <HeroThumbnail />
           <MetaTable />
         </div>
-        <div className="flex flex-col gap-[110px] sm:gap-[170px] w-full py-[110px] sm:py-[170px]">
+        <div className="flex flex-col gap-[110px] sm:gap-[200px] w-full py-[110px] sm:py-[170px]">
           <OverviewSection />
           <Divider />
           <SecondaryResearchSection />
@@ -289,7 +298,7 @@ export default function Connecteer() {
           <FinalDesignsSection />
         </div>
       </div>
-      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
+      <Footer maxWidthClass="max-w-[774px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
   );

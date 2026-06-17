@@ -13,10 +13,10 @@ const project1ThumbnailJsonUrl = new URL("../assets/ai/project-1/Frame-32.json",
 function HeaderContainer() {
   return (
     <div className="content-stretch flex flex-col items-start mt-[120px] sm:mt-[160px] mx-auto max-w-[1200px] w-full px-[20px] sm:px-[32px] lg:px-0" data-name="Header Container">
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] relative shrink-0 text-[#32404f] text-[0px] tracking-[-1.04px] w-full text-left">
+      <div className="flex flex-col font-inter font-medium justify-center leading-[0] relative shrink-0 text-[#1e242a] text-[0px] tracking-[-0.04em] w-full text-left">
         <p className="text-[32px] sm:text-[44px] whitespace-pre-wrap">
-          <span className="leading-[36px] sm:leading-[44px] text-[#32404f]">AI</span>
-          <span className="leading-[36px] sm:leading-[44px] text-[#32404f]">{` builds that turn ambiguity into direction`}</span>
+          <span className="leading-[36px] sm:leading-[44px] text-[#1e242a]">AI</span>
+          <span className="leading-[36px] sm:leading-[44px] text-[#1e242a]">{` builds that turn ambiguity into direction`}</span>
         </p>
       </div>
       <div className="mt-[10px] max-w-[980px] font-geist font-normal text-[#5b6a79] text-[17px] sm:text-[18px] leading-[27px] sm:leading-[29px] tracking-[-0.2px]">
@@ -92,7 +92,7 @@ function LottieThumbnail({ srcUrl, fallbackVideoSrc }: { srcUrl: string; fallbac
 
 function AiThumbnail({ src, videoSrc, animationSrcUrl, comingSoon }: { src?: string; videoSrc?: string; animationSrcUrl?: string; comingSoon?: boolean }) {
   return (
-    <div className="bg-[#1e242a] shrink-0 w-full relative overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="AI Thumbnail">
+    <div className="bg-[#fbfdfd] outline-none shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="AI Thumbnail">
       {animationSrcUrl ? (
         <LottieThumbnail srcUrl={animationSrcUrl} fallbackVideoSrc={videoSrc} />
       ) : videoSrc ? (
@@ -110,7 +110,7 @@ function AiThumbnail({ src, videoSrc, animationSrcUrl, comingSoon }: { src?: str
       ) : (
         <div className="w-full aspect-[4/3] flex items-center justify-center">
           {comingSoon && (
-            <span className="font-geist-mono text-[11px] text-[rgba(255,255,255,0.2)] uppercase tracking-[0.14em]">
+            <span className="font-inter text-[11px] text-[rgba(255,255,255,0.2)] uppercase tracking-[0.14em]">
               Coming soon
             </span>
           )}
@@ -122,18 +122,15 @@ function AiThumbnail({ src, videoSrc, animationSrcUrl, comingSoon }: { src?: str
 
 function ProjectInfo({ title, subtitle }: { title: string; subtitle?: string }) {
   return (
-    <div
-      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
-      data-name="Info Container"
-    >
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[18px] sm:text-[20px] tracking-[-0.64px] text-[#32404f]">
-        <p className="leading-[28px] sm:leading-[38px]">{title}</p>
-      </div>
+    <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Info Container">
       {subtitle ? (
-        <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] uppercase text-[rgba(50,64,79,0.58)]">
-          <p className="leading-[20px] sm:leading-[22.5px]">{subtitle}</p>
+        <div className="flex flex-row gap-[6px] flex-wrap">
+          <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">{subtitle}</span>
         </div>
       ) : null}
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
+        <p className="leading-[26px] sm:leading-[28px]">{title}</p>
+      </div>
     </div>
   );
 }
@@ -141,7 +138,6 @@ function ProjectInfo({ title, subtitle }: { title: string; subtitle?: string }) 
 function ProjectCard({ to, href, title, subtitle, thumbnailSrc, thumbnailVideoSrc, thumbnailAnimationSrcUrl, showTopBorder = true, comingSoon }: { to?: string; href?: string; title: string; subtitle?: string; thumbnailSrc?: string; thumbnailVideoSrc?: string; thumbnailAnimationSrcUrl?: string; showTopBorder?: boolean; comingSoon?: boolean }) {
   const inner = (
     <>
-      {showTopBorder && <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />}
       <AiThumbnail src={thumbnailSrc} videoSrc={thumbnailVideoSrc} animationSrcUrl={thumbnailAnimationSrcUrl} comingSoon={comingSoon} />
       <ProjectInfo title={title} subtitle={subtitle} />
     </>
@@ -151,7 +147,7 @@ function ProjectCard({ to, href, title, subtitle, thumbnailSrc, thumbnailVideoSr
     return (
       <RouterLink
         to={to}
-        className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+        className="content-stretch flex flex-col gap-[16px] items-start relative group w-full"
         style={{ textDecoration: "none", color: "inherit" }}
       >
         {inner}
@@ -165,7 +161,7 @@ function ProjectCard({ to, href, title, subtitle, thumbnailSrc, thumbnailVideoSr
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+        className="content-stretch flex flex-col gap-[16px] items-start relative group w-full"
         style={{ textDecoration: "none", color: "inherit" }}
       >
         {inner}
@@ -175,7 +171,7 @@ function ProjectCard({ to, href, title, subtitle, thumbnailSrc, thumbnailVideoSr
 
   return (
     <div
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+      className="content-stretch flex flex-col gap-[16px] items-start relative group w-full"
       data-cursor="coming-soon"
     >
       {inner}
@@ -185,7 +181,7 @@ function ProjectCard({ to, href, title, subtitle, thumbnailSrc, thumbnailVideoSr
 
 function ProjectsGrid() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] sm:gap-[32px] items-start relative shrink-0 w-full" data-name="Projects Grid">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] sm:gap-[80px] items-start relative shrink-0 w-full" data-name="Projects Grid">
       <ProjectCard to="/ai/project-2" title="Design Decision Note" subtitle="Figma Plugin" thumbnailSrc={project2ThumbnailImage} />
       <ProjectCard
         href="https://www.linkedin.com/feed/update/urn:li:activity:7445938090139095042/"
@@ -208,7 +204,7 @@ function ProjectsGrid() {
       <ProjectCard
         to="/ai/project-1"
         title="Chat GPT Feature Concepts"
-        subtitle="Prototype • PoC"
+        subtitle="Proof of Concept"
         thumbnailAnimationSrcUrl={project1ThumbnailJsonUrl}
         thumbnailVideoSrc={project1ThumbnailVideo}
       />
@@ -226,7 +222,7 @@ function MainFrame() {
 
 export default function AiProjectPage() {
   return (
-    <div className="bg-dot-grid min-h-screen flex flex-col relative w-full" data-name="AI Project Page">
+    <div className="bg-[#fbfdfd] min-h-screen flex flex-col relative w-full" data-name="AI Project Page">
       <HeaderContainer />
       <MainFrame />
       <Footer />

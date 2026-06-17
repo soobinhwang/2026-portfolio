@@ -17,43 +17,11 @@ import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
 
-function ProfileInfoItem() {
-  return (
-    <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] max-[392px]:px-[4px] max-[392px]:py-[1px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] max-[392px]:text-[8px] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px] max-[392px]:leading-[14px]">AI Pioneer</p>
-      </div>
-    </div>
-  );
-}
-
-function ProfileInfoItem1() {
-  return (
-    <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] max-[392px]:px-[4px] max-[392px]:py-[1px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] max-[392px]:text-[8px] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px] max-[392px]:leading-[14px]">B2B SaaS</p>
-      </div>
-    </div>
-  );
-}
-
-function ProfileInfoItem2() {
-  return (
-    <div className="bg-[rgba(23,0,207,0.05)] content-stretch flex items-center justify-center px-[6px] py-[2px] max-[392px]:px-[4px] max-[392px]:py-[1px] relative rounded-[4px] shrink-0" data-name="Profile Info Item">
-      <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[#1700cf] text-[12px] max-[392px]:text-[8px] uppercase whitespace-nowrap">
-        <p className="leading-[22.5px] max-[392px]:leading-[14px]">Platform & Systems</p>
-      </div>
-    </div>
-  );
-}
-
 function ProfileInfoContainer() {
   return (
-    <div className="content-center flex flex-wrap max-[392px]:flex-nowrap gap-[10px] max-[392px]:gap-[4px] items-center relative shrink-0 w-full" data-name="Profile Info Container">
-      <ProfileInfoItem />
-      <ProfileInfoItem1 />
-      <ProfileInfoItem2 />
-    </div>
+    <p className="font-inter font-normal text-[16px] text-[#5b6a79] leading-[24px] tracking-[-0.2px] text-center">
+      AI Builder · Enterprise Product · Scalable Solutions
+    </p>
   );
 }
 
@@ -114,7 +82,6 @@ function ProfileImageContainer() {
         <FloatingVisual className="absolute right-[-20px] top-[74px] w-[50px] h-auto float-soft float-soft-delayed-3" src={imgSmile} axis="z" />
         <FloatingVisual className="absolute right-[27px] bottom-[7px] w-[42px] h-auto float-soft float-soft-delayed-4" src={imgScale} />
       </div>
-      <ProfileInfoContainer />
     </div>
   );
 }
@@ -143,7 +110,7 @@ function ProfileCTAs() {
         rel="noreferrer"
         className="group bg-[#1e242a] hover:bg-[#2a3138] transition-colors duration-200 overflow-clip flex gap-[8px] items-center justify-center px-[16px] py-[8px] rounded-[24px]"
       >
-        <span className="font-geist-mono font-medium text-white text-[13px] tracking-[-0.3px] uppercase leading-[20px] whitespace-nowrap">Let's Chat</span>
+        <span className="font-inter font-medium text-white text-[13px] tracking-[-0.3px] uppercase leading-[20px] whitespace-nowrap">Let's Chat</span>
       </a>
       <a
         href="https://www.linkedin.com/in/sue-product-dsgn/"
@@ -151,7 +118,7 @@ function ProfileCTAs() {
         rel="noreferrer"
         className="group bg-[#f0f3f5] hover:bg-[#e8ecf0] transition-colors duration-200 overflow-clip flex gap-[8px] items-center justify-center px-[16px] py-[8px] rounded-[24px]"
       >
-        <span className="font-geist-mono font-medium text-[#1e242a] text-[13px] tracking-[-0.3px] uppercase leading-[20px] whitespace-nowrap">LinkedIn</span>
+        <span className="font-inter font-medium text-[#1e242a] text-[13px] tracking-[-0.3px] uppercase leading-[20px] whitespace-nowrap">LinkedIn</span>
       </a>
     </div>
   );
@@ -161,20 +128,15 @@ function ProfileContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] sm:gap-[34px] items-center self-center max-w-[619px] mt-[120px] sm:mt-[160px] w-full px-[20px] sm:px-0" data-name="Profile Container">
       <ProfileImageContainer />
-      <div className="flex flex-col font-newsreader font-normal justify-center leading-[0] min-w-full relative shrink-0 text-[#32404f] text-[0px] text-center tracking-[-1.04px] w-[min-content]">
-        <p className="text-[32px] sm:text-[50px] whitespace-pre-wrap">
-          <span className="leading-[36px] sm:leading-[50px] text-[#32404f]">{`I'm Sue, a product designer `}</span>
-          <span className="leading-[36px] sm:leading-[50px]">
+      <div className="flex flex-col gap-[20px] items-center min-w-full">
+        <div className="flex flex-col font-bricolage font-medium justify-center leading-[0] min-w-full relative shrink-0 text-[#1e242a] text-[0px] text-center tracking-[-2.5px] w-[min-content]">
+          <p className="text-[32px] sm:text-[58px]">
+            <span className="leading-[38px] sm:leading-[56px]">Sue Hwang</span>
             <br aria-hidden="true" />
-          </span>
-          <span className="leading-[36px] sm:leading-[50px] text-[#858e97]">{`who `}</span>
-          <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">{`turns `}</span>
-          <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">
-            ambiguity
-            <br aria-hidden="true" />
-          </span>
-          <span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]">into </span><span className="font-newsreader font-normal italic leading-[36px] sm:leading-[50px] text-[#858e97]">scalable</span><span className="font-newsreader font-normal leading-[36px] sm:leading-[50px] text-[#858e97]"> solutions</span>
-        </p>
+            <span className="leading-[38px] sm:leading-[56px] whitespace-nowrap">Strategic Product Designer</span>
+          </p>
+        </div>
+        <ProfileInfoContainer />
       </div>
       {/* <ProfileCTAs /> */}
     </div>
@@ -183,7 +145,7 @@ function ProfileContainer() {
 
 function Thumbnail() {
   return (
-    <div className="bg-[#f0f3f5] relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+    <div className="bg-[#fbfdfd] outline-none relative shrink-0 w-full rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP1Thumbnail} />
     </div>
   );
@@ -191,15 +153,16 @@ function Thumbnail() {
 
 function InfoContainer() {
   return (
-    <div
-      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
-      data-name="Info Container"
-    >
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">{`Rewards & Recognition Platform`}</p>
+    <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Info Container">
+      <div className="flex flex-row gap-[6px] flex-wrap">
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">B2B SaaS</span>
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Employee Experience</span>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Employee Experience</p>
+      <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
+          <p className="leading-[26px] sm:leading-[28px]">{`Rewards & Recognition Platform`}</p>
+        </div>
+        {/* <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Shifting one-off client builds into a scalable, template-driven product</p> */}
       </div>
     </div>
   );
@@ -209,11 +172,10 @@ function Container1() {
   return (
     <RouterLink
       to="/engagement-platform"
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+      className="content-stretch flex flex-col gap-[16px] items-start relative group w-full"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail />
       <InfoContainer />
     </RouterLink>
@@ -222,7 +184,7 @@ function Container1() {
 
 function Thumbnail1() {
   return (
-    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+    <div className="bg-[#1e242a] outline-none shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP2Thumbnail} />
     </div>
   );
@@ -230,15 +192,16 @@ function Thumbnail1() {
 
 function InfoContainer1() {
   return (
-    <div
-      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
-      data-name="Info Container"
-    >
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">Global Reward Storefront</p>
+    <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Info Container">
+      <div className="flex flex-row gap-[6px] flex-wrap">
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">B2B SaaS</span>
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">E-commerce</span>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">E-commerce</p>
+      <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
+          <p className="leading-[26px] sm:leading-[28px]">Global Reward Storefront</p>
+        </div>
+        {/* <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Improving reward discoverability in a high-choice storefront</p> */}
       </div>
     </div>
   );
@@ -248,7 +211,7 @@ function Container4() {
   return (
     <RouterLink
       to="/global-reward-storefront"
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+      className="content-stretch flex flex-col gap-[16px] items-start relative group w-full"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
@@ -269,7 +232,7 @@ function Container() {
 
 function Thumbnail2() {
   return (
-    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#1e242a] outline-none shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP3Thumbnail} />
     </div>
   );
@@ -277,15 +240,12 @@ function Thumbnail2() {
 
 function InfoContainer2() {
   return (
-    <div
-      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
-      data-name="Info Container"
-    >
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">C1 Wallet</p>
+    <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Info Container">
+      <div className="flex flex-row gap-[6px] flex-wrap">
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Rewards Wallet</span>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Rewards Wallet</p>
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
+        <p className="leading-[26px] sm:leading-[28px]">C1 Wallet</p>
       </div>
     </div>
   );
@@ -294,11 +254,10 @@ function InfoContainer2() {
 function Container6() {
   return (
     <div
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+      className="content-stretch flex flex-col gap-[16px] items-start relative group w-full"
       data-name="Container"
       data-cursor="coming-soon"
     >
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail2 />
       <InfoContainer2 />
     </div>
@@ -307,7 +266,7 @@ function Container6() {
 
 function Thumbnail3() {
   return (
-    <div className="bg-[#1e242a] shrink-0 w-full relative transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+    <div className="bg-[#1e242a] outline-none shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP4Thumbnail} />
     </div>
   );
@@ -315,15 +274,16 @@ function Thumbnail3() {
 
 function InfoContainer3() {
   return (
-    <div
-      className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full"
-      data-name="Info Container"
-    >
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">Budget & Incentive Manager</p>
+    <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Info Container">
+      <div className="flex flex-row gap-[6px] flex-wrap">
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">B2C</span>
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Data Visualization</span>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Data Visualization</p>
+      <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
+          <p className="leading-[26px] sm:leading-[28px]">Budget & Incentive Manager</p>
+        </div>
+        {/* <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">A UI revamp that cut clicks, errors, and frustration for incentive managers</p> */}
       </div>
     </div>
   );
@@ -333,11 +293,10 @@ function Container7() {
   return (
     <RouterLink
       to="/design-library"
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+      className="content-stretch flex flex-col gap-[16px] items-start relative group w-full"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <Thumbnail3 />
       <InfoContainer3 />
     </RouterLink>
@@ -355,7 +314,7 @@ function Container5() {
 
 function ThumbnailWeFair() {
   return (
-    <div className="relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+    <div className="bg-[#fbfdfd] outline-none relative shrink-0 w-full rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP5Thumbnail} />
     </div>
   );
@@ -363,12 +322,16 @@ function ThumbnailWeFair() {
 
 function InfoContainerWeFair() {
   return (
-    <div className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full" data-name="Info Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">Ethical Shopping App WeFair</p>
+    <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Info Container">
+      <div className="flex flex-row gap-[6px] flex-wrap">
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Hackathon</span>
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">2nd Place</span>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Hackathon · 2nd Place</p>
+      <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
+          <p className="leading-[26px] sm:leading-[28px]">Ethical Shopping App WeFair</p>
+        </div>
+        {/* <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Helping consumers discover and support brands that pay living wages</p> */}
       </div>
     </div>
   );
@@ -378,11 +341,10 @@ function ContainerWeFair() {
   return (
     <RouterLink
       to="/wefair"
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+      className="content-stretch flex flex-col gap-[16px] items-start relative group w-full"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <ThumbnailWeFair />
       <InfoContainerWeFair />
     </RouterLink>
@@ -391,7 +353,7 @@ function ContainerWeFair() {
 
 function ThumbnailConnecteer() {
   return (
-    <div className="relative shrink-0 w-full transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+    <div className="bg-[#fbfdfd] outline-none relative shrink-0 w-full rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP6Thumbnail} />
     </div>
   );
@@ -399,12 +361,16 @@ function ThumbnailConnecteer() {
 
 function InfoContainerConnecteer() {
   return (
-    <div className="content-stretch flex flex-col min-[1120px]:flex-row font-normal items-start min-[1120px]:items-center justify-start min-[1120px]:justify-between gap-[6px] min-[1120px]:gap-0 leading-[0] relative shrink-0 w-full" data-name="Info Container">
-      <div className="flex flex-col font-newsreader justify-center relative shrink-0 text-[#32404f] text-[18px] sm:text-[20px] tracking-[-0.64px]">
-        <p className="leading-[28px] sm:leading-[38px]">Volunteer Matching App Connecteer</p>
+    <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Info Container">
+      <div className="flex flex-row gap-[6px] flex-wrap">
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Hackathon</span>
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">2nd Place</span>
       </div>
-      <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[13px] sm:text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
-        <p className="leading-[20px] sm:leading-[22.5px]">Hackathon · 2nd Place</p>
+      <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
+          <p className="leading-[26px] sm:leading-[28px]">Volunteer Matching App Connecteer</p>
+        </div>
+        {/* <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Inclusive volunteer matching for high school students of all backgrounds</p> */}
       </div>
     </div>
   );
@@ -414,11 +380,10 @@ function ContainerConnecteer() {
   return (
     <RouterLink
       to="/connecteer"
-      className="content-stretch flex flex-col gap-[12px] items-start relative group w-full"
+      className="content-stretch flex flex-col gap-[16px] items-start relative group w-full"
       data-name="Container"
       style={{ textDecoration: "none", color: "inherit" }}
     >
-      <div aria-hidden="true" className="absolute border-[#ebeced] border-solid border-t inset-0 pointer-events-none" />
       <ThumbnailConnecteer />
       <InfoContainerConnecteer />
     </RouterLink>
@@ -436,7 +401,7 @@ function Container8() {
 
 function MainFrame1() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] sm:gap-[40px] items-start relative shrink-0 w-full" data-name="Main Frame">
+    <div className="content-stretch flex flex-col gap-[48px] sm:gap-[80px] items-start relative shrink-0 w-full" data-name="Main Frame">
       <Container />
       <Container5 />
       <Container8 />

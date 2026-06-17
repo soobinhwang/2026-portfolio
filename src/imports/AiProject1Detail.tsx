@@ -20,7 +20,7 @@ const project1ThumbnailJsonUrl = new URL("../assets/ai/project-1/Frame-32.json",
 
 function SectionLabel({ label }: { label: string }) {
   return (
-    <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
+    <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
       <p className="leading-[22.5px]">{label}</p>
     </div>
   );
@@ -106,23 +106,20 @@ function DetailThumbnail() {
 
 function OverviewSection() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Overview">
+    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Overview">
       <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full">
-        <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
+        <div className="flex flex-col font-inter justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
           <p className="leading-[22.5px] whitespace-pre-wrap">Prototype • PoC</p>
         </div>
-        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-1.04px] w-full">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-0.04em] w-full">
           <p className="leading-[normal] whitespace-pre-wrap">Chat GPT Feature Concepts</p>
-        </div>
-        <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
-          <p className="leading-[22.5px]">Three interaction improvements prototyped to help users navigate long chats, keep context, and act faster.</p>
         </div>
       </div>
       <DetailThumbnail />
       <div className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full" data-name="Property">
         <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full">
           <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-          <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+          <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
             <p className="leading-[22.5px] whitespace-pre-wrap">Tool</p>
           </div>
           <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
@@ -144,7 +141,7 @@ function OverviewSection() {
         </div>
         <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full">
           <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-          <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+          <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
             <p className="leading-[22.5px] whitespace-pre-wrap">Timeline</p>
           </div>
           <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
@@ -153,7 +150,7 @@ function OverviewSection() {
         </div>
         <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full">
           <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-          <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+          <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
             <p className="leading-[22.5px] whitespace-pre-wrap">Team</p>
           </div>
           <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
@@ -161,7 +158,7 @@ function OverviewSection() {
           </div>
         </div>
         <div className="content-stretch flex flex-col sm:flex-row font-normal gap-[8px] sm:gap-[76px] items-start sm:items-center leading-[0] relative shrink-0 text-[15px] w-full">
-          <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+          <div className="flex flex-col font-inter justify-center relative shrink-0 text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
             <p className="leading-[22.5px] whitespace-pre-wrap">Skills</p>
           </div>
           <div className="flex flex-col font-geist justify-center min-h-px min-w-0 relative text-[#5b6a79] w-full">
@@ -182,7 +179,7 @@ function WhySection() {
     <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Why">
       <SectionLabel label="How it started" />
       <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full">
-        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px] w-full">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em] w-full">
           <p className="leading-[42px] whitespace-pre-wrap">
             If you're a ChatGPT user, have you ever had that moment where you think,{" "}
             <span className="italic font-medium">I wish it did this</span>?
@@ -210,13 +207,13 @@ function FeatureScopeSection() {
       <SectionLabel label="concept overview" />
       <div className="flex flex-col gap-[16px] w-full">
         <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#dbe4ec] bg-[#f4f8fb] px-[14px] py-[12px]">
-          <div className="font-geist-mono text-[12px] text-[#5b6a79] uppercase leading-[22.5px]">Goal</div>
+          <div className="font-inter text-[12px] text-[#5b6a79] uppercase leading-[22.5px]">Goal</div>
           <p className="font-geist font-normal text-[16px] text-[#4e5e6d] leading-[26px]">
             Reduce clicks and mental blocks in day-to-day ChatGPT usage
           </p>
         </div>
         <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#dbe4ec] bg-[#f4f8fb] px-[14px] py-[12px]">
-          <div className="font-geist-mono text-[12px] text-[#5b6a79] uppercase leading-[22.5px]">Target user</div>
+          <div className="font-inter text-[12px] text-[#5b6a79] uppercase leading-[22.5px]">Target user</div>
           <ul className="pl-[20px] list-disc font-geist font-normal text-[15px] text-[#4e5e6d] leading-[24px]">
             <li>Frequent ChatGPT users managing complex tasks</li>
             <li>Users who run parallel ideas and need stronger context control</li>
@@ -224,7 +221,7 @@ function FeatureScopeSection() {
           </ul>
         </div>
         <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#dbe4ec] bg-[#f4f8fb] px-[14px] py-[12px]">
-          <div className="font-geist-mono text-[12px] text-[#5b6a79] uppercase leading-[22.5px]">Features</div>
+          <div className="font-inter text-[12px] text-[#5b6a79] uppercase leading-[22.5px]">Features</div>
           <ol className="pl-[20px] font-geist font-normal text-[15px] text-[#4e5e6d] leading-[24px] list-decimal">
             <li>Branch Chat</li>
             <li>Prompt Queue</li>
@@ -256,7 +253,7 @@ function FeatureBlock({
 
   return (
     <div className="flex flex-col gap-[20px] w-full" data-name="Feature">
-      <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em]">
         <p className="leading-[42px]">{title}</p>
       </div>
       <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={isPlaying ? "true" : "false"}>
@@ -281,11 +278,11 @@ function FeatureBlock({
       </div>
       <div className="flex flex-col gap-[14px]">
         <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#f1d8d8] bg-[#fcf4f4] px-[14px] py-[12px]">
-          <div className="font-geist-mono text-[12px] text-[#b05555] uppercase leading-[22.5px]">Problem</div>
+          <div className="font-inter text-[12px] text-[#b05555] uppercase leading-[22.5px]">Problem</div>
           <div className="font-geist font-normal text-[15px] text-[#6b5050] leading-[24px]">{painPoint}</div>
         </div>
         <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#d7e9db] bg-[#f3f9f4] px-[14px] py-[12px]">
-          <div className="font-geist-mono text-[12px] text-[#3f8654] uppercase leading-[22.5px]">Solution</div>
+          <div className="font-inter text-[12px] text-[#3f8654] uppercase leading-[22.5px]">Solution</div>
           <div className="font-geist font-normal text-[15px] text-[#45604e] leading-[24px]">{improvement}</div>
         </div>
       </div>
@@ -297,7 +294,7 @@ function WhatIMadeSection() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="What I Made">
       <SectionLabel label="what i built" />
-      <div className="flex flex-col gap-[110px] sm:gap-[170px] w-full">
+      <div className="flex flex-col gap-[110px] sm:gap-[200px] w-full">
         <FeatureBlock
           title="Feature 1: Branch Chat"
           videoSrc={featureBranchChatVideo}
@@ -332,9 +329,9 @@ function BuildingProcessSection() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Building Process">
       <SectionLabel label="building process" />
-      <div className="content-stretch flex flex-col gap-[110px] sm:gap-[170px] items-start relative w-full">
+      <div className="content-stretch flex flex-col gap-[110px] sm:gap-[200px] items-start relative w-full">
         <div className="content-stretch flex flex-col gap-[20px] items-start relative w-full">
-          <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+          <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em]">
             <p className="leading-[42px]">Documented daily friction that turned into testable concepts</p>
           </div>
           <div className="bg-[#1e242a] w-full relative shrink-0">
@@ -347,7 +344,7 @@ function BuildingProcessSection() {
         </div>
 
         <div className="content-stretch flex flex-col gap-[20px] items-start relative w-full">
-          <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+          <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em]">
             <p className="leading-[42px]">Plan, build, and troubleshoot with AI agents</p>
           </div>
           <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={isCodexVideoPlaying ? "true" : "false"}>
@@ -392,7 +389,7 @@ function TryItSection() {
             target="_blank"
             rel="noopener noreferrer"
             data-cursor="case-study"
-            className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
+            className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-inter text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
           >
             Try the prototype
             <span aria-hidden="true">↗</span>
@@ -413,7 +410,7 @@ function TryItSection() {
 function SectionContainer() {
   return (
     <div
-      className="content-stretch flex flex-col gap-[110px] sm:gap-[170px] items-start max-w-[774px] pt-[48px] pb-[48px] relative shrink-0 w-full"
+      className="content-stretch flex flex-col gap-[110px] sm:gap-[200px] items-start max-w-[774px] pt-[48px] pb-[48px] relative shrink-0 w-full"
       data-name="Section Container"
     >
       <OverviewSection />
@@ -438,7 +435,7 @@ export default function AiProject1Detail() {
       data-name="AI Project 1 Detail"
     >
       <SectionContainer />
-      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
+      <Footer maxWidthClass="max-w-[774px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
   );

@@ -25,7 +25,7 @@ import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialo
 
 function SectionLabel({ label }: { label: string }) {
   return (
-    <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
+    <div className="flex flex-col font-inter justify-center relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase">
       <p className="leading-[22.5px]">{label}</p>
     </div>
   );
@@ -49,23 +49,20 @@ function DetailThumbnail() {
 
 function OverviewSection() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Overview">
+    <div className="content-stretch flex flex-col gap-[32px] items-start relative w-full" data-name="Overview">
       <div className="content-stretch flex flex-col font-normal gap-[16px] items-start leading-[0] relative shrink-0 w-full">
-        <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
+        <div className="flex flex-col font-inter justify-center relative shrink-0 text-[#858e97] text-[13px] uppercase w-full">
           <p className="leading-[22.5px] whitespace-pre-wrap">Figma Plugin</p>
         </div>
-        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-1.04px] w-full">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[42px] tracking-[-0.04em] w-full">
           <p className="leading-[normal] whitespace-pre-wrap">Design Decision Note</p>
-        </div>
-        <div className="flex flex-col font-geist font-normal justify-center relative shrink-0 text-[#5b6a79] text-[16px] w-full">
-          <p className="leading-[22.5px]">Speeds up design decision tracking by turning scattered meeting notes into clear, labelled decision cards.</p>
         </div>
       </div>
       <DetailThumbnail />
       <div className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full" data-name="Property">
         <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full">
           <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-          <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+          <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
             <p className="leading-[22.5px] whitespace-pre-wrap">Tool</p>
           </div>
           <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
@@ -91,7 +88,7 @@ function OverviewSection() {
         </div>
         <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full">
           <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-          <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+          <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
             <p className="leading-[22.5px] whitespace-pre-wrap">Timeline</p>
           </div>
           <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
@@ -100,7 +97,7 @@ function OverviewSection() {
         </div>
         <div className="content-stretch flex flex-col sm:flex-row gap-[8px] sm:gap-[76px] items-start sm:items-center pb-[12px] relative shrink-0 w-full">
           <div aria-hidden="true" className="absolute border-[#ebeced] border-b border-solid inset-0 pointer-events-none" />
-          <div className="flex flex-col font-geist-mono font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+          <div className="flex flex-col font-inter font-normal justify-center leading-[0] relative shrink-0 text-[15px] text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
             <p className="leading-[22.5px] whitespace-pre-wrap">Team</p>
           </div>
           <div className="flex flex-col font-geist font-normal justify-center leading-[0] min-h-px min-w-0 relative text-[#5b6a79] text-[15px] w-full">
@@ -108,7 +105,7 @@ function OverviewSection() {
           </div>
         </div>
         <div className="content-stretch flex flex-col sm:flex-row font-normal gap-[8px] sm:gap-[76px] items-start sm:items-center leading-[0] relative shrink-0 text-[15px] w-full">
-          <div className="flex flex-col font-geist-mono justify-center relative shrink-0 text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
+          <div className="flex flex-col font-inter justify-center relative shrink-0 text-[rgba(50,64,79,0.58)] uppercase w-full sm:w-[72px]">
             <p className="leading-[22.5px] whitespace-pre-wrap">Skills</p>
           </div>
           <div className="flex flex-col font-geist justify-center min-h-px min-w-0 relative text-[#5b6a79] w-full">
@@ -130,7 +127,7 @@ function PluginDemoSection() {
   return (
     <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full" data-name="Plugin Demo">
       <SectionLabel label="what i built" />
-      <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px] w-full">
+      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em] w-full">
         <p className="leading-[42px] whitespace-pre-wrap">A plugin that keeps decisions where designs live</p>
       </div>
       <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={demoPlaying ? "true" : "false"}>
@@ -168,7 +165,7 @@ function PluginDemoSection() {
           target="_blank"
           rel="noreferrer"
           data-cursor="case-study"
-          className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
+          className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-inter text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
         >
           Try the plugin
           <span aria-hidden="true">↗</span>
@@ -187,7 +184,7 @@ function WhySection() {
     <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="Why">
       <SectionLabel label="How it started" />
       <div className="content-stretch flex flex-col gap-[18px] items-start relative w-full">
-        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px] w-full">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em] w-full">
           <p className="leading-[42px] whitespace-pre-wrap">Design reviews move fast. Decisions don’t always stick.</p>
         </div>
         <div className="w-[40%] bg-[#f0f3f5] rounded-[10px] overflow-hidden">
@@ -253,7 +250,7 @@ function FeatureBlock({
   return (
     <div className="flex flex-col gap-[20px] w-full" data-name="Feature">
       {title ? (
-        <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em]">
           <p className="leading-[42px]">{title}</p>
         </div>
       ) : null}
@@ -410,11 +407,11 @@ function BuildingProcessSection() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full" data-name="How I built">
       <SectionLabel label="How I built" />
-      <div className="flex flex-col gap-[110px] sm:gap-[170px] w-full">
+      <div className="flex flex-col gap-[110px] sm:gap-[200px] w-full">
         {steps.map((step) => (
           <div key={step.title} className="flex flex-col gap-[20px] w-full">
             {step.hideMedia ? (
-                <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+                <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em]">
                   <p className="leading-[42px]">{step.title}</p>
                 </div>
               ) : step.title === "Testing & Iteration" ? (
@@ -432,7 +429,7 @@ function BuildingProcessSection() {
               </>
             ) : step.title === "Official launch" ? (
               <>
-                <div className="flex flex-col font-newsreader font-normal justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.56px]">
+                <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em]">
                   <p className="leading-[42px]">{step.title}</p>
                 </div>
                 <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing="true">
@@ -470,7 +467,7 @@ function BuildingProcessSection() {
             )}
             {step.keyPoints ? (
               <div className="flex flex-col gap-[6px] rounded-[10px] border border-[#f2dfcf] bg-[#fff7ef] px-[14px] py-[12px]">
-                <div className="font-geist-mono text-[12px] text-[#b26f32] uppercase leading-[22.5px]">Key points</div>
+                <div className="font-inter text-[12px] text-[#b26f32] uppercase leading-[22.5px]">Key points</div>
                 <ol className="pl-[20px] font-geist font-normal text-[15px] text-[#8d6439] leading-[24px] list-decimal">
                   {step.keyPoints.map((point, index) => (
                     <li key={index}>{point}</li>
@@ -485,7 +482,7 @@ function BuildingProcessSection() {
                   target="_blank"
                   rel="noreferrer"
                   data-cursor="case-study"
-                  className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-geist-mono text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
+                  className="inline-flex items-center gap-[8px] px-[24px] py-[12px] font-inter text-[15px] font-medium rounded-[24px] whitespace-nowrap bg-[#1e242a] text-white hover:bg-[#2a3138] transition-colors uppercase"
                 >
                   {step.ctaLabel}
                   <span aria-hidden="true">↗</span>
@@ -506,7 +503,7 @@ function BuildingProcessSection() {
 function SectionContainer() {
   return (
     <div
-      className="content-stretch flex flex-col gap-[110px] sm:gap-[170px] items-start max-w-[774px] pt-[48px] pb-[48px] relative shrink-0 w-full"
+      className="content-stretch flex flex-col gap-[110px] sm:gap-[200px] items-start max-w-[774px] pt-[48px] pb-[48px] relative shrink-0 w-full"
       data-name="Section Container"
     >
       <OverviewSection />
@@ -527,7 +524,7 @@ export default function AiProject2Detail() {
       data-name="AI Project 2 Detail"
     >
       <SectionContainer />
-      <Footer maxWidthClass="max-w-[774px]" emailVariant="text" paddingXClass="px-[20px] sm:px-0" />
+      <Footer maxWidthClass="max-w-[774px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
   );

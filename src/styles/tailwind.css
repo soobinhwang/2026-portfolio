@@ -77,6 +77,14 @@ body {
     font-family: 'Newsreader', serif;
   }
 
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-bricolage {
+    font-family: 'Bricolage Grotesque', sans-serif;
+  }
+
   .float-soft {
     animation: float-soft 4.5s ease-in-out infinite;
     will-change: transform;
