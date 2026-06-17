@@ -41,6 +41,7 @@ body {
 }
 
 .bg-dot-grid-center-strip {
+  --dot-grid-color: rgba(30, 36, 42, 0.11);
   background-color: #fbfdfd;
   background-image:
     radial-gradient(ellipse 58% 20% at 50% 12%, transparent 0%, transparent 42%, rgba(251, 253, 253, 0.8) 56%, #fbfdfd 65%),

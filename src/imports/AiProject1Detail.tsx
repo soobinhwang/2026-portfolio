@@ -10,6 +10,7 @@ import imgChatGptLogo from "../assets/ai/project-1/gpt logo.jpg";
 import imgClaudeLogo from "../assets/ai/project-1/claude logo.png";
 import imgCursorLogo from "../assets/ai/project-1/cursor logo.png";
 import Footer from "../app/components/Footer";
+import MoreProjects from "../app/components/MoreProjects";
 import NavBar from "../app/components/NavBar";
 
 const project1ThumbnailJsonUrl = new URL("../assets/ai/project-1/Frame-32.json", import.meta.url).href;
@@ -94,7 +95,7 @@ function LottieThumbnail({ srcUrl, fallbackVideoSrc }: { srcUrl: string; fallbac
 
 function DetailThumbnail() {
   return (
-    <div className="bg-[#1e242a] h-[240px] sm:h-[440px] shrink-0 w-full overflow-clip relative" data-name="Detail Thumbnail">
+    <div className="bg-[#1e242a] h-[240px] sm:h-[440px] shrink-0 w-full overflow-hidden rounded-[12px] relative" data-name="Detail Thumbnail">
       <LottieThumbnail srcUrl={project1ThumbnailJsonUrl} fallbackVideoSrc={project1ThumbnailVideo} />
     </div>
   );
@@ -256,7 +257,7 @@ function FeatureBlock({
       <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em]">
         <p className="leading-[42px]">{title}</p>
       </div>
-      <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={isPlaying ? "true" : "false"}>
+      <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0 rounded-[12px] overflow-hidden" data-playing={isPlaying ? "true" : "false"}>
         {videoSrc ? (
           <video
             ref={videoRef}
@@ -334,7 +335,7 @@ function BuildingProcessSection() {
           <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em]">
             <p className="leading-[42px]">Documented daily friction that turned into testable concepts</p>
           </div>
-          <div className="bg-[#1e242a] w-full relative shrink-0">
+          <div className="bg-[#1e242a] w-full relative shrink-0 rounded-[12px] overflow-hidden">
             <img loading="lazy" decoding="async" alt="Problem framing" className="block w-full h-auto object-contain" src={imgProblemFraming} />
           </div>
           <p className="font-geist text-[15px] text-[#5b6a79] leading-[25px]">
@@ -347,7 +348,7 @@ function BuildingProcessSection() {
           <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em]">
             <p className="leading-[42px]">Plan, build, and troubleshoot with AI agents</p>
           </div>
-          <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={isCodexVideoPlaying ? "true" : "false"}>
+          <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0 rounded-[12px] overflow-hidden" data-playing={isCodexVideoPlaying ? "true" : "false"}>
             <video
               ref={codexVideoRef}
               className="ai-muted-controls block w-full h-auto object-contain"
@@ -435,6 +436,7 @@ export default function AiProject1Detail() {
       data-name="AI Project 1 Detail"
     >
       <SectionContainer />
+      <MoreProjects currentId="ai-project-1" />
       <Footer maxWidthClass="max-w-[774px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>

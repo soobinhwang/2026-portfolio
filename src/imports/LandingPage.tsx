@@ -19,7 +19,7 @@ import NavBar from "../app/components/NavBar";
 
 function ProfileInfoContainer() {
   return (
-    <p className="font-inter font-normal text-[16px] text-[#5b6a79] leading-[24px] tracking-[-0.2px] text-center">
+    <p className="font-inter font-normal text-[13px] sm:text-[16px] text-[#5b6a79] leading-[20px] sm:leading-[24px] tracking-[-0.2px] text-center">
       AI Builder · Enterprise Product · Scalable Solutions
     </p>
   );
@@ -145,7 +145,7 @@ function ProfileContainer() {
 
 function Thumbnail() {
   return (
-    <div className="bg-[#fbfdfd] outline-none relative shrink-0 w-full rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+    <div className="bg-[#fbfdfd] relative shrink-0 w-full rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60 [-webkit-mask-image:radial-gradient(white,black)] [transform:translateZ(0)] [outline:2px_solid_#fbfdfd]" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP1Thumbnail} />
     </div>
   );
@@ -162,7 +162,7 @@ function InfoContainer() {
         <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
           <p className="leading-[26px] sm:leading-[28px]">{`Rewards & Recognition Platform`}</p>
         </div>
-        {/* <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Shifting one-off client builds into a scalable, template-driven product</p> */}
+        <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Shifting one-off client builds into a scalable, template-driven product</p>
       </div>
     </div>
   );
@@ -184,7 +184,7 @@ function Container1() {
 
 function Thumbnail1() {
   return (
-    <div className="bg-[#1e242a] outline-none shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+    <div className="bg-[#1e242a] shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60 [-webkit-mask-image:radial-gradient(white,black)] [transform:translateZ(0)] [outline:2px_solid_#fbfdfd]" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP2Thumbnail} />
     </div>
   );
@@ -201,7 +201,7 @@ function InfoContainer1() {
         <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
           <p className="leading-[26px] sm:leading-[28px]">Global Reward Storefront</p>
         </div>
-        {/* <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Improving reward discoverability in a high-choice storefront</p> */}
+        <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Improving reward discoverability in a high-choice storefront</p>
       </div>
     </div>
   );
@@ -232,7 +232,7 @@ function Container() {
 
 function Thumbnail2() {
   return (
-    <div className="bg-[#1e242a] outline-none shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail">
+    <div className="bg-[#1e242a] shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60 [-webkit-mask-image:radial-gradient(white,black)] [transform:translateZ(0)] [outline:2px_solid_#fbfdfd]" data-name="Thumbnail">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP3Thumbnail} />
     </div>
   );
@@ -242,10 +242,14 @@ function InfoContainer2() {
   return (
     <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Info Container">
       <div className="flex flex-row gap-[6px] flex-wrap">
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">B2B2C</span>
         <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Rewards Wallet</span>
       </div>
-      <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
-        <p className="leading-[26px] sm:leading-[28px]">C1 Wallet</p>
+      <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
+          <p className="leading-[26px] sm:leading-[28px]">C1 Wallet</p>
+        </div>
+        <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">A net-new product balancing monetization with user trust</p>
       </div>
     </div>
   );
@@ -266,7 +270,7 @@ function Container6() {
 
 function Thumbnail3() {
   return (
-    <div className="bg-[#1e242a] outline-none shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+    <div className="bg-[#1e242a] shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60 [-webkit-mask-image:radial-gradient(white,black)] [transform:translateZ(0)] [outline:2px_solid_#fbfdfd]" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP4Thumbnail} />
     </div>
   );
@@ -278,12 +282,13 @@ function InfoContainer3() {
       <div className="flex flex-row gap-[6px] flex-wrap">
         <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">B2C</span>
         <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Data Visualization</span>
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Design System</span>
       </div>
       <div className="flex flex-col gap-[6px]">
         <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
           <p className="leading-[26px] sm:leading-[28px]">Budget & Incentive Manager</p>
         </div>
-        {/* <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">A UI revamp that cut clicks, errors, and frustration for incentive managers</p> */}
+        <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">A UI revamp that cut clicks, errors, and frustration for incentive managers</p>
       </div>
     </div>
   );
@@ -314,7 +319,7 @@ function Container5() {
 
 function ThumbnailWeFair() {
   return (
-    <div className="bg-[#fbfdfd] outline-none relative shrink-0 w-full rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+    <div className="bg-[#fbfdfd] relative shrink-0 w-full rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60 [-webkit-mask-image:radial-gradient(white,black)] [transform:translateZ(0)] [outline:2px_solid_#fbfdfd]" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP5Thumbnail} />
     </div>
   );
@@ -324,6 +329,7 @@ function InfoContainerWeFair() {
   return (
     <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Info Container">
       <div className="flex flex-row gap-[6px] flex-wrap">
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Mobile App</span>
         <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Hackathon</span>
         <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">2nd Place</span>
       </div>
@@ -331,7 +337,7 @@ function InfoContainerWeFair() {
         <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
           <p className="leading-[26px] sm:leading-[28px]">Ethical Shopping App WeFair</p>
         </div>
-        {/* <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Helping consumers discover and support brands that pay living wages</p> */}
+        <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Helping consumers discover and support brands that pay living wages</p>
       </div>
     </div>
   );
@@ -353,7 +359,7 @@ function ContainerWeFair() {
 
 function ThumbnailConnecteer() {
   return (
-    <div className="bg-[#fbfdfd] outline-none relative shrink-0 w-full rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60" data-name="Thumbnail" data-cursor="project">
+    <div className="bg-[#fbfdfd] relative shrink-0 w-full rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60 [-webkit-mask-image:radial-gradient(white,black)] [transform:translateZ(0)] [outline:2px_solid_#fbfdfd]" data-name="Thumbnail" data-cursor="project">
       <img loading="lazy" decoding="async" alt="" className="block w-full h-auto object-contain" src={imgP6Thumbnail} />
     </div>
   );
@@ -363,6 +369,7 @@ function InfoContainerConnecteer() {
   return (
     <div className="flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="Info Container">
       <div className="flex flex-row gap-[6px] flex-wrap">
+        <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Mobile App</span>
         <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">Hackathon</span>
         <span className="border border-[#e4e7ea] rounded-full px-[12px] py-[4px] text-[12px] font-inter font-normal text-[#9ba3af]">2nd Place</span>
       </div>
@@ -370,7 +377,7 @@ function InfoContainerConnecteer() {
         <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
           <p className="leading-[26px] sm:leading-[28px]">Volunteer Matching App Connecteer</p>
         </div>
-        {/* <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Inclusive volunteer matching for high school students of all backgrounds</p> */}
+        <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Inclusive volunteer matching for high school students of all backgrounds</p>
       </div>
     </div>
   );

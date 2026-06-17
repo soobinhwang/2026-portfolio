@@ -25,6 +25,7 @@ import imgChallenge from "../assets/work/design-library/Challenge.png";
 import imgStar from "../assets/work/reward-storefront/star.png";
 import NavBar from "../app/components/NavBar";
 import Footer from "../app/components/Footer";
+import MoreProjects from "../app/components/MoreProjects";
 import ImpactSectionGRS from "./ImpactSectionGRS";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 
@@ -934,6 +935,7 @@ export default function DesignLibrary() {
   return (
     <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[96px] sm:pt-[110px] relative w-full px-[20px]" data-name="Design Library">
       <MainContent />
+      <MoreProjects currentId="design-library" />
       <Footer maxWidthClass="max-w-[774px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>

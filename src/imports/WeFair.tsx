@@ -1,5 +1,6 @@
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
+import MoreProjects from "../app/components/MoreProjects";
 import NavBar from "../app/components/NavBar";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 import imgDetailThumbnail from "../assets/work/wefair/P5-Detail-Thumbnail.png";
@@ -410,6 +411,7 @@ export default function WeFair() {
           <FinalDesignsSection />
         </div>
       </div>
+      <MoreProjects currentId="wefair" />
       <Footer maxWidthClass="max-w-[774px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>

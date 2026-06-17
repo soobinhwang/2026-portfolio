@@ -15,6 +15,7 @@ import videoSolution1 from "../assets/work/reward-storefront/Solution 1.mp4";
 import videoSolution2 from "../assets/work/reward-storefront/Solution 2.mp4";
 import NavBar from "../app/components/NavBar";
 import Footer from "../app/components/Footer";
+import MoreProjects from "../app/components/MoreProjects";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 import ImpactSectionGRS from "./ImpactSectionGRS";
 
@@ -1107,6 +1108,7 @@ export default function GlobalRewardStorefront() {
   return (
     <div className="bg-[#fbfdfd] content-stretch flex flex-col items-center min-h-screen pt-[96px] sm:pt-[110px] px-[20px] relative w-full" data-name="Global Reward Storefront">
       <MainContent />
+      <MoreProjects currentId="global-reward-storefront" />
       <Footer maxWidthClass="max-w-[774px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>

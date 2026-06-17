@@ -16,6 +16,7 @@ import videoMvp from "../assets/ai/project-2/MVP.mov";
 import videoPostMvp from "../assets/ai/project-2/Post MVP.mov";
 import videoWhatIBuilt from "../assets/ai/project-2/What I built.mov";
 import Footer from "../app/components/Footer";
+import MoreProjects from "../app/components/MoreProjects";
 import NavBar from "../app/components/NavBar";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 
@@ -41,7 +42,7 @@ function Divider() {
 
 function DetailThumbnail() {
   return (
-    <div className="bg-[#1e242a] h-[240px] sm:h-[440px] shrink-0 w-full overflow-clip relative" data-name="Detail Thumbnail">
+    <div className="bg-[#1e242a] h-[240px] sm:h-[440px] shrink-0 w-full overflow-hidden rounded-[12px] relative" data-name="Detail Thumbnail">
       <img loading="eager" fetchPriority="high" decoding="async" alt="" className="absolute inset-0 size-full object-cover" src={imgDetailThumbnail} />
     </div>
   );
@@ -130,7 +131,7 @@ function PluginDemoSection() {
       <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em] w-full">
         <p className="leading-[42px] whitespace-pre-wrap">A plugin that keeps decisions where designs live</p>
       </div>
-      <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing={demoPlaying ? "true" : "false"}>
+      <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0 rounded-[12px] overflow-hidden" data-playing={demoPlaying ? "true" : "false"}>
         <video
           className="ai-muted-controls block w-full h-auto object-contain"
           src={videoPluginFinal}
@@ -259,7 +260,7 @@ function FeatureBlock({
           <DialogTrigger asChild>
             <button
               type="button"
-              className={mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0 cursor-pointer group"}
+              className={mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0 cursor-pointer group rounded-[12px] overflow-hidden"}
               aria-label={fullViewAriaLabel ?? "Open image full view"}
             >
               <img loading="lazy" decoding="async" alt="" className={imageClassName ?? "block w-full h-auto object-contain"} src={imageSrc} />
@@ -294,7 +295,7 @@ function FeatureBlock({
         </Dialog>
       ) : (
         <div
-          className={videoSrc ? `ai-video-shell ${mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0"}` : mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0"}
+          className={videoSrc ? `ai-video-shell ${mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0 rounded-[12px] overflow-hidden"}` : mediaClassName ?? "bg-[#1e242a] w-full relative shrink-0 rounded-[12px] overflow-hidden"}
           data-playing={videoSrc ? (isPlaying ? "true" : "false") : undefined}
         >
           {imageSrc ? (
@@ -432,7 +433,7 @@ function BuildingProcessSection() {
                 <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[32px] tracking-[-0.04em]">
                   <p className="leading-[42px]">{step.title}</p>
                 </div>
-                <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0" data-playing="true">
+                <div className="ai-video-shell bg-[#1e242a] w-full relative shrink-0 rounded-[12px] overflow-hidden" data-playing="true">
                   <video
                     className="ai-muted-controls block w-full h-auto object-contain"
                     src={videoWhatIBuilt}
@@ -524,6 +525,7 @@ export default function AiProject2Detail() {
       data-name="AI Project 2 Detail"
     >
       <SectionContainer />
+      <MoreProjects currentId="ai-project-2" />
       <Footer maxWidthClass="max-w-[774px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>

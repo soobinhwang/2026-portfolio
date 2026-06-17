@@ -1,5 +1,6 @@
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
+import MoreProjects from "../app/components/MoreProjects";
 import NavBar from "../app/components/NavBar";
 import { Dialog, DialogContent, DialogTrigger } from "../app/components/ui/dialog";
 import imgDetailThumbnail from "../assets/work/connecteer/P6-Detail-Thumbnail.png";
@@ -298,6 +299,7 @@ export default function Connecteer() {
           <FinalDesignsSection />
         </div>
       </div>
+      <MoreProjects currentId="connecteer" />
       <Footer maxWidthClass="max-w-[774px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />
     </div>
