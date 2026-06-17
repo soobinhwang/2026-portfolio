@@ -51,6 +51,19 @@ body {
   background-position: left top, 0 0;
 }
 
+.bg-dot-grid-center-strip-edged {
+  --dot-grid-color: rgba(30, 36, 42, 0.11);
+  background-color: #fbfdfd;
+  background-image:
+    linear-gradient(to right, #fbfdfd 0, rgba(251, 253, 253, 0) var(--dot-grid-edge-fade)),
+    linear-gradient(to left, #fbfdfd 0, rgba(251, 253, 253, 0) var(--dot-grid-edge-fade)),
+    radial-gradient(ellipse 58% 20% at 50% 12%, transparent 0%, transparent 42%, rgba(251, 253, 253, 0.8) 56%, #fbfdfd 65%),
+    radial-gradient(circle, var(--dot-grid-color) var(--dot-grid-dot), transparent var(--dot-grid-dot));
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-size: 100% 100%, 100% 100%, 100% 100%, var(--dot-grid-size) var(--dot-grid-size);
+  background-position: left top, right top, left top, 0 0;
+}
+
 .bg-dot-grid-soft-center {
   background-color: #fbfdfd;
   background-image:

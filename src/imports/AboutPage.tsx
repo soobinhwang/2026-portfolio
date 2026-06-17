@@ -1065,7 +1065,7 @@ function MainFrame() {
 
 export default function AboutPage() {
   return (
-    <div className="bg-dot-grid-soft-center min-h-screen flex flex-col relative w-full" data-name="About Page">
+    <div className="bg-dot-grid-center-strip-edged min-h-screen flex flex-col relative w-full" data-name="About Page">
       <MainFrame />
       <Footer maxWidthClass="max-w-[550px]" paddingXClass="px-[20px] sm:px-0" />
       <NavBar />

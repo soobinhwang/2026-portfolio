@@ -87,13 +87,13 @@ const PROJECTS: Project[] = [
 function ProjectCard({ project }: { project: Project }) {
   const thumbnail = (
     <div
-      className="outline-none shrink-0 w-full relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60"
+      className="outline-none shrink-0 w-full aspect-[4/3] relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60"
       style={{ backgroundColor: project.thumbnailBg }}
       data-cursor={project.to ? "project" : "coming-soon"}
     >
       {project.thumbnailVideoSrc ? (
         <video
-          className="block w-full h-auto object-contain"
+          className="absolute inset-0 w-full h-full object-cover"
           src={project.thumbnailVideoSrc}
           autoPlay
           loop
@@ -106,7 +106,7 @@ function ProjectCard({ project }: { project: Project }) {
           loading="lazy"
           decoding="async"
           alt=""
-          className="block w-full h-auto object-contain"
+          className="absolute inset-0 w-full h-full object-cover"
           src={project.thumbnailSrc}
         />
       )}
