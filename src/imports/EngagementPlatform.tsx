@@ -366,7 +366,7 @@ function MyRoleAndImpact() {
 
   const stats = [
     { prefix: "+", number: "30", suffix: "%", label: "Revenue growth" },
-    { prefix: "~", number: "60", suffix: "%", label: "Reduced launch time" },
+    { prefix: "~", number: "71", suffix: "%", label: "Reduced launch time" },
     { prefix: "+", number: "100", suffix: "", label: "Client programs" },
   ];
 
