@@ -5,7 +5,7 @@ import imgMentor from "../assets/About/mentor.png";
 import { Link as RouterLink } from "react-router";
 import Footer from "../app/components/Footer";
 import NavBar from "../app/components/NavBar";
-import resumePdf from "../assets/About/Sue Hwang - Resume.pdf";
+import resumePdf from "../assets/About/Sue Hwang - Product Designer - Resume.pdf";
 
 function StatusIndicator() {
   return (
@@ -217,7 +217,7 @@ function DownloadResumeLink() {
       className="content-stretch flex items-center justify-center relative shrink-0 group"
       data-name="Download Resume Link"
       href={resumePdf}
-      download="Sue Hwang - Resume.pdf"
+      download="Sue Hwang - Product Designer - Resume.pdf"
       aria-label="Download resume"
     >
       <DownloadResumeContainer />
