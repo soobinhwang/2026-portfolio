@@ -9109,8 +9109,8 @@ function Container27() {
         description="They came to act, not to explore."
       />
       <InsightRow
-        title="Awards and Rewards: two terms that rarely coexist, but here they do"
-        description="Users got confused, and that got in the way of taking action."
+        title="No clear priority in navigation"
+        description="Recognition, shopping, and account settings all felt equally important."
       />
     </div>
   );
