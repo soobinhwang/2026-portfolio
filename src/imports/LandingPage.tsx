@@ -160,7 +160,7 @@ function InfoContainer() {
       </div>
       <div className="flex flex-col gap-[6px]">
         <div className="flex flex-col font-inter font-medium justify-center relative shrink-0 text-[#1e242a] text-[20px] tracking-[-0.4px]">
-          <p className="leading-[26px] sm:leading-[28px]">{`Rewards & Recognition Platform`}</p>
+          <p className="leading-[26px] sm:leading-[28px]">Employee Recognition Landing Page</p>
         </div>
         <p className="font-inter font-normal text-[16px] text-[#8c9199] leading-[24px] tracking-[-0.3px]">Shifting one-off client builds into a scalable, template-driven product</p>
       </div>
