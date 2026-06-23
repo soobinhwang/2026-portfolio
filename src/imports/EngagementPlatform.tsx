@@ -9105,7 +9105,7 @@ function Container27() {
         description="In their own words, it felt overwhelming and they didn't know where to start."
       />
       <InsightRow
-        title="Once familiar, users visited weekly to send recognition, check awards, or shop"
+        title="Once familiar, users visited weekly to send recognition, play games, or shop"
         description="They came to act, not to explore."
       />
       <InsightRow
