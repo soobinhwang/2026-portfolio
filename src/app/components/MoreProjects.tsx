@@ -87,7 +87,7 @@ const PROJECTS: Project[] = [
 function ProjectCard({ project }: { project: Project }) {
   const thumbnail = (
     <div
-      className="outline-none shrink-0 w-full aspect-[4/3] relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60"
+      className="shrink-0 w-full aspect-[4/3] relative rounded-[18px] overflow-hidden transition-opacity duration-300 ease-in-out group-hover:opacity-60 [-webkit-mask-image:radial-gradient(white,black)] [transform:translateZ(0)] [outline:2px_solid_white]"
       style={{ backgroundColor: project.thumbnailBg }}
       data-cursor={project.to ? "project" : "coming-soon"}
     >
